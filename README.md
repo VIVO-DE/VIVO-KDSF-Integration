@@ -1,2 +1,2 @@
-# kdsf-mapping
-Mapping of the KDSF Ontology on existing Ontologies used in VIVO.
+# kdsf-alignment
+KDSF Ontology on existing Ontologies used in VIVO.
