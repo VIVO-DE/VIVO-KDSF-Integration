@@ -24,6 +24,10 @@
         <owl:versionIRI rdf:resource="http://kerndatensatz-forschung.de/owl/Basis/20150611"/>
     </owl:Ontology>
 
+
+<!-- All comments marked with "kdsf-vivo:" are e.g. suggestions on the optimization of the kdsf ontology for better mapping ... -->
+
+
 <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -131,6 +135,15 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Bibliographie -->
+
+    <owl:Class rdf:about="&kdsf;Bibliographie">
+        <rdfs:label rdf:datatype="&xsd;string">Bibliographie [Publikationstyp]</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Buch"/>
+        <Meta:inhaltlicheDefinition>Pu24</Meta:inhaltlicheDefinition>
     </owl:Class>
 
 
@@ -296,7 +309,13 @@
     </owl:Class>
 
 
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Verwaltungspersonal -->
 
+    <owl:Class rdf:about="&kdsf;Verwaltungspersonal">
+        <rdfs:label rdf:datatype="&xsd;string">Verwaltungspersonal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;WissenschaftsunterstuetzendesPersonal"/>
+        <Meta:inhaltlicheDefinition>Be28</Meta:inhaltlicheDefinition>
+    </owl:Class>
 
 
 
@@ -353,13 +372,7 @@
 
 
 
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#Bibliographie -->
 
-    <owl:Class rdf:about="&kdsf;Bibliographie">
-        <rdfs:label rdf:datatype="&xsd;string">Bibliographie [Publikationstyp]</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&kdsf;Buch"/>
-        <Meta:inhaltlicheDefinition>Pu24</Meta:inhaltlicheDefinition>
-    </owl:Class>
 
 
 
@@ -568,7 +581,7 @@
     
 
 
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#DFG -->
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#DFG --> <!-- kdsf-vivo: DFG should be an instance of an Organization (Class) -->
 
     <owl:Class rdf:about="&kdsf;DFG">
         <rdfs:label rdf:datatype="&xsd;string">DFG</rdfs:label>
@@ -1308,13 +1321,7 @@
     
 
 
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#Verwaltungspersonal -->
 
-    <owl:Class rdf:about="&kdsf;Verwaltungspersonal">
-        <rdfs:label rdf:datatype="&xsd;string">Verwaltungspersonal</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&kdsf;WissenschaftsunterstuetzendesPersonal"/>
-        <Meta:inhaltlicheDefinition>Be28</Meta:inhaltlicheDefinition>
-    </owl:Class>
     
 
 
