@@ -1,0 +1,1369 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Meta "http://kerndatensatz-forschung.de/owl/Meta#" >
+    <!ENTITY kdsf "http://kerndatensatz-forschung.de/owl/Basis#" >
+]>
+
+
+<rdf:RDF xmlns="http://kerndatensatz-forschung.de/owl/Basis#"
+     xml:base="http://kerndatensatz-forschung.de/owl/Basis"
+     xmlns:Meta="http://kerndatensatz-forschung.de/owl/Meta#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:kdsf="http://kerndatensatz-forschung.de/owl/Basis#">
+    <owl:Ontology rdf:about="http://kerndatensatz-forschung.de/owl/Basis">
+        <owl:imports rdf:resource="http://kerndatensatz-forschung.de/owl/Meta"/>
+        <owl:versionIRI rdf:resource="http://kerndatensatz-forschung.de/owl/Basis/20150611"/>
+    </owl:Ontology>
+
+
+<!-- All comments marked with "kdsf-vivo:" are suggestions on the optimization of the kdsf ontology regarding alignment to VIVO ontologies & more -->
+
+
+<!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Arbeitspapier_Forschungsbericht -->
+
+    <owl:Class rdf:about="&kdsf;Arbeitspapier_Forschungsbericht">
+        <rdfs:label rdf:datatype="&xsd;string">Arbeitspapier/Forschungsbericht</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu37</Meta:inhaltlicheDefinition>
+        <owl:equivalentClass rdf:resource="&vivo;WorkingPaper"/>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Artikel -->
+
+    <owl:Class rdf:about="&kdsf;Artikel">
+        <rdfs:label rdf:datatype="&xsd;string">Artikel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu25</Meta:inhaltlicheDefinition>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <Document rdf:about="&bibo;Article"/>
+                    <Document rdf:about="&bibo;AcademicArticle"/> <!--SubClass of Article -->
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Buch -->
+
+    <owl:Class rdf:about="&kdsf;Buch">
+        <rdfs:label rdf:datatype="&xsd;string">Buch</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu22</Meta:inhaltlicheDefinition>
+        <owl:equivalentClass rdf:resource="&bibo;Book"/>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Datensammlung -->
+
+    <owl:Class rdf:about="&kdsf;Datensammlung">
+        <rdfs:label rdf:datatype="&xsd;string">Datensammlung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu38</Meta:inhaltlicheDefinition>
+        <owl:equivalentClass rdf:resource="&vivo;Dataset"/>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Dissertation -->
+
+    <owl:Class rdf:about="&kdsf;Dissertation">
+        <rdfs:label rdf:datatype="&xsd;string">Dissertation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Qualifikationsschrift"/>
+        <Meta:inhaltlicheDefinition>Pu34</Meta:inhaltlicheDefinition>
+        <owl:equivalentClass rdf:resource="&bibo;ThesisDegree"/>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Journalartikel -->
+
+    <owl:Class rdf:about="&kdsf;Journalartikel">
+        <rdfs:label rdf:datatype="&xsd;string">Journalartikel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Artikel"/>
+        <Meta:inhaltlicheDefinition>Pu11</Meta:inhaltlicheDefinition>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <Document rdf:about="&bibo;Article"/>
+                    <Document rdf:about="&bibo;AcademicArticle"/> <!--SubClass of Article -->
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sammelband -->
+
+    <owl:Class rdf:about="&kdsf;Sammelband">
+        <rdfs:label rdf:datatype="&xsd;string">Sammelband</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Buch"/>
+        <Meta:inhaltlicheDefinition>Pu23</Meta:inhaltlicheDefinition>
+        <owl:equivalentClass rdf:resource="&bibo;Proceedings"/>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Wissenschaftliche_Vortragsfolien -->
+
+    <owl:Class rdf:about="&kdsf;Wissenschaftliche_Vortragsfolien">
+        <rdfs:label rdf:datatype="&xsd;string">Wissenschaftliche Vortragsfolien</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu44</Meta:inhaltlicheDefinition>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <Document rdf:about="&bibo;Slideshow"/>
+                    <Document rdf:about="&vivo;Presentation"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Bibliographie -->
+
+    <owl:Class rdf:about="&kdsf;Bibliographie">
+        <rdfs:label rdf:datatype="&xsd;string">Bibliographie [Publikationstyp]</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Buch"/>
+        <Meta:inhaltlicheDefinition>Pu24</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+<!-- ################################################################################################
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter -->
+
+    <owl:Class rdf:about="&kdsf;Beschaeftigter">
+        <rdfs:label rdf:datatype="&xsd;string">BeschÃ¤ftigte / BeschÃ¤ftigter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Person"/>
+        <rdfs:comment>Personen, die in einem BeschÃ¤ftigungsverhÃ¤ltnis sind. KÃ¶nnen Ã¼ber Qualifikationen verfÃ¼gen (Promotion/Habilitation)</rdfs:comment>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <Document rdf:about="&vivo;EmeritusLibrarian"/>
+                    <Document rdf:about="&vivo;Librarian"/>
+                    <Document rdf:about="&vivo;EmeritusFaculty"/>
+                    <Document rdf:about="&vivo;EmeritusProfessor"/> <!--SubClass of EmeritusFaculty -->
+                    <Document rdf:about="&vivo;FacultyMember"/>
+                    <Document rdf:about="&vivo;NonAcademic"/>
+                    <Document rdf:about="&vivo;NonFacultyAcademic"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit -->
+
+    <owl:Class rdf:about="&kdsf;Organisationseinheit">
+        <rdfs:label rdf:datatype="&xsd;string">Organisationseinheit</rdfs:label>
+        <Meta:inhaltlicheDefinition>Be75</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Dr121</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na92</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pu140</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pa35</Meta:inhaltlicheDefinition>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <Document rdf:about="&vivo;Association"/>
+                    <Document rdf:about="&vivo;Center"/>
+                    <Document rdf:about="&vivo;ClinicalOrganization"/>
+                    <Document rdf:about="&vivo;College"/>
+                    <Document rdf:about="&vivo;Company"/>
+                    <Document rdf:about="&vivo;PrivateCompany"/> <!-- SubClass of Company -->
+                    <Document rdf:about="&vivo;Consortium"/>
+                    <Document rdf:about="&vivo;Department"/>
+                    <Document rdf:about="&vivo;AcademicDepartment"/> <!-- SubClass of Department -->
+                    <Document rdf:about="&vivo;ExtensionUnit"/>
+                    <Document rdf:about="&vivo;Division"/> <!-- SubClass of ExtensionUnit -->
+                    <Document rdf:about="&vivo;Foundation"/>
+                    <Document rdf:about="&vivo;FundingOrganization"/>
+                    <Document rdf:about="&vivo;GovernmentAgency"/>
+                    <Document rdf:about="&vivo;Hospital"/>
+                    <Document rdf:about="&vivo;Institute"/>
+                    <Document rdf:about="&vivo;Laboratory"/>
+                    <Document rdf:about="&vivo;ServiceProvidingLaboratory"/> <!-- SubClass of Laboratory -->
+                    <Document rdf:about="&vivo;Museum"/>
+                    <Document rdf:about="&vivo;School"/>
+                    <Document rdf:about="&vivo;StudentOrganization"/>
+                    <Document rdf:about="&vivo;University"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Professoren -->
+
+    <owl:Class rdf:about="&kdsf;Professoren">
+        <rdfs:label rdf:datatype="&xsd;string">Professoren</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Wissenschaftliches_und_kuenstlerisches_Personal"/>
+        <Meta:inhaltlicheDefinition>Be19</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Ordentliche_Professoren -->
+
+    <owl:Class rdf:about="&kdsf;Ordentliche_Professoren">
+        <rdfs:label>Ordentliche Professoren</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Professorenbezeichnung"/>
+        <Meta:inhaltlicheDefinition>Be37</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Wissenschaftliche_oder_kuenstlerische_Hilfskraefte -->
+
+    <owl:Class rdf:about="&kdsf;Wissenschaftliche_oder_kuenstlerische_Hilfskraefte">
+        <rdfs:label rdf:datatype="&xsd;string">Wissenschaftliche oder kÃ¼nstlerische HilfskrÃ¤fte</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Wissenschaftliches_und_kuenstlerisches_Personal"/>
+        <Meta:inhaltlicheDefinition>Be18</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Wissenschaftliche_und_kuenstlerische_Mitarbeiter -->
+
+    <owl:Class rdf:about="&kdsf;Wissenschaftliche_und_kuenstlerische_Mitarbeiter">
+        <rdfs:label rdf:datatype="&xsd;string">Wissenschaftliche und kÃ¼nstlerische Mitarbeiter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Wissenschaftliches_und_kuenstlerisches_Personal"/>
+        <Meta:inhaltlicheDefinition>Be22</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Wissenschaftliches_und_kuenstlerisches_Personal -->
+
+    <owl:Class rdf:about="&kdsf;Wissenschaftliches_und_kuenstlerisches_Personal">
+        <rdfs:label rdf:datatype="&xsd;string">Wissenschaftliches und kÃ¼nstlerisches Personal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Personalkategorie"/>
+        <Meta:inhaltlicheDefinition>Be68</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#WissenschaftsnahesPersonal -->
+
+    <owl:Class rdf:about="&kdsf;WissenschaftsnahesPersonal">
+        <rdfs:label rdf:datatype="&xsd;string">Wissenschaftsnahes Personal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Personalkategorie"/>
+        <Meta:inhaltlicheDefinition>Be63</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#WissenschaftsunterstuetzendesPersonal -->
+
+    <owl:Class rdf:about="&kdsf;WissenschaftsunterstuetzendesPersonal">
+        <rdfs:label>WissenschaftsunterstÃ¼tzendes Personal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Personalkategorie"/>
+        <Meta:inhaltlicheDefinition>Be73</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Verwaltungspersonal -->
+
+    <owl:Class rdf:about="&kdsf;Verwaltungspersonal">
+        <rdfs:label rdf:datatype="&xsd;string">Verwaltungspersonal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;WissenschaftsunterstuetzendesPersonal"/>
+        <Meta:inhaltlicheDefinition>Be28</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <!-- Publiziertes | ohne owl:equivalentClass-->
+
+
+   <!-- http://kerndatensatz-forschung.de/owl/Basis#Beitraege_Interviews_in_nicht-wissenschaftlichen_Medien -->
+
+    <owl:Class rdf:about="&kdsf;Beitraege_Interviews_in_nicht-wissenschaftlichen_Medien">
+        <rdfs:label rdf:datatype="&xsd;string">BeitrÃ¤ge bzw. Interviews in nicht-wissenschaftlichen Medien</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu39</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+
+
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Herausgeberschaft_eines_Sonderhefts_einer_Zeitschrift -->
+
+    <owl:Class rdf:about="&kdsf;Herausgeberschaft_eines_Sonderhefts_einer_Zeitschrift">
+        <rdfs:label rdf:datatype="&xsd;string">Herausgeberschaft eines Sonderhefts einer Zeitschrift</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu51</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Herausgegebenes_Buch -->
+
+    <owl:Class rdf:about="&kdsf;Herausgegebenes_Buch">
+        <rdfs:label rdf:datatype="&xsd;string">Herausgegebenes Buch</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Buch"/>
+        <Meta:inhaltlicheDefinition>Pu48</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter -->
+
+    <owl:Class rdf:about="&kdsf;Konferenzposter">
+        <rdfs:label rdf:datatype="&xsd;string">Konferenzposter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu26</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Monographie -->
+
+    <owl:Class rdf:about="&kdsf;Monographie">
+        <rdfs:label rdf:datatype="&xsd;string">Monographie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Buch"/>
+        <Meta:inhaltlicheDefinition>Pu13</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#NeuerPublikationstyp -->
+
+    <owl:Class rdf:about="&kdsf;NeuerPublikationstyp">
+        <rdfs:label rdf:datatype="&xsd;string">Neuer Publikations- oder Dokumenttyp</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu111</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Publikation -->
+
+    <owl:Class rdf:about="&kdsf;Publikation">
+        <rdfs:label rdf:datatype="&xsd;string">Publikation</rdfs:label>
+        <Meta:inhaltlicheDefinition>Pu1a</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pu1</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp -->
+
+    <owl:Class rdf:about="&kdsf;Publikationstyp">
+        <rdfs:label rdf:datatype="&xsd;string">Publikationstyp</rdfs:label>
+        <Meta:inhaltlicheDefinition>Pu6</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.type.publication</Meta:pgbid>
+    </owl:Class>
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Qualifikationsschrift -->
+
+    <owl:Class rdf:about="&kdsf;Qualifikationsschrift">
+        <rdfs:label rdf:datatype="&xsd;string">Qualifikationsschrift</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu146</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Quellenedition -->
+
+    <owl:Class rdf:about="&kdsf;Quellenedition">
+        <rdfs:label rdf:datatype="&xsd;string">Quellenedition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Buch"/>
+        <Meta:inhaltlicheDefinition>Pu47</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag -->
+
+    <owl:Class rdf:about="&kdsf;Sammelbandbeitrag">
+        <rdfs:label rdf:datatype="&xsd;string">Sammelbandbeitrag</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Artikel"/>
+        <Meta:inhaltlicheDefinition>Pu110</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Software -->
+
+    <owl:Class rdf:about="&kdsf;Software">
+        <rdfs:label rdf:datatype="&xsd;string">Software</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu45</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#ePaper -->
+
+    <owl:Class rdf:about="&kdsf;ePaper">
+        <rdfs:label rdf:datatype="&xsd;string">ePaper</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Artikel"/>
+        <Meta:inhaltlicheDefinition>Pu29</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+
+                                    <!-- Publiziertes ENDE-->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#AUF -->
+
+    <owl:Class rdf:about="&kdsf;AUF">
+        <rdfs:label>AUF</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Promotionskooperationspartner"/>
+        <Meta:inhaltlicheDefinition>Na94</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Abschluss -->
+
+    <owl:Class rdf:about="&kdsf;Abschluss">
+        <rdfs:subClassOf rdf:resource="&kdsf;Qualifikation"/>
+        <rdfs:comment>Das Abschlusskonzept gruppiert Eigenschaften eines Abschlusses.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Befristet -->
+
+    <owl:Class rdf:about="&kdsf;Befristet">
+        <rdfs:label rdf:datatype="&xsd;string">Befristet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Befristung"/>
+        <owl:disjointWith rdf:resource="&kdsf;Unbefristet"/>
+        <Meta:inhaltlicheDefinition>Be33</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Befristung -->
+
+    <owl:Class rdf:about="&kdsf;Befristung">
+        <rdfs:label rdf:datatype="&xsd;string">Befristung</rdfs:label>
+        <Meta:inhaltlicheDefinition>Be10</Meta:inhaltlicheDefinition>
+    </owl:Class>
+       
+
+
+
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigung -->
+
+    <owl:Class rdf:about="&kdsf;Beschaeftigung">
+        <rdfs:label rdf:datatype="&xsd;string">BeschÃ¤ftigung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;FinanzierteObjekte"/>
+        <rdfs:comment>Konzept zur Darstellung der Eigenschaften, die mit einer BeschÃ¤ftigung zusammenhÃ¤ngen (z.B. Befristung, Dauer, Voll/Teilzeit, etc.)</rdfs:comment>
+    </owl:Class>
+        
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Bund -->
+
+    <owl:Class rdf:about="&kdsf;Bund">
+        <rdfs:label rdf:datatype="&xsd;string">Bund</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr22</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Bundeslaender -->
+
+    <owl:Class rdf:about="&kdsf;Bundeslaender">
+        <rdfs:label rdf:datatype="&xsd;string">BundeslÃ¤nder</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr23</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#DFG --> <!-- kdsf-vivo: DFG should be an instance of an Organization (Class) -->
+
+    <owl:Class rdf:about="&kdsf;DFG">
+        <rdfs:label rdf:datatype="&xsd;string">DFG</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr21</Meta:inhaltlicheDefinition>
+    </owl:Class>
+     
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Drittmittel -->
+
+    <owl:Class rdf:about="&kdsf;Drittmittel">
+        <rdfs:label rdf:datatype="&xsd;string">Drittmittel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Finanzierungsform"/>
+        <Meta:inhaltlicheDefinition>Be14</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na30</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Dr89</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt -->
+
+    <owl:Class rdf:about="&kdsf;Drittmittelprojekt">
+        <rdfs:label rdf:datatype="&xsd;string">Drittmittelprojekt</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Projekt_Programm"/>
+        <Meta:inhaltlicheDefinition>Pu137</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Dr30</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Dr2a</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#ERC-Grant -->
+
+    <owl:Class rdf:about="&kdsf;ERC-Grant">
+        <rdfs:label>ERC-Grant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Preis"/>
+        <Meta:inhaltlicheDefinition>Fo15</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#EU -->
+
+    <owl:Class rdf:about="&kdsf;EU">
+        <rdfs:label rdf:datatype="&xsd;string">EU</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;EU_und_sonstige_internationale_Organisationen"/>
+        <Meta:inhaltlicheDefinition>Dr95</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#EU_und_sonstige_internationale_Organisationen -->
+
+    <owl:Class rdf:about="&kdsf;EU_und_sonstige_internationale_Organisationen">
+        <rdfs:label rdf:datatype="&xsd;string">EU und sonstige internationale Organisationen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr20</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Emmy-Noether-Programm -->
+
+    <owl:Class rdf:about="&kdsf;Emmy-Noether-Programm">
+        <rdfs:label>Emmy-Noether-Programm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Preis"/>
+        <Meta:inhaltlicheDefinition>Fo54</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#FH -->
+
+    <owl:Class rdf:about="&kdsf;FH">
+        <rdfs:label>FH</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Promotionskooperationspartner"/>
+        <Meta:inhaltlicheDefinition>Na93</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Fach -->
+
+    <owl:Class rdf:about="&kdsf;Fach">
+        <rdfs:label rdf:datatype="&xsd;string">Fach</rdfs:label>
+        <Meta:inhaltlicheDefinition>Na2</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pa1</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pu138</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Dr28</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Be38</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Facharbeiter -->
+
+    <owl:Class rdf:about="&kdsf;Facharbeiter">
+        <rdfs:label rdf:datatype="&xsd;string">Facharbeiter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;WissenschaftsunterstuetzendesPersonal"/>
+        <Meta:inhaltlicheDefinition>Be61</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#FinanzierteObjekte -->
+
+    <owl:Class rdf:about="&kdsf;FinanzierteObjekte">
+        <rdfs:label rdf:datatype="&xsd;string">Finanzierte Objekte</rdfs:label>
+        <rdfs:comment>Zusammenfassung aller Objekte, die eine Art der Finanzierung haben</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform -->
+
+    <owl:Class rdf:about="&kdsf;Finanzierungsform">
+        <rdfs:label rdf:datatype="&xsd;string">Finanzierungsform</rdfs:label>
+        <Meta:inhaltlicheDefinition>Be8</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na14</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Format -->
+
+    <owl:Class rdf:about="&kdsf;Format">
+        <rdfs:label rdf:datatype="&xsd;string">Format</rdfs:label>
+        <Meta:pgbid>dcterms.format</Meta:pgbid>
+        <Meta:inhaltlicheDefinition>Pu87</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld -->
+
+    <owl:Class rdf:about="&kdsf;Forschungsfeld">
+        <rdfs:label>Forschungsfeld</rdfs:label>
+        <Meta:inhaltlicheDefinition>Dr124</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na66</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pa36</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Be77</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pu141</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur -->
+
+    <owl:Class rdf:about="&kdsf;Forschungsinfrastruktur">
+        <rdfs:label>Forschungsinfrastruktur</rdfs:label>
+        <Meta:inhaltlicheDefinition>Fi2</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart -->
+
+    <owl:Class rdf:about="&kdsf;Forschungsinfrastrukturart">
+        <rdfs:label>Art der Forschungsinfrastruktur</rdfs:label>
+        <Meta:inhaltlicheDefinition>Fi5</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturtyp -->
+
+    <owl:Class rdf:about="&kdsf;Forschungsinfrastrukturtyp">
+        <rdfs:label>Typ der Forschungsinfrastruktur</rdfs:label>
+        <Meta:inhaltlicheDefinition>Fi4</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung -->
+
+    <owl:Class rdf:about="&kdsf;GemeinsameBerufung">
+        <rdfs:label rdf:datatype="&xsd;string">Gemeinsame Berufung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Professoren"/>
+        <Meta:inhaltlicheDefinition>Be4a</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Gewerbliche_Wirtschaft_und_sonstige_private_Bereiche -->
+
+    <owl:Class rdf:about="&kdsf;Gewerbliche_Wirtschaft_und_sonstige_private_Bereiche">
+        <rdfs:label rdf:datatype="&xsd;string">Gewerbliche Wirtschaft und sonstige private Bereiche</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr25</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Gottfried_Wilhelm_Leibniz-Preis -->
+
+    <owl:Class rdf:about="&kdsf;Gottfried_Wilhelm_Leibniz-Preis">
+        <rdfs:label>Gottfried-Wilhelm-Leibniz-Preis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Preis"/>
+        <Meta:inhaltlicheDefinition>Fo10</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Grossgeraete_und_Instrumente -->
+
+    <owl:Class rdf:about="&kdsf;Grossgeraete_und_Instrumente">
+        <rdfs:label>GroÃŸgerÃ¤te und Instrumente</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Forschungsinfrastrukturtyp"/>
+        <Meta:inhaltlicheDefinition>Fi15</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Grundmittel_und_Institutionelle_Mittel -->
+
+    <owl:Class rdf:about="&kdsf;Grundmittel_und_Institutionelle_Mittel">
+        <rdfs:label rdf:datatype="&xsd;string">Grundmittel und institutionelle Mittel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Finanzierungsform"/>
+        <Meta:inhaltlicheDefinition>Be13</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na29</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Habilitation -->
+
+    <owl:Class rdf:about="&kdsf;Habilitation">
+        <rdfs:label rdf:datatype="&xsd;string">Habilitation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Abschluss"/>
+        <rdfs:subClassOf rdf:resource="&kdsf;Qualifikationsschrift"/>
+        <Meta:inhaltlicheDefinition>Pu35</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Be16</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na44</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Hauptberuflich -->
+
+    <owl:Class rdf:about="&kdsf;Hauptberuflich">
+        <rdfs:label rdf:datatype="&xsd;string">Hauptberuflich</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Taetigkeit"/>
+        <Meta:inhaltlicheDefinition>Be35</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Hauptberufliche_Gastprofessoren -->
+
+    <owl:Class rdf:about="&kdsf;Hauptberufliche_Gastprofessoren">
+        <rdfs:label>Hauptberufliche Gastprofessoren</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Sonstige_Professoren"/>
+        <Meta:inhaltlicheDefinition>Be30</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Heinz-Maier-Leibnitz-Preis -->
+
+    <owl:Class rdf:about="&kdsf;Heinz-Maier-Leibnitz-Preis">
+        <rdfs:label>Heinz-Maier-Leibnitz-Preis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Preis"/>
+        <Meta:inhaltlicheDefinition>Fo12</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Hersteller -->
+
+    <owl:Class rdf:about="&kdsf;Hersteller">
+        <rdfs:label rdf:datatype="&xsd;string">Hersteller</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Verlagskategorie"/>
+        <Meta:inhaltlicheDefinition>Pu69</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.publisher.manufacturer</Meta:pgbid>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Humboldt-Professur -->
+
+    <owl:Class rdf:about="&kdsf;Humboldt-Professur">
+        <rdfs:label>Humboldt-Professur</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Preis"/>
+        <Meta:inhaltlicheDefinition>Fo14</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Informations-_und_Kommunikationsinfrastrukturen -->
+
+    <owl:Class rdf:about="&kdsf;Informations-_und_Kommunikationsinfrastrukturen">
+        <rdfs:label>Informations- und Kommunikationsinfrastrukturen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Forschungsinfrastrukturtyp"/>
+        <Meta:inhaltlicheDefinition>Fi17</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Juniorprofessoren -->
+
+    <owl:Class rdf:about="&kdsf;Juniorprofessoren">
+        <rdfs:label>Juniorprofessoren</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Sonstige_Professoren"/>
+        <Meta:inhaltlicheDefinition>Be29</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Lokal -->
+
+    <owl:Class rdf:about="&kdsf;Lokal">
+        <rdfs:label>Lokal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Forschungsinfrastrukturart"/>
+        <Meta:inhaltlicheDefinition>Fi19</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Max-Planck-Forschungspreis -->
+
+    <owl:Class rdf:about="&kdsf;Max-Planck-Forschungspreis">
+        <rdfs:label>Max-Planck-Forschungspreis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Preis"/>
+        <Meta:inhaltlicheDefinition>Fo11</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Mischfinanzierung -->
+
+    <owl:Class rdf:about="&kdsf;Mischfinanzierung">
+        <rdfs:label>Mischfinanzierung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Finanzierungsform"/>
+        <Meta:inhaltlicheDefinition>Be86</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber -->
+
+    <owl:Class rdf:about="&kdsf;Mittelgeber">
+        <rdfs:label rdf:datatype="&xsd;string">Mittelgeber</rdfs:label>
+        <Meta:inhaltlicheDefinition>Dr12</Meta:inhaltlicheDefinition>
+    </owl:Class>
+        
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Nebenberuflich -->
+
+    <owl:Class rdf:about="&kdsf;Nebenberuflich">
+        <rdfs:label rdf:datatype="&xsd;string">Nebenberuflich</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Taetigkeit"/>
+        <Meta:inhaltlicheDefinition>Be36</Meta:inhaltlicheDefinition>
+    </owl:Class>
+        
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Nicht_erklaert -->
+
+    <owl:Class rdf:about="&kdsf;Nicht_erklaert">
+        <rdfs:label>Nicht erklÃ¤rt</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr134</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Nicht_erklaert_Oeffentliche_Mittelgeber -->
+
+    <owl:Class rdf:about="&kdsf;Nicht_erklaert_Oeffentliche_Mittelgeber">
+        <rdfs:label>Nicht erklÃ¤rt (Ã–ffentliche Mittelgeber)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Nicht_erklaert"/>
+        <Meta:inhaltlicheDefinition>Dr136</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Nicht_erklaert_Private_Mittelgeber -->
+
+    <owl:Class rdf:about="&kdsf;Nicht_erklaert_Private_Mittelgeber">
+        <rdfs:label>Nicht erklÃ¤rt (Private Mittelgeber)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Nicht_erklaert"/>
+        <Meta:inhaltlicheDefinition>Dr135</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Nobelpreis -->
+
+    <owl:Class rdf:about="&kdsf;Nobelpreis">
+        <rdfs:label>Nobelpreis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Preis"/>
+        <Meta:inhaltlicheDefinition>Fo9</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Open_Access -->
+
+    <owl:Class rdf:about="&kdsf;Open_Access">
+        <rdfs:label>Open Access</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Zugangsart"/>
+        <Meta:inhaltlicheDefinition>Fi24</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+
+    
+
+
+
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Patent -->
+
+    <owl:Class rdf:about="&kdsf;Patent">
+        <rdfs:label rdf:datatype="&xsd;string">Patent</rdfs:label>
+        <Meta:inhaltlicheDefinition>Pa2</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pa25</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Person -->
+
+    <owl:Class rdf:about="&kdsf;Person">
+        <rdfs:label rdf:datatype="&xsd;string">Person</rdfs:label>
+        <rdfs:comment>Zusammenfassendes Konzept fÃ¼r die Darstellung aller personenbezogenen Eigenschaften und Attribute</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie -->
+
+    <owl:Class rdf:about="&kdsf;Personalkategorie">
+        <rdfs:label rdf:datatype="&xsd;string">Personalkategorie</rdfs:label>
+        <Meta:inhaltlicheDefinition>Be11</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Preis -->
+
+    <owl:Class rdf:about="&kdsf;Preis">
+        <rdfs:label>Preis</rdfs:label>
+        <Meta:inhaltlicheDefinition>Fo1a</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Fo29</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Professorenbezeichnung -->
+
+    <owl:Class rdf:about="&kdsf;Professorenbezeichnung">
+        <rdfs:label>Bezeichnung fÃ¼r Professoren</rdfs:label>
+        <Meta:inhaltlicheDefinition>Be41</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Programm -->
+
+    <owl:Class rdf:about="&kdsf;Programm">
+        <rdfs:label rdf:datatype="&xsd;string">Programm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Projekt_Programm"/>
+        <Meta:inhaltlicheDefinition>Na3</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Projekt_Programm -->
+
+    <owl:Class rdf:about="&kdsf;Projekt_Programm">
+        <rdfs:label rdf:datatype="&xsd;string">Projekt bzw. Programm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;FinanzierteObjekte"/>
+        <rdfs:comment>Oberklasse fÃ¼r Projekte und Programme, da beide Ã¼ber gemeinsame Eigenschaften (z.B. Sprecher und Antragsteller) verfÃ¼gen</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Promotion -->
+
+    <owl:Class rdf:about="&kdsf;Promotion">
+        <rdfs:label rdf:datatype="&xsd;string">Promotion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Abschluss"/>
+        <Meta:inhaltlicheDefinition>Na43</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Be17</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner -->
+
+    <owl:Class rdf:about="&kdsf;Promotionskooperationspartner">
+        <rdfs:label>Promotionskooperationspartner</rdfs:label>
+        <Meta:inhaltlicheDefinition>Na86</Meta:inhaltlicheDefinition>
+    </owl:Class>
+       
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Qualifikation -->
+
+    <owl:Class rdf:about="&kdsf;Qualifikation">
+        <rdfs:label rdf:datatype="&xsd;string">Qualifikation</rdfs:label>
+        <Meta:inhaltlicheDefinition>Be9</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren -->
+
+    <owl:Class rdf:about="&kdsf;Seniorprofessoren">
+        <rdfs:label>Seniorprofessoren</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Sonstige_Professoren"/>
+        <Meta:inhaltlicheDefinition>Be31</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Shared_Access -->
+
+    <owl:Class rdf:about="&kdsf;Shared_Access">
+        <rdfs:label>Shared Access</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Zugangsart"/>
+        <Meta:inhaltlicheDefinition>Fi23</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sofja-Kovalevskaja-Preis -->
+
+    <owl:Class rdf:about="&kdsf;Sofja-Kovalevskaja-Preis">
+        <rdfs:label>Sofja-Kovalevskaja-Preis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Preis"/>
+        <Meta:inhaltlicheDefinition>Fo62</Meta:inhaltlicheDefinition>
+    </owl:Class>
+        
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sondermittel -->
+
+    <owl:Class rdf:about="&kdsf;Sondermittel">
+        <rdfs:label>Sondermittel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Finanzierungsform"/>
+        <Meta:inhaltlicheDefinition>Be87</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sonstige_Drittmittelgeber -->
+
+    <owl:Class rdf:about="&kdsf;Sonstige_Drittmittelgeber">
+        <rdfs:label>Sonstige Drittmittelgeber</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr141</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sonstige_Kooperationspartner -->
+
+    <owl:Class rdf:about="&kdsf;Sonstige_Kooperationspartner">
+        <rdfs:label>Sonstige Kooperationspartner</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Promotionskooperationspartner"/>
+        <Meta:inhaltlicheDefinition>Na97</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sonstige_Professoren -->
+
+    <owl:Class rdf:about="&kdsf;Sonstige_Professoren">
+        <rdfs:label>Sonstige Professoren</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Professorenbezeichnung"/>
+        <Meta:inhaltlicheDefinition>Be88</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sonstige_internationale_Organisationen -->
+
+    <owl:Class rdf:about="&kdsf;Sonstige_internationale_Organisationen">
+        <rdfs:label rdf:datatype="&xsd;string">Sonstige internationale Organisationen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;EU_und_sonstige_internationale_Organisationen"/>
+        <Meta:inhaltlicheDefinition>Dr96</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sonstiger_Typ -->
+
+    <owl:Class rdf:about="&kdsf;Sonstiger_Typ">
+        <rdfs:label>Sonstiger Typ</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Forschungsinfrastrukturtyp"/>
+        <Meta:inhaltlicheDefinition>Fi18</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sonstiges_wissenschaftliches_und_kuenstlerisches_Personal -->
+
+    <owl:Class rdf:about="&kdsf;Sonstiges_wissenschaftliches_und_kuenstlerisches_Personal">
+        <rdfs:label>Sonstiges wissenschaftliches und kÃ¼nstlerisches Personal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Wissenschaftliches_und_kuenstlerisches_Personal"/>
+        <Meta:inhaltlicheDefinition>Be85</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Stiftungsprofessoren -->
+
+    <owl:Class rdf:about="&kdsf;Stiftungsprofessoren">
+        <rdfs:label>Stiftungsprofessoren</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Sonstige_Professoren"/>
+        <Meta:inhaltlicheDefinition>Be59</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Strukturiertes_Promotionsprogramm -->
+
+    <owl:Class rdf:about="&kdsf;Strukturiertes_Promotionsprogramm">
+        <rdfs:label rdf:datatype="&xsd;string">Strukturiertes Promotionsprogramm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Programm"/>
+        <Meta:inhaltlicheDefinition>Na48</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na6</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Taetigkeit -->
+
+    <owl:Class rdf:about="&kdsf;Taetigkeit">
+        <rdfs:label rdf:datatype="&xsd;string">TÃ¤tigkeit</rdfs:label>
+        <Meta:inhaltlicheDefinition>Be32</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Teilzeit -->
+
+    <owl:Class rdf:about="&kdsf;Teilzeit">
+        <rdfs:label rdf:datatype="&xsd;string">Teilzeit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Hauptberuflich"/>
+        <Meta:inhaltlicheDefinition>Be56</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Unbefristet -->
+
+    <owl:Class rdf:about="&kdsf;Unbefristet">
+        <rdfs:label rdf:datatype="&xsd;string">Unbefristet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Befristung"/>
+        <Meta:inhaltlicheDefinition>Be34</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Universitaet -->
+
+    <owl:Class rdf:about="&kdsf;Universitaet">
+        <rdfs:label>UniversitÃ¤t</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Promotionskooperationspartner"/>
+        <Meta:inhaltlicheDefinition>Na96</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#User_Access -->
+
+    <owl:Class rdf:about="&kdsf;User_Access">
+        <rdfs:label>User Access</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Zugangsart"/>
+        <Meta:inhaltlicheDefinition>Fi22</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Verlagskategorie -->
+
+    <owl:Class rdf:about="&kdsf;Verlagskategorie">
+        <rdfs:label>Verlagskategorie</rdfs:label>
+        <Meta:pgbid>dcterms.publisher</Meta:pgbid>
+        <Meta:inhaltlicheDefinition>Pu67</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Verleger -->
+
+    <owl:Class rdf:about="&kdsf;Verleger">
+        <rdfs:label rdf:datatype="&xsd;string">Verleger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Verlagskategorie"/>
+        <Meta:inhaltlicheDefinition>Pu68</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.publisher.publisher</Meta:pgbid>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Verteilt -->
+
+    <owl:Class rdf:about="&kdsf;Verteilt">
+        <rdfs:label>Verteilt</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Forschungsinfrastrukturart"/>
+        <Meta:inhaltlicheDefinition>Fi20</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Vertretungsprofessoren -->
+
+    <owl:Class rdf:about="&kdsf;Vertretungsprofessoren">
+        <rdfs:label>Vertretungsprofessoren / Lehrstuhlvertreter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Sonstige_Professoren"/>
+        <Meta:inhaltlicheDefinition>Be58</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Vertrieb -->
+
+    <owl:Class rdf:about="&kdsf;Vertrieb">
+        <rdfs:label rdf:datatype="&xsd;string">Vertrieb</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Verlagskategorie"/>
+        <Meta:pgbid>kds.publisher.distributor</Meta:pgbid>
+        <Meta:inhaltlicheDefinition>Pu70</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Virtuell -->
+
+    <owl:Class rdf:about="&kdsf;Virtuell">
+        <rdfs:label>Virtuell</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Forschungsinfrastrukturart"/>
+        <Meta:inhaltlicheDefinition>Fi21</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Vollzeit -->
+
+    <owl:Class rdf:about="&kdsf;Vollzeit">
+        <rdfs:label rdf:datatype="&xsd;string">Vollzeit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Hauptberuflich"/>
+        <Meta:inhaltlicheDefinition>Be55</Meta:inhaltlicheDefinition>
+    </owl:Class>
+        
+
+
+
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Wissensressourcen -->
+
+    <owl:Class rdf:about="&kdsf;Wissensressourcen">
+        <rdfs:label>Wissensressourcen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&kdsf;Forschungsinfrastrukturtyp"/>
+        <Meta:inhaltlicheDefinition>Fi16</Meta:inhaltlicheDefinition>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Zugangsart -->
+
+    <owl:Class rdf:about="&kdsf;Zugangsart">
+        <rdfs:label>Art des Zugangs</rdfs:label>
+        <Meta:inhaltlicheDefinition>Fi6</Meta:inhaltlicheDefinition>
+    </owl:Class>
+
+</rdf:RDF>
