@@ -1,0 +1,1059 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://lod.tib.eu/onto/kdsf/"
+     xml:base="http://lod.tib.eu/onto/kdsf/"
+     xmlns:Meta="http://kerndatensatz-forschung.de/owl/Meta#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+	 xmlns:kdsf="http://kerndatensatz-forschung.de/owl/Basis#"
+	 xmlns:bibo="http://purl.org/ontology/bibo/"
+	 xmlns:vivo="http://vivoweb.org/ontology/core#"
+	 xmlns:foaf="http://xmlns.com/foaf/0.1/">
+	 
+    <owl:Ontology rdf:about="http://lod.tib.eu/onto/kdsf/">
+        <owl:versionIRI rdf:resource="http://lod.tib.eu/onto/kdsf/2016/04-01/"/>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology was created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) as a KDSF extension of VIVO-ISF. It is tested with VIVO 1.9."</rdfs:comment>
+        <vitro:ontologyPrefixAnnot>kdsf-vivo</vitro:ontologyPrefixAnnot>
+        <rdfs:label xml:lang="de">KDSF-VIVO Extension</rdfs:label>
+    </owl:Ontology>
+    
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatAnmelder wird im VIVO über vivo:assigne abgebildet, daher weggelassen -->
+
+    <!-- owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatAnmelder">
+        <rdfs:label xml:lang="de">hat Anmelder</rdfs:label>
+		
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Patent"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit"/>
+                    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty -->
+	
+
+	<!-- http://lod.tib.eu/onto/kdsf/hatAltersgruppe wird hier als ObjectProperty definiert, daher ein anderer URI -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatAltersgruppe">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Person"/>
+        <rdfs:range rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <Meta:inhaltlicheDefinition>Be52</Meta:inhaltlicheDefinition>
+		<vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:publicDescriptionAnnot>Altersgruppe der Beschäftigten zum Erfassungsstichtag. Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter. Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu berechnen, sofern eine Einrichtung diese intern vorhält. </vitro:publicDescriptionAnnot>
+        <rdfs:label xml:lang="de">Altersgruppe</rdfs:label>
+    </owl:ObjectProperty>
+	
+	
+	<!-- http://lod.tib.eu/onto/kdsf/AltersgruppeBeiAbschluss wird hier als ObjectProperty definiert, daher ein anderer URI -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/AltersgruppeBeiAbschluss">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren"/>
+        <rdfs:range rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <Meta:inhaltlicheDefinition>Na69</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na71</Meta:inhaltlicheDefinition>
+		<vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de">Altersgruppe bei Abschluss</rdfs:label>
+    </owl:ObjectProperty>
+	
+
+    <!-- http://lod.tib.eu/onto/kdsf/hatGemeinsameBerufung , wird hier als ObjectProperty definiert, daher ein anderer URI -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatGemeinsameBerufung">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professor"/>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <Meta:inhaltlicheDefinition>Be4a</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+		<vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <rdfs:label xml:lang="de">hat gemeinsame Berufung</rdfs:label>
+    </owl:ObjectProperty>
+    
+	
+    <!-- http://lod.tib.eu/onto/kdsf/hatGeschlecht , wird hier als ObjectProperty definiert, daher ein anderer URI -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatGeschlecht">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Person"/>
+        <rdfs:range rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de">hat Geschlecht</rdfs:label>
+    </owl:ObjectProperty>
+ 
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/hatRessourceart wird hier als ObjectProperty definiert, daher ein anderer URI -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatRessourceart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikation"/>
+        <rdfs:range rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Ressourceart"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de">hat Ressourceart</rdfs:label>
+    </owl:ObjectProperty>
+    
+    
+
+	<!-- http://lod.tib.eu/onto/kdsf/istUebergeordnetesProjektVon inverse zu kdsf:hatUebergeordnetesProjekt -->
+	<!-- Alternativ kann als Faux Property von obo:BFO_0000050 mit dem Domain und Range kdsf:Drittmittelprojekt abgebildet werden -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/istUebergeordnetesProjektVon">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt"/>
+        <rdfs:range rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+		<vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de">ist übergeordnetes Projekt von</rdfs:label>
+    </owl:ObjectProperty>
+
+   
+
+    <!-- http://lod.tib.eu/onto/kdsf/hatZugriffsrechte wird hier als ObjectProperty erfasst, daher ein anderer URI -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatZugriffsrechte">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikation"/>
+        <rdfs:range rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:publicDescriptionAnnot>Die Beschreibung der Zugangsrechte erfolgt entlang der OpenAire-Guidelines.</vitro:publicDescriptionAnnot>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de">hat Zugriffsrechte</rdfs:label>
+    </owl:ObjectProperty>
+    
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/hatPromotionsberechtigungAus wird hier als ObjectProperty definiert, daher ein anderer URI -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatPromotionsberechtigungAus">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Person"/>
+        <rdfs:range rdf:resource="http://lod.tib.eu/onto/kdsf/LandKategorie"/>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:publicDescriptionAnnot xml:lang="de">Es wird unterschieden zwischen Inland und Ausland. Personen mit Promotionsberechtigungen aus mehreren Ländern, die sowohl in Deutschland als auch weiteren Ländern erworben wurden, werden nur der Kategorie Inland zugeordnet.</vitro:publicDescriptionAnnot>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de">hat Promotionsberechtigung aus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/hatStaatsangehoerigkeit wird hier als ObjectProperty definiert, daher ein anderer URI -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatStaatsangehoerigkeit">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Person"/>
+        <rdfs:range rdf:resource="http://lod.tib.eu/onto/kdsf/LandKategorie"/>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:publicDescriptionAnnot xml:lang="de">Es wird unterschieden zwischen Inland und Ausland. Personen mit mehreren Staatsangehörigkeiten, die sowohl dem deutschen als auch weiteren Staaten angehören, werden nur der Kategorie Inland zugeordnet.</vitro:publicDescriptionAnnot>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de">hat Staatsangehörigkeit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/hatBesoldung wird hier als ObjectProperty definiert, daher ein anderer URI -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatBesoldung">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professor"/>
+        <rdfs:range rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de">hat Besoldung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/hatVertrag neu eingeführte ObjectProperty, um die Befristung abzubilden -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatVertrag">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://lod.tib.eu/onto/kdsf/vertragVon"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter"/>
+        <rdfs:range rdf:resource="http://lod.tib.eu/onto/kdsf/Vertrag"/>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de">hat Vertrag</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/vertragVon inverse Property für oben genannte ObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/vertragVon">
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de">ist Vertrag von</rdfs:label>
+    </owl:ObjectProperty>
+    
+	
+	<!-- http://lod.tib.eu/onto/kdsf/koordinatorEinrichtung wird hier als ObjectProperty definiert, daher ein anderer URI -->
+
+    <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/koordinatorEinrichtung">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <Meta:inhaltlicheDefinition>Dr19a</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+		<vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+		<vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de">Sprechereinrichtung / Konsortialführer</rdfs:label>
+    </owl:ObjectProperty>
+	
+
+	
+	<!-- http://lod.tib.eu/onto/kdsf/hatTeilnehmer die ObjectProperty lässt sich ebenfalls mit http://purl.obolibrary.org/obo/RO_0000056 darstellen, daher weggelassen  -->
+	
+	<!-- owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatTeilnehmer">
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#StrukturiertesPromotionsprogramm"/>
+        <rdfs:range rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Person"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de">hat Teilnehmer</rdfs:label>
+    </owl:ObjectProperty -->
+	
+
+    <!-- Es macht mehr Sinn, Beziehung zu Sprache als Object Property zu erfassen. Die OP muss zunächst in Absprache mit der VIVO-Community bestimmt werden -->
+	<!--owl:ObjectProperty rdf:about="">
+		<rdfs:domain rdf:resource=""/>
+		<rdfs:range rdf:resource=""/>
+		<Meta:inhaltlicheDefinition>Pu95</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.language.iso</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inPropertyGroupAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/default#n6607"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de">hat Sprache</rdfs:label>
+	</owl:ObjectProperty -->
+	
+
+	
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+   
+	<!-- es muss mit der Community abegestimmt werden, welche bestehende DatatypeProperty hierfür nachgenutzt werden soll, Domain wäre die Sprache und Range: string -->
+	<!-- owl:DatatypeProperty rdf:about="http://lod.tib.eu/onto/kdsf/2016/hatSprachcode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikation"/>
+        <rdfs:range rdf:resource="http://lod.tib.eu/onto/kdsf/2016/SprachcodeISO"/>
+        <Meta:inhaltlicheDefinition>Pu95</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.language.iso</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de">hat Sprachcode</rdfs:label>
+    </owl:DatatypeProperty -->
+
+
+    
+
+    <!-- http://lod.tib.eu/onto/kdsf/hatBefristung wird hier als Datatype Property erfasst, daher ein anderer URI -->
+
+    <owl:DatatypeProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatBefristung">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://lod.tib.eu/onto/kdsf/Vertrag"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de">hat Befristung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+	
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+	
+	<!-- http://lod.tib.eu/onto/kdsf/Altersgruppe zusätzliche Klasse für Zuweisung zur Altersgruppe und AltersgruppeBeiAbschluss-->
+	
+	<owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Altersgruppe">
+        <Meta:inhaltlicheDefinition>Be52</Meta:inhaltlicheDefinition>
+        <rdfs:label xml:lang="de">Altersgruppe</rdfs:label>
+    </owl:Class>
+
+	
+    <!-- http://lod.tib.eu/onto/kdsf/Zugriffsrechte Klasse zur Abbildung der Zugriffsrechte und Range für die Object Property kdsf_vivo:hatZugriffsrechte -->
+
+    <owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Zugriffsrechte">
+        <obo:IAO_0000115>Zugriffsrechte nach  OpenAIRE Guidelines for Literature Repositories</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de">Zugriffsrechte</rdfs:label>
+    </owl:Class>
+    
+	
+	
+    <!-- http://lod.tib.eu/onto/kdsf/Geschlechtsangabe -->
+
+    <owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe">
+        <vitro:descriptionAnnot>Das Geschlecht ist als &quot;männlich&quot;, &quot;weiblich&quot; oder &quot;ohne Angabe&quot; anzugeben.</vitro:descriptionAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de">Geschlechtsangabe</rdfs:label>
+    </owl:Class>
+    
+	
+    <!-- http://lod.tib.eu/onto/kdsf/Ressourceart -->
+
+    <owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Ressourceart">
+        <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</vitro:displayLimitAnnot>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de">Ressourceart</rdfs:label>
+    </owl:Class>
+    
+
+    <!-- http://lod.tib.eu/onto/kdsf/LandKategorie -->
+
+    <owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/LandKategorie">
+		<vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+		<vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+		<vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+		<vitro:publicDescriptionAnnot xml:lang="de">Die Klasse wurde erstellt, um die Staatsangehörigkeit und das Land des zur Aufnahme einer Promotion berechtigenden Studienabschlusses abzubilden.</vitro:publicDescriptionAnnot>
+		<rdfs:label xml:lang="de">Landkategorie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Besoldungsart -->
+
+    <owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Besoldungsart">
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:publicDescriptionAnnot xml:lang="de">Die Klasse wurde erstellt, um die Besoldungsarten zusammenzufassen.</vitro:publicDescriptionAnnot>
+        <rdfs:label xml:lang="de">Besoldungsart</rdfs:label>
+    </owl:Class>
+    
+    
+
+    <!-- http://lod.tib.eu/onto/kdsf/Vertrag -->
+
+    <owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Vertrag">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#dateTimeInterval"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://vivoweb.org/ontology/core#DateTimeInterval"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+		</rdfs:subClassOf>
+		<vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+		<vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+		<vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+		<vitro:publicDescriptionAnnot xml:lang="de">Die Klasse wurde erstellt, um das befristete/ unbefristete Verhältnis abzubilden.</vitro:publicDescriptionAnnot>
+		<rdfs:label xml:lang="de">Vertrag</rdfs:label>
+	</owl:Class>
+	
+	
+	
+	
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Ausland -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Ausland">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/LandKategorie"/>
+        <rdfs:label xml:lang="de">Ausland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+	
+    <!-- http://lod.tib.eu/onto/kdsf/Inland -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Inland">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/LandKategorie"/>
+        <rdfs:label xml:lang="de">Inland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Audio -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Audio">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
+        <rdfs:label xml:lang="de">Audio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B1 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B1">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B10 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B10">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B10</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B11 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B11">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B11</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B2 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B2">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B3 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B3">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B4 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B4">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B5 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B5">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B6 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B6">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B7 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B7">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B7</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B8 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B8">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B8</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/B9 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B9">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">B9</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/BewegteBilder -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/BewegteBilder">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
+        <rdfs:label xml:lang="de">Bewegte Bilder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Bild -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Bild">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
+        <rdfs:label xml:lang="de">Bild</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Bund -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Bund">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <rdfs:label xml:lang="de">Bund</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Bundeslaender -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Bundeslaender">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <rdfs:label xml:lang="de">Bundesländer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/C2 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/C2">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">C2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/ClosedAccess die URIs für die Zugriffsrechte werden noch ermittelt -->
+
+    <!-- owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/ClosedAccess">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
+        <rdfs:label xml:lang="en">Closed Access</rdfs:label>
+    </owl:NamedIndividual -->
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/DFG -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/DFG">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <rdfs:label xml:lang="de">Deutsche Forschungsgemeinschaft</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/EU -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/EU">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <rdfs:label xml:lang="de">Europäische Union</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/EmbargoedAccess die URIs für die Zugriffsrechte werden noch ermittelt -->
+
+    <!-- owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/EmbargoedAccess">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
+        <rdfs:label xml:lang="en">Embargoed Access</rdfs:label>
+    </owl:NamedIndividual -->
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/GewerblicheWirtschaftlicheUndSonstigeBereiche -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/GewerblicheWirtschaftlicheUndSonstigeBereiche">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <rdfs:label xml:lang="de">Gewerbliche Wirtschaftliche und Sonstige Bereiche</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Habilitiert -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Habilitiert">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikation"/>
+        <rdfs:label xml:lang="de">Habilitiert</rdfs:label>
+    </owl:NamedIndividual>
+    
+	
+
+	<!-- http://lod.tib.eu/onto/kdsf/Lokal -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Lokal">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
+        <rdfs:label xml:lang="de">Lokal</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://lod.tib.eu/onto/kdsf/Maennlich -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Maennlich">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
+        <rdfs:label xml:lang="de">Männlich</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Nebenberuflich -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Nebenberuflich">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
+        <rdfs:label xml:lang="de">Nebenberuflich</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/NichtErklärtOeffentlicheMittelgeber -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/NichtErklärtOeffentlicheMittelgeber">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <rdfs:label xml:lang="de">Nicht erklärte öffentliche Mittelgeber</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/NichtErklärtPrivateMittelgeber -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/NichtErklärtPrivateMittelgeber">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <rdfs:label xml:lang="de">Nicht erklärte private Mittelgeber</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Ohne_Angabe -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Ohne_Angabe">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
+        <rdfs:label xml:lang="de">Ohne Angabe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/OpenAccess die URIs für die Zugriffsrechte werden noch ermittelt -->
+
+    <!-- owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/OpenAccess">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
+        <rdfs:label xml:lang="de">Open Access</rdfs:label>
+    </owl:NamedIndividual -->
+    
+
+	<!-- http://lod.tib.eu/onto/kdsf/OpenAccessFIZugangsart die URIs für die Zugriffsrechte werden noch ermittelt -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/OpenAccessFIZugangsart">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Zugangsart"/>
+        <rdfs:label xml:lang="de">Open Access</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://lod.tib.eu/onto/kdsf/Promoviert -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Promoviert">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikation"/>
+        <rdfs:label xml:lang="de">Promoviert</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/RestrictedAccess die URIs für die Zugriffsrechte werden noch ermittelt -->
+
+    <!-- owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/RestrictedAccess">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/AccessRights"/>
+        <rdfs:label xml:lang="en">Restricted Access</rdfs:label>
+    </owl:NamedIndividual -->
+    
+
+    <!-- http://lod.tib.eu/onto/kdsf/SharedAccessFIZugangsart -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SharedAccessFIZugangsart">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Zugangsart"/>
+        <rdfs:label xml:lang="de">Shared Access</rdfs:label>
+    </owl:NamedIndividual>	
+
+    <!-- http://lod.tib.eu/onto/kdsf/SonstigeDrittmittelgeber -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SonstigeDrittmittelgeber">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <rdfs:label xml:lang="de">Sonstige Drittmittelgeber</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/SonstigeInternationaleOrganisationen -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SonstigeInternationaleOrganisationen">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <rdfs:label xml:lang="de">Sonstige internationale Organisationen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Teilzeit -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Teilzeit">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
+        <rdfs:label xml:lang="de">Teilzeit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+	<!-- http://lod.tib.eu/onto/kdsf/Drittmittel -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Drittmittel">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
+        <rdfs:label xml:lang="de">Drittmittel</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/GrundmittelUndInstitutionelleMittel -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/GrundmittelUndInstitutionelleMittel">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
+        <rdfs:label xml:lang="de">Grundmittel und institutionelle Mittel</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/Mischfinanzierung -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Mischfinanzierung">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
+        <rdfs:label xml:lang="de">Mischfinanzierung</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/Sondermittel -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Sondermittel">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
+        <rdfs:label xml:lang="de">Sondermittel</rdfs:label>
+    </owl:NamedIndividual>
+	
+    <!-- http://lod.tib.eu/onto/kdsf/Text -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Text">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
+        <rdfs:label xml:lang="de">Text</rdfs:label>
+    </owl:NamedIndividual>
+    
+	
+	 <!-- http://lod.tib.eu/onto/kdsf/UserAccessFIZugangsart -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/UserAccessFIZugangsart">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Zugangsart"/>
+        <rdfs:label xml:lang="de">User Access</rdfs:label>
+    </owl:NamedIndividual>
+
+
+	<!-- http://lod.tib.eu/onto/kdsf/Verteilt -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Verteilt">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
+        <rdfs:label xml:lang="de">Verteilt</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/Virtuell -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Virtuell">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
+        <rdfs:label xml:lang="de">Virtuell</rdfs:label>
+    </owl:NamedIndividual>
+	
+    <!-- http://lod.tib.eu/onto/kdsf/Vollzeit -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Vollzeit">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
+        <rdfs:label xml:lang="de">Vollzeit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/W1 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/W1">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">W1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/W2_C3 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/W2_C3">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">W2/C3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/W3_C4 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/W3_C4">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
+        <rdfs:label xml:lang="de">W3/C4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Weiblich -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Weiblich">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
+        <rdfs:label xml:lang="de">Weiblich</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lod.tib.eu/onto/kdsf/Hauptberuflich -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Hauptberuflich">
+        <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
+        <rdfs:label xml:lang="de">Hauptberuflich</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+	<!-- http://lod.tib.eu/onto/kdsf/Unter25 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Unter25">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <rdfs:label xml:lang="de">unter 25 Jahren</rdfs:label>
+    </owl:NamedIndividual>
+
+	<!-- http://lod.tib.eu/onto/kdsf/25BisUnter30 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/25BisUnter30">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <rdfs:label xml:lang="de">25 bis unter 30 Jahren</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/30BisUnter35 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/30BisUnter35">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <rdfs:label xml:lang="de">30 bis unter 35 Jahren</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/35BisUnter40 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/35BisUnter40">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <rdfs:label xml:lang="de">35 bis unter 40 Jahren</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/40BisUnter45 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/40BisUnter45">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <rdfs:label xml:lang="de">40 bis unter 45</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/45BisUnter50 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/45BisUnter50">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <rdfs:label xml:lang="de">45 bis unter 50</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/50BisUnter55 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/50BisUnter55">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <rdfs:label xml:lang="de">50 bis unter 55</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/55BisUnter60 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/55BisUnter60">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <rdfs:label xml:lang="de">55 bis unter 60</rdfs:label>
+    </owl:NamedIndividual>
+	
+	
+	<!-- http://lod.tib.eu/onto/kdsf/60BisUnter65 -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/60BisUnter65">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <rdfs:label xml:lang="de">60 bis unter 65</rdfs:label>
+    </owl:NamedIndividual>
+	
+	<!-- http://lod.tib.eu/onto/kdsf/65undAelter -->
+
+    <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/65undAelter">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
+        <rdfs:label xml:lang="de">65 und älter</rdfs:label>
+    </owl:NamedIndividual>
+	
+	
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Ausland"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Inland"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B1"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B10"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B11"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B2"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B3"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B4"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B5"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B6"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B7"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B8"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/B9"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/C2"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/W1"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/W2_C3"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/W3_C4"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+	
+	 <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Unter25"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/25BisUnter30"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/30BisUnter35"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/35BisUnter40"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/40BisUnter45"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/45BisUnter50"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/50BisUnter55"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/55BisUnter60"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/60BisUnter65"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/65undAelter"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+	
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Maennlich"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Ohne_Angabe"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Maennlich"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Weiblich"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Ohne_Angabe"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Weiblich"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Teilzeit"/>
+            <rdf:Description rdf:about="http://lod.tib.eu/onto/kdsf/Vollzeit"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
