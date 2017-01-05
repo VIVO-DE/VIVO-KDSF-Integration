@@ -15,7 +15,7 @@
 	 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	 xmlns:dct="http://purl.org/dc/terms/">
 	 
-	 <owl:Ontology rdf:about="http://kerndatensatz-forschung.de/owl/Basis">
+	<owl:Ontology rdf:about="http://kerndatensatz-forschung.de/owl/Basis">
         <owl:imports rdf:resource="http://kerndatensatz-forschung.de/owl/Meta"/>
 		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. It is tested with VIVO 1.9."</rdfs:comment>
 		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International.</rdfs:comment>
@@ -27,7 +27,7 @@
 	
 	
 	
-	 <!-- 
+	<!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -94,7 +94,7 @@
 	
 	
 	
-	 <!-- http://kerndatensatz-forschung.de/owl/Basis#hatFinanzierungsform -->
+	<!-- http://kerndatensatz-forschung.de/owl/Basis#hatFinanzierungsform -->
 
     <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatFinanzierungsform">
 		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
@@ -153,7 +153,7 @@
     </owl:ObjectProperty -->
     
 	
-	 <!-- http://kerndatensatz-forschung.de/owl/Basis#hatMittelgeber -->
+	<!-- http://kerndatensatz-forschung.de/owl/Basis#hatMittelgeber -->
 
     <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatMittelgeber">
 		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
@@ -195,7 +195,7 @@
         <rdfs:label xml:lang="de">hat Organisationseinheit</rdfs:label>
     </owl:ObjectProperty>
 	
-	  <!-- http://kerndatensatz-forschung.de/owl/Basis#hatPersonalkategorie wurde als überflüssige Zwischenkategorie weggelassen -->
+	<!-- http://kerndatensatz-forschung.de/owl/Basis#hatPersonalkategorie wurde als überflüssige Zwischenkategorie weggelassen -->
 
     <!-- owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatPersonalkategorie">
         <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter"/>
@@ -211,7 +211,7 @@
     </owl:ObjectProperty -->
 	
 	
-	 <!-- http://kerndatensatz-forschung.de/owl/Basis#hatQualifikation -->
+	<!-- http://kerndatensatz-forschung.de/owl/Basis#hatQualifikation -->
 
     <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatQualifikation">
 		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
@@ -452,7 +452,7 @@
      -->
 	 
 	 
-	  <!-- http://kerndatensatz-forschung.de/owl/Basis#Abschlusszeitpunkt wird als Faux Property von vivo:dateTimeValue erfasst -->
+	<!-- http://kerndatensatz-forschung.de/owl/Basis#Abschlusszeitpunkt wird als Faux Property von vivo:dateTimeValue erfasst -->
 
     <!-- owl:DatatypeProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Abschlusszeitpunkt">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -717,7 +717,7 @@ Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu be
     </owl:DatatypeProperty -->
     
 
-	    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sprachcode, wird weggelassen, da in Absprache mit VIVO-Community eine bereits bestehende Property für Darstellung der Sprachcodes gewählt wird   -->
+	<!-- http://kerndatensatz-forschung.de/owl/Basis#Sprachcode, wird weggelassen, da in Absprache mit VIVO-Community eine bereits bestehende Property für Darstellung der Sprachcodes gewählt wird   -->
 
     <!-- owl:DatatypeProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Sprachcode">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -1212,7 +1212,7 @@ Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu be
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#InformationsUndKommunikationsinfrastrukturen">
         <rdfs:label xml:lang="de">Informations- und Kommunikationsinfrastrukturen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturtyp"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur"/>
 		<vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGroupequipment"/>
         <Meta:inhaltlicheDefinition>Fi17</Meta:inhaltlicheDefinition>
 		<vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
