@@ -1335,7 +1335,7 @@ Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu be
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit">
-        <owl:equivalentClass rdf:resource="http://vivoweb.org/ontology/core#ExtensionUnit"/>
+        <owl:equivalentClass rdf:resource="http://vivoweb.org/ontology/core#Division"/>
         <Meta:inhaltlicheDefinition>Be75</Meta:inhaltlicheDefinition>
         <Meta:inhaltlicheDefinition>Dr121</Meta:inhaltlicheDefinition>
         <Meta:inhaltlicheDefinition>Na92</Meta:inhaltlicheDefinition>

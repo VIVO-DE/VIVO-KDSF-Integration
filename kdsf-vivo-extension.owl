@@ -88,7 +88,7 @@
 
     <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatGemeinsameBerufung">
 		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professor"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professoren"/>
 		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <Meta:inhaltlicheDefinition>Be4a</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -208,7 +208,7 @@
     <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/hatBesoldung">
 		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professor"/>
+        <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professoren"/>
         <rdfs:range rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
