@@ -18,7 +18,7 @@
         <owl:versionIRI rdf:resource="http://lod.tib.eu/onto/kdsf/2016/04-01/"/>
 		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology was created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) as a KDSF extension of VIVO-ISF. It is tested with VIVO 1.9."</rdfs:comment>
         <vitro:ontologyPrefixAnnot>kdsf-vivo</vitro:ontologyPrefixAnnot>
-        <rdfs:label xml:lang="de">KDSF-VIVO Extension</rdfs:label>
+        <rdfs:label xml:lang="de-DE">KDSF-VIVO Extension</rdfs:label>
     </owl:Ontology>
     
 
@@ -63,7 +63,7 @@
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:publicDescriptionAnnot>Altersgruppe der Beschäftigten zum Erfassungsstichtag. Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter. Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu berechnen, sofern eine Einrichtung diese intern vorhält. </vitro:publicDescriptionAnnot>
-        <rdfs:label xml:lang="de">Altersgruppe</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Altersgruppe</rdfs:label>
     </owl:ObjectProperty>
 	
 	
@@ -80,7 +80,7 @@
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de">Altersgruppe bei Abschluss</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Altersgruppe bei Abschluss</rdfs:label>
     </owl:ObjectProperty>
 	
 
@@ -96,7 +96,7 @@
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
 		<vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
-        <rdfs:label xml:lang="de">hat gemeinsame Berufung</rdfs:label>
+        <rdfs:label xml:lang="de-DE">hat gemeinsame Berufung</rdfs:label>
     </owl:ObjectProperty>
     
 	
@@ -112,7 +112,7 @@
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="de">hat Geschlecht</rdfs:label>
+        <rdfs:label xml:lang="de-DE">hat Geschlecht</rdfs:label>
     </owl:ObjectProperty>
  
 
@@ -127,7 +127,7 @@
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="de">hat Ressourceart</rdfs:label>
+        <rdfs:label xml:lang="de-DE">hat Ressourceart</rdfs:label>
     </owl:ObjectProperty>
     
     
@@ -145,7 +145,7 @@
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
 		<vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="de">ist übergeordnetes Projekt von</rdfs:label>
+        <rdfs:label xml:lang="de-DE">ist übergeordnetes Projekt von</rdfs:label>
     </owl:ObjectProperty>
 
    
@@ -161,7 +161,7 @@
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:publicDescriptionAnnot>Die Beschreibung der Zugangsrechte erfolgt entlang der OpenAire-Guidelines.</vitro:publicDescriptionAnnot>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="de">hat Zugriffsrechte</rdfs:label>
+        <rdfs:label xml:lang="de-DE">hat Zugriffsrechte</rdfs:label>
     </owl:ObjectProperty>
     
     
@@ -180,7 +180,7 @@
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:publicDescriptionAnnot xml:lang="de">Es wird unterschieden zwischen Inland und Ausland. Personen mit Promotionsberechtigungen aus mehreren Ländern, die sowohl in Deutschland als auch weiteren Ländern erworben wurden, werden nur der Kategorie Inland zugeordnet.</vitro:publicDescriptionAnnot>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="de">hat Promotionsberechtigung aus</rdfs:label>
+        <rdfs:label xml:lang="de-DE">hat Promotionsberechtigung aus</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -198,7 +198,7 @@
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:publicDescriptionAnnot xml:lang="de">Es wird unterschieden zwischen Inland und Ausland. Personen mit mehreren Staatsangehörigkeiten, die sowohl dem deutschen als auch weiteren Staaten angehören, werden nur der Kategorie Inland zugeordnet.</vitro:publicDescriptionAnnot>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="de">hat Staatsangehörigkeit</rdfs:label>
+        <rdfs:label xml:lang="de-DE">hat Staatsangehörigkeit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -214,7 +214,7 @@
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="de">hat Besoldung</rdfs:label>
+        <rdfs:label xml:lang="de-DE">hat Besoldung</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -231,19 +231,21 @@
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="de">hat Vertrag</rdfs:label>
+        <rdfs:label xml:lang="de-DE">hat Vertrag</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lod.tib.eu/onto/kdsf/vertragVon inverse Property für oben genannte ObjectProperty -->
+    <!-- http://lod.tib.eu/onto/kdsf/vertragVon inverse Property für die oben genannte ObjectProperty -->
 
     <owl:ObjectProperty rdf:about="http://lod.tib.eu/onto/kdsf/vertragVon">
+		<rdfs:domain rdf:resource="http://lod.tib.eu/onto/kdsf/Vertrag"/>
+		<rdfs:range rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter"/>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="de">ist Vertrag von</rdfs:label>
+        <rdfs:label xml:lang="de-DE">ist Vertrag von</rdfs:label>
     </owl:ObjectProperty>
     
 	
@@ -260,7 +262,7 @@
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
 		<vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
 		<vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="de">Sprechereinrichtung / Konsortialführer</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Sprechereinrichtung / Konsortialführer</rdfs:label>
     </owl:ObjectProperty>
 	
 
@@ -330,7 +332,7 @@
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de">hat Befristung</rdfs:label>
+        <rdfs:label xml:lang="de-DE">hat Befristung</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -349,7 +351,7 @@
 	
 	<owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Altersgruppe">
         <Meta:inhaltlicheDefinition>Be52</Meta:inhaltlicheDefinition>
-        <rdfs:label xml:lang="de">Altersgruppe</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Altersgruppe</rdfs:label>
     </owl:Class>
 
 	
@@ -360,7 +362,7 @@
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de">Zugriffsrechte</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Zugriffsrechte</rdfs:label>
     </owl:Class>
     
 	
@@ -372,7 +374,7 @@
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de">Geschlechtsangabe</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Geschlechtsangabe</rdfs:label>
     </owl:Class>
     
 	
@@ -384,7 +386,7 @@
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de">Ressourceart</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Ressourceart</rdfs:label>
     </owl:Class>
     
 
@@ -395,7 +397,7 @@
 		<vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
 		<vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
 		<vitro:publicDescriptionAnnot xml:lang="de">Die Klasse wurde erstellt, um die Staatsangehörigkeit und das Land des zur Aufnahme einer Promotion berechtigenden Studienabschlusses abzubilden.</vitro:publicDescriptionAnnot>
-		<rdfs:label xml:lang="de">Landkategorie</rdfs:label>
+		<rdfs:label xml:lang="de-DE">Landkategorie</rdfs:label>
     </owl:Class>
     
 
@@ -407,7 +409,7 @@
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:publicDescriptionAnnot xml:lang="de">Die Klasse wurde erstellt, um die Besoldungsarten zusammenzufassen.</vitro:publicDescriptionAnnot>
-        <rdfs:label xml:lang="de">Besoldungsart</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Besoldungsart</rdfs:label>
     </owl:Class>
     
     
@@ -427,7 +429,7 @@
 		<vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
 		<vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
 		<vitro:publicDescriptionAnnot xml:lang="de">Die Klasse wurde erstellt, um das befristete/ unbefristete Verhältnis abzubilden.</vitro:publicDescriptionAnnot>
-		<rdfs:label xml:lang="de">Vertrag</rdfs:label>
+		<rdfs:label xml:lang="de-DE">Vertrag</rdfs:label>
 	</owl:Class>
 	
 	
@@ -448,7 +450,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Ausland">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/LandKategorie"/>
-        <rdfs:label xml:lang="de">Ausland</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Ausland</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -457,7 +459,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Inland">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/LandKategorie"/>
-        <rdfs:label xml:lang="de">Inland</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Inland</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -466,7 +468,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Audio">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
-        <rdfs:label xml:lang="de">Audio</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Audio</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -475,7 +477,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B1">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B1</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -484,7 +486,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B10">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B10</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B10</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -493,7 +495,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B11">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B11</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B11</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -502,7 +504,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B2">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B2</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -511,7 +513,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B3">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B3</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -520,7 +522,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B4">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B4</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -529,7 +531,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B5">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B5</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B5</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -538,7 +540,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B6">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B6</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B6</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -547,7 +549,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B7">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B7</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B7</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -556,7 +558,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B8">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B8</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B8</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -565,7 +567,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B9">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">B9</rdfs:label>
+        <rdfs:label xml:lang="de-DE">B9</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -574,7 +576,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/BewegteBilder">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
-        <rdfs:label xml:lang="de">Bewegte Bilder</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Bewegte Bilder</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -583,7 +585,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Bild">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
-        <rdfs:label xml:lang="de">Bild</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Bild</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -592,7 +594,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Bund">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de">Bund</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Bund</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -601,7 +603,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Bundeslaender">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de">Bundesländer</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Bundesländer</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -610,7 +612,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/C2">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">C2</rdfs:label>
+        <rdfs:label xml:lang="de-DE">C2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -628,7 +630,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/DFG">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de">Deutsche Forschungsgemeinschaft</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Deutsche Forschungsgemeinschaft</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -637,7 +639,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/EU">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de">Europäische Union</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Europäische Union</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -655,7 +657,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/GewerblicheWirtschaftlicheUndSonstigeBereiche">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de">Gewerbliche Wirtschaftliche und Sonstige Bereiche</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Gewerbliche Wirtschaftliche und Sonstige Bereiche</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -664,7 +666,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Habilitiert">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikation"/>
-        <rdfs:label xml:lang="de">Habilitiert</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Habilitiert</rdfs:label>
     </owl:NamedIndividual>
     
 	
@@ -673,14 +675,14 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Lokal">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
-        <rdfs:label xml:lang="de">Lokal</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Lokal</rdfs:label>
     </owl:NamedIndividual>
 
     <!-- http://lod.tib.eu/onto/kdsf/Maennlich -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Maennlich">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
-        <rdfs:label xml:lang="de">Männlich</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Männlich</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -689,7 +691,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Nebenberuflich">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
-        <rdfs:label xml:lang="de">Nebenberuflich</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Nebenberuflich</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -698,7 +700,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/NichtErklärtOeffentlicheMittelgeber">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de">Nicht erklärte öffentliche Mittelgeber</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Nicht erklärte öffentliche Mittelgeber</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -707,7 +709,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/NichtErklärtPrivateMittelgeber">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de">Nicht erklärte private Mittelgeber</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Nicht erklärte private Mittelgeber</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -716,7 +718,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Ohne_Angabe">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
-        <rdfs:label xml:lang="de">Ohne Angabe</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Ohne Angabe</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -733,14 +735,14 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/OpenAccessFIZugangsart">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Zugangsart"/>
-        <rdfs:label xml:lang="de">Open Access</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Open Access</rdfs:label>
     </owl:NamedIndividual>
 
     <!-- http://lod.tib.eu/onto/kdsf/Promoviert -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Promoviert">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikation"/>
-        <rdfs:label xml:lang="de">Promoviert</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Promoviert</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -757,14 +759,14 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SharedAccessFIZugangsart">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Zugangsart"/>
-        <rdfs:label xml:lang="de">Shared Access</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Shared Access</rdfs:label>
     </owl:NamedIndividual>	
 
     <!-- http://lod.tib.eu/onto/kdsf/SonstigeDrittmittelgeber -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SonstigeDrittmittelgeber">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de">Sonstige Drittmittelgeber</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Sonstige Drittmittelgeber</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -773,7 +775,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SonstigeInternationaleOrganisationen">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de">Sonstige internationale Organisationen</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Sonstige internationale Organisationen</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -782,7 +784,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Teilzeit">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
-        <rdfs:label xml:lang="de">Teilzeit</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Teilzeit</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -791,35 +793,35 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Drittmittel">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
-        <rdfs:label xml:lang="de">Drittmittel</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Drittmittel</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/GrundmittelUndInstitutionelleMittel -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/GrundmittelUndInstitutionelleMittel">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
-        <rdfs:label xml:lang="de">Grundmittel und institutionelle Mittel</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Grundmittel und institutionelle Mittel</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/Mischfinanzierung -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Mischfinanzierung">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
-        <rdfs:label xml:lang="de">Mischfinanzierung</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Mischfinanzierung</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/Sondermittel -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Sondermittel">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
-        <rdfs:label xml:lang="de">Sondermittel</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Sondermittel</rdfs:label>
     </owl:NamedIndividual>
 	
     <!-- http://lod.tib.eu/onto/kdsf/Text -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Text">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
-        <rdfs:label xml:lang="de">Text</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Text</rdfs:label>
     </owl:NamedIndividual>
     
 	
@@ -827,7 +829,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/UserAccessFIZugangsart">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Zugangsart"/>
-        <rdfs:label xml:lang="de">User Access</rdfs:label>
+        <rdfs:label xml:lang="de-DE">User Access</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -835,21 +837,21 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Verteilt">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
-        <rdfs:label xml:lang="de">Verteilt</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Verteilt</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/Virtuell -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Virtuell">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
-        <rdfs:label xml:lang="de">Virtuell</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Virtuell</rdfs:label>
     </owl:NamedIndividual>
 	
     <!-- http://lod.tib.eu/onto/kdsf/Vollzeit -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Vollzeit">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
-        <rdfs:label xml:lang="de">Vollzeit</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Vollzeit</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -858,7 +860,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/W1">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">W1</rdfs:label>
+        <rdfs:label xml:lang="de-DE">W1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -867,7 +869,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/W2_C3">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">W2/C3</rdfs:label>
+        <rdfs:label xml:lang="de-DE">W2/C3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -876,7 +878,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/W3_C4">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
-        <rdfs:label xml:lang="de">W3/C4</rdfs:label>
+        <rdfs:label xml:lang="de-DE">W3/C4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -885,7 +887,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Weiblich">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
-        <rdfs:label xml:lang="de">Weiblich</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Weiblich</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -894,7 +896,7 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Hauptberuflich">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
-        <rdfs:label xml:lang="de">Hauptberuflich</rdfs:label>
+        <rdfs:label xml:lang="de-DE">Hauptberuflich</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -902,56 +904,56 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Unter25">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de">unter 25 Jahren</rdfs:label>
+        <rdfs:label xml:lang="de-DE">unter 25 Jahren</rdfs:label>
     </owl:NamedIndividual>
 
 	<!-- http://lod.tib.eu/onto/kdsf/25BisUnter30 -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/25BisUnter30">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de">25 bis unter 30 Jahren</rdfs:label>
+        <rdfs:label xml:lang="de-DE">25 bis unter 30 Jahren</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/30BisUnter35 -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/30BisUnter35">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de">30 bis unter 35 Jahren</rdfs:label>
+        <rdfs:label xml:lang="de-DE">30 bis unter 35 Jahren</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/35BisUnter40 -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/35BisUnter40">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de">35 bis unter 40 Jahren</rdfs:label>
+        <rdfs:label xml:lang="de-DE">35 bis unter 40 Jahren</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/40BisUnter45 -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/40BisUnter45">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de">40 bis unter 45</rdfs:label>
+        <rdfs:label xml:lang="de-DE">40 bis unter 45 Jahren</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/45BisUnter50 -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/45BisUnter50">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de">45 bis unter 50</rdfs:label>
+        <rdfs:label xml:lang="de-DE">45 bis unter 50 Jahren</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/50BisUnter55 -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/50BisUnter55">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de">50 bis unter 55</rdfs:label>
+        <rdfs:label xml:lang="de-DE">50 bis unter 55 Jahren</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/55BisUnter60 -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/55BisUnter60">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de">55 bis unter 60</rdfs:label>
+        <rdfs:label xml:lang="de-DE">55 bis unter 60 Jahren</rdfs:label>
     </owl:NamedIndividual>
 	
 	
@@ -959,14 +961,14 @@
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/60BisUnter65">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de">60 bis unter 65</rdfs:label>
+        <rdfs:label xml:lang="de-DE">60 bis unter 65 Jahren</rdfs:label>
     </owl:NamedIndividual>
 	
 	<!-- http://lod.tib.eu/onto/kdsf/65undAelter -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/65undAelter">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de">65 und älter</rdfs:label>
+        <rdfs:label xml:lang="de-DE">65 Jahre und älter</rdfs:label>
     </owl:NamedIndividual>
 	
 	
