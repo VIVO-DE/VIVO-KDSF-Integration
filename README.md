@@ -1,7 +1,7 @@
 
 # KDSF-VIVO-Alignment
 
-_KDSF ontology alignment (Kerndatensatz Forschung = Research Core Dataset) for use in VIVO. KDSF is a German national standard, therefore the descripion is in German only._
+_KDSF ontology alignment (Kerndatensatz Forschung = Research Core Dataset) for use in VIVO. KDSF is a German national standard, therefore the description is in German only._
 
 Mit den vorliegenden Dateien wird versucht, den [Kerndatensatz Forschung](http://kerndatensatz-forschung.de/) (KDSF) in VIVO zu integrieren. Es wird das Basismodell mit den grundlegenden forschungsbezogenen Objekten wie Person, Publikation, Drittmittelprojekte, Strukturiertes Promotionsprogramm, Patent und Forschungsinfrastruktur verwendet.
 
