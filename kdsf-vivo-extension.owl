@@ -725,7 +725,7 @@
 
     <!-- http://purl.org/coar/access_right/c_abf2 Konzept zur Darstellung von Open Access aus dem COAR-Vokabular  -->
 
-    < owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_abf2">
+    <owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_abf2">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
         <rdfs:label xml:lang="de-DE">Open Access</rdfs:label>
     </owl:NamedIndividual>
