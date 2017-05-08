@@ -617,12 +617,12 @@
     
 
 
-    <!-- http://lod.tib.eu/onto/kdsf/ClosedAccess die URIs für die Zugriffsrechte werden noch ermittelt -->
+    <!-- http://purl.org/coar/access_right/c_14cb  Konzept zur Darstellung von Metadata Only Access aus dem COAR-Vokabular-->
 
-    <!-- owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/ClosedAccess">
+    <owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_14cb">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
-        <rdfs:label xml:lang="en">Closed Access</rdfs:label>
-    </owl:NamedIndividual -->
+        <rdfs:label xml:lang="de-DE">Metadata only access</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -644,12 +644,12 @@
     
 
 
-    <!-- http://lod.tib.eu/onto/kdsf/EmbargoedAccess die URIs für die Zugriffsrechte werden noch ermittelt -->
+    <!-- http://purl.org/coar/access_right/c_f1cf Konzept zur Darstellung von Emabargoed Access aus dem COAR-Vokabular -->
 
-    <!-- owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/EmbargoedAccess">
+    <owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_f1cf">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
-        <rdfs:label xml:lang="en">Embargoed Access</rdfs:label>
-    </owl:NamedIndividual -->
+        <rdfs:label xml:lang="de-DE">Embargoed Access</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -723,15 +723,15 @@
     
 
 
-    <!-- http://lod.tib.eu/onto/kdsf/OpenAccess die URIs für die Zugriffsrechte werden noch ermittelt -->
+    <!-- http://purl.org/coar/access_right/c_abf2 Konzept zur Darstellung von Open Access aus dem COAR-Vokabular  -->
 
-    <!-- owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/OpenAccess">
+    < owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_abf2">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
-        <rdfs:label xml:lang="de">Open Access</rdfs:label>
-    </owl:NamedIndividual -->
+        <rdfs:label xml:lang="de-DE">Open Access</rdfs:label>
+    </owl:NamedIndividual>
     
 
-	<!-- http://lod.tib.eu/onto/kdsf/OpenAccessFIZugangsart die URIs für die Zugriffsrechte werden noch ermittelt -->
+	<!-- http://lod.tib.eu/onto/kdsf/OpenAccessFIZugangsart -->
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/OpenAccessFIZugangsart">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Zugangsart"/>
@@ -747,12 +747,12 @@
     
 
 
-    <!-- http://lod.tib.eu/onto/kdsf/RestrictedAccess die URIs für die Zugriffsrechte werden noch ermittelt -->
+    <!-- http://purl.org/coar/access_right/c_16ec Konzept zur Darstellung von Restricted Access aus dem COAR-Vokabular -->
 
-    <!-- owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/RestrictedAccess">
-        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/AccessRights"/>
-        <rdfs:label xml:lang="en">Restricted Access</rdfs:label>
-    </owl:NamedIndividual -->
+    <owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_16ec">
+        <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
+        <rdfs:label xml:lang="de-DE">Restricted Access</rdfs:label>
+    </owl:NamedIndividual>
     
 
     <!-- http://lod.tib.eu/onto/kdsf/SharedAccessFIZugangsart -->
