@@ -1199,6 +1199,7 @@ Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu be
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Habilitation">
 		<rdfs:label xml:lang="de-DE">Habilitation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren"/>
+		<rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Project"/>
         <Meta:inhaltlicheDefinition>Be16</Meta:inhaltlicheDefinition>
         <Meta:inhaltlicheDefinition>Na44</Meta:inhaltlicheDefinition> 
     </owl:Class>
@@ -1461,6 +1462,7 @@ Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu be
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Promotion">
 		<rdfs:label xml:lang="de-DE">Promotion</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren"/>
+		<rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Project"/>
         <Meta:inhaltlicheDefinition>Be17</Meta:inhaltlicheDefinition>
         <Meta:inhaltlicheDefinition>Na43</Meta:inhaltlicheDefinition>
     </owl:Class>
@@ -1526,7 +1528,7 @@ Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu be
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren">
 		<rdfs:label xml:lang="de-DE">Qualifizierungsverfahren</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#EducationalProcess"/>
+        <owl:equivalentClass rdf:resource="http://vivoweb.org/ontology/core#EducationalProcess"/>
         <Meta:inhaltlicheDefinition>Na4a</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
