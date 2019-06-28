@@ -159,7 +159,8 @@
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:publicDescriptionAnnot>Die Beschreibung der Zugangsrechte erfolgt entlang der OpenAire-Guidelines.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot>Die Beschreibung der Zugangsrechte erfolgt entlang des „Access Rights Vocabulary” der Confederation of Open Access Repositorires (COAR):
+https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/access-rights-vocabulary/</vitro:publicDescriptionAnnot>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
         <rdfs:label xml:lang="de-DE">hat Zugriffsrechte</rdfs:label>
     </owl:ObjectProperty>
@@ -358,7 +359,8 @@
     <!-- http://lod.tib.eu/onto/kdsf/Zugriffsrechte Klasse zur Abbildung der Zugriffsrechte und Range für die Object Property kdsf_vivo:hatZugriffsrechte -->
 
     <owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Zugriffsrechte">
-        <obo:IAO_0000115>Zugriffsrechte nach  OpenAIRE Guidelines for Literature Repositories</obo:IAO_0000115>
+        <obo:IAO_0000115>Zugriffsrechte entsprechend dem „Access Rights Vocabulary” der Confederation of Open Access Repositorires (COAR):
+https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/access-rights-vocabulary/</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
