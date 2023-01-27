@@ -54,3 +54,4 @@ Der Kerndatensatz Forschung steht unter der Lizenz [Creative Commons Attribution
 * Tatiana Walther
 * Anna Kasprzik
 * Christian Hauschke
+* Rolf Guescini
