@@ -1,0 +1,35 @@
+Prefix(:=<http://kerndatensatz-forschung.de/owl/Meta#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(Meta:=<http://kerndatensatz-forschung.de/owl/Meta#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(vitro:=<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>)
+
+
+Ontology(<http://kerndatensatz-forschung.de/owl/Meta>
+<http://kerndatensatz-forschung.de/owl/Meta/20151010>
+Annotation(vitro:ontologyPrefixAnnot "kdsf-meta")
+Annotation(rdfs:label "KDSF-Meta"@de)
+
+Declaration(AnnotationProperty(Meta:inhaltlicheDefinition))
+Declaration(AnnotationProperty(Meta:pgbid))
+Declaration(AnnotationProperty(vitro:ontologyPrefixAnnot))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: Meta:inhaltlicheDefinition (inhaltliche Definition)
+
+AnnotationAssertion(rdfs:label Meta:inhaltlicheDefinition "inhaltliche Definition"^^xsd:string)
+SubAnnotationPropertyOf(Meta:inhaltlicheDefinition rdfs:isDefinedBy)
+
+# Annotation Property: Meta:pgbid (ID der PGB)
+
+AnnotationAssertion(rdfs:label Meta:pgbid "ID der PGB"^^xsd:string)
+SubAnnotationPropertyOf(Meta:pgbid rdfs:isDefinedBy)
+
+
+
+)
