@@ -1,0 +1,17 @@
+id: KDSF-VIVO-Integration
+title: KDSF VIVO Integration
+github_org: bua-vivo
+git_main_branch: main
+repo: VIVO-KDSF-Integration
+uribase: "http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration"
+base_iris:
+    - "http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration"
+release_artefacts:
+    - base
+    - full
+    - simple
+primary_release: full
+export_formats:
+    - owl
+    - ttl
+robot_java_args: '-Xmx8G'

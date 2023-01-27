@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1674834607471" name="http://kerndatensatz-forschung.de/owl/Basis" uri="kdsf-vivo-alignment.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1674834607471" name="http://kerndatensatz-forschung.de/owl/Meta" uri="kdsf-meta.owl.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1674834607471" name="http://lod.tib.eu/onto/kdsf/" uri="kdsf-vivo-extension.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1674834607471" name="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration.owl" uri="KDSF-VIVO-Integration.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1674834607471" name="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-base.owl" uri="KDSF-VIVO-Integration-base.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1674834607471" name="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-full.owl" uri="KDSF-VIVO-Integration-full.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1674834607471" name="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-simple.owl" uri="KDSF-VIVO-Integration-simple.owl"/>
+    </group>
+</catalog>
