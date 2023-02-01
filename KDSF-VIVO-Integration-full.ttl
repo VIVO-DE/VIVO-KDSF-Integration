@@ -7,7 +7,7 @@
 @base <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-full.ttl> .
 
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-full.ttl> rdf:type owl:Ontology ;
-                                                                                                                                             owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-01-27/KDSF-VIVO-Integration-full.ttl> ;
+                                                                                                                                             owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-02-01/KDSF-VIVO-Integration-full.ttl> ;
                                                                                                                                              <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                                                                                                                              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> "kdsf" ;
                                                                                                                                              rdfs:comment """This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.\"
@@ -16,7 +16,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                                                                                                           "This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International."^^xsd:string ;
                                                                                                                                              rdfs:label "KDSF-VIVO-Alignment"@de-de ;
                                                                                                                                              owl:versionInfo "2017-01-04"^^xsd:string ,
-                                                                                                                                                             "2023-01-27"^^xsd:string .
+                                                                                                                                                             "2023-02-01"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -535,7 +535,29 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                            rdfs:label "Ausserplanmässiger Professor"@de-de .
+                                                                            rdfs:label "Associate professors"@en-us ,
+                                                                                       "Außerplanmäßige Professor/-innen"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Befristet
+<http://kerndatensatz-forschung.de/owl/Basis#Befristet> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Befristung> ;
+                                                        <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be33" ;
+                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                        rdfs:label "Befristet"@de-de ,
+                                                                   "Limited"@en-us .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Befristung
+<http://kerndatensatz-forschung.de/owl/Basis#Befristung> rdf:type owl:Class ;
+                                                         <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be10" ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         rdfs:label "Befristung"@de-de ,
+                                                                    "Time limit"@en-us .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien
@@ -561,6 +583,14 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                              rdfs:comment "Personen, die in einem Beschäftigungsverhältnis sind." ;
                                                              rdfs:label "Beschäftigte / Beschäftigter"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigung
+<http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigung> rdf:type owl:Class ;
+                                                             rdfs:comment "Concept for presenting the characteristics associated with employment (e.g. fixed-term, duration, full/part-time, etc.)"@en-us ,
+                                                                          "Konzept zur Darstellung der Eigenschaften, die mit einer Beschäftigung zusammenhängen (z.B. Befristung, Dauer, Voll/Teilzeit, etc.)"@de-de ;
+                                                             rdfs:label "Beschäftigung"@de-de ,
+                                                                        "Employment"@en-us .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#BibliographieDokumenttyp
@@ -619,6 +649,16 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                            rdfs:label "Dissertation"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Doktorand
+<http://kerndatensatz-forschung.de/owl/Basis#Doktorand> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Person> ,
+                                                                        <http://xmlns.com/foaf/0.1/Person> ;
+                                                        rdfs:comment "Personen, die in einem Beschäftigungsverhältnis sind."@de-de ,
+                                                                     "Persons who are in an employment relationship."@en-us ;
+                                                        rdfs:label "Doktorand/ -innen"@de-de ,
+                                                                   "PhD student"@en-us .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt
@@ -742,7 +782,8 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
                                                                              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                             rdfs:label "Hauptberuflicher Gastprofessor"@de-de .
+                                                                             rdfs:label "Full-time visiting professors"@en-us ,
+                                                                                        "Hauptberufliche Gastprofessor/-innen"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift
@@ -799,7 +840,8 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                rdfs:label "Juniorprofessor"@de-de .
+                                                                rdfs:label "Junior professors"@en-us ,
+                                                                           "Juniorprofessor/-innen"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter
@@ -823,6 +865,17 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                 rdfs:label "Letter to the Editor"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Lokal
+<http://kerndatensatz-forschung.de/owl/Basis#Lokal> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart> ;
+                                                    <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Fi19" ;
+                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                    rdfs:label "Local"@en-us ,
+                                                               "Lokal"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract
@@ -869,6 +922,17 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                    rdfs:label "Neuer Publikations- oder Dokumenttyp"@de-de .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#OpenAccess
+<http://kerndatensatz-forschung.de/owl/Basis#OpenAccess> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Zugangsart> ;
+                                                         <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Fi24" ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         rdfs:label "Open Access"@de-de ,
+                                                                    "Open Access"@en-us .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#OrdentlicheProfessoren
 <http://kerndatensatz-forschung.de/owl/Basis#OrdentlicheProfessoren> rdf:type owl:Class ;
                                                                      rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Professoren> ;
@@ -877,7 +941,8 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                     rdfs:label "Ordentlicher Professor"@de-de .
+                                                                     rdfs:label "Full professors"@en-us ,
+                                                                                "Ordentliche Professor/-innen"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit
@@ -935,7 +1000,8 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                          rdfs:label "Professor"@de-de .
+                                                          rdfs:label "Professor/-innen"@de-de ,
+                                                                     "Professors"@en-us .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Promotion
@@ -1082,7 +1148,19 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                rdfs:label "Seniorprofessor"@de-de .
+                                                                rdfs:label "Senior professors"@en-us ,
+                                                                           "Seniorprofessor/-innen"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#SharedAccess
+<http://kerndatensatz-forschung.de/owl/Basis#SharedAccess> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Zugangsart> ;
+                                                           <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Fi23" ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           rdfs:label "Shared Access"@de-de ,
+                                                                      "Shared Access"@en-us .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Software
@@ -1097,16 +1175,58 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                        rdfs:label "Software"@de-de .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#SonstigeBezeichnung
+<http://kerndatensatz-forschung.de/owl/Basis#SonstigeBezeichnung> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Professoren> ;
+                                                                  <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be46"@en-us ;
+                                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "Die Person (Professor/-in) kann keiner der genannten Bezeichnungen zugeordnet werden."@de-de ,
+                                                                                                               "The person (professor) cannot be assigned to any of the above designations."@en-us ;
+                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                  rdfs:label "Other designation"@en-us ,
+                                                                             "Sonstige Bezeichnung"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#SonstigeKooperationspartner
+<http://kerndatensatz-forschung.de/owl/Basis#SonstigeKooperationspartner> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> ;
+                                                                          <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Na97"@en-us ;
+                                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouporganizations> ;
+                                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                          rdfs:label "Other Cooperation partner"@en-us ,
+                                                                                     "Sonstige Kooperationspartner"@de-de .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#SonstigesPersonal
 <http://kerndatensatz-forschung.de/owl/Basis#SonstigesPersonal> rdf:type owl:Class ;
                                                                 rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Person> ,
                                                                                 <http://xmlns.com/foaf/0.1/Person> ;
-                                                                <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be73" ;
-                                                                <http://purl.obolibrary.org/obo/IAO_0000115> "Umfasst Personal, das nicht wissenschaftlich oder wissenschaftsunterstützend arbeitet und kein Verwaltungspersonal ist."@de-de ;
+                                                                <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be73" ,
+                                                                                                                                   "Fi30" ;
+                                                                <http://purl.obolibrary.org/obo/IAO_0000115> "Includes staff who do not work in a scientific or science support capacity and are not administrative staff."@en-us ,
+                                                                                                             "Umfasst Personal, das nicht wissenschaftlich oder wissenschaftsunterstützend arbeitet und kein Verwaltungspersonal ist."@de-de ;
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
-                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                rdfs:label "Other staff"@en-us ,
+                                                                           "Sonstiges Personal"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#SonstigesWissenschaftlichesUndKuenstlerischesPersonal
+<http://kerndatensatz-forschung.de/owl/Basis#SonstigesWissenschaftlichesUndKuenstlerischesPersonal> rdf:type owl:Class ;
+                                                                                                    rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#WissenschaftlichesUndKuenstlerischesPersonal> ;
+                                                                                                    <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be85"@en ;
+                                                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+                                                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                                    rdfs:label "Other scientific and artistic staff"@en-us ,
+                                                                                                               "Sonstiges wissenschaftliches und künstlerisches Personal"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Stiftungsprofessoren
@@ -1117,7 +1237,8 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                   rdfs:label "Stiftungsprofessor"@de-de .
+                                                                   rdfs:label "Foundation professors"@en-us ,
+                                                                              "Stiftungsprofessor/-innen"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#StrukturiertesPromotionsprogramm
@@ -1141,16 +1262,39 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                              rdfs:label "Tätigkeitsart"@de-de .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#Unbefristet
+<http://kerndatensatz-forschung.de/owl/Basis#Unbefristet> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Befristung> ;
+                                                          <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be34" ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          rdfs:label "Unbefristet"@de-de ,
+                                                                     "Unlimited"@en-us .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#Universitaet
 <http://kerndatensatz-forschung.de/owl/Basis#Universitaet> rdf:type owl:Class ;
-                                                           owl:equivalentClass <http://vivoweb.org/ontology/core#University> ;
-                                                           rdfs:subClassOf <http://vivoweb.org/ontology/core#University> ;
+                                                           rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> ,
+                                                                           <http://vivoweb.org/ontology/core#University> ;
                                                            <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Na96" ;
                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouporganizations> ;
                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                           rdfs:label "Universität"@de-de .
+                                                           rdfs:label "University"@en-us ,
+                                                                      "Universität"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#UserAccess
+<http://kerndatensatz-forschung.de/owl/Basis#UserAccess> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Zugangsart> ;
+                                                         <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Fi22" ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         rdfs:label "User Access"@de-de ,
+                                                                    "User Access"@en-us .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Verlag
@@ -1166,6 +1310,17 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                      rdfs:label "Verlag"@de-de .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#Verteilt
+<http://kerndatensatz-forschung.de/owl/Basis#Verteilt> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart> ;
+                                                       <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Fi20" ;
+                                                       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                       rdfs:label "Distributed"@en-us ,
+                                                                  "Verteilt"@de-de .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#Vertretungsprofessoren
 <http://kerndatensatz-forschung.de/owl/Basis#Vertretungsprofessoren> rdf:type owl:Class ;
                                                                      rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Professoren> ;
@@ -1174,7 +1329,8 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                     rdfs:label "Vertretungsprofessor/Lehrstuhlvertreter"@de-de .
+                                                                     rdfs:label "Substitute professors / chair representatives"@en-us ,
+                                                                                "Vertretungsprofessor/-innen / Lehrstuhlvertreter/-innen"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Verwaltungspersonal
@@ -1188,6 +1344,17 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                   rdfs:label "Verwaltungspersonal"@de-de .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#Virtuell
+<http://kerndatensatz-forschung.de/owl/Basis#Virtuell> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart> ;
+                                                       <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Fi21" ;
+                                                       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                       rdfs:label "Virtual"@en-us ,
+                                                                  "Virtuell"@de-de .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#WissenschaftlicheOderKuenstlerischeHilfskraefte
 <http://kerndatensatz-forschung.de/owl/Basis#WissenschaftlicheOderKuenstlerischeHilfskraefte> rdf:type owl:Class ;
                                                                                               rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#WissenschaftlichesUndKuenstlerischesPersonal> ;
@@ -1196,7 +1363,8 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
                                                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                                              rdfs:label "Wissenschaftliche oder künstlerische Hilfskräfte"@de-de .
+                                                                                              rdfs:label "Scientific or artistic assistants"@en-us ,
+                                                                                                         "Wissenschaftliche oder künstlerische Hilfskräfte"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#WissenschaftlicheUndKuenstlerischeMitarbeiter
@@ -1207,7 +1375,8 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
                                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                                            rdfs:label "Wissenschaftliche und künstlerische Mitarbeiter"@de-de .
+                                                                                            rdfs:label "Scientific and artistic staff"@en-us ,
+                                                                                                       "Wissenschaftliche und künstlerische Mitarbeiter"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#WissenschaftlicheVortragsfolien
@@ -1274,7 +1443,8 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                         rdfs:label "Art des Zugangs"@de-de .
+                                                         rdfs:label "Art des Zugangs"@de-de ,
+                                                                    "Type of access"@en-us .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#ePaper
@@ -1400,8 +1570,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
 
 ###  http://vivoweb.org/ontology/core#University
-<http://vivoweb.org/ontology/core#University> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Universitaet> .
+<http://vivoweb.org/ontology/core#University> rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Organization
