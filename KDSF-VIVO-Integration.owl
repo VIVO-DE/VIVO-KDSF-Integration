@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/">
-        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-02-01/KDSF-VIVO-Integration.owl"/>
+        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-02-20/KDSF-VIVO-Integration.owl"/>
         <terms:rights rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <vitro:ontologyPrefixAnnot>kdsf</vitro:ontologyPrefixAnnot>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.&quot;
@@ -20,7 +20,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International.</rdfs:comment>
         <rdfs:label xml:lang="de-de">KDSF-VIVO-Alignment</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-01-04</owl:versionInfo>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-01</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-20</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -591,11 +591,6 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <owl:DatatypeProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt">
         <rdfs:domain rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <Meta:inhaltlicheDefinition>Dr13</Meta:inhaltlicheDefinition>
-        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Förderkennzeichen des Drittmittelprojekts</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -653,6 +648,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Außeruniversitäre Forschungseinrichtung</rdfs:label>
+        <rdfs:label xml:lang="en-us">Non-university research institution</rdfs:label>
     </owl:Class>
     
 
@@ -668,6 +664,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Arbeitspapier/Forschungsbericht</rdfs:label>
+        <rdfs:label xml:lang="en-us">Working Paper/Research Report</rdfs:label>
     </owl:Class>
     
 
@@ -675,14 +672,14 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Artikel -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Artikel">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikation"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Article"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
         <Meta:inhaltlicheDefinition>Pu25</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Article</rdfs:label>
         <rdfs:label xml:lang="de-de">Artikel</rdfs:label>
     </owl:Class>
     
@@ -695,6 +692,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <Meta:inhaltlicheDefinition>Pa39</Meta:inhaltlicheDefinition>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
         <rdfs:label xml:lang="de-de">Ausgründung</rdfs:label>
+        <rdfs:label xml:lang="en-us">Spin-off Company</rdfs:label>
     </owl:Class>
     
 
@@ -703,6 +701,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#AusserplanmaessigeProfessoren">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professoren"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren"/>
         <Meta:inhaltlicheDefinition>Be89</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -747,11 +746,35 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <owl:equivalentClass rdf:resource="http://purl.org/ontology/bibo/Interview"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Interview"/>
         <Meta:inhaltlicheDefinition>Pu39</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="de-de">Beitrag mit Bezug auf wissenschaftliche Tätigkeiten, veröffentlicht in Massenmedien (z.B. Zeitungen, nicht-wissenschaftliche Zeitschriften, Blogs, Rundfunk oder Fernsehen).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">Contribution related to scientific activities published in mass media (e.g. newspaper, non-academic periodicals, blogs, radio, or TV).</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="de-de">Beitrag mit Bezug auf wissenschaftliche Tätigkeiten, veröffentlicht in Massenmedien (z.B. Zeitungen, nicht-wissenschaftliche Zeitschriften, Blogs, Rundfunk oder Fernsehen).</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Contribution related to scientific activities published in mass media (e.g. newspaper, non-academic perio-dicals, blogs, radio, or TV).</rdfs:comment>
         <rdfs:label xml:lang="de-de">Beiträge bzw. Interviews in nicht-wissenschaftlichen Medien</rdfs:label>
+        <rdfs:label xml:lang="en-us">Contributions or interviews in non-scientific media</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu42</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="de-de">Beitrag mit Bezug auf wissenschaftliche Tätigkeiten, veröffentlicht in wissenschaftlichen Blogs.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">Contribution referring to scientific activities, published in science blogs.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="de-de">Beitrag mit Bezug auf wissenschaftliche Tätigkeiten, veröffentlicht in wissenschaftlichen Blogs.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Contribution referring to scientific activities, published in science blogs.</rdfs:comment>
+        <rdfs:label xml:lang="de-de">Beitrag in wissenschaftlige Blogs</rdfs:label>
+        <rdfs:label xml:lang="en-us">Contribution in scientific blogs</rdfs:label>
     </owl:Class>
     
 
@@ -766,8 +789,10 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:comment>Personen, die in einem Beschäftigungsverhältnis sind.</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Personen, die in einem Beschäftigungsverhältnis sind.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Persons who are in an employment relationship</rdfs:comment>
         <rdfs:label xml:lang="de-de">Beschäftigte / Beschäftigter</rdfs:label>
+        <rdfs:label xml:lang="en-us">Employee</rdfs:label>
     </owl:Class>
     
 
@@ -775,6 +800,9 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigung -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigung">
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:comment xml:lang="en-us">Concept for presenting the characteristics associated with employment (e.g. fixed-term, duration, full/part-time, etc.)</rdfs:comment>
         <rdfs:comment xml:lang="de-de">Konzept zur Darstellung der Eigenschaften, die mit einer Beschäftigung zusammenhängen (z.B. Befristung, Dauer, Voll/Teilzeit, etc.)</rdfs:comment>
         <rdfs:label xml:lang="de-de">Beschäftigung</rdfs:label>
@@ -783,9 +811,10 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     
 
 
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#BibliographieDokumenttyp -->
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Bibliographie -->
 
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#BibliographieDokumenttyp">
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Bibliographie">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Dokumenttyp"/>
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Journalartikel"/>
         <Meta:inhaltlicheDefinition>Pu129</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -793,21 +822,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Bibliographie [Journalartikel]</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp -->
-
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Buch"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Book"/>
-        <Meta:inhaltlicheDefinition>Pu24</Meta:inhaltlicheDefinition>
-        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
-        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Bibliographie [Buch]</rdfs:label>
+        <rdfs:label xml:lang="en-us">Bibliography [Journal Article]</rdfs:label>
     </owl:Class>
     
 
@@ -822,22 +837,53 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Book</rdfs:label>
         <rdfs:label xml:lang="de-de">Buch</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#Datensammlung -->
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Bund -->
 
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Datensammlung">
-        <owl:equivalentClass rdf:resource="http://vivoweb.org/ontology/core#Dataset"/>
-        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Dataset"/>
-        <Meta:inhaltlicheDefinition>Pu38</Meta:inhaltlicheDefinition>
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Bund">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr22</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Datensammlung</rdfs:label>
+        <rdfs:label xml:lang="de-de">Bund</rdfs:label>
+        <rdfs:label xml:lang="en-us">Federal Government</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Bundeslaender -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Bundeslaender">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr23</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Bundesländer</rdfs:label>
+        <rdfs:label xml:lang="en-us">Federal states</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#DFG -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#DFG">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr21</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">DFG</rdfs:label>
+        <rdfs:label xml:lang="en-us">DFG</rdfs:label>
     </owl:Class>
     
 
@@ -847,11 +893,16 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Dissertation">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikationsschrift"/>
         <Meta:inhaltlicheDefinition>Pu34</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">A dissertation is a scientific work needed for the completion of a doctorate (PhD) degree.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Dissertation ist eine wissenschaftliche Arbeit für den Erwerb des Doktorgrades.</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">A dissertation is a scientific work needed for the completion of a doctorate (PhD) degree.</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Eine Dissertation ist eine wissenschaftliche Arbeit für den Erwerb des Doktorgrades.</rdfs:comment>
         <rdfs:label xml:lang="de-de">Dissertation</rdfs:label>
+        <rdfs:label xml:lang="en-us">Dissertation</rdfs:label>
     </owl:Class>
     
 
@@ -861,10 +912,28 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Doktorand">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Person"/>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:comment xml:lang="de-de">Personen, die in einem Beschäftigungsverhältnis sind.</rdfs:comment>
         <rdfs:comment xml:lang="en-us">Persons who are in an employment relationship.</rdfs:comment>
         <rdfs:label xml:lang="de-de">Doktorand/ -innen</rdfs:label>
         <rdfs:label xml:lang="en-us">PhD student</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Dokumenttyp -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Dokumenttyp">
+        <Meta:inhaltlicheDefinition>Pu101</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.type.document</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Document type</rdfs:label>
+        <rdfs:label xml:lang="de-de">Dokumenttyp</rdfs:label>
     </owl:Class>
     
 
@@ -876,11 +945,28 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <Meta:inhaltlicheDefinition>Dr2a</Meta:inhaltlicheDefinition>
         <Meta:inhaltlicheDefinition>Dr30</Meta:inhaltlicheDefinition>
         <obo:IAO_0000115>Drittmittelprojekte im Sinne des Kerndatensatzes sind zeitlich befristet geförderte Forschungsaktivitäten mit Startdatum, Enddatum und Forschungsgegenstand, deren Finanzierung aus Drittmitteln erfolgt.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">Third-party funded projects within the context of the core data set are research activities funded for a limited period of time with a start date, end date and research object, the funding of which comes from third-party funds.</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGroupactivities"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Drittmittelprojekt</rdfs:label>
+        <rdfs:label xml:lang="en-us">Third-party funded project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#EU -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#EU">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#EuUndSonstigeInternationaleOrganisationen"/>
+        <Meta:inhaltlicheDefinition xml:lang="de-de">Dr95</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">EU</rdfs:label>
+        <rdfs:label xml:lang="en-us">EU</rdfs:label>
     </owl:Class>
     
 
@@ -896,6 +982,22 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Editorial</rdfs:label>
+        <rdfs:label xml:lang="en-us">Editorial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#EuUndSonstigeInternationaleOrganisationen -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#EuUndSonstigeInternationaleOrganisationen">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr20</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">EU and other international organisations</rdfs:label>
+        <rdfs:label xml:lang="de-de">EU und sonstige internationale Organisationen</rdfs:label>
     </owl:Class>
     
 
@@ -910,6 +1012,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Fachhochschule</rdfs:label>
+        <rdfs:label xml:lang="en-us">University of Applied Sciences</rdfs:label>
     </owl:Class>
     
 
@@ -926,6 +1029,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Fach</rdfs:label>
+        <rdfs:label xml:lang="en-us">Subject</rdfs:label>
     </owl:Class>
     
 
@@ -939,6 +1043,77 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Finanzierungsform</rdfs:label>
+        <rdfs:label xml:lang="en-us">Form of financing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Foerderer -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Foerderer">
+        <Meta:inhaltlicheDefinition>Pu86</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>dcterms.funding</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Funders</rdfs:label>
+        <rdfs:label xml:lang="de-de">Förderer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt"/>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Format -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Format">
+        <Meta:inhaltlicheDefinition>Pu87</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>dcterms.format</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Format</rdfs:label>
+        <rdfs:label xml:lang="en-us">Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Forschungsdaten -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Forschungsdaten">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu38</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="de-de">Forschungsdaten sind Daten, die im wissenschaftlichen Arbeitsprozess generiert oder verarbeitet werden. Art und Form variieren über Fachdisziplinen. Forschungsdaten umfassen z.B. Erhebungs-, Mess- und strukturierte Beobachtungsdaten, Surveydaten, Metadaten sowie Zusammenstellungen von Texten, graphisch-visuellen Materialien und Simulationen. Der Publikationstyp umfasst Sets von digitalen und/oder analogen Forschungsdaten, die öffentlich zugänglich sind oder zu wissenschaftlichen Zwecken aufbereitet wurden (Scientific Use Files). Eine Dokumentation dazu muss zugänglich sein. Software stellt gemäß Kerndatensatz Forschung einen eigenen Publikationstyp dar (Pu45).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">Research data are data generated or processed during research. Type and form vary over academic disciplines. Research data comprise collections, measurements, structured observations, survey data, metadata as well as compilations of texts, graphic-visualmaterials and simulations. This publication type comprises sets of digital and/or analog research data that are published or processed for scientific purposes (scientific use files). This includes a publicly available documentation. Software is assigned to a separate publication type (Pu45).</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="de-de">Forschungsdaten sind Daten, die im wissenschaftlichen Arbeitsprozess generiert oder verarbeitet werden. Art und Form variieren über Fachdisziplinen. Forschungsdaten umfassen z.B. Erhebungs-, Mess- und strukturierte Beobachtungsdaten, Surveydaten, Metadaten sowie Zusammenstellungen von Texten, graphisch-visuellen Materialien und Simulationen. Der Publikationstyp umfasst Sets von digitalen und/oder analogen Forschungsdaten, die öffentlich zugänglich sind oder zu wissenschaftlichen Zwecken aufbereitet wurden (Scientific Use Files). Eine Dokumentation dazu muss zugänglich sein. Software stellt gemäß Kerndatensatz Forschung einen eigenen Publikationstyp dar (Pu45).</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Research data are data generated or processed during research. Type and form vary over academic disciplines. Research data comprise collections, measurements, structured observations, survey data, metadata as well as compilations of texts, graphic-visualmaterials and simulations. This publication type comprises sets of digital and/or analog research data that are published or processed for scientific purposes (scientific use files). This includes a publicly available documentation. Software is assigned to a separate publication type (Pu45).</rdfs:comment>
+        <rdfs:label xml:lang="de-de">Forschungsdaten</rdfs:label>
+        <rdfs:label xml:lang="en-us">Research data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld">
+        <Meta:inhaltlicheDefinition>Be77</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Dr124</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na66</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pa36</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pu141</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Forschungsfeld</rdfs:label>
+        <rdfs:label xml:lang="en-us">Research field</rdfs:label>
     </owl:Class>
     
 
@@ -947,12 +1122,14 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur">
         <Meta:inhaltlicheDefinition>Fi2</Meta:inhaltlicheDefinition>
-        <vitro:descriptionAnnot>Forschungsinfrastrukturen im Sinne des Kerndatensatzes sind umfangreiche / aufwendige Instrumente, Ressourcen oder Serviceeinrichtungen für die Forschung in allen Wissenschaftsgebieten, die sich durch eine mindestens überregionale Bedeutung für das jeweilige Wissenschaftsgebiet sowie durch eine mittel- bis langfristige Lebensdauer (mehr als 5 Jahre) auszeichnen und für eine externe Nutzung zur Verfügung stehen für die Zugangs- bzw. Nutzungsregelungen etabliert sind.</vitro:descriptionAnnot>
+        <vitro:descriptionAnnot xml:lang="de-de">Forschungsinfrastrukturen im Sinne des Kerndatensatzes sind umfangreiche / aufwendige Instrumente, Ressourcen oder Serviceeinrichtungen für die Forschung in allen Wissenschaftsgebieten, die sich durch eine mindestens überregionale Bedeutung für das jeweilige Wissenschaftsgebiet sowie durch eine mittel- bis langfristige Lebensdauer (mehr als 5 Jahre) auszeichnen und für eine externe Nutzung zur Verfügung stehen für die Zugangs- bzw. Nutzungsregelungen etabliert sind.</vitro:descriptionAnnot>
+        <vitro:descriptionAnnot xml:lang="en-us">Research infrastructures within the context of the Core Data Set are extensive / elaborate instruments, resources or service facilities for research in all scientific disciplines that are characterised by at least supraregional importance for the respective scientific discipline and by a medium- to long-term lifespan (more than 5 years) and are available for external use for which access or usage regulations have been established.</vitro:descriptionAnnot>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGroupequipment"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Forschungsinfrastruktur</rdfs:label>
+        <rdfs:label xml:lang="en-us">Research infrastructure</rdfs:label>
     </owl:Class>
     
 
@@ -965,6 +1142,34 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Art der Forschungsinfrastruktur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung">
+        <Meta:inhaltlicheDefinition>Be4a</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Common vocation</rdfs:label>
+        <rdfs:label xml:lang="de-de">Gemeinsame Berufung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#GewerblicheWirtschaftUndSonstigeBereiche -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#GewerblicheWirtschaftUndSonstigeBereiche">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr25</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Commercial economy and other sectors</rdfs:label>
+        <rdfs:label xml:lang="de-de">Gewerbliche Wirtschaft und sonstige Bereiche</rdfs:label>
     </owl:Class>
     
 
@@ -1003,11 +1208,18 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Habilitationsschrift">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikationsschrift"/>
         <Meta:inhaltlicheDefinition>Pu35</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">A habilitation is a scientific work needed for receiving the Venia legendi</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Habilitation ist eine
+wissenschaftliche Arbeit für den Erwerb der universitären Lehrbefähigung</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">A habilitation is a scientific work needed for receiving the Venia legendi</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Eine Habilitation ist eine
+wissenschaftliche Arbeit für den Erwerb der universitären Lehrbefähigung</rdfs:comment>
         <rdfs:label xml:lang="de-de">Habilitationsschrift</rdfs:label>
+        <rdfs:label xml:lang="en-us">Postdoctoral thesis</rdfs:label>
     </owl:Class>
     
 
@@ -1016,6 +1228,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#HauptberuflicheGastprofessoren">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professoren"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren"/>
         <Meta:inhaltlicheDefinition>Be30</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -1030,29 +1243,35 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <!-- http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikation"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp"/>
         <Meta:inhaltlicheDefinition>Pu51</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">A special issue of a journal edited by one or more persons. It contains contributions from different authors about a specific topic or a conference.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Ein Sonderheft einer Zeitschrift, das von einer oder mehreren Personen herausgegeben wurde. Es enthält Beiträge in Aufsätzen verschiedener Autor/-innen zu einem spezifischen Thema oder einer Konferenz.</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">A special issue of a journal edited by one or more persons. It contains contributions from different authors about a specific topic or a conference.</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Ein Sonderheft einer Zeitschrift, das von einer oder mehreren Personen herausgegeben wurde. Es enthält Beiträge in Aufsätzen verschiedener Autor/-innen zu einem spezifischen Thema oder einer Konferenz.</rdfs:comment>
         <rdfs:label xml:lang="de-de">Herausgeberschaft eines Sonderhefts einer Zeitschrift</rdfs:label>
+        <rdfs:label xml:lang="en-us">Special issue of a journal</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch -->
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Identifier -->
 
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Buch"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Book"/>
-        <Meta:inhaltlicheDefinition>Pu48</Meta:inhaltlicheDefinition>
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Identifier">
+        <Meta:inhaltlicheDefinition>Pu132</Meta:inhaltlicheDefinition>
+        <vitro:descriptionAnnot xml:lang="de-de">Für jeden Eintrag ist nach Möglichkeit die DOI als eindeutiger Identifier anzugeben, bei
+Büchern ggf. alternativ die ISBN. Eine Publikation kann mehrere Identifier haben. Zusätzlich kann, sofern keine DOI oder ISBN vorhanden sein sollte, ein oder mehrere alternative Identifier (z.B. ISSN, Artikelnummer, URI, PMID, Scopus EID, WOSut) angegeben werden.</vitro:descriptionAnnot>
+        <vitro:descriptionAnnot xml:lang="en-us">If possible, the DOI should be given as the unique identifier for each entry.
+alternatively the ISBN for books. A publication may have several identifiers. In addition, if no DOI or ISBN is available, one or more alternative identifiers (e.g. ISSN, article number, URI, PMID, Scopus EID, WOSut) can be provided.</vitro:descriptionAnnot>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Herausgegebenes Buch</rdfs:label>
+        <rdfs:label xml:lang="de-de">Identifier</rdfs:label>
+        <rdfs:label xml:lang="en-us">Identifier</rdfs:label>
     </owl:Class>
     
 
@@ -1071,6 +1290,24 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     
 
 
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#IntegrierendeRessource -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#IntegrierendeRessource">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu49</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">Integrating resources comprise loose-leaf publications that have continuous additions as well as dynamic online ressources (e.g. blogs and websites) with continually added, updated, replaced or deleted material (According to RDA content type: Integrating resource).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Integrierende Ressourcen umfassen physische Loseblattsammlungen, die durch Ergänzungslieferungen laufend aktualisiert werden sowie dynamische Online-Ressourcen (z.B. Blogs und Webauftritte) mit laufenden Ergänzungen, Updates, Ersetzungen oder Löschungen (Orientiert an RDA-Bezeichnung: Integrierende Ressource).</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">Integrating resources comprise loose-leaf publications that have continuous additions as well as dynamic online ressources (e.g. blogs and websites) with continually added, updated, replaced or deleted material (According to RDA content type: Integrating resource).</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Integrierende Ressourcen umfassen physische Loseblattsammlungen, die durch Ergänzungslieferungen laufend aktualisiert werden sowie dynamische Online-Ressourcen (z.B. Blogs und Webauftritte) mit laufenden Ergänzungen, Updates, Ersetzungen oder Löschungen (Orientiert an RDA-Bezeichnung: Integrierende Ressource).</rdfs:comment>
+        <rdfs:label xml:lang="de-de">Integrierende Ressource</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Journalartikel -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Journalartikel">
@@ -1080,6 +1317,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Journal article</rdfs:label>
         <rdfs:label xml:lang="de-de">Journalartikel</rdfs:label>
     </owl:Class>
     
@@ -1089,6 +1327,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Juniorprofessoren">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professoren"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren"/>
         <Meta:inhaltlicheDefinition>Be29</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -1096,6 +1335,60 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">Junior professors</rdfs:label>
         <rdfs:label xml:lang="de-de">Juniorprofessor/-innen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Konferenzband -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Konferenzband">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Buch"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Book"/>
+        <Meta:inhaltlicheDefinition xml:lang="de-de">Pu43</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">A publication edited by an individual person, a group of persons or a corporation. It contains contributions of different authors to scientific conventions, conferences or congresses (see conference contribution).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Publikation von Beiträgen, die als Sammelwerk erscheinen. Herausgeber/-innen können natürliche Personen oder Körperschaften sein. Sie enthält Beiträge zu Tagungen, Kongressen oder Wissenschaftlichen Konferenzen verschiedener Autor/-innen (siehe Konferenzbeitrag).</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">A publication edited by an individual person, a group of persons or a corporation. It contains contributions of different authors to scientific conventions, conferences or congresses (see conference contribution).</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Eine Publikation von Beiträgen, die als Sammelwerk erscheinen. Herausgeber/-innen können natürliche Personen oder Körperschaften sein. Sie enthält Beiträge zu Tagungen, Kongressen oder Wissenschaftlichen Konferenzen verschiedener Autor/-innen (siehe Konferenzbeitrag)</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Conference proceedings</rdfs:label>
+        <rdfs:label xml:lang="de-de">Konferenzband</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp"/>
+        <Meta:inhaltlicheDefinition>Pu31</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Conference contribution</rdfs:label>
+        <rdfs:label xml:lang="de-de">Konferenzbeitrag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag"/>
+        <Meta:inhaltlicheDefinition xml:lang="de-de">Pu28</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">A conference paper is a self-contained contribution to a defined theme / one question, created by one or more authors, along with other contributions presented in a scientific conference and published e.g. in a conference proceedings.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Ein Konferenzpaper ist ein Beitrag zu einem abgegrenzten Thema / einer Fragestellung, erstellt durch einen/eine oder mehrere Autoren/Autorinnen, der zusammen mit anderen Beiträgen im Rahmen einer wissenschaftlichen Konferenz präsentiert und z.B. in einem Konferenzband veröffentlicht wurde</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">A conference paper is a self-contained contribution to a defined theme / one question, created by one or more authors, along with other contributions presented in a scientific conference and published e.g. in a conference proceedings.</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Ein Konferenzpaper ist ein Beitrag zu einem abgegrenzten Thema / einer Fragestellung, erstellt durch einen/eine oder mehrere Autoren/Autorinnen, der zusammen mit anderen Beiträgen im Rahmen einer wissenschaftlichen Konferenz präsentiert und z.B. in einem Konferenzband veröffentlicht wurde</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Conference Paper</rdfs:label>
+        <rdfs:label xml:lang="de-de">Konferenzpaper</rdfs:label>
     </owl:Class>
     
 
@@ -1110,6 +1403,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Conference Poster</rdfs:label>
         <rdfs:label xml:lang="de-de">Konferenzposter</rdfs:label>
     </owl:Class>
     
@@ -1118,6 +1412,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <!-- http://kerndatensatz-forschung.de/owl/Basis#LetterToTheEditor -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#LetterToTheEditor">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Dokumenttyp"/>
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Journalartikel"/>
         <Meta:inhaltlicheDefinition>Pu120</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -1125,6 +1420,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Letter to the Editor</rdfs:label>
+        <rdfs:label xml:lang="en-us">Letter to the Editor</rdfs:label>
     </owl:Class>
     
 
@@ -1146,13 +1442,18 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <!-- http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Journalartikel"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag"/>
         <Meta:inhaltlicheDefinition>Pu48</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">A meeting abstract is a short text that summarizes a conference paper, a conference poster or a presentation at a scientific conference and is published (e.g. in a conference proceedings) and permanently available.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Ein Meeting Abstract ist ein kurzer Text, der ein Konferenzpaper, ein Konferenzposter oder eine Präsentation in einer wissenschaftlichen Konferenz zusammenfasst und der (z.B. in einem Konferenzband) veröffentlicht wurde und dauerhaft verfügbar ist.</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">A meeting abstract is a short text that summarizes a conference paper, a conference poster or a presentation at a scientific conference and is published (e.g. in a conference proceedings) and permanently available.</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Ein Meeting Abstract ist ein kurzer Text, der ein Konferenzpaper, ein Konferenzposter oder eine Präsentation in einer wissenschaftlichen Konferenz zusammenfasst und der (z.B. in einem Konferenzband) veröffentlicht wurde und dauerhaft verfügbar ist.</rdfs:comment>
         <rdfs:label xml:lang="de-de">Meeting Abstract</rdfs:label>
+        <rdfs:label xml:lang="en-us">Meeting Abstract</rdfs:label>
     </owl:Class>
     
 
@@ -1164,7 +1465,8 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Mittelgeber</rdfs:label>
+        <rdfs:label xml:lang="de-de">Drittmittelgeber/-in</rdfs:label>
+        <rdfs:label xml:lang="en-us">Third-party funder</rdfs:label>
     </owl:Class>
     
 
@@ -1175,10 +1477,17 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Buch"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Book"/>
         <Meta:inhaltlicheDefinition>Pu13</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">A monograph is a book written by a single or multiple authors dedicated to a specific topic, which it portrays comprehensively, including all relevant research findings. [This publication type also comprises: reference and text books, maps, exhibition catalog and translation if the latter is to be seen as substantial research achievement]</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Monographie ist ein Buch, geschrieben von einem/einer Autor/-in oder mehreren Autoren/Autorinnen, das sich einem spezifischen Thema widmet und dieses umfassend und unter Berücksichtigung der relevanten Forschungsergebnisse darstellt.
+[Dieser Publikationstyp enthält auch: Fach- und Lehrbuch, Ausstellungskatalog, Karten, Übersetzung (wenn die Übersetzung eine substanzielle Forschungsleistung darstellt.)]</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">A monograph is a book written by a single or multiple authors dedicated to a specific topic, which it portrays comprehensively, including all relevant research findings. [This publication type also comprises: reference and text books, maps, exhibition catalog and translation if the latter is to be seen as substantial research achievement]</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Eine Monographie ist ein Buch, geschrieben von einem/einer Autor/-in oder mehreren Autoren/Autorinnen, das sich einem spezifischen Thema widmet und dieses umfassend und unter Berücksichtigung der relevanten Forschungsergebnisse darstellt.
+[Dieser Publikationstyp enthält auch: Fach- und Lehrbuch, Ausstellungskatalog, Karten, Übersetzung (wenn die Übersetzung eine substanzielle Forschungsleistung darstellt.)]</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Monograph</rdfs:label>
         <rdfs:label xml:lang="de-de">Monographie</rdfs:label>
     </owl:Class>
     
@@ -1187,14 +1496,76 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <!-- http://kerndatensatz-forschung.de/owl/Basis#NeuerPublikationstyp -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#NeuerPublikationstyp">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikation"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp"/>
         <Meta:inhaltlicheDefinition>Pu111</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="de-de">Das Werk kann nicht einem der vorhandenen Publikationstypen zugeordnet werden. Es wird darum gebeten, in diesem Fall einen Vorschlag für einen neuen Publikationstyp einzureichen. Dieser sollte eine klare und möglichst allgemeine Definition wie auch die Abgrenzung von ähnlichen bereits vorliegenden Publikationstypen enthalten</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">The work cannot be attributed to one of the available publication types. In this case a suggestion for a new publication type should be made. This suggestion should include a clear and comprehensive definition as well as clues for the discrimination against the existing publication types.</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Neuer Publikations- oder Dokumenttyp</rdfs:label>
+        <rdfs:comment xml:lang="de-de">Das Werk kann nicht einem der vorhandenen Publikationstypen zugeordnet werden. Es wird darum gebeten, in diesem Fall einen Vorschlag für einen neuen Publikationstyp einzureichen. Dieser sollte eine klare und möglichst allgemeine Definition wie auch die Abgrenzung von ähnlichen bereits vorliegenden Publikationstypen enthalten</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The work cannot be attributed to one of the available publication types. In this case a suggestion for a new publication type should be made. This suggestion should include a clear and comprehensive definition as well as clues for the discrimination against the existing publication types.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Other publication type</rdfs:label>
+        <rdfs:label xml:lang="de-de">Sonstiger Publikationstyp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#NichtErklaert -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#NichtErklaert">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr134</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Nicht Erklärt</rdfs:label>
+        <rdfs:label xml:lang="en-us">Not declared</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#NichtErklaertOeffentlicheMittelgeber -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#NichtErklaertOeffentlicheMittelgeber">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#NichtErklaert"/>
+        <Meta:inhaltlicheDefinition>Dr136</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Nicht erklärt (Öffentliche Mittelgeber/-innen)</rdfs:label>
+        <rdfs:label xml:lang="en-us">Not declared (public funders)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#NichtErklaertPrivateMittelgeber -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#NichtErklaertPrivateMittelgeber">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#NichtErklaert"/>
+        <Meta:inhaltlicheDefinition>Dr135</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Nicht Erklärt (Private Mittelgeber/ -innen)</rdfs:label>
+        <rdfs:label xml:lang="en-us">Not declared (private donors)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Nutzung -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Nutzung">
+        <Meta:inhaltlicheDefinition>Fi8</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Nutzung / Nutzungsintensität</rdfs:label>
+        <rdfs:label xml:lang="en-us">Use / intensity of use</rdfs:label>
     </owl:Class>
     
 
@@ -1217,6 +1588,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#OrdentlicheProfessoren">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professoren"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professorenbezeichnung"/>
         <Meta:inhaltlicheDefinition>Be37</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -1242,6 +1614,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Organisational unit</rdfs:label>
         <rdfs:label xml:lang="de-de">Organisationseinheit</rdfs:label>
     </owl:Class>
     
@@ -1258,8 +1631,10 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:comment>Technisch einmalige erteilte Patente. Erteilungen für die gleiche Erfindung in zwei oder mehr Ländern werden nur einfach gezählt. Wenn ein technisch einmaliges erteiltes Patent im Vorjahr gezählt wurde, kann es nicht noch einmal aufgeführt werden.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Technically unique patents granted. Grants for the same invention in two or more countries are only counted once. If a technically unique patent granted was counted in the previous year, it cannot be listed again.</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Technisch einmalige erteilte Patente. Erteilungen für die gleiche Erfindung in zwei oder mehr Ländern werden nur einfach gezählt. Wenn ein technisch einmaliges erteiltes Patent im Vorjahr gezählt wurde, kann es nicht noch einmal aufgeführt werden.</rdfs:comment>
         <rdfs:label xml:lang="de-de">Patent</rdfs:label>
+        <rdfs:label xml:lang="en-us">Patent</rdfs:label>
     </owl:Class>
     
 
@@ -1273,8 +1648,44 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:comment>Zusammenfassendes Konzept für die Darstellung aller personenbezogenen Eigenschaften und Attribute</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Summary concept for the representation of all personal properties and attributes</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Zusammenfassendes Konzept für die Darstellung aller personenbezogenen Eigenschaften und Attribute</rdfs:comment>
         <rdfs:label xml:lang="de-de">Person</rdfs:label>
+        <rdfs:label xml:lang="en-us">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie">
+        <Meta:inhaltlicheDefinition>Be11</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Personalkategorie</rdfs:label>
+        <rdfs:label xml:lang="en-us">Personnel category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Preprint -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Preprint">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Artikel"/>
+        <Meta:inhaltlicheDefinition>Pu29</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">A preprint is a scientific manuscript, which has not (yet) sbujected to a review process. Preprints are published on dicipline-specific recognized preprint servers (e.g. arXiv.org).
+Preprints are to be distinguished from the publication type working paper (Pu37).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Ein Preprint ist ein wissenschaftliches Manuskript, welches (noch) kein Begutachtungsverfahren durchlaufen hat. Preprints werden über im jeweiligen Fach anerkannte Preprintserver veröffentlicht (z.B. über arXiv.org). Preprints sind abzugrenzen vom Publikationstyp Arbeitspapier/Forschungsbericht (Pu37)</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">A preprint is a scientific manuscript, which has not (yet) sbujected to a review process. Preprints are published on dicipline-specific recognized preprint servers (e.g. arXiv.org).
+Preprints are to be distinguished from the publication type working paper (Pu37).</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Ein Preprint ist ein wissenschaftliches Manuskript, welches (noch) kein Begutachtungsverfahren durchlaufen hat. Preprints werden über im jeweiligen Fach anerkannte Preprintserver veröffentlicht (z.B. über arXiv.org). Preprints sind abzugrenzen vom Publikationstyp Arbeitspapier/Forschungsbericht (Pu37)</rdfs:comment>
+        <rdfs:label xml:lang="de-de">Preprint</rdfs:label>
+        <rdfs:label xml:lang="en-us">Preprint</rdfs:label>
     </owl:Class>
     
 
@@ -1301,6 +1712,19 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     
 
 
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Professorenbezeichnung -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Professorenbezeichnung">
+        <Meta:inhaltlicheDefinition xml:lang="en-us">Be41</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Bezeichnung für Professoren</rdfs:label>
+        <rdfs:label xml:lang="en-us">Designation for professors</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Promotion -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Promotion">
@@ -1323,6 +1747,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">PhD cooperation partner</rdfs:label>
         <rdfs:label xml:lang="de-de">Promotionskooperationspartner</rdfs:label>
     </owl:Class>
     
@@ -1331,15 +1756,32 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Publikation -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Publikation">
-        <owl:equivalentClass rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
         <Meta:inhaltlicheDefinition>Pu1</Meta:inhaltlicheDefinition>
         <Meta:inhaltlicheDefinition>Pu4a</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Publication</rdfs:label>
         <rdfs:label xml:lang="de-de">Publikation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp">
+        <Meta:inhaltlicheDefinition xml:lang="de-de">Pu6</Meta:inhaltlicheDefinition>
+        <Meta:pgbid xml:lang="de-de">kds.type.publication</Meta:pgbid>
+        <obo:IAO_0000115 xml:lang="en-us">Categorization of all publishing formats based on criteria such as publication and source, e.g. in journal articles, book chapters, monographs</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Kategorisierung aller Publikationsformate anhand von Eigenschaften wie Erscheinungsweise und Quelle, z.B. in Journalartikel, Sammelbandbeitrag, Monographie u.a..</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">Categorization of all publishing formats based on criteria such as publication and source, e.g. in journal articles, book chapters, monographs</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Kategorisierung aller Publikationsformate anhand von Eigenschaften wie Erscheinungsweise und Quelle, z.B. in Journalartikel, Sammelbandbeitrag, Monographie u.a..</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Publication type</rdfs:label>
+        <rdfs:label xml:lang="de-de">Publikationstyp</rdfs:label>
     </owl:Class>
     
 
@@ -1359,14 +1801,18 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Qualifikationsschrift -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Qualifikationsschrift">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikation"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Thesis"/>
         <Meta:inhaltlicheDefinition>Pu146</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">Qualification Theses include Doctoral and Habilitation Theses. It is to be indicated whether the publication is a Qualification Thesis. In this case, the type of qualification (habilitation or dissertation) must be specified.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Qualifikationsschriften umfassen Dissertationen und Habilitationen. Es ist anzugeben ob es sich bei der Publikation um eine Qualifikationsschrift handelt. In diesem Fall ist die Art der Qualifikationsschrift (Dissertation oder Habilitation) anzugeben.</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">Qualification Theses include Doctoral and Habilitation Theses. It is to be indicated whether the publication is a Qualification Thesis. In this case, the type of qualification (habilitation or dissertation) must be specified.</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Qualifikationsschriften umfassen Dissertationen und Habilitationen. Es ist anzugeben ob es sich bei der Publikation um eine Qualifikationsschrift handelt. In diesem Fall ist die Art der Qualifikationsschrift (Dissertation oder Habilitation) anzugeben.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Qualification Thesis</rdfs:label>
         <rdfs:label xml:lang="de-de">Qualifikationsschrift</rdfs:label>
     </owl:Class>
     
@@ -1386,9 +1832,10 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     
 
 
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionDokumenttyp -->
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Quellenedition -->
 
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionDokumenttyp">
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Quellenedition">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Dokumenttyp"/>
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Journalartikel"/>
         <Meta:inhaltlicheDefinition>Pu130</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -1396,21 +1843,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Quellenedition [Journalartikel]</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp -->
-
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Buch"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Book"/>
-        <Meta:inhaltlicheDefinition>Pu47</Meta:inhaltlicheDefinition>
-        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
-        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Quellenedition [Buch]</rdfs:label>
+        <rdfs:label xml:lang="en-us">Source edition [Journal Article]</rdfs:label>
     </owl:Class>
     
 
@@ -1418,6 +1851,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Review -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Review">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Dokumenttyp"/>
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Journalartikel"/>
         <Meta:inhaltlicheDefinition>Pu114</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -1425,6 +1859,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Review</rdfs:label>
+        <rdfs:label xml:lang="en-us">Review</rdfs:label>
     </owl:Class>
     
 
@@ -1439,6 +1874,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Review</rdfs:label>
         <rdfs:label xml:lang="de-de">Rezension</rdfs:label>
     </owl:Class>
     
@@ -1450,10 +1886,23 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Buch"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Book"/>
         <Meta:inhaltlicheDefinition>Pu23</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">A book that has been edited by one or more persons. It contains contributions by different authors in chapters or essays/articles (see inbook).
+[This publication type also includes festschrift (commemorative publications) and legal commentary (either loose-leaf collection or bound book), exhibition catalog, maps]
+Conference proceedings are excluded from this category (see conference proceedings, Pu43).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Ein Sammelband ist ein Buch, das von einer oder mehreren Personen herausgegeben wurde. Es enthält Beiträge in Form von Kapiteln oder Aufsätzen verschiedener Autor/-innen (siehe Sammelbandbeitrag).
+[Dieser Publikationstyp enthält auch: Festschrift, Gesetzeskommentare (Loseblattsammlung oder gebunden), Ausstellungskatalog, Karten.]
+Als Sammelband veröffentlichte Konferenzbände sind von dieser Kategorie ausgeschlossen und werden als Konferenzband (Pu43) kategorisiert.</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">A book that has been edited by one or more persons. It contains contributions by different authors in chapters or essays/articles (see inbook).
+[This publication type also includes festschrift (commemorative publications) and legal commentary (either loose-leaf collection or bound book), exhibition catalog, maps]
+Conference proceedings are excluded from this category (see conference proceedings, Pu43).</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Ein Sammelband ist ein Buch, das von einer oder mehreren Personen herausgegeben wurde. Es enthält Beiträge in Form von Kapiteln oder Aufsätzen verschiedener Autor/-innen (siehe Sammelbandbeitrag).
+[Dieser Publikationstyp enthält auch: Festschrift, Gesetzeskommentare (Loseblattsammlung oder gebunden), Ausstellungskatalog, Karten.]
+Als Sammelband veröffentlichte Konferenzbände sind von dieser Kategorie ausgeschlossen und werden als Konferenzband (Pu43) kategorisiert.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Anthology</rdfs:label>
         <rdfs:label xml:lang="de-de">Sammelband</rdfs:label>
     </owl:Class>
     
@@ -1468,6 +1917,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Anthology contribution</rdfs:label>
         <rdfs:label xml:lang="de-de">Sammelbandbeitrag</rdfs:label>
     </owl:Class>
     
@@ -1477,6 +1927,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professoren"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren"/>
         <Meta:inhaltlicheDefinition>Be31</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -1508,11 +1959,18 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/ERO_0000071"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ERO_0000071"/>
         <Meta:inhaltlicheDefinition>Pu45</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="de-de">Software bezeichnet wissenschaftliche Computerprogramme mit einer dazugehörigen Dokumentation.
+[Der Publikationstyp umfasst auch Manuale.]</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">Software is a generic term for computer programs and their associated documentation, as opposed to data used as input and generated as output. [The publication type also comprises manuals]</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="de-de">Software bezeichnet wissenschaftliche Computerprogramme mit einer dazugehörigen Dokumentation.
+[Der Publikationstyp umfasst auch Manuale.]</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Software is a generic term for computer programs and their associated documentation, as opposed to data used as input and generated as output. [The publication type also comprises manuals]</rdfs:comment>
         <rdfs:label xml:lang="de-de">Software</rdfs:label>
+        <rdfs:label xml:lang="en-us">Software</rdfs:label>
     </owl:Class>
     
 
@@ -1521,6 +1979,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#SonstigeBezeichnung">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professoren"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren"/>
         <Meta:inhaltlicheDefinition xml:lang="en-us">Be46</Meta:inhaltlicheDefinition>
         <obo:IAO_0000115 xml:lang="de-de">Die Person (Professor/-in) kann keiner der genannten Bezeichnungen zugeordnet werden.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en-us">The person (professor) cannot be assigned to any of the above designations.</obo:IAO_0000115>
@@ -1530,6 +1989,36 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">Other designation</rdfs:label>
         <rdfs:label xml:lang="de-de">Sonstige Bezeichnung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
+        <Meta:inhaltlicheDefinition>Dr141</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Other third-party funders</rdfs:label>
+        <rdfs:label xml:lang="de-de">Sonstige Drittmittelgeber/-innen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#SonstigeInternationaleOrganisationen -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#SonstigeInternationaleOrganisationen">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#EuUndSonstigeInternationaleOrganisationen"/>
+        <Meta:inhaltlicheDefinition>Dr96</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Other international organisations</rdfs:label>
+        <rdfs:label xml:lang="de-de">Sonstige internationale Organisationen</rdfs:label>
     </owl:Class>
     
 
@@ -1545,6 +2034,36 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">Other Cooperation partner</rdfs:label>
         <rdfs:label xml:lang="de-de">Sonstige Kooperationspartner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professorenbezeichnung"/>
+        <Meta:inhaltlicheDefinition>Be88</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Other professors</rdfs:label>
+        <rdfs:label xml:lang="de-de">Sonstige Professor/-innen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#SonstigerDokumenttyp -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#SonstigerDokumenttyp">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Dokumenttyp"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
+        <Meta:inhaltlicheDefinition>Pu100</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Other document type</rdfs:label>
+        <rdfs:label xml:lang="de-de">Sonstiger Dokumenttyp</rdfs:label>
     </owl:Class>
     
 
@@ -1587,6 +2106,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Stiftungsprofessoren">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professoren"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren"/>
         <Meta:inhaltlicheDefinition>Be59</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -1703,6 +2223,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Vertretungsprofessoren">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Professoren"/>
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren"/>
         <Meta:inhaltlicheDefinition>Be58</Meta:inhaltlicheDefinition>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -1778,10 +2299,15 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <owl:equivalentClass rdf:resource="http://purl.org/ontology/bibo/Slideshow"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Slideshow"/>
         <Meta:inhaltlicheDefinition>Pu44</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="en-us">Slides are publicly available visual representations of oral contributions given at scientific events.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Vortragsfolien sind öffentlich zugängliche visuelle Darstellungen von mündlichen Beiträgen auf wissenschaftlichen Veranstaltungen.</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">Slides are publicly available visual representations of oral contributions given at scientific events.</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Vortragsfolien sind öffentlich zugängliche visuelle Darstellungen von mündlichen Beiträgen auf wissenschaftlichen Veranstaltungen.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Scientific presentation slides</rdfs:label>
         <rdfs:label xml:lang="de-de">Wissenschaftliche Vortragsfolien</rdfs:label>
     </owl:Class>
     
@@ -1797,6 +2323,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Scientific Article</rdfs:label>
         <rdfs:label xml:lang="de-de">Wissenschaftlicher Artikel</rdfs:label>
     </owl:Class>
     
@@ -1858,20 +2385,6 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     
 
 
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#ePaper -->
-
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#ePaper">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Artikel"/>
-        <Meta:inhaltlicheDefinition>Pu29</Meta:inhaltlicheDefinition>
-        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
-        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">ePaper</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ERO_0000004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ERO_0000004"/>
@@ -1916,9 +2429,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <!-- http://purl.org/ontology/bibo/Document -->
 
-    <owl:Class rdf:about="http://purl.org/ontology/bibo/Document">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Publikation"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.org/ontology/bibo/Document"/>
     
 
 
@@ -1976,9 +2487,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <!-- http://vivoweb.org/ontology/core#Dataset -->
 
-    <owl:Class rdf:about="http://vivoweb.org/ontology/core#Dataset">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Datensammlung"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#Dataset"/>
     
 
 
@@ -2063,6 +2572,24 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Person"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt">
+        <Meta:inhaltlicheDefinition>Dr13</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Förderkennzeichen des Drittmittelprojekts</rdfs:label>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    </rdf:Description>
 </rdf:RDF>
 
 
