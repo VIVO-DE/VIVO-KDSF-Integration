@@ -33,10 +33,10 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Ausserplanmaessig
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Befristet>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Befristung>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigung>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Bibliographie>))
-Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Buch>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Bund>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Bundeslaender>))
@@ -65,11 +65,12 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Habilitation>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Habilitationsschrift>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#HauptberuflicheGastprofessoren>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift>))
-Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Identifier>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#InformationsUndKommunikationsinfrastrukturen>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Journalartikel>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Juniorprofessoren>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#LetterToTheEditor>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Lokal>))
@@ -87,17 +88,18 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Organisationseinh
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Patent>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Person>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Preprint>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Professor>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Professoren>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Professorenbezeichnung>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Promotion>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Publikation>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Qualifikation>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Qualifikationsschrift>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Quellenedition>))
-Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Review>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Rezension>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Sammelband>))
@@ -132,7 +134,6 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Wissenschaftliche
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#WissenschaftsunterstuetzendesPersonal>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Wissensressourcen>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Zugangsart>))
-Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#ePaper>))
 Declaration(Class(obo:ERO_0000004))
 Declaration(Class(obo:ERO_0000014))
 Declaration(Class(obo:ERO_0000071))
@@ -565,7 +566,7 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#AUF>
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#AUF> "Non-university research institution"@en-us)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#AUF> <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> (Arbeitspapier/Forschungsbericht)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> (Working Paper/Research Report)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> "Pu37")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -573,8 +574,9 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> "Arbeitspapier/Forschungsbericht"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> "Working Paper/Research Report"@en-us)
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> bibo:Report)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Artikel> (Artikel)
 
@@ -583,8 +585,9 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Artikel> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Artikel> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Artikel> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Artikel> "Article"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Artikel> "Artikel"@de-de)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Artikel> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Artikel> <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Artikel> bibo:Article)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Ausgruendung> (Spin-off Company)
@@ -629,13 +632,33 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Befr
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> (Beiträge bzw. Interviews in nicht-wissenschaftlichen Medien)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> "Pu39")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> "Beitrag mit Bezug auf wissenschaftliche Tätigkeiten, veröffentlicht in Massenmedien (z.B. Zeitungen, nicht-wissenschaftliche Zeitschriften, Blogs, Rundfunk oder Fernsehen)."@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> "Contribution related to scientific activities published in mass media (e.g. newspaper, non-academic periodicals, blogs, radio, or TV)."@en-us)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> "Beitrag mit Bezug auf wissenschaftliche Tätigkeiten, veröffentlicht in Massenmedien (z.B. Zeitungen, nicht-wissenschaftliche Zeitschriften, Blogs, Rundfunk oder Fernsehen)."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> "Contribution related to scientific activities published in mass media (e.g. newspaper, non-academic perio-dicals, blogs, radio, or TV)."@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> "Beiträge bzw. Interviews in nicht-wissenschaftlichen Medien"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> "Contributions or interviews in non-scientific media"@en-us)
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> bibo:Interview)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien> <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp>)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> (Contribution in scientific blogs)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> "Pu42")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> "Beitrag mit Bezug auf wissenschaftliche Tätigkeiten, veröffentlicht in wissenschaftlichen Blogs."@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> "Contribution referring to scientific activities, published in science blogs."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> "Beitrag mit Bezug auf wissenschaftliche Tätigkeiten, veröffentlicht in wissenschaftlichen Blogs."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> "Contribution referring to scientific activities, published in science blogs."@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> "Beitrag in wissenschaftlige Blogs"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> "Contribution in scientific blogs"@en-us)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#BeitragInWissenschaftlichenBlogs> <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter> (Beschäftigte / Beschäftigter)
 
@@ -672,26 +695,17 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Bibl
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Bibliographie> <http://kerndatensatz-forschung.de/owl/Basis#Dokumenttyp>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Bibliographie> <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp> (Bibliographie [Buch])
-
-AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp> "Pu24")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp> "Bibliographie [Buch]"@de-de)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#BibliographiePublikationstyp> <http://kerndatensatz-forschung.de/owl/Basis#Buch>)
-
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Buch> (Buch)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Buch> (Book)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Buch> "Pu22")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Buch> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Buch> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Buch> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Buch> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Buch> "Book"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Buch> "Buch"@de-de)
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#Buch> bibo:Book)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Buch> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Buch> <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Bund> (Federal Government)
 
@@ -977,16 +991,6 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kernda
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift> "Herausgeberschaft eines Sonderhefts einer Zeitschrift"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> (Herausgegebenes Buch)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> "Pu48")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> "Herausgegebenes Buch"@de-de)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> <http://kerndatensatz-forschung.de/owl/Basis#Buch>)
-
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Identifier> (Identifier)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Identifier> "Pu132")
@@ -1010,13 +1014,14 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kernda
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#InformationsUndKommunikationsinfrastrukturen> "Informations- und Kommunikationsinfrastrukturen"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#InformationsUndKommunikationsinfrastrukturen> <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel> (Journalartikel)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel> (Journal article)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel> "Pu11")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel> "Journal article"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel> "Journalartikel"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Journalartikel> <http://kerndatensatz-forschung.de/owl/Basis#Artikel>)
 
@@ -1032,16 +1037,43 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Juni
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Juniorprofessoren> <http://kerndatensatz-forschung.de/owl/Basis#Professoren>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Juniorprofessoren> <http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> (Konferenzposter)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag> (Conference contribution)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag> "Pu31")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag> "Conference contribution"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag> "Konferenzbeitrag"@de-de)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag> <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp>)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> (Conference Paper)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> "Pu28"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> "A conference paper is a self-contained contribution to a defined theme / one question, created by one or more authors, along with other contributions presented in a scientific conference and published e.g. in a conference proceedings."@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> "Ein Konferenzpaper ist ein Beitrag zu einem abgegrenzten Thema / einer Fragestellung, erstellt durch einen/eine oder mehrere Autoren/Autorinnen, der zusammen mit anderen Beiträgen im Rahmen einer wissenschaftlichen Konferenz präsentiert und z.B. in einem Konferenzband veröffentlicht wurde"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> "A conference paper is a self-contained contribution to a defined theme / one question, created by one or more authors, along with other contributions presented in a scientific conference and published e.g. in a conference proceedings."@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> "Ein Konferenzpaper ist ein Beitrag zu einem abgegrenzten Thema / einer Fragestellung, erstellt durch einen/eine oder mehrere Autoren/Autorinnen, der zusammen mit anderen Beiträgen im Rahmen einer wissenschaftlichen Konferenz präsentiert und z.B. in einem Konferenzband veröffentlicht wurde"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> "Conference Paper"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> "Konferenzpaper"@de-de)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzpaper> <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag>)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> (Conference Poster)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> "Pu26")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> "Conference Poster"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> "Konferenzposter"@de-de)
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> vivo:ConferencePoster)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzposter> <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#LetterToTheEditor> (Letter to the Editor)
 
@@ -1068,12 +1100,17 @@ SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Lokal> <http://kerndaten
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> (Meeting Abstract)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> "Pu48")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> "A meeting abstract is a short text that summarizes a conference paper, a conference poster or a presentation at a scientific conference and is published (e.g. in a conference proceedings) and permanently available."@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> "Ein Meeting Abstract ist ein kurzer Text, der ein Konferenzpaper, ein Konferenzposter oder eine Präsentation in einer wissenschaftlichen Konferenz zusammenfasst und der (z.B. in einem Konferenzband) veröffentlicht wurde und dauerhaft verfügbar ist."@de-de)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> "A meeting abstract is a short text that summarizes a conference paper, a conference poster or a presentation at a scientific conference and is published (e.g. in a conference proceedings) and permanently available."@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> "Ein Meeting Abstract ist ein kurzer Text, der ein Konferenzpaper, ein Konferenzposter oder eine Präsentation in einer wissenschaftlichen Konferenz zusammenfasst und der (z.B. in einem Konferenzband) veröffentlicht wurde und dauerhaft verfügbar ist."@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> "Meeting Abstract"@de-de)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> "Meeting Abstract"@en-us)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#MeetingAbstract> <http://kerndatensatz-forschung.de/owl/Basis#Konferenzbeitrag>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber> (Drittmittelgeber/-in)
 
@@ -1084,13 +1121,20 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kernda
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber> "Drittmittelgeber/-in"@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber> "Third-party funder"@en-us)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Monographie> (Monographie)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Monographie> (Monograph)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Monographie> "Pu13")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Monographie> "A monograph is a book written by a single or multiple authors dedicated to a specific topic, which it portrays comprehensively, including all relevant research findings. [This publication type also comprises: reference and text books, maps, exhibition catalog and translation if the latter is to be seen as substantial research achievement]"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Monographie> "Eine Monographie ist ein Buch, geschrieben von einem/einer Autor/-in oder mehreren Autoren/Autorinnen, das sich einem spezifischen Thema widmet und dieses umfassend und unter Berücksichtigung der relevanten Forschungsergebnisse darstellt.
+[Dieser Publikationstyp enthält auch: Fach- und Lehrbuch, Ausstellungskatalog, Karten, Übersetzung (wenn die Übersetzung eine substanzielle Forschungsleistung darstellt.)]"@de-de)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Monographie> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Monographie> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Monographie> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Monographie> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Monographie> "A monograph is a book written by a single or multiple authors dedicated to a specific topic, which it portrays comprehensively, including all relevant research findings. [This publication type also comprises: reference and text books, maps, exhibition catalog and translation if the latter is to be seen as substantial research achievement]"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Monographie> "Eine Monographie ist ein Buch, geschrieben von einem/einer Autor/-in oder mehreren Autoren/Autorinnen, das sich einem spezifischen Thema widmet und dieses umfassend und unter Berücksichtigung der relevanten Forschungsergebnisse darstellt.
+[Dieser Publikationstyp enthält auch: Fach- und Lehrbuch, Ausstellungskatalog, Karten, Übersetzung (wenn die Übersetzung eine substanzielle Forschungsleistung darstellt.)]"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Monographie> "Monograph"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Monographie> "Monographie"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Monographie> <http://kerndatensatz-forschung.de/owl/Basis#Buch>)
 
@@ -1218,6 +1262,23 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kernda
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie> "Personalkategorie"@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie> "Personnel category"@en-us)
 
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Preprint> (Preprint)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Preprint> "Pu29")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Preprint> "A preprint is a scientific manuscript, which has not (yet) sbujected to a review process. Preprints are published on dicipline-specific recognized preprint servers (e.g. arXiv.org).
+Preprints are to be distinguished from the publication type working paper (Pu37)."@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Preprint> "Ein Preprint ist ein wissenschaftliches Manuskript, welches (noch) kein Begutachtungsverfahren durchlaufen hat. Preprints werden über im jeweiligen Fach anerkannte Preprintserver veröffentlicht (z.B. über arXiv.org). Preprints sind abzugrenzen vom Publikationstyp Arbeitspapier/Forschungsbericht (Pu37)"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Preprint> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Preprint> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Preprint> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Preprint> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Preprint> "A preprint is a scientific manuscript, which has not (yet) sbujected to a review process. Preprints are published on dicipline-specific recognized preprint servers (e.g. arXiv.org).
+Preprints are to be distinguished from the publication type working paper (Pu37)."@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Preprint> "Ein Preprint ist ein wissenschaftliches Manuskript, welches (noch) kein Begutachtungsverfahren durchlaufen hat. Preprints werden über im jeweiligen Fach anerkannte Preprintserver veröffentlicht (z.B. über arXiv.org). Preprints sind abzugrenzen vom Publikationstyp Arbeitspapier/Forschungsbericht (Pu37)"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Preprint> "Preprint"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Preprint> "Preprint"@en-us)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Preprint> <http://kerndatensatz-forschung.de/owl/Basis#Artikel>)
+
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Professoren> (Professors)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Professoren> "Be19")
@@ -1266,7 +1327,22 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Publikation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Publikation> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Publikation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Publikation> "Publication"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Publikation> "Publikation"@de-de)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> (Publikationstyp)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> "Pu6"@de-de)
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> "kds.type.publication"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> "Categorization of all publishing formats based on criteria such as publication and source, e.g. in journal articles, book chapters, monographs"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> "Kategorisierung aller Publikationsformate anhand von Eigenschaften wie Erscheinungsweise und Quelle, z.B. in Journalartikel, Sammelbandbeitrag, Monographie u.a.."@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> "Categorization of all publishing formats based on criteria such as publication and source, e.g. in journal articles, book chapters, monographs"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> "Kategorisierung aller Publikationsformate anhand von Eigenschaften wie Erscheinungsweise und Quelle, z.B. in Journalartikel, Sammelbandbeitrag, Monographie u.a.."@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> "Publication type"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp> "Publikationstyp"@de-de)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Qualifikation> (Qualifikation)
 
@@ -1308,15 +1384,6 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Quel
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> <http://kerndatensatz-forschung.de/owl/Basis#Dokumenttyp>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp> (Quellenedition [Buch])
-
-AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp> "Pu47")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp> "Quellenedition [Buch]"@de-de)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#QuelleneditionPublikationstyp> <http://kerndatensatz-forschung.de/owl/Basis#Buch>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Review> (Review)
 
@@ -1343,23 +1410,37 @@ EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#Rezension> vivo:R
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Rezension> <http://kerndatensatz-forschung.de/owl/Basis#Dokumenttyp>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Rezension> <http://kerndatensatz-forschung.de/owl/Basis#Journalartikel>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> (Sammelband)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> (Anthology)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> "Pu23")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> "A book that has been edited by one or more persons. It contains contributions by different authors in chapters or essays/articles (see inbook).
+[This publication type also includes festschrift (commemorative publications) and legal commentary (either loose-leaf collection or bound book), exhibition catalog, maps]
+Conference proceedings are excluded from this category (see conference proceedings, Pu43)."@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> "Ein Sammelband ist ein Buch, das von einer oder mehreren Personen herausgegeben wurde. Es enthält Beiträge in Form von Kapiteln oder Aufsätzen verschiedener Autor/-innen (siehe Sammelbandbeitrag).
+[Dieser Publikationstyp enthält auch: Festschrift, Gesetzeskommentare (Loseblattsammlung oder gebunden), Ausstellungskatalog, Karten.]
+Als Sammelband veröffentlichte Konferenzbände sind von dieser Kategorie ausgeschlossen und werden als Konferenzband (Pu43) kategorisiert."@de-de)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> "A book that has been edited by one or more persons. It contains contributions by different authors in chapters or essays/articles (see inbook).
+[This publication type also includes festschrift (commemorative publications) and legal commentary (either loose-leaf collection or bound book), exhibition catalog, maps]
+Conference proceedings are excluded from this category (see conference proceedings, Pu43)."@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> "Ein Sammelband ist ein Buch, das von einer oder mehreren Personen herausgegeben wurde. Es enthält Beiträge in Form von Kapiteln oder Aufsätzen verschiedener Autor/-innen (siehe Sammelbandbeitrag).
+[Dieser Publikationstyp enthält auch: Festschrift, Gesetzeskommentare (Loseblattsammlung oder gebunden), Ausstellungskatalog, Karten.]
+Als Sammelband veröffentlichte Konferenzbände sind von dieser Kategorie ausgeschlossen und werden als Konferenzband (Pu43) kategorisiert."@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> "Anthology"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Sammelband> "Sammelband"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Sammelband> <http://kerndatensatz-forschung.de/owl/Basis#Buch>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> (Sammelbandbeitrag)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> (Anthology contribution)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> "Pu110")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> "Anthology contribution"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> "Sammelbandbeitrag"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> <http://kerndatensatz-forschung.de/owl/Basis#Artikel>)
 
@@ -1691,16 +1772,6 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Zugangsart> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Zugangsart> "Art des Zugangs"@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Zugangsart> "Type of access"@en-us)
-
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#ePaper> (ePaper)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#ePaper> "Pu29")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#ePaper> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#ePaper> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#ePaper> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#ePaper> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#ePaper> "ePaper"@de-de)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#ePaper> <http://kerndatensatz-forschung.de/owl/Basis#Artikel>)
 
 
 )
