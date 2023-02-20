@@ -1,0 +1,10 @@
+site_name: KDSF-VIVO-INTEGRATION
+site_description: KDSF-VIVO-INTEGRATION Documentation
+site_author: Rolf Guescini
+docs_dir: docs/
+repo_name: BUA-VIVO/VIVO-KDSF-Integration
+repo_url: https://github.com/BUA-VIVO/VIVO-KDSF-Integration
+nav:
+  - VIVO-KDSF-Integration: index.md
+theme:
+  name: material
