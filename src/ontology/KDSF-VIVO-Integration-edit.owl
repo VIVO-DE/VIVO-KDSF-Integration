@@ -52,8 +52,13 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#EuUndSonstigeInte
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#FH>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Fach>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Foerderer>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Format>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#GewerblicheWirtschaftUndSonstigeBereiche>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#GrossgeraeteUndInstrumente>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Habilitation>))
@@ -61,6 +66,7 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Habilitationsschr
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#HauptberuflicheGastprofessoren>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Identifier>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#InformationsUndKommunikationsinfrastrukturen>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Journalartikel>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Juniorprofessoren>))
@@ -74,11 +80,13 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#NeuerPublikations
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#NichtErklaert>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#NichtErklaertOeffentlicheMittelgeber>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#NichtErklaertPrivateMittelgeber>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Nutzung>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#OpenAccess>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#OrdentlicheProfessoren>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Patent>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Person>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Professor>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Professoren>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Professorenbezeichnung>))
@@ -546,7 +554,7 @@ DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Koordinationsroll
 #   Classes
 ############################
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#AUF> (Außeruniversitäre Forschungseinrichtung)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#AUF> (Non-university research institution)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#AUF> "Na94")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#AUF> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -554,6 +562,7 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#AUF> <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#AUF> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#AUF> "Außeruniversitäre Forschungseinrichtung"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#AUF> "Non-university research institution"@en-us)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#AUF> <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> (Arbeitspapier/Forschungsbericht)
@@ -635,8 +644,10 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter> <http://vivoweb.org/ontology#vitroClassGrouppeople>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter> "Personen, die in einem Beschäftigungsverhältnis sind.")
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter> "Personen, die in einem Beschäftigungsverhältnis sind."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter> "Persons who are in an employment relationship"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter> "Beschäftigte / Beschäftigter"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter> "Employee"@en-us)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigter> <http://kerndatensatz-forschung.de/owl/Basis#Person>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Beschaeftigung> (Employment)
@@ -738,6 +749,10 @@ SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Dissertation> <http://ke
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> (Doktorand/ -innen)
 
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> <http://vivoweb.org/ontology#vitroClassGrouppeople>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> "Personen, die in einem Beschäftigungsverhältnis sind."@de-de)
 AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> "Persons who are in an employment relationship."@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> "Doktorand/ -innen"@de-de)
@@ -759,11 +774,13 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Doku
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> "Dr2a")
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> "Dr30")
 AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> "Drittmittelprojekte im Sinne des Kerndatensatzes sind zeitlich befristet geförderte Forschungsaktivitäten mit Startdatum, Enddatum und Forschungsgegenstand, deren Finanzierung aus Drittmitteln erfolgt.")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> "Third-party funded projects within the context of the core data set are research activities funded for a limited period of time with a start date, end date and research object, the funding of which comes from third-party funds."@en-us)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> <http://vivoweb.org/ontology#vitroClassGroupactivities>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> "Drittmittelprojekt"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> "Third-party funded project"@en-us)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> obo:ERO_0000014)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#EU> (EU)
@@ -801,7 +818,7 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#EuUn
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#EuUndSonstigeInternationaleOrganisationen> "EU und sonstige internationale Organisationen"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#EuUndSonstigeInternationaleOrganisationen> <http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#FH> (Fachhochschule)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#FH> (University of Applied Sciences)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#FH> "Na93")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#FH> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -809,6 +826,7 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#FH> <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#FH> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#FH> "Fachhochschule"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#FH> "University of Applied Sciences"@en-us)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#FH> <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Fach> (Fach)
@@ -822,8 +840,9 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Fach> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Fach> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Fach> "Fach"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Fach> "Subject"@en-us)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> (Finanzierungsform)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> (Form of financing)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> "Be8")
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> "Na14")
@@ -831,16 +850,52 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> "Finanzierungsform"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> "Form of financing"@en-us)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> (Forschungsinfrastruktur)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> (Förderer)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "Pu86")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "dcterms.funding")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "Funders"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "Förderer"@de-de)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Format> (Format)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Format> "Pu87")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Format> "dcterms.format")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Format> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Format> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Format> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Format> "Format"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Format> "Format"@en-us)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> (Forschungsfeld)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> "Be77")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> "Dr124")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> "Na66")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> "Pa36")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> "Pu141")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> "Forschungsfeld"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Forschungsfeld> "Research field"@en-us)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> (Research infrastructure)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> "Fi2")
-AnnotationAssertion(vitro:descriptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> "Forschungsinfrastrukturen im Sinne des Kerndatensatzes sind umfangreiche / aufwendige Instrumente, Ressourcen oder Serviceeinrichtungen für die Forschung in allen Wissenschaftsgebieten, die sich durch eine mindestens überregionale Bedeutung für das jeweilige Wissenschaftsgebiet sowie durch eine mittel- bis langfristige Lebensdauer (mehr als 5 Jahre) auszeichnen und für eine externe Nutzung zur Verfügung stehen für die Zugangs- bzw. Nutzungsregelungen etabliert sind.")
+AnnotationAssertion(vitro:descriptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> "Forschungsinfrastrukturen im Sinne des Kerndatensatzes sind umfangreiche / aufwendige Instrumente, Ressourcen oder Serviceeinrichtungen für die Forschung in allen Wissenschaftsgebieten, die sich durch eine mindestens überregionale Bedeutung für das jeweilige Wissenschaftsgebiet sowie durch eine mittel- bis langfristige Lebensdauer (mehr als 5 Jahre) auszeichnen und für eine externe Nutzung zur Verfügung stehen für die Zugangs- bzw. Nutzungsregelungen etabliert sind."@de-de)
+AnnotationAssertion(vitro:descriptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> "Research infrastructures within the context of the Core Data Set are extensive / elaborate instruments, resources or service facilities for research in all scientific disciplines that are characterised by at least supraregional importance for the respective scientific discipline and by a medium- to long-term lifespan (more than 5 years) and are available for external use for which access or usage regulations have been established."@en-us)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> <http://vivoweb.org/ontology#vitroClassGroupequipment>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> "Forschungsinfrastruktur"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur> "Research infrastructure"@en-us)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart> (Art der Forschungsinfrastruktur)
 
@@ -849,6 +904,15 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart> "Art der Forschungsinfrastruktur"@de-de)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung> (Common vocation)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung> "Be4a")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung> "Common vocation"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung> "Gemeinsame Berufung"@de-de)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#GewerblicheWirtschaftUndSonstigeBereiche> (Gewerbliche Wirtschaft und sonstige Bereiche)
 
@@ -922,6 +986,19 @@ AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Ba
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> "Herausgegebenes Buch"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#HerausgegebenesBuch> <http://kerndatensatz-forschung.de/owl/Basis#Buch>)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Identifier> (Identifier)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Identifier> "Pu132")
+AnnotationAssertion(vitro:descriptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Identifier> "Für jeden Eintrag ist nach Möglichkeit die DOI als eindeutiger Identifier anzugeben, bei
+Büchern ggf. alternativ die ISBN. Eine Publikation kann mehrere Identifier haben. Zusätzlich kann, sofern keine DOI oder ISBN vorhanden sein sollte, ein oder mehrere alternative Identifier (z.B. ISSN, Artikelnummer, URI, PMID, Scopus EID, WOSut) angegeben werden."@de-de)
+AnnotationAssertion(vitro:descriptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Identifier> "If possible, the DOI should be given as the unique identifier for each entry.
+alternatively the ISBN for books. A publication may have several identifiers. In addition, if no DOI or ISBN is available, one or more alternative identifiers (e.g. ISSN, article number, URI, PMID, Scopus EID, WOSut) can be provided."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Identifier> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Identifier> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Identifier> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Identifier> "Identifier"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Identifier> "Identifier"@en-us)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#InformationsUndKommunikationsinfrastrukturen> (Informations- und Kommunikationsinfrastrukturen)
 
@@ -1060,6 +1137,15 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Nich
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#NichtErklaertPrivateMittelgeber> "Not declared (private donors)"@en-us)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#NichtErklaertPrivateMittelgeber> <http://kerndatensatz-forschung.de/owl/Basis#NichtErklaert>)
 
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Nutzung> (Use / intensity of use)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Nutzung> "Fi8")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Nutzung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Nutzung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Nutzung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Nutzung> "Nutzung / Nutzungsintensität"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Nutzung> "Use / intensity of use"@en-us)
+
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#OpenAccess> (Open Access)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#OpenAccess> "Fi24")
@@ -1082,7 +1168,7 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Orde
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#OrdentlicheProfessoren> <http://kerndatensatz-forschung.de/owl/Basis#Professoren>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#OrdentlicheProfessoren> <http://kerndatensatz-forschung.de/owl/Basis#Professorenbezeichnung>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit> (Organisationseinheit)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit> (Organisational unit)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit> "Be75")
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit> "Dr121")
@@ -1093,6 +1179,7 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit> <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit> "Organisational unit"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit> "Organisationseinheit"@de-de)
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit> vivo:Division)
 
@@ -1104,8 +1191,10 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Patent> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Patent> <http://vivoweb.org/ontology#vitroClassGrouppublications>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Patent> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Patent> "Technisch einmalige erteilte Patente. Erteilungen für die gleiche Erfindung in zwei oder mehr Ländern werden nur einfach gezählt. Wenn ein technisch einmaliges erteiltes Patent im Vorjahr gezählt wurde, kann es nicht noch einmal aufgeführt werden.")
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Patent> "Technically unique patents granted. Grants for the same invention in two or more countries are only counted once. If a technically unique patent granted was counted in the previous year, it cannot be listed again."@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Patent> "Technisch einmalige erteilte Patente. Erteilungen für die gleiche Erfindung in zwei oder mehr Ländern werden nur einfach gezählt. Wenn ein technisch einmaliges erteiltes Patent im Vorjahr gezählt wurde, kann es nicht noch einmal aufgeführt werden."@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Patent> "Patent"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Patent> "Patent"@en-us)
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#Patent> bibo:Patent)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Person> (Person)
@@ -1114,9 +1203,20 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Person> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Person> <http://vivoweb.org/ontology#vitroClassGrouppeople>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Person> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Person> "Zusammenfassendes Konzept für die Darstellung aller personenbezogenen Eigenschaften und Attribute")
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Person> "Summary concept for the representation of all personal properties and attributes"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Person> "Zusammenfassendes Konzept für die Darstellung aller personenbezogenen Eigenschaften und Attribute"@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Person> "Person"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Person> "Person"@en-us)
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#Person> foaf:Person)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie> (Personnel category)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie> "Be11")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie> "Personalkategorie"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Personalkategorie> "Personnel category"@en-us)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Professoren> (Professors)
 
@@ -1154,6 +1254,7 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> "PhD cooperation partner"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> "Promotionskooperationspartner"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> foaf:Organization)
 
@@ -1195,7 +1296,7 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kernda
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren> "Qualifizierungsverfahren"@de-de)
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren> vivo:EducationalProcess)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> (Source edition [Journal Article])
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> (Quellenedition [Journalartikel])
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> "Pu130")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1310,11 +1411,12 @@ SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#SonstigeBezeichnung> <ht
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#SonstigeBezeichnung> <http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber> (Other third-party funders)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber> "Dr141")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber> <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber> "Dr141")
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber> "Other third-party funders"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber> "Sonstige Drittmittelgeber/-innen"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#SonstigeDrittmittelgeber> <http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber>)
