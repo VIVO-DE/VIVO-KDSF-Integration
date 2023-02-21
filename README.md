@@ -1,4 +1,4 @@
-![Build Status](https://github.com/BUA-VIVO/bua-upper-ontology/workflows/CI/badge.svg)
+![Build Status](https://github.com/BUA-VIVO/VIVO-KDSF-Integration/workflows/CI/badge.svg)
 # KDSF-VIVO-Alignment
 
 _KDSF ontology alignment (Kerndatensatz Forschung = Research Core Dataset) for use in VIVO. KDSF is a German national standard, therefore the description is in German only._
