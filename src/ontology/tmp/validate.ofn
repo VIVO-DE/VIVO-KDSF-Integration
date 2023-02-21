@@ -27,6 +27,7 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierFors
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Artikel>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Ausgruendung>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#AusserplanmaessigeProfessoren>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Autor>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Befristet>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Befristung>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#BeitraegeInterviewsInNicht-wissenschaftlichenMedien>))
@@ -62,6 +63,7 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Habilitation>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Habilitationsschrift>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Habilitiert>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#HauptberuflicheGastprofessoren>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Herausgeber>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Identifier>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#InformationsUndKommunikationsinfrastrukturen>))
@@ -106,6 +108,8 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Rezension>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Sammelband>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Schoepfer>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#SchoepferID>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#SharedAccess>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Software>))
@@ -628,6 +632,25 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Auss
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#AusserplanmaessigeProfessoren> <http://kerndatensatz-forschung.de/owl/Basis#Professoren>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#AusserplanmaessigeProfessoren> <http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren>)
 
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Autor> (Author)
+
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Autor> "Pu52")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Autor> "kds.creator.author")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Autor> "An author is the person responsible for producing a written work. For other research products it may be used in a broader sense also to include the primary compiler, composer, creator, etc.
+
+RDA name: Creator (Person)"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Autor> "Ein/-e Autor/-in ist eine Person, die für die Produktion eines geschriebenen Werkes verantwortlich ist. Für andere Forschungsprodukte soll der Autor/-innenbegriff breit benutzt werden können, und also auch Programmierer/-innen, Komponist/-innen, Schöpfer/-innen etc. beinhalten."@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Autor> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Autor> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Autor> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Autor> "An author is the person responsible for producing a written work. For other research products it may be used in a broader sense also to include the primary compiler, composer, creator, etc.
+
+RDA name: Creator (Person)"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Autor> "Ein/-e Autor/-in ist eine Person, die für die Produktion eines geschriebenen Werkes verantwortlich ist. Für andere Forschungsprodukte soll der Autor/-innenbegriff breit benutzt werden können, und also auch Programmierer/-innen, Komponist/-innen, Schöpfer/-innen etc. beinhalten."@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Autor> "Author"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Autor> "Autor/-in"@de-de)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Autor> <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp>)
+
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Befristet> (Limited)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Befristet> "Be33")
@@ -774,7 +797,7 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Diss
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Dissertation> "Dissertation"@en-us)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Dissertation> <http://kerndatensatz-forschung.de/owl/Basis#Qualifikationsschrift>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> (PhD student)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> (Doktorand/ -innen)
 
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1033,6 +1056,29 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Haup
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#HauptberuflicheGastprofessoren> "Hauptberufliche Gastprofessor/-innen"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#HauptberuflicheGastprofessoren> <http://kerndatensatz-forschung.de/owl/Basis#Professoren>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#HauptberuflicheGastprofessoren> <http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren>)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> (Herausgeber/-in)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> "Pu53")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> "kds.creator.editor")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> "A person who prepares for publication the work(s) of one or more other authors. An editor may be responsible for selecting material included in a collection or for preparing manuscript copy for the printer, including annotation of the text, verification of the accuracy of facts and bibliographic citations, polishing grammar and style, organizing front and back matter, etc..
+
+RDA name: Contributor"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> "Eine Person, die die Veröffentlichung der Arbeit(en) eines/einer Autors/Autorin oder mehrerer anderen Autor/-innen erstellt. Ein/-e Herausgeber/-in kann für die Auswahl des Materials für einen Sammelband verantwortlich sein oder kann für die Vorbereitung eines Manuskripts zum Druck, einschließlich Kommentierung des Textes, Überprüfung der Richtigkeit der Tatsachen und bibliographische Angaben, der Verbesserung von Grammatik und Stil sowie Organisation von Buchvorder- und Rückseite verantwortlich sein.
+
+RDA-Bezeichnung: Mitwirkender/Mitwirkende"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> "A person who prepares for publication the work(s) of one or more other authors. An editor may be responsible for selecting material included in a collection or for preparing manuscript copy for the printer, including annotation of the text, verification of the accuracy of facts and bibliographic citations, polishing grammar and style, organizing front and back matter, etc..
+
+RDA name: Contributor"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> "Eine Person, die die Veröffentlichung der Arbeit(en) eines/einer Autors/Autorin oder mehrerer anderen Autor/-innen erstellt. Ein/-e Herausgeber/-in kann für die Auswahl des Materials für einen Sammelband verantwortlich sein oder kann für die Vorbereitung eines Manuskripts zum Druck, einschließlich Kommentierung des Textes, Überprüfung der Richtigkeit der Tatsachen und bibliographische Angaben, der Verbesserung von Grammatik und Stil sowie Organisation von Buchvorder- und Rückseite verantwortlich sein.
+
+RDA-Bezeichnung: Mitwirkender/Mitwirkende"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> "Editor"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> "Herausgeber/-in"@de-de)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift> (Herausgeberschaft eines Sonderhefts einer Zeitschrift)
 
@@ -1585,6 +1631,42 @@ AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Sc
 AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed."@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "Creator"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "Schöpfer/-in"@de-de)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> (Schöpfer/-innen-ID)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> "Pu16")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> "kds.IDCreator")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> "Creator-ID is a collective term for ORCID and/or alternative unique person ID numbers"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> "Für jeden/jede Schöpfer/-in ist nach Möglichkeit die ORCID und/oder alternative Personenkennungen als eindeutige Identifier anzugeben."@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> "Creator-ID is a collective term for ORCID and/or alternative unique person ID numbers."@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> "Für jeden/jede Schöpfer/-in ist nach Möglichkeit die ORCID und/oder alternative Personenkennungen als eindeutige Identifier anzugeben."@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> "Schöpfer/-innen-ID"@de-de)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer>)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> (Creator type)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> "Pu55")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> "kds.creator")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> "For the purposes of the core research data set the author role is to be specified with the metadatum creator type. Standard entry is Author (Pu52).
+
+RDA name: Relationship designator"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> "Im Sinne des Kerndatensatz Forschung wird die Autor/-innenrolle mit dem Schöpfer/-innentyp spezifiziert. Standard-Eintrag ist Autor/-in (Pu52).
+
+RDA-Bezeichnung: Beziehungskennzeichnung"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> "For the purposes of the core research data set the author role is to be specified with the metadatum creator type. Standard entry is Author (Pu52).
+
+RDA name: Relationship designator"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> "Im Sinne des Kerndatensatz Forschung wird die Autor/-innenrolle mit dem Schöpfer/-innentyp spezifiziert. Standard-Eintrag ist Autor/-in (Pu52).
+
+RDA-Bezeichnung: Beziehungskennzeichnung"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> "Creator type"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> "Schöpfer/-innentyp"@de-de)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren> (Seniorprofessor/-innen)
 
