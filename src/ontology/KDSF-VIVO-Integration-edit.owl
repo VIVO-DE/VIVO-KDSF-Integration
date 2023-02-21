@@ -63,6 +63,7 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#GewerblicheWirtsc
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#GrossgeraeteUndInstrumente>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Habilitation>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Habilitationsschrift>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Habilitiert>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#HauptberuflicheGastprofessoren>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Identifier>))
@@ -96,6 +97,7 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Professoren>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Professorenbezeichnung>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Promotion>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Promoviert>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Publikation>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Publikationstyp>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Qualifikation>))
@@ -966,9 +968,16 @@ SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#GrossgeraeteUndInstrumen
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> "Be16")
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> "Na44")
-AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> "Habilitation"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> "Die Habilitation dient als akademisches Examen dem Nachweis der besonderen Befähigung für Forschung und Lehre in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Habilitation setzt die Promotion und in der Regel eine mehrjährige wissenschaftliche Tätigkeit voraus. Hochschulen mit Promotionsrecht haben das Recht zur Habilitation."@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> "The Habilitation serves as an academic examination to prove special competence for research and teaching in a specific subject or subject area. Admission to the Habilitation requires a doctorate and, as a rule, several years of academic activity. Universities with the right to award doctorates have the right to award a Habilitation"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> "Die Habilitation dient als akademisches Examen dem Nachweis der besonderen Befähigung für Forschung und Lehre in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Habilitation setzt die Promotion und in der Regel eine mehrjährige wissenschaftliche Tätigkeit voraus. Hochschulen mit Promotionsrecht haben das Recht zur Habilitation."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> "The Habilitation serves as an academic examination to prove special competence for research and teaching in a specific subject or subject area. Admission to the Habilitation requires a doctorate and, as a rule, several years of academic activity. Universities with the right to award doctorates have the right to award a Habilitation"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> "Habilitation")
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Habilitation> "Habilitation"@en-us)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Habilitation> <http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren>)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Habilitation> vivo:Project)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Habilitationsschrift> (Habilitationsschrift)
 
@@ -986,6 +995,16 @@ wissenschaftliche Arbeit für den Erwerb der universitären Lehrbefähigung"@de-
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Habilitationsschrift> "Habilitationsschrift"@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Habilitationsschrift> "Postdoctoral thesis"@en-us)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Habilitationsschrift> <http://kerndatensatz-forschung.de/owl/Basis#Qualifikationsschrift>)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Habilitiert> (Habilitated)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Habilitiert> "Be16")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Habilitiert> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Habilitiert> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Habilitiert> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Habilitiert> "Habilitated"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Habilitiert> "Habilitiert"@de-de)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Habilitiert> <http://kerndatensatz-forschung.de/owl/Basis#Qualifikation>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#HauptberuflicheGastprofessoren> (Full-time visiting professors)
 
@@ -1361,11 +1380,18 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Prof
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Promotion> "Be17")
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Promotion> "Na43")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Promotion> "Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D."@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Promotion> "The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master's level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promotion> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promotion> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promotion> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Promotion> "Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Promotion> "The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master's level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D."@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Promotion> "Doctorate"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Promotion> "Promotion"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Promotion> <http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren>)
-SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Promotion> vivo:Project)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> (Promotionskooperationspartner)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> (PhD cooperation partner)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> "Na86")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1375,6 +1401,20 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kernda
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> "PhD cooperation partner"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> "Promotionskooperationspartner"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> foaf:Organization)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> (Promoviert)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> "Be17")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> "Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D."@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> "The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master's level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> "Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> "The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master's level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D."@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> "Promoviert"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Promoviert> "Received a Doctorate"@en-us)
+SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Promoviert> <http://kerndatensatz-forschung.de/owl/Basis#Qualifikation>)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Publikation> (Publikation)
 
@@ -1407,6 +1447,9 @@ AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.d
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Qualifikation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Qualifikation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Qualifikation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Qualifikation> "Die Qualifikation der Beschäftigten wird aufgeschlüsselt nach Habilitation und Promotion. Gezählt wird jeweils der höchste Abschluss."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Qualifikation> "The qualifications of employees are broken down by habilitation and doctorate. The highest degree is counted in each case."@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Qualifikation> "Qualification"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Qualifikation> "Qualifikation"@de-de)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Qualifikationsschrift> (Qualification Thesis)

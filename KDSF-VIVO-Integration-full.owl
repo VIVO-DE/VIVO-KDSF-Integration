@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-full.owl">
-        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-02-20/KDSF-VIVO-Integration-full.owl"/>
+        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-02-21/KDSF-VIVO-Integration-full.owl"/>
         <terms:rights rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <vitro:ontologyPrefixAnnot>kdsf</vitro:ontologyPrefixAnnot>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.&quot;
@@ -20,7 +20,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International.</rdfs:comment>
         <rdfs:label xml:lang="de-de">KDSF-VIVO-Alignment</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-01-04</owl:versionInfo>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-20</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-21</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1195,10 +1195,17 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Habilitation">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren"/>
         <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#EducationalProcess"/>
-        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Project"/>
         <Meta:inhaltlicheDefinition>Be16</Meta:inhaltlicheDefinition>
         <Meta:inhaltlicheDefinition>Na44</Meta:inhaltlicheDefinition>
-        <rdfs:label xml:lang="de-de">Habilitation</rdfs:label>
+        <obo:IAO_0000115 xml:lang="de-de">Die Habilitation dient als akademisches Examen dem Nachweis der besonderen Befähigung für Forschung und Lehre in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Habilitation setzt die Promotion und in der Regel eine mehrjährige wissenschaftliche Tätigkeit voraus. Hochschulen mit Promotionsrecht haben das Recht zur Habilitation.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">The Habilitation serves as an academic examination to prove special competence for research and teaching in a specific subject or subject area. Admission to the Habilitation requires a doctorate and, as a rule, several years of academic activity. Universities with the right to award doctorates have the right to award a Habilitation</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="de-de">Die Habilitation dient als akademisches Examen dem Nachweis der besonderen Befähigung für Forschung und Lehre in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Habilitation setzt die Promotion und in der Regel eine mehrjährige wissenschaftliche Tätigkeit voraus. Hochschulen mit Promotionsrecht haben das Recht zur Habilitation.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The Habilitation serves as an academic examination to prove special competence for research and teaching in a specific subject or subject area. Admission to the Habilitation requires a doctorate and, as a rule, several years of academic activity. Universities with the right to award doctorates have the right to award a Habilitation</rdfs:comment>
+        <rdfs:label>Habilitation</rdfs:label>
+        <rdfs:label xml:lang="en-us">Habilitation</rdfs:label>
     </owl:Class>
     
 
@@ -1220,6 +1227,20 @@ wissenschaftliche Arbeit für den Erwerb der universitären Lehrbefähigung</obo
 wissenschaftliche Arbeit für den Erwerb der universitären Lehrbefähigung</rdfs:comment>
         <rdfs:label xml:lang="de-de">Habilitationsschrift</rdfs:label>
         <rdfs:label xml:lang="en-us">Postdoctoral thesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Habilitiert -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Habilitiert">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikation"/>
+        <Meta:inhaltlicheDefinition>Be16</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Habilitated</rdfs:label>
+        <rdfs:label xml:lang="de-de">Habilitiert</rdfs:label>
     </owl:Class>
     
 
@@ -1730,9 +1751,16 @@ Preprints are to be distinguished from the publication type working paper (Pu37)
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Promotion">
         <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren"/>
         <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#EducationalProcess"/>
-        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Project"/>
         <Meta:inhaltlicheDefinition>Be17</Meta:inhaltlicheDefinition>
         <Meta:inhaltlicheDefinition>Na43</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="de-de">Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master&apos;s level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="de-de">Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master&apos;s level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Doctorate</rdfs:label>
         <rdfs:label xml:lang="de-de">Promotion</rdfs:label>
     </owl:Class>
     
@@ -1749,6 +1777,24 @@ Preprints are to be distinguished from the publication type working paper (Pu37)
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">PhD cooperation partner</rdfs:label>
         <rdfs:label xml:lang="de-de">Promotionskooperationspartner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Promoviert -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Promoviert">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikation"/>
+        <Meta:inhaltlicheDefinition>Be17</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="de-de">Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master&apos;s level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="de-de">Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master&apos;s level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D.</rdfs:comment>
+        <rdfs:label xml:lang="de-de">Promoviert</rdfs:label>
+        <rdfs:label xml:lang="en-us">Received a Doctorate</rdfs:label>
     </owl:Class>
     
 
@@ -1793,6 +1839,9 @@ Preprints are to be distinguished from the publication type working paper (Pu37)
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="de-de">Die Qualifikation der Beschäftigten wird aufgeschlüsselt nach Habilitation und Promotion. Gezählt wird jeweils der höchste Abschluss.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The qualifications of employees are broken down by habilitation and doctorate. The highest degree is counted in each case.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Qualification</rdfs:label>
         <rdfs:label xml:lang="de-de">Qualifikation</rdfs:label>
     </owl:Class>
     
