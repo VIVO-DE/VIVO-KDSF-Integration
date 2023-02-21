@@ -54,4 +54,6 @@ Der Kerndatensatz Forschung steht unter der Lizenz [Creative Commons Attribution
 * Tatiana Walther
 * Anna Kasprzik
 * Christian Hauschke
+
+# Refactoring and Update to KDSF V. 1.3
 * Rolf Guescini
