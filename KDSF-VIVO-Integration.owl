@@ -713,6 +713,29 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
     
 
 
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Autor -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Autor">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp"/>
+        <Meta:pgbid>Pu52</Meta:pgbid>
+        <Meta:pgbid>kds.creator.author</Meta:pgbid>
+        <obo:IAO_0000115 xml:lang="en-us">An author is the person responsible for producing a written work. For other research products it may be used in a broader sense also to include the primary compiler, composer, creator, etc.
+
+RDA name: Creator (Person)</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Ein/-e Autor/-in ist eine Person, die für die Produktion eines geschriebenen Werkes verantwortlich ist. Für andere Forschungsprodukte soll der Autor/-innenbegriff breit benutzt werden können, und also auch Programmierer/-innen, Komponist/-innen, Schöpfer/-innen etc. beinhalten.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">An author is the person responsible for producing a written work. For other research products it may be used in a broader sense also to include the primary compiler, composer, creator, etc.
+
+RDA name: Creator (Person)</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Ein/-e Autor/-in ist eine Person, die für die Produktion eines geschriebenen Werkes verantwortlich ist. Für andere Forschungsprodukte soll der Autor/-innenbegriff breit benutzt werden können, und also auch Programmierer/-innen, Komponist/-innen, Schöpfer/-innen etc. beinhalten.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Author</rdfs:label>
+        <rdfs:label xml:lang="de-de">Autor/-in</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Befristet -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Befristet">
@@ -1257,6 +1280,33 @@ wissenschaftliche Arbeit für den Erwerb der universitären Lehrbefähigung</rdf
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">Full-time visiting professors</rdfs:label>
         <rdfs:label xml:lang="de-de">Hauptberufliche Gastprofessor/-innen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Herausgeber -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Herausgeber">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp"/>
+        <Meta:inhaltlicheDefinition>Pu53</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.creator.editor</Meta:pgbid>
+        <obo:IAO_0000115 xml:lang="en-us">A person who prepares for publication the work(s) of one or more other authors. An editor may be responsible for selecting material included in a collection or for preparing manuscript copy for the printer, including annotation of the text, verification of the accuracy of facts and bibliographic citations, polishing grammar and style, organizing front and back matter, etc..
+
+RDA name: Contributor</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Person, die die Veröffentlichung der Arbeit(en) eines/einer Autors/Autorin oder mehrerer anderen Autor/-innen erstellt. Ein/-e Herausgeber/-in kann für die Auswahl des Materials für einen Sammelband verantwortlich sein oder kann für die Vorbereitung eines Manuskripts zum Druck, einschließlich Kommentierung des Textes, Überprüfung der Richtigkeit der Tatsachen und bibliographische Angaben, der Verbesserung von Grammatik und Stil sowie Organisation von Buchvorder- und Rückseite verantwortlich sein.
+
+RDA-Bezeichnung: Mitwirkender/Mitwirkende</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">A person who prepares for publication the work(s) of one or more other authors. An editor may be responsible for selecting material included in a collection or for preparing manuscript copy for the printer, including annotation of the text, verification of the accuracy of facts and bibliographic citations, polishing grammar and style, organizing front and back matter, etc..
+
+RDA name: Contributor</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Eine Person, die die Veröffentlichung der Arbeit(en) eines/einer Autors/Autorin oder mehrerer anderen Autor/-innen erstellt. Ein/-e Herausgeber/-in kann für die Auswahl des Materials für einen Sammelband verantwortlich sein oder kann für die Vorbereitung eines Manuskripts zum Druck, einschließlich Kommentierung des Textes, Überprüfung der Richtigkeit der Tatsachen und bibliographische Angaben, der Verbesserung von Grammatik und Stil sowie Organisation von Buchvorder- und Rückseite verantwortlich sein.
+
+RDA-Bezeichnung: Mitwirkender/Mitwirkende</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Editor</rdfs:label>
+        <rdfs:label xml:lang="de-de">Herausgeber/-in</rdfs:label>
     </owl:Class>
     
 
@@ -1987,6 +2037,50 @@ Als Sammelband veröffentlichte Konferenzbände sind von dieser Kategorie ausges
         <rdfs:comment xml:lang="en-us">First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Creator</rdfs:label>
         <rdfs:label xml:lang="de-de">Schöpfer/-in</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#SchoepferID -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#SchoepferID">
+        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Schoepfer"/>
+        <Meta:inhaltlicheDefinition>Pu16</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.IDCreator</Meta:pgbid>
+        <obo:IAO_0000115 xml:lang="en-us">Creator-ID is a collective term for ORCID and/or alternative unique person ID numbers</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Für jeden/jede Schöpfer/-in ist nach Möglichkeit die ORCID und/oder alternative Personenkennungen als eindeutige Identifier anzugeben.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">Creator-ID is a collective term for ORCID and/or alternative unique person ID numbers.</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Für jeden/jede Schöpfer/-in ist nach Möglichkeit die ORCID und/oder alternative Personenkennungen als eindeutige Identifier anzugeben.</rdfs:comment>
+        <rdfs:label xml:lang="de-de">Schöpfer/-innen-ID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp">
+        <Meta:inhaltlicheDefinition>Pu55</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.creator</Meta:pgbid>
+        <obo:IAO_0000115 xml:lang="en-us">For the purposes of the core research data set the author role is to be specified with the metadatum creator type. Standard entry is Author (Pu52).
+
+RDA name: Relationship designator</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Im Sinne des Kerndatensatz Forschung wird die Autor/-innenrolle mit dem Schöpfer/-innentyp spezifiziert. Standard-Eintrag ist Autor/-in (Pu52).
+
+RDA-Bezeichnung: Beziehungskennzeichnung</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">For the purposes of the core research data set the author role is to be specified with the metadatum creator type. Standard entry is Author (Pu52).
+
+RDA name: Relationship designator</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Im Sinne des Kerndatensatz Forschung wird die Autor/-innenrolle mit dem Schöpfer/-innentyp spezifiziert. Standard-Eintrag ist Autor/-in (Pu52).
+
+RDA-Bezeichnung: Beziehungskennzeichnung</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Creator type</rdfs:label>
+        <rdfs:label xml:lang="de-de">Schöpfer/-innentyp</rdfs:label>
     </owl:Class>
     
 

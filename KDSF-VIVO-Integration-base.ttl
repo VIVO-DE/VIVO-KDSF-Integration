@@ -535,6 +535,26 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                                        "Außerplanmäßige Professor/-innen"@de-de .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#Autor
+<http://kerndatensatz-forschung.de/owl/Basis#Autor> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> ;
+                                                    <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "Pu52" ,
+                                                                                                       "kds.creator.author" ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> """An author is the person responsible for producing a written work. For other research products it may be used in a broader sense also to include the primary compiler, composer, creator, etc.
+
+RDA name: Creator (Person)"""@en-us ,
+                                                                                                 "Ein/-e Autor/-in ist eine Person, die für die Produktion eines geschriebenen Werkes verantwortlich ist. Für andere Forschungsprodukte soll der Autor/-innenbegriff breit benutzt werden können, und also auch Programmierer/-innen, Komponist/-innen, Schöpfer/-innen etc. beinhalten."@de-de ;
+                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                    rdfs:comment """An author is the person responsible for producing a written work. For other research products it may be used in a broader sense also to include the primary compiler, composer, creator, etc.
+
+RDA name: Creator (Person)"""@en-us ,
+                                                                 "Ein/-e Autor/-in ist eine Person, die für die Produktion eines geschriebenen Werkes verantwortlich ist. Für andere Forschungsprodukte soll der Autor/-innenbegriff breit benutzt werden können, und also auch Programmierer/-innen, Komponist/-innen, Schöpfer/-innen etc. beinhalten."@de-de ;
+                                                    rdfs:label "Author"@en-us ,
+                                                               "Autor/-in"@de-de .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#Befristet
 <http://kerndatensatz-forschung.de/owl/Basis#Befristet> rdf:type owl:Class ;
                                                         rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Befristung> ;
@@ -975,6 +995,30 @@ wissenschaftliche Arbeit für den Erwerb der universitären Lehrbefähigung"""@d
                                                                              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                              rdfs:label "Full-time visiting professors"@en-us ,
                                                                                         "Hauptberufliche Gastprofessor/-innen"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Herausgeber
+<http://kerndatensatz-forschung.de/owl/Basis#Herausgeber> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> ;
+                                                          <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu53" ;
+                                                          <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "kds.creator.editor" ;
+                                                          <http://purl.obolibrary.org/obo/IAO_0000115> """A person who prepares for publication the work(s) of one or more other authors. An editor may be responsible for selecting material included in a collection or for preparing manuscript copy for the printer, including annotation of the text, verification of the accuracy of facts and bibliographic citations, polishing grammar and style, organizing front and back matter, etc..
+
+RDA name: Contributor"""@en-us ,
+                                                                                                       """Eine Person, die die Veröffentlichung der Arbeit(en) eines/einer Autors/Autorin oder mehrerer anderen Autor/-innen erstellt. Ein/-e Herausgeber/-in kann für die Auswahl des Materials für einen Sammelband verantwortlich sein oder kann für die Vorbereitung eines Manuskripts zum Druck, einschließlich Kommentierung des Textes, Überprüfung der Richtigkeit der Tatsachen und bibliographische Angaben, der Verbesserung von Grammatik und Stil sowie Organisation von Buchvorder- und Rückseite verantwortlich sein.
+
+RDA-Bezeichnung: Mitwirkender/Mitwirkende"""@de-de ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          rdfs:comment """A person who prepares for publication the work(s) of one or more other authors. An editor may be responsible for selecting material included in a collection or for preparing manuscript copy for the printer, including annotation of the text, verification of the accuracy of facts and bibliographic citations, polishing grammar and style, organizing front and back matter, etc..
+
+RDA name: Contributor"""@en-us ,
+                                                                       """Eine Person, die die Veröffentlichung der Arbeit(en) eines/einer Autors/Autorin oder mehrerer anderen Autor/-innen erstellt. Ein/-e Herausgeber/-in kann für die Auswahl des Materials für einen Sammelband verantwortlich sein oder kann für die Vorbereitung eines Manuskripts zum Druck, einschließlich Kommentierung des Textes, Überprüfung der Richtigkeit der Tatsachen und bibliographische Angaben, der Verbesserung von Grammatik und Stil sowie Organisation von Buchvorder- und Rückseite verantwortlich sein.
+
+RDA-Bezeichnung: Mitwirkender/Mitwirkende"""@de-de ;
+                                                          rdfs:label "Editor"@en-us ,
+                                                                     "Herausgeber/-in"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#HerausgeberschaftEinesSonderheftsEinerZeitschrift
@@ -1567,6 +1611,44 @@ Als Sammelband veröffentlichte Konferenzbände sind von dieser Kategorie ausges
                                                                      "First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed."@en-us ;
                                                         rdfs:label "Creator"@en-us ,
                                                                    "Schöpfer/-in"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#SchoepferID
+<http://kerndatensatz-forschung.de/owl/Basis#SchoepferID> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> ;
+                                                          <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu16" ;
+                                                          <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "kds.IDCreator" ;
+                                                          <http://purl.obolibrary.org/obo/IAO_0000115> "Creator-ID is a collective term for ORCID and/or alternative unique person ID numbers"@en-us ,
+                                                                                                       "Für jeden/jede Schöpfer/-in ist nach Möglichkeit die ORCID und/oder alternative Personenkennungen als eindeutige Identifier anzugeben."@de-de ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          rdfs:comment "Creator-ID is a collective term for ORCID and/or alternative unique person ID numbers."@en-us ,
+                                                                       "Für jeden/jede Schöpfer/-in ist nach Möglichkeit die ORCID und/oder alternative Personenkennungen als eindeutige Identifier anzugeben."@de-de ;
+                                                          rdfs:label "Schöpfer/-innen-ID"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp
+<http://kerndatensatz-forschung.de/owl/Basis#Schoepfertyp> rdf:type owl:Class ;
+                                                           <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu55" ;
+                                                           <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "kds.creator" ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> """For the purposes of the core research data set the author role is to be specified with the metadatum creator type. Standard entry is Author (Pu52).
+
+RDA name: Relationship designator"""@en-us ,
+                                                                                                        """Im Sinne des Kerndatensatz Forschung wird die Autor/-innenrolle mit dem Schöpfer/-innentyp spezifiziert. Standard-Eintrag ist Autor/-in (Pu52).
+
+RDA-Bezeichnung: Beziehungskennzeichnung"""@de-de ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           rdfs:comment """For the purposes of the core research data set the author role is to be specified with the metadatum creator type. Standard entry is Author (Pu52).
+
+RDA name: Relationship designator"""@en-us ,
+                                                                        """Im Sinne des Kerndatensatz Forschung wird die Autor/-innenrolle mit dem Schöpfer/-innentyp spezifiziert. Standard-Eintrag ist Autor/-in (Pu52).
+
+RDA-Bezeichnung: Beziehungskennzeichnung"""@de-de ;
+                                                           rdfs:label "Creator type"@en-us ,
+                                                                      "Schöpfer/-innentyp"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren
