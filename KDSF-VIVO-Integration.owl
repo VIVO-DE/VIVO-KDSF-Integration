@@ -1972,6 +1972,25 @@ Als Sammelband veröffentlichte Konferenzbände sind von dieser Kategorie ausges
     
 
 
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Schoepfer -->
+
+    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Schoepfer">
+        <Meta:inhaltlicheDefinition>Pu2</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>dcterms.creator</Meta:pgbid>
+        <obo:IAO_0000115 xml:lang="de-de">Der Vorname und Nachname der schöpfenden Person. Ein Werk kann einen oder mehrere Schöpfer/-innen, z.B. Autor/-innen, haben, die alle aufzulisten sind.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="de-de">Der Vorname und Nachname der schöpfenden Person. Ein Werk kann einen oder mehrere Schöpfer/-innen, z.B. Autor/-innen, haben, die alle aufzulisten sind.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Creator</rdfs:label>
+        <rdfs:label xml:lang="de-de">Schöpfer/-in</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren">

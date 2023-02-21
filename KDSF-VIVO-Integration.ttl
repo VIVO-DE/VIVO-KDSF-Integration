@@ -1565,6 +1565,22 @@ Als Sammelband veröffentlichte Konferenzbände sind von dieser Kategorie ausges
                                                                            "Sammelbandbeitrag"@de-de .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#Schoepfer
+<http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> rdf:type owl:Class ;
+                                                        <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu2" ;
+                                                        <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "dcterms.creator" ;
+                                                        <http://purl.obolibrary.org/obo/IAO_0000115> "Der Vorname und Nachname der schöpfenden Person. Ein Werk kann einen oder mehrere Schöpfer/-innen, z.B. Autor/-innen, haben, die alle aufzulisten sind."@de-de ,
+                                                                                                     "First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed."@en-us ;
+                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                        rdfs:comment "Der Vorname und Nachname der schöpfenden Person. Ein Werk kann einen oder mehrere Schöpfer/-innen, z.B. Autor/-innen, haben, die alle aufzulisten sind."@de-de ,
+                                                                     "First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed."@en-us ;
+                                                        rdfs:label "Creator"@en-us ,
+                                                                   "Schöpfer/-in"@de-de .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren
 <http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren> rdf:type owl:Class ;
                                                                 rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Professoren> ,

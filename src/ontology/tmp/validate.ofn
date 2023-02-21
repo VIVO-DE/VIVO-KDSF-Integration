@@ -105,6 +105,7 @@ Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Review>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Rezension>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Sammelband>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag>))
+Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Schoepfer>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#SharedAccess>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#Software>))
@@ -1499,7 +1500,7 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Qual
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren> <http://vivoweb.org/ontology/core#EducationalProcess>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren> <http://vivoweb.org/ontology/core#EducationalProcess>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> (Source edition [Journal Article])
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> (Quellenedition [Journalartikel])
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> "Pu130")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1569,6 +1570,21 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kernda
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> "Anthology contribution"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> "Sammelbandbeitrag"@de-de)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Sammelbandbeitrag> <http://kerndatensatz-forschung.de/owl/Basis#Artikel>)
+
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> (Creator)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "Pu2")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "dcterms.creator")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "Der Vorname und Nachname der schöpfenden Person. Ein Werk kann einen oder mehrere Schöpfer/-innen, z.B. Autor/-innen, haben, die alle aufzulisten sind."@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:inClassGroup <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> <http://vivoweb.org/ontology#vitroClassGrouppeople>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "Der Vorname und Nachname der schöpfenden Person. Ein Werk kann einen oder mehrere Schöpfer/-innen, z.B. Autor/-innen, haben, die alle aufzulisten sind."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed."@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "Creator"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> "Schöpfer/-in"@de-de)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Seniorprofessoren> (Seniorprofessor/-innen)
 
