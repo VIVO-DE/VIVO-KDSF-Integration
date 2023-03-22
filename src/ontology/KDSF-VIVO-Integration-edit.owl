@@ -1056,12 +1056,12 @@ DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#BezeichnungDerPro
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> (Datum der prioritätsbegründenden Erstanmeldung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> "Pa10")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> "Die Zuordnung einer Patentanmeldung zu einer Zeitperiode erfolgt anhand des Anmeldetages.
 
 Jede Erstanmeldung wird nur einfach gezählt, unabhängig davon, für welche und in wie vielen Ländern die Erstanmeldung einer bestimmten Erfindung erfolgt."@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> "Die Zuordnung einer Patentanmeldung zu einer Zeitperiode erfolgt anhand des Anmeldetages.
 
 Jede Erstanmeldung wird nur einfach gezählt, unabhängig davon, für welche und in wie vielen Ländern die Erstanmeldung einer bestimmten Erfindung erfolgt."@de-de)
@@ -1088,10 +1088,44 @@ DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilu
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> (Drittmitteleinnahmen)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Dr1a")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Core date according to the third-party funding definition for the higher education finance statistics of Destatis (H203/32137100-5) to be recorded by research institutions with cameralistic accounting:
+
+Third-party funding income is income that is raised from public or private sources in addition to the regular research institution budget (basic funding) to promote research and development as well as young researchers and teaching. Third-party funds can be provided to the research institution itself, to one of its sub-institutions (e.g. faculties, departments, institutes) or to individual scientists.
+
+As a rule, only those funds are recorded that are entered in the research institution's budget or that are administered by the research institution in deposit accounts.
+
+Third-party funds are recorded without value-added tax. In the case of mixed financing in cooperations, the funds acquired at the respective institution are allocated on a percentage basis. In order to avoid duplication, funds that are passed on are not counted.
+
+Third-party funding income is reported including programme flat rates / overheads.
+
+This information is intended as an alternative to Dr1b. Only one of the two core data is to be recorded."@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Kerndatum gemäß der Drittmitteldefinition für die Hochschulfinanzstatistik von Destatis (H203/32137100-5) zu erfassen durch Forschungseinrichtungen mit kameralistischem Rechnungswesen:
+
+Drittmitteleinnahmen sind Einnahmen, die zur Förderung von Forschung und Entwicklung sowie des wissenschaftlichen Nachwuchses und der Lehre zusätzlich zum regulären Forschungseinrichtungshaushalt (Grundausstattung) von öffentlichen oder privaten Stellen eingeworben werden. Drittmittel können der Forschungseinrichtung selbst, einer ihrer Untereinrichtungen (z.B. Fakultäten, Fachbereiche, Institute) oder einzelnen Wissenschaftlern zur Verfügung gestellt werden.
+
+Es werden grundsätzlich nur solche Mittel erfasst, die in die Forschungseinrichtungshaushalte eingestellt bzw. die von der Forschungseinrichtung auf Verwahrkonten verwaltet werden.
+
+Drittmittel werden ohne Umsatzsteuer erfasst. Bei einer Mischfinanzierung in Kooperationen werden die an der jeweiligen Einrichtung eingeworbenen Mittel prozentual zugeordnet. Im Sinne einer dopplungsfreien Erhebung sind weitergereichte Mittel nicht mitzuzählen.
+
+Drittmitteleinnahmen werden einschließlich Programmpauschalen / Overheads ausgewiesen.
+
+Diese Angabe versteht sich als Alternative zu Dr1b. Nur eines der beiden Kerndaten ist zu erfassen."@de-de)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Kerndatum gemäß der Drittmitteldefinition für die Hochschulfinanzstatistik von Destatis (H203/32137100-5) zu erfassen durch Forschungseinrichtungen mit kameralistischem Rechnungswesen:
+
+Drittmitteleinnahmen sind Einnahmen, die zur Förderung von Forschung und Entwicklung sowie des wissenschaftlichen Nachwuchses und der Lehre zusätzlich zum regulären Forschungseinrichtungshaushalt (Grundausstattung) von öffentlichen oder privaten Stellen eingeworben werden. Drittmittel können der Forschungseinrichtung selbst, einer ihrer Untereinrichtungen (z.B. Fakultäten, Fachbereiche, Institute) oder einzelnen Wissenschaftlern zur Verfügung gestellt werden.
+
+Es werden grundsätzlich nur solche Mittel erfasst, die in die Forschungseinrichtungshaushalte eingestellt bzw. die von der Forschungseinrichtung auf Verwahrkonten verwaltet werden.
+
+Drittmittel werden ohne Umsatzsteuer erfasst. Bei einer Mischfinanzierung in Kooperationen werden die an der jeweiligen Einrichtung eingeworbenen Mittel prozentual zugeordnet. Im Sinne einer dopplungsfreien Erhebung sind weitergereichte Mittel nicht mitzuzählen.
+
+Drittmitteleinnahmen werden einschließlich Programmpauschalen / Overheads ausgewiesen.
+
+Diese Angabe versteht sich als Alternative zu Dr1b. Nur eines der beiden Kerndaten ist zu erfassen."@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Drittmitteleinnahmen"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Third-party revenue"@en-us)
 FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen>)
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> xsd:float)
