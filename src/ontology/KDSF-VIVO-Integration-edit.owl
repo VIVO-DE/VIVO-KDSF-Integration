@@ -214,7 +214,6 @@ Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatSprec
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatStrukturiertesPromotionsprogramm>))
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatTaetigkeitsart>))
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatTyp>))
-Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt>))
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatUntereinheit>))
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatUnterstuetzungDurch>))
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatVerlag>))
@@ -255,6 +254,7 @@ Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#NameDerQue
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Ressource>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(dct:rights))
 Declaration(AnnotationProperty(vitro:descriptionAnnot))
@@ -721,36 +721,6 @@ AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschun
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatTyp> "has type"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatTyp> "hat Typ"@de-de)
 SubObjectPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatTyp> owl:topObjectProperty)
-
-# Object Property: <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> (has superordinate project)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "Dr10")
-AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "Die Angabe des Titels des übergeordneten Projektes dient der Abbildung der logischen Struktur. Ein Teilprojekt liegt dann vor, wenn z.B. ein eigenes Förderkennzeichen vergeben wurde. Der Detailgrad der Ausweisung von Teilprojekten bleibt der Einrichtung überlassen.
-
-Sofern ein Projekt vertraulich bleiben muss, ist es dem/der \"Drittmittelgeber/-in\" \"Nicht erklärt\" zuzuordnen. In diesem Fall kann auch der Titel des übergeordneten Projektes frei bleiben"@de-de)
-AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "The specification of the title of the superordinate project serves to map the logical structure. A sub-project exists if, for example, its own funding code has been assigned. The level of detail of the sub-project designation is left to the institution.
-
-If a project must remain confidential, it must be assigned to the \"Third-party funder\" \"Not declared\". In this case, the title of the superordinate project can also be left blank
-
-Translated with www.DeepL.com/Translator (free version)"@en-us)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:offerCreateNewOptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "true"^^xsd:boolean)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "true"^^xsd:boolean)
-AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "Die Angabe des Titels des übergeordneten Projektes dient der Abbildung der logischen Struktur. Ein Teilprojekt liegt dann vor, wenn z.B. ein eigenes Förderkennzeichen vergeben wurde. Der Detailgrad der Ausweisung von Teilprojekten bleibt der Einrichtung überlassen.
-
-Sofern ein Projekt vertraulich bleiben muss, ist es dem/der \"Drittmittelgeber/-in\" \"Nicht erklärt\" zuzuordnen. In diesem Fall kann auch der Titel des übergeordneten Projektes frei bleiben"@de-de)
-AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "The specification of the title of the superordinate project serves to map the logical structure. A sub-project exists if, for example, its own funding code has been assigned. The level of detail of the sub-project designation is left to the institution.
-
-If a project must remain confidential, it must be assigned to the \"Third-party funder\" \"Not declared\". In this case, the title of the superordinate project can also be left blank
-
-Translated with www.DeepL.com/Translator (free version)"@en-us)
-AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "has superordinate project"@en-us)
-AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "hat übergeordnetes Projekt"@de-de)
-SubObjectPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> owl:topObjectProperty)
-ObjectPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
-ObjectPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
 
 # Object Property: <http://kerndatensatz-forschung.de/owl/Basis#hatUntereinheit> (has subunit)
 
@@ -1296,15 +1266,15 @@ DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Koordinationsroll
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> (Name of the speaker institution / consortium leadership)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Dr19a")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Anzugeben sind Organisationseinheiten inkl. Sitzland/Sitzländer. Hierbei ist die größte organisatorische Einheit (bspw. eine Universität oder ein Institut/Zentrum einer AUF) anzugeben, nicht jedoch interne Untereinheiten.
 
 Aufschlüsselung für inländische Einrichtungen gemäß dem Informationsportal der DFG, GERiT (German Research Institutions), für ausländische Einrichtungen gemäß dem Research Organization Registry (ROR) oder alternativ über ISO-Landescode (z.B. USA) und Name (z.B. UC Berkeley)."@de-de)
 AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Specify organisational units including country of domicile/countries of domicile. The largest organisational unit (e.g. a university or an institute/centre of an AUF) must be specified, but not internal subunits.
 
 Breakdown for domestic institutions according to the DFG's information portal GERiT (German Research Institutions), for foreign institutions according to the Research Organization Registry (ROR) or alternatively via ISO country code (e.g. USA) and name (e.g. UC Berkeley)"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Anzugeben sind Organisationseinheiten inkl. Sitzland/Sitzländer. Hierbei ist die größte organisatorische Einheit (bspw. eine Universität oder ein Institut/Zentrum einer AUF) anzugeben, nicht jedoch interne Untereinheiten.
 
 Aufschlüsselung für inländische Einrichtungen gemäß dem Informationsportal der DFG, GERiT (German Research Institutions), für ausländische Einrichtungen gemäß dem Research Organization Registry (ROR) oder alternativ über ISO-Landescode (z.B. USA) und Name (z.B. UC Berkeley)."@de-de)
@@ -1482,7 +1452,7 @@ SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsbere
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> <http://kerndatensatz-forschung.de/owl/Basis#Person>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> xsd:string)
 
-# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> (has superordinate project)
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> (<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt>)
 
 SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> owl:topDataProperty)
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)

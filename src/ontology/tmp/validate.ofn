@@ -11,7 +11,7 @@ Prefix(vitro:=<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>)
 
 
 Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/>
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-03-15/KDSF-VIVO-Integration.owl>
+<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-03-28/KDSF-VIVO-Integration.owl>
 Annotation(terms:rights <https://creativecommons.org/licenses/by-sa/4.0/>)
 Annotation(vitro:ontologyPrefixAnnot "kdsf")
 Annotation(rdfs:comment "This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.\"
@@ -20,7 +20,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 Annotation(rdfs:comment "This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International."^^xsd:string)
 Annotation(rdfs:label "KDSF-VIVO-Alignment"@de-de)
 Annotation(owl:versionInfo "2017-01-04"^^xsd:string)
-Annotation(owl:versionInfo "2023-03-15"^^xsd:string)
+Annotation(owl:versionInfo "2023-03-28"^^xsd:string)
 
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#AUF>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht>))
@@ -211,7 +211,6 @@ Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatSprec
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatStrukturiertesPromotionsprogramm>))
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatTaetigkeitsart>))
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatTyp>))
-Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt>))
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatUntereinheit>))
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatUnterstuetzungDurch>))
 Declaration(ObjectProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatVerlag>))
@@ -237,9 +236,22 @@ Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Drittmitte
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Drittmittelertraege>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenPublikation>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Geschlecht>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Heft>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzname>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Name>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Ressource>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt>))
 Declaration(AnnotationProperty(Meta:inhaltlicheDefinition))
 Declaration(AnnotationProperty(Meta:pgbid))
 Declaration(AnnotationProperty(obo:IAO_0000115))
@@ -723,19 +735,6 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatT
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatTyp> "hat Typ"@de-de)
 SubObjectPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatTyp> owl:topObjectProperty)
 
-# Object Property: <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> (hat übergeordnetes Projekt)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "Dr10")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:offerCreateNewOptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "true"^^xsd:boolean)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "true"^^xsd:boolean)
-AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "hat übergeordnetes Projekt"@de-de)
-SubObjectPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> owl:topObjectProperty)
-ObjectPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
-ObjectPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
-
 # Object Property: <http://kerndatensatz-forschung.de/owl/Basis#hatUntereinheit> (has subunit)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#hatUntereinheit> "Be83")
@@ -1086,7 +1085,7 @@ SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritae
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> <http://kerndatensatz-forschung.de/owl/Basis#Patent>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> xsd:dateTime)
 
-# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilung> (Date of issue)
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilung> (Datum der Erteilung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilung> "(Pa4)")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1101,10 +1100,44 @@ DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilu
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> (Drittmitteleinnahmen)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Dr1a")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Core date according to the third-party funding definition for the higher education finance statistics of Destatis (H203/32137100-5) to be recorded by research institutions with cameralistic accounting:
+
+Third-party funding income is income that is raised from public or private sources in addition to the regular research institution budget (basic funding) to promote research and development as well as young researchers and teaching. Third-party funds can be provided to the research institution itself, to one of its sub-institutions (e.g. faculties, departments, institutes) or to individual scientists.
+
+As a rule, only those funds are recorded that are entered in the research institution's budget or that are administered by the research institution in deposit accounts.
+
+Third-party funds are recorded without value-added tax. In the case of mixed financing in cooperations, the funds acquired at the respective institution are allocated on a percentage basis. In order to avoid duplication, funds that are passed on are not counted.
+
+Third-party funding income is reported including programme flat rates / overheads.
+
+This information is intended as an alternative to Dr1b. Only one of the two core data is to be recorded."@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Kerndatum gemäß der Drittmitteldefinition für die Hochschulfinanzstatistik von Destatis (H203/32137100-5) zu erfassen durch Forschungseinrichtungen mit kameralistischem Rechnungswesen:
+
+Drittmitteleinnahmen sind Einnahmen, die zur Förderung von Forschung und Entwicklung sowie des wissenschaftlichen Nachwuchses und der Lehre zusätzlich zum regulären Forschungseinrichtungshaushalt (Grundausstattung) von öffentlichen oder privaten Stellen eingeworben werden. Drittmittel können der Forschungseinrichtung selbst, einer ihrer Untereinrichtungen (z.B. Fakultäten, Fachbereiche, Institute) oder einzelnen Wissenschaftlern zur Verfügung gestellt werden.
+
+Es werden grundsätzlich nur solche Mittel erfasst, die in die Forschungseinrichtungshaushalte eingestellt bzw. die von der Forschungseinrichtung auf Verwahrkonten verwaltet werden.
+
+Drittmittel werden ohne Umsatzsteuer erfasst. Bei einer Mischfinanzierung in Kooperationen werden die an der jeweiligen Einrichtung eingeworbenen Mittel prozentual zugeordnet. Im Sinne einer dopplungsfreien Erhebung sind weitergereichte Mittel nicht mitzuzählen.
+
+Drittmitteleinnahmen werden einschließlich Programmpauschalen / Overheads ausgewiesen.
+
+Diese Angabe versteht sich als Alternative zu Dr1b. Nur eines der beiden Kerndaten ist zu erfassen."@de-de)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Kerndatum gemäß der Drittmitteldefinition für die Hochschulfinanzstatistik von Destatis (H203/32137100-5) zu erfassen durch Forschungseinrichtungen mit kameralistischem Rechnungswesen:
+
+Drittmitteleinnahmen sind Einnahmen, die zur Förderung von Forschung und Entwicklung sowie des wissenschaftlichen Nachwuchses und der Lehre zusätzlich zum regulären Forschungseinrichtungshaushalt (Grundausstattung) von öffentlichen oder privaten Stellen eingeworben werden. Drittmittel können der Forschungseinrichtung selbst, einer ihrer Untereinrichtungen (z.B. Fakultäten, Fachbereiche, Institute) oder einzelnen Wissenschaftlern zur Verfügung gestellt werden.
+
+Es werden grundsätzlich nur solche Mittel erfasst, die in die Forschungseinrichtungshaushalte eingestellt bzw. die von der Forschungseinrichtung auf Verwahrkonten verwaltet werden.
+
+Drittmittel werden ohne Umsatzsteuer erfasst. Bei einer Mischfinanzierung in Kooperationen werden die an der jeweiligen Einrichtung eingeworbenen Mittel prozentual zugeordnet. Im Sinne einer dopplungsfreien Erhebung sind weitergereichte Mittel nicht mitzuzählen.
+
+Drittmitteleinnahmen werden einschließlich Programmpauschalen / Overheads ausgewiesen.
+
+Diese Angabe versteht sich als Alternative zu Dr1b. Nur eines der beiden Kerndaten ist zu erfassen."@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Drittmitteleinnahmen"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> "Third-party revenue"@en-us)
 FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen>)
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen> xsd:float)
@@ -1143,6 +1176,43 @@ FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Foerderkennz
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenPublikation> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenPublikation> xsd:string)
 
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> (Gender)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> "Be7"@en-us)
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> "Na7"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> "Das Geschlecht ist als \"männlich\", \"weiblich\", \"divers\" oder \"ohne Angabe\" anzugeben."@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> "The gender is to be indicated as \"male\", \"female\", \"diverse\" or \"not specified\""@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> "Das Geschlecht ist als \"männlich\", \"weiblich\", \"divers\" oder \"ohne Angabe\" anzugeben."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> "The gender is to be indicated as \"male\", \"female\", \"diverse\" or \"not specified\""@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> "Gender"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> "Geslecht"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> owl:topDataProperty)
+FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Geschlecht>)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> <http://kerndatensatz-forschung.de/owl/Basis#Person>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Geschlecht> DataOneOf("Maennlich" "Ohne Angabe" "Weiblich" "divers"))
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Heft> (Issue)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Heft> "Pu91")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Heft> "kds.format.issue")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Heft> "A single instance of periodical literature such as a journal, e.g. Volume 103, Issue 2"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Heft> "Eine einzelne Entität eines Journals; Beispiel Volume 103 Issue 2."@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Heft> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Heft> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Heft> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Heft> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Heft> "A single instance of periodical literature such as a journal, e.g. Volume 103, Issue 2"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Heft> "Eine einzelne Entität eines Journals; Beispiel Volume 103 Issue 2."@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Heft> "Heft"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Heft> "Issue"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Heft> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Heft> <http://kerndatensatz-forschung.de/owl/Basis#Format>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Heft> xsd:string)
+
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum> (Conference date)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum> "Pu99")
@@ -1160,16 +1230,184 @@ SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum> o
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum> <http://kerndatensatz-forschung.de/owl/Basis#Format>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum> xsd:string)
 
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> (Name of scientific meeting)
+
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> "Titel der wissenschaftlichen Konferenz"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> "Title of the scientific meeting"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> "Titel der wissenschaftlichen Konferenz"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> "Title of the scientific meeting"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> "Name der Konferenz"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> "Name of scientific meeting"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> owl:topDataProperty)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> (Cooperation partner (for cooperative doctorates))
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> "Na86")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> "Angabe, ob Personen auf der Grundlage einer Kooperation zwischen der Hochschule und einer außeruniversitären Forschungseinrichtung, einer Fachhochschule, einer anderen Universität oder einer sonstigen Einrichtung (z.B. aus der Wirtschaft) oder eines Arbeitsvertrags bei einer außeruniversitären Forschungseinrichtung, einer Fachhochschule, einer anderen Universität oder einer sonstigen Einrichtung promoviert wurden oder promovieren"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> "Indication of whether persons have been awarded a doctorate or are pursuing a doctorate on the basis of a cooperation between the higher education institution and a non-university research institution, a university of applied sciences, another university or another institution (e.g. from industry) or on the basis of an employment contract at a non-university research institution, a university of applied sciences, another university or another institution"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> "Angabe, ob Personen auf der Grundlage einer Kooperation zwischen der Hochschule und einer außeruniversitären Forschungseinrichtung, einer Fachhochschule, einer anderen Universität oder einer sonstigen Einrichtung (z.B. aus der Wirtschaft) oder eines Arbeitsvertrags bei einer außeruniversitären Forschungseinrichtung, einer Fachhochschule, einer anderen Universität oder einer sonstigen Einrichtung promoviert wurden oder promovieren"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> "Indication of whether persons have been awarded a doctorate or are pursuing a doctorate on the basis of a cooperation between the higher education institution and a non-university research institution, a university of applied sciences, another university or another institution (e.g. from industry) or on the basis of an employment contract at a non-university research institution, a university of applied sciences, another university or another institution"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> "Cooperation partner (for cooperative doctorates)"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> "Kooperationspartner (bei kooperativer Promotion)"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> <http://kerndatensatz-forschung.de/owl/Basis#Promotion>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> xsd:string)
+
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> (Koordinationsrolle (Einrichtung))
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> "Dr142")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> "Es wird angegeben (ja/nein), ob die berichtende Einrichtung ein Projekt unter Beteiligung mehrerer selbständiger Einrichtungen, bspw. ein Konsortialprojekt, koordiniert"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> "Indicate (yes/no) whether the reporting institution is coordinating a project involving several independent institutions, e.g. a consortium project"@en-us)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> "Es wird angegeben (ja/nein), ob die berichtende Einrichtung ein Projekt unter Beteiligung mehrerer selbständiger Einrichtungen, bspw. ein Konsortialprojekt, koordiniert"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> "Indicate (yes/no) whether the reporting institution is coordinating a project involving several independent institutions, e.g. a consortium project"@en-us)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> "Koordinationsrolle (Einrichtung)"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> owl:topDataProperty)
 FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle>)
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle> xsd:boolean)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> (Name of the speaker institution / consortium leadership)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Dr19a")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Anzugeben sind Organisationseinheiten inkl. Sitzland/Sitzländer. Hierbei ist die größte organisatorische Einheit (bspw. eine Universität oder ein Institut/Zentrum einer AUF) anzugeben, nicht jedoch interne Untereinheiten.
+
+Aufschlüsselung für inländische Einrichtungen gemäß dem Informationsportal der DFG, GERiT (German Research Institutions), für ausländische Einrichtungen gemäß dem Research Organization Registry (ROR) oder alternativ über ISO-Landescode (z.B. USA) und Name (z.B. UC Berkeley)."@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Specify organisational units including country of domicile/countries of domicile. The largest organisational unit (e.g. a university or an institute/centre of an AUF) must be specified, but not internal subunits.
+
+Breakdown for domestic institutions according to the DFG's information portal GERiT (German Research Institutions), for foreign institutions according to the Research Organization Registry (ROR) or alternatively via ISO country code (e.g. USA) and name (e.g. UC Berkeley)"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Anzugeben sind Organisationseinheiten inkl. Sitzland/Sitzländer. Hierbei ist die größte organisatorische Einheit (bspw. eine Universität oder ein Institut/Zentrum einer AUF) anzugeben, nicht jedoch interne Untereinheiten.
+
+Aufschlüsselung für inländische Einrichtungen gemäß dem Informationsportal der DFG, GERiT (German Research Institutions), für ausländische Einrichtungen gemäß dem Research Organization Registry (ROR) oder alternativ über ISO-Landescode (z.B. USA) und Name (z.B. UC Berkeley)."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Specify organisational units including country of domicile/countries of domicile. The largest organisational unit (e.g. a university or an institute/centre of an AUF) must be specified, but not internal subunits.
+
+Breakdown for domestic institutions according to the DFG's information portal GERiT (German Research Institutions), for foreign institutions according to the Research Organization Registry (ROR) or alternatively via ISO country code (e.g. USA) and name (e.g. UC Berkeley)"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Name der Sprechereinrichtung / Konsortialführung"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> "Name of the speaker institution / consortium leadership"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> (Countries of the participating institutions)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> "Na82")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> "Anzugeben ist das Sitzland/die Sitzländer der beteiligten ausländischen Einrichtung (nicht das Bundesland bei inländischer beteiligter Einrichtung). Aufschlüsselung nach ISO-Landescode (z.B. USA)"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> "Indicate the country(ies) of residence of the participating foreign institution (not the federal state in the case of a domestic participating institution). Breakdown by ISO country code (e.g. USA)"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> "Anzugeben ist das Sitzland/die Sitzländer der beteiligten ausländischen Einrichtung (nicht das Bundesland bei inländischer beteiligter Einrichtung). Aufschlüsselung nach ISO-Landescode (z.B. USA)"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> "Indicate the country(ies) of residence of the participating foreign institution (not the federal state in the case of a domestic participating institution). Breakdown by ISO country code (e.g. USA)"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> "Countries of the participating institutions"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> "Länder der beteiligten Einrichtungen"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> <http://kerndatensatz-forschung.de/owl/Basis#StrukturiertesPromotionsprogramm>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#LaenderDerBeteiligtenInstitutionen> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Name> (Name)
+
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Name> "Essential property of a person"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Name> "Wesentliche Eigenschaft einer Person"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Name> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Name> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Name> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Name> "Essential property of a person"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Name> "Wesentliche Eigenschaft einer Person"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Name> "Name"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Name> "Name"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Name> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Name> <http://kerndatensatz-forschung.de/owl/Basis#Person>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Name> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> (Name of Spin-off)
+
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> "Essential property of a spin-off"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> "Wesentliche Eigenschaft einer Ausgründung"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> "Essential property of a spin-off"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> "Wesentliche Eigenschaft einer Ausgründung"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> "Name der Ausgründung"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> "Name of Spin-off"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung> owl:topDataProperty)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> (Name der Organisationseinheit)
+
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> "Essential property of an organisational unit"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> "Wesentliche Eigenschaft einer Organisationseinheit"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> "Essential property of an organisational unit"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> "Wesentliche Eigenschaft einer Organisationseinheit"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> "Name der Organisationseinheit"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> "Name of organisational unit"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> <http://kerndatensatz-forschung.de/owl/Basis#Organisationseinheit>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> (Name of the source)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> "Pu143")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> "Name des Journals, der Reihe, des Sammelbands oder des Konferenzbands.
+Der Name des Journals, der zeitschriftenähnlichen Reihe, des Sammelbands oder des Konferenzbands wird als Metadatum des Journalartikels (Pu11), des Sammelbandbeitrags (Pu110) bzw. des Konferenzpapers (Pu28) angegeben. Fakultativ können Journalnamen und -identifier zentral vorgehalten werden. Ein Sammelband oder Konferenzband ist außerdem in dem Fall, in dem die Herausgeberschaft eines Sammelbandes oder Konferenzbandes als Publikation eingegeben wird, als separater Eintrag vorzunehmen."@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> "Name of journal, series, edited book or conference proceedings which is to be entered as metadatum of the journal article (Pu11) inbook (Pu110) or conference paper (Pu28), respectively. Journal names and journal identifier optionally may be stored centrally. Edited books or conference proceedings are to be entered as separate entries as well in the case that the edition of the edited book or the conference proceedings shall be entered as publication"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> "Name des Journals, der Reihe, des Sammelbands oder des Konferenzbands.
+Der Name des Journals, der zeitschriftenähnlichen Reihe, des Sammelbands oder des Konferenzbands wird als Metadatum des Journalartikels (Pu11), des Sammelbandbeitrags (Pu110) bzw. des Konferenzpapers (Pu28) angegeben. Fakultativ können Journalnamen und -identifier zentral vorgehalten werden. Ein Sammelband oder Konferenzband ist außerdem in dem Fall, in dem die Herausgeberschaft eines Sammelbandes oder Konferenzbandes als Publikation eingegeben wird, als separater Eintrag vorzunehmen."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> "Name of journal, series, edited book or conference proceedings which is to be entered as metadatum of the journal article (Pu11) inbook (Pu110) or conference paper (Pu28), respectively. Journal names and journal identifier optionally may be stored centrally. Edited books or conference proceedings are to be entered as separate entries as well in the case that the edition of the edited book or the conference proceedings shall be entered as publication"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> "Name der Quelle"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> "Name of the source"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> (ist Peer Reviewed)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "Pu104")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "Pu150")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "kds.type.peerreviewed")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "Anzugeben ist, ob die Publikation durch ein Redaktionskomitee oder im Auftrag eines/einer Redakteurs/Redakteurin durch externe Fachkolleg/-innen inhaltlich begutachtet worden ist.
+
+Anzugeben für Artikel und Buchbeiträge"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "Indicate whether the publication has been peer-reviewed by an editorial committee or by external peers on behalf of an editor.
+
+To be indicated for articles and book contributions"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "Anzugeben ist, ob die Publikation durch ein Redaktionskomitee oder im Auftrag eines/einer Redakteurs/Redakteurin durch externe Fachkolleg/-innen inhaltlich begutachtet worden ist.
+
+Anzugeben für Artikel und Buchbeiträge
+
+Hinweis: In Abwesenheit eindeutiger Quellen für das Begutachtungsverfahren von Publikationen müssen Publikationslisten unter Einbeziehung der Autor/-innnen qualitätsgesichert werden. Damit besteht eine Grundlage für die Erfassung des Begutachtungswesens."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "Indicate whether the publication has been peer-reviewed by an editorial committee or by external peers on behalf of an editor.
+
+To be indicated for articles and book contributions
+
+Note: In the absence of clear sources for the peer review process of publications, publication lists must be quality assured with the involvement of the authors. This provides a basis for recording the peer review process"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "is peer reviewed"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "ist Peer Reviewed"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> xsd:boolean)
 
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Ressource> (Darstellungsform)
 
@@ -1210,6 +1448,28 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Ress
 SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Ressource> owl:topDataProperty)
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Ressource> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Ressource> DataOneOf("Audio" "Bewegte Bilder" "Bild" "Text"))
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> (hat Promotionsberechtigung aus)
+
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> "A distinction is made between domestic and foreign countries. Persons with doctoral qualifications from several countries, which were acquired in Germany as well as in other countries, are only assigned to the domestic category"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> "Es wird unterschieden zwischen Inland und Ausland. Personen mit Promotionsberechtigungen aus mehreren Ländern, die sowohl in Deutschland als auch weiteren Ländern erworben wurden, werden nur der Kategorie Inland zugeordnet"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> "A distinction is made between domestic and foreign countries. Persons with doctoral qualifications from several countries, which were acquired in Germany as well as in other countries, are only assigned to the domestic category"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> "Es wird unterschieden zwischen Inland und Ausland. Personen mit Promotionsberechtigungen aus mehreren Ländern, die sowohl in Deutschland als auch weiteren Ländern erworben wurden, werden nur der Kategorie Inland zugeordnet"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> "has doctoral degree entitlement from"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> "hat Promotionsberechtigung aus"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> <http://kerndatensatz-forschung.de/owl/Basis#Person>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> (<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt>)
+
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> xsd:string)
 
 
 
@@ -2218,7 +2478,7 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Prom
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Promotion> <http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Promotion> <http://vivoweb.org/ontology/core#EducationalProcess>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> (Promotionskooperationspartner)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> (PhD cooperation partner)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> "Na86")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -2305,7 +2565,7 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Qual
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren> <http://vivoweb.org/ontology/core#EducationalProcess>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren> <http://vivoweb.org/ontology/core#EducationalProcess>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> (Quellenedition [Journalartikel])
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> (Source edition [Journal Article])
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> "Pu130")
 AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> "A scholarly edition of primary sources is the publication of historic or cultural sources with a substantial contribution of the source editor published as an article or a book.

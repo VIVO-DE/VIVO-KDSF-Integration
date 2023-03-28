@@ -33,7 +33,6 @@ http://kerndatensatz-forschung.de/owl/Basis#hatSprecher
 http://kerndatensatz-forschung.de/owl/Basis#hatStrukturiertesPromotionsprogramm
 http://kerndatensatz-forschung.de/owl/Basis#hatTaetigkeitsart
 http://kerndatensatz-forschung.de/owl/Basis#hatTyp
-http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt
 http://kerndatensatz-forschung.de/owl/Basis#hatUntereinheit
 http://kerndatensatz-forschung.de/owl/Basis#hatUnterstuetzungDurch
 http://kerndatensatz-forschung.de/owl/Basis#hatVerlag
