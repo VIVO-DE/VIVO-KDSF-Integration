@@ -7,7 +7,7 @@
 @base <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-base.ttl> .
 
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-base.ttl> rdf:type owl:Ontology ;
-                                                                                                                                             owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-03-28/KDSF-VIVO-Integration-base.ttl> ;
+                                                                                                                                             owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-03-29/KDSF-VIVO-Integration-base.ttl> ;
                                                                                                                                              <http://purl.org/dc/elements/1.1/type> <http://purl.obolibrary.org/obo/IAO_8000001> ;
                                                                                                                                              <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                                                                                                                              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> "kdsf" ;
@@ -17,7 +17,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                                                                                                           "This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International."^^xsd:string ;
                                                                                                                                              rdfs:label "KDSF-VIVO-Alignment"@de-de ;
                                                                                                                                              owl:versionInfo "2017-01-04"^^xsd:string ,
-                                                                                                                                                             "2023-03-28"^^xsd:string .
+                                                                                                                                                             "2023-03-29"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -1091,6 +1091,11 @@ Diese Angabe versteht sich als Alternative zu Dr1b. Nur eines der beiden Kerndat
                                                                   rdfs:label "Drittmittelerträge"@de-de .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#Foerderer
+<http://kerndatensatz-forschung.de/owl/Basis#Foerderer> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf owl:topDataProperty .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt
 <http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt> rdf:type owl:DatatypeProperty ;
                                                                                    rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> ;
@@ -1164,6 +1169,21 @@ Diese Angabe versteht sich als Alternative zu Dr1b. Nur eines der beiden Kerndat
                                                               "Issue"@en-us .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#IdentifierName
+<http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                             rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Identifier> ;
+                                                             rdfs:range xsd:string ;
+                                                             <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu133" ;
+                                                             <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "dcterms.identifier.name" ;
+                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                             rdfs:label "Name des Identifiers"@de-de ,
+                                                                        "Name of the identifier"@en-us .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum
 <http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum> rdf:type owl:DatatypeProperty ;
                                                              rdfs:subPropertyOf owl:topDataProperty ;
@@ -1194,6 +1214,25 @@ Diese Angabe versteht sich als Alternative zu Dr1b. Nur eines der beiden Kerndat
                                                                          "Title of the scientific meeting"@en-us ;
                                                             rdfs:label "Name der Konferenz"@de-de ,
                                                                        "Name of scientific meeting"@en-us .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Konferenzort
+<http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                           rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Format> ;
+                                                           rdfs:range xsd:string ;
+                                                           <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu98" ;
+                                                           <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "kds.format.ConferenceVenue" ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "Anzugeben sind Stadt und Land, in welchen die Konferenz stattfindet. Aufschlüsselung des Lands über ISO-Landescode (z.B. USA). Bei „Online“-Konferenzen mit Teilnehmer/-innen ausschließlich an verschiedenen Orten erfolgt hierüber eine entsprechende Angabe"@de-de ,
+                                                                                                        "City and country of the conference through ISO country code (e.g. USA). In case of pure online virtual con-ferences this information should be included here"@en-us ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                           rdfs:comment "Anzugeben sind Stadt und Land, in welchen die Konferenz stattfindet. Aufschlüsselung des Lands über ISO-Landescode (z.B. USA). Bei „Online“-Konferenzen mit Teilnehmer/-innen ausschließlich an verschiedenen Orten erfolgt hierüber eine entsprechende Angabe"@de-de ,
+                                                                        "City and country of the conference through ISO country code (e.g. USA). In case of pure online virtual con-ferences this information should be included here"@en-us ;
+                                                           rdfs:label "Conference venue"@en-us ,
+                                                                      "Ort der Konferenz"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner
@@ -1339,6 +1378,52 @@ Der Name des Journals, der zeitschriftenähnlichen Reihe, des Sammelbands oder d
                                                                        "Name of the source"@en-us .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung
+<http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                                         rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung> ;
+                                                                         rdfs:range xsd:string ;
+                                                                         <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be12" ;
+                                                                         <http://purl.obolibrary.org/obo/IAO_0000115> """Anzugeben sind Organisationseinheiten inkl. Sitzland/Sitzländer. Hierbei ist die größte organisatorische Einheit (bspw. eine Universität oder ein Institut/Zentrum einer AUF) anzugeben, nicht jedoch interne Untereinheiten.
+Aufschlüsselung für inländische Einrichtungen gemäß dem Informationsportal der DFG, GERiT (German Research Institutions), für ausländische Einrichtungen gemäß dem Research Organization Registry (ROR) oder alternativ über ISO-Landescode (z.B. USA) und Name (z.B. UC Berkeley)."""@de-de ,
+                                                                                                                      """The organisational units to be indicated include the country/countries of domicile. The largest organisational unit (e.g. a university or an institute/centre of an AUF) must be specified, but not internal subunits.
+Breakdown for domestic institutions according to the DFG's information portal, GERiT (German Research Institutions), for foreign institutions according to the Research Organization Registry (ROR) or alternatively via ISO country code (e.g. USA) and name (e.g. UC Berkeley)"""@en-us ;
+                                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                         rdfs:comment """Anzugeben sind Organisationseinheiten inkl. Sitzland/Sitzländer. Hierbei ist die größte organisatorische Einheit (bspw. eine Universität oder ein Institut/Zentrum einer AUF) anzugeben, nicht jedoch interne Untereinheiten.
+Aufschlüsselung für inländische Einrichtungen gemäß dem Informationsportal der DFG, GERiT (German Research Institutions), für ausländische Einrichtungen gemäß dem Research Organization Registry (ROR) oder alternativ über ISO-Landescode (z.B. USA) und Name (z.B. UC Berkeley)."""@de-de ,
+                                                                                      """The organisational units to be indicated include the country/countries of domicile. The largest organisational unit (e.g. a university or an institute/centre of an AUF) must be specified, but not internal subunits.
+Breakdown for domestic institutions according to the DFG's information portal, GERiT (German Research Institutions), for foreign institutions according to the Research Organization Registry (ROR) or alternatively via ISO country code (e.g. USA) and name (e.g. UC Berkeley)"""@en-us ;
+                                                                         rdfs:label "Name der weiteren Einrichtung"@de-de ,
+                                                                                    "Name of other institution"@en-us .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie
+<http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdfs:domain <http://purl.org/ontology/bibo/Patent> ;
+                                                            rdfs:range xsd:string ;
+                                                            <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pa38" ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000115> """Anzahl der zum Stichtag insgesamt bestehenden Patentfamilien, bei denen die berichtende Einrichtung als Anmelderin fungiert (umfasst nicht veräußerte Patentfamilien unabhängig vom Status der Erteilung).
+
+Erstes Mitglied einer Patentfamilie ist die prioritätsbegründende Anmeldung; alle weiteren Anmeldungen, die diese Priorität in Anspruch nehmen, sind weitere Familienmitglieder"""@de-de ,
+                                                                                                         """Total number of patent families in existence as of the reporting date for which the reporting institution is the applicant (includes patent families that have not been sold, regardless of grant status).
+
+The first member of a patent family is the priority application; all other applications claiming this priority are additional family members"""@en-us ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            rdfs:comment """Anzahl der zum Stichtag insgesamt bestehenden Patentfamilien, bei denen die berichtende Einrichtung als Anmelderin fungiert (umfasst nicht veräußerte Patentfamilien unabhängig vom Status der Erteilung).
+
+Erstes Mitglied einer Patentfamilie ist die prioritätsbegründende Anmeldung; alle weiteren Anmeldungen, die diese Priorität in Anspruch nehmen, sind weitere Familienmitglieder"""@de-de ,
+                                                                         """Total number of patent families in existence as of the reporting date for which the reporting institution is the applicant (includes patent families that have not been sold, regardless of grant status).
+
+The first member of a patent family is the priority application; all other applications claiming this priority are additional family members"""@en-us ;
+                                                            rdfs:label "Patent family"@en-us ,
+                                                                       "Patentfamilie"@de-de .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed
 <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> rdf:type owl:DatatypeProperty ;
                                                            rdfs:subPropertyOf owl:topDataProperty ;
@@ -1371,6 +1456,42 @@ Note: In the absence of clear sources for the peer review process of publication
                                                                       "ist Peer Reviewed"@de-de .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn
+<http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdf:type owl:FunctionalProperty ;
+                                                            rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> ;
+                                                            rdfs:range xsd:dateTime ;
+                                                            <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Dr15a" ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Als Projektbeginn zählt das Jahr des Projektbeginns laut Bewilligungsbescheid bzw. Vereinbarung mit dem Förderer. Liegt kein Startdatum vor, kann das Jahr des ersten Mittelabrufs eingesetzt werden"@de-de ,
+                                                                                                         "The year of the start of the project according to the notification of approval or agreement with the funding agency counts as the start of the project. If there is no start date, the year of the first call for funds can be used"@en-us ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                            rdfs:comment "Als Projektbeginn zählt das Jahr des Projektbeginns laut Bewilligungsbescheid bzw. Vereinbarung mit dem Förderer. Liegt kein Startdatum vor, kann das Jahr des ersten Mittelabrufs eingesetzt werden"@de-de ,
+                                                                         "The year of the start of the project according to the notification of approval or agreement with the funding agency counts as the start of the project. If there is no start date, the year of the first call for funds can be used"@en-us ;
+                                                            rdfs:label "Projektbeginn" .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Projektende
+<http://kerndatensatz-forschung.de/owl/Basis#Projektende> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                          rdf:type owl:FunctionalProperty ;
+                                                          rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> ;
+                                                          rdfs:range xsd:dateTime ;
+                                                          <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Dr14a" ;
+                                                          <http://purl.obolibrary.org/obo/IAO_0000115> "Als Projektende zählt das Jahr des Projektendes laut Bewilligungsbescheid bzw. Vereinbarung mit dem Förderer. Liegt kein Enddatum vor, kann das Jahr des letzten Mittelabrufs eingesetzt werden"@de-de ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                          rdfs:comment "Als Projektende zählt das Jahr des Projektendes laut Bewilligungsbescheid bzw. Vereinbarung mit dem Förderer. Liegt kein Enddatum vor, kann das Jahr des letzten Mittelabrufs eingesetzt werden"@de-de ;
+                                                          rdfs:label "Projektende"@de-de .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#Ressource
 <http://kerndatensatz-forschung.de/owl/Basis#Ressource> rdf:type owl:DatatypeProperty ;
                                                         rdfs:subPropertyOf owl:topDataProperty ;
@@ -1390,6 +1511,13 @@ Note: In the absence of clear sources for the peer review process of publication
                                                                                           ]
                                                                                ]
                                                                    ] ;
+                                                        <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu102" ,
+                                                                                                                           "Pu106" ,
+                                                                                                                           "Pu107" ,
+                                                                                                                           "Pu108" ,
+                                                                                                                           "Pu109" ,
+                                                                                                                           "Pu50" ;
+                                                        <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "kds.type.form" ;
                                                         <http://purl.obolibrary.org/obo/IAO_0000115> """Die Darstellungsform spezifiziert die überwiegende Form der Kommunikation für bestimmte Publikationstypen (Pu6) und gibt an, mit welchem Sinn der Inhalt wahrgenommen wird (Orientiert an RDA-Bezeichnung: Inhaltstyp).
 
 Zu markierende Publikationstypen:
@@ -1426,6 +1554,308 @@ Publication types to be marked:
                                                                    "Form of presentation"@en-us .
 
 
+###  http://kerndatensatz-forschung.de/owl/Basis#Schoepfername
+<http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer> ;
+                                                            rdfs:range xsd:string ;
+                                                            <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu2" ;
+                                                            <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "dcterms.creator" ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Der Vorname und Nachname der schöpfenden Person. Ein Werk kann einen oder mehrere Schöpfer/-innen, z.B. Autor/-innen, haben, die alle aufzulisten sind"@de-de ,
+                                                                                                         "First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed"@en-us ,
+                                                                                                         "Name of the creator(s)"@en-us ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            rdfs:comment "Der Vorname und Nachname der schöpfenden Person. Ein Werk kann einen oder mehrere Schöpfer/-innen, z.B. Autor/-innen, haben, die alle aufzulisten sind"@de-de ,
+                                                                         "First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed"@en-us ;
+                                                            rdfs:label "Name des Schöpfer/-ins"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich
+<http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Format> ;
+                                                            rdfs:range xsd:string ;
+                                                            <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu145" ;
+                                                            <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "kds.format.pagerange" ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Angabe der Anfangs- und Endseite der Publikation"@de-de ,
+                                                                                                         "The first and last page of a publication"@en-us ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            rdfs:comment "Angabe der Anfangs- und Endseite der Publikation"@de-de ,
+                                                                         "The first and last page of a publication"@en-us ;
+                                                            rdfs:label "Page range"@en-us ,
+                                                                       "Seitenbereich"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Sprachcode
+<http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Publikation> ;
+                                                         rdfs:range xsd:string ;
+                                                         <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu95" ;
+                                                         <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "kds.language.iso" ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                         rdfs:label "Language code"@en-us ,
+                                                                    "Sprachcode"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit
+<http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Person> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be72" ,
+                                                                                                                                      "Na58" ;
+                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A distinction is made between Germany and abroad. Individuals with multiple nationalities who belong to both Germany and other countries are only assigned to the Domestic category"@en-us ,
+                                                                                                                "Es wird unterschieden zwischen Inland und Ausland. Personen mit mehreren Staatsangehörigkeiten, die sowohl dem deutschen als auch weiteren Staaten angehören, werden nur der Kategorie Inland zugeordnet."@de-de ;
+                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
+                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                                   rdfs:comment "A distinction is made between Germany and abroad. Individuals with multiple nationalities who belong to both Germany and other countries are only assigned to the Domestic category"@en-us ,
+                                                                                "Es wird unterschieden zwischen Inland und Ausland. Personen mit mehreren Staatsangehörigkeiten, die sowohl dem deutschen als auch weiteren Staaten angehören, werden nur der Kategorie Inland zugeordnet."@de-de ;
+                                                                   rdfs:label "Citizenship"@en-us ,
+                                                                              "Staatsangehörigkeit"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet
+<http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> rdf:type owl:DatatypeProperty ;
+                                                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                      rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Promotion> ;
+                                                                                                      rdfs:range xsd:dateTime ;
+                                                                                                      <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Na38a" ;
+                                                                                                      <http://purl.obolibrary.org/obo/IAO_0000115> "Der Beginn der Promotion ist mittels des Datums (Jahr, Monat) der Annahme als Doktorand/-in am Fachbereich / an der Fakultät zu bestimmen"@de-de ,
+                                                                                                                                                   "The start of the doctorate is to be determined by the date (year, month) of acceptance as a doctoral candidate at the department/faculty"@en-us ;
+                                                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                                      rdfs:comment "Der Beginn der Promotion ist mittels des Datums (Jahr, Monat) der Annahme als Doktorand/-in am Fachbereich / an der Fakultät zu bestimmen"@de-de ,
+                                                                                                                   "The start of the doctorate is to be determined by the date (year, month) of acceptance as a doctoral candidate at the department/faculty"@en-us ;
+                                                                                                      rdfs:label "Start der Promotion (nach Annahme als Doktorand/-in am Fachbereich / an der Fakultät)"@de-de ,
+                                                                                                                 "Start of the doctorate (after acceptance as a doctoral student at the department / faculty)"@en-us .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag
+<http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> rdf:type owl:DatatypeProperty ;
+                                                                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                        rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Promotion> ;
+                                                                                                        rdfs:range xsd:dateTime ;
+                                                                                                        <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Na102" ;
+                                                                                                        <http://purl.obolibrary.org/obo/IAO_0000115> "Der Beginn der Promotion ist mittels des Datums (Jahr, Monat) der Betreuungsvereinbarung oder des Arbeitsvertrages zu bestimmen"@de-de ;
+                                                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
+                                                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                                                                        rdfs:comment "Der Beginn der Promotion ist mittels des Datums (Jahr, Monat) der Betreuungsvereinbarung oder des Arbeitsvertrages zu bestimmen"@de-de ,
+                                                                                                                     "The start of the doctorate is to be determined using the date (year, month) of the supervision agreement or the employment contract"@en-us ;
+                                                                                                        rdfs:label "Start der Promotion (nach Betreuungsvereinbarung / Arbeitsvertrag)"@de-de ,
+                                                                                                                   "Start of doctorate (according to supervision agreement / employment contract)"@en-us .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden
+<http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> rdf:type owl:DatatypeProperty ;
+                                                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                               rdf:type owl:FunctionalProperty ;
+                                                                                               rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#StrukturiertesPromotionsprogramm> ;
+                                                                                               rdfs:range xsd:string ;
+                                                                                               <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Na22" ;
+                                                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Es wird angegeben (ja/nein), ob im strukturierten Promotionsprogramm Stipendien oder Stellen für Doktorand/-innen vergeben werden"@de-de ,
+                                                                                                                                            "It is stated (yes/no) whether scholarships or positions for doctoral students are awarded in the structured doctoral program"@en-us ;
+                                                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                               rdfs:comment "Es wird angegeben (ja/nein), ob im strukturierten Promotionsprogramm Stipendien oder Stellen für Doktorand/-innen vergeben werden"@de-de ,
+                                                                                                            "It is stated (yes/no) whether scholarships or positions for doctoral students are awarded in the structured doctoral program"@en-us ;
+                                                                                               rdfs:label "Scholarships or positions for participating doctoral students"@en-us ,
+                                                                                                          "Stipendien oder Stellen für teilnehmende Doktorand/-innen"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#TitelPatent
+<http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                          rdf:type owl:FunctionalProperty ;
+                                                          rdfs:domain <http://purl.org/ontology/bibo/Patent> ;
+                                                          rdfs:range xsd:string ;
+                                                          <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pa7" ;
+                                                          <http://purl.obolibrary.org/obo/IAO_0000115> "Der Titel des Patentes aus der Anmeldung"@de-de ,
+                                                                                                       "The title of the patent from the application"@en-us ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                          rdfs:comment "Der Titel des Patentes aus der Anmeldung"@de-de ,
+                                                                       "The title of the patent from the application"@en-us ;
+                                                          rdfs:label "Titel des Patents"@de-de ,
+                                                                     "Title of patent"@en-us .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt
+<http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                           rdf:type owl:FunctionalProperty ;
+                                                           rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> ;
+                                                           rdfs:range xsd:string ;
+                                                           <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Dr9" ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> """Anzugeben ist der Titel zum Zeitpunkt der Bewilligung.
+
+Sofern ein Projekt vertraulich bleiben muss, ist es dem/der \"Drittmittelgeber/-in\" \"Nicht erklärt\" zuzuordnen. In diesem Fall kann auch der Titel des Projekts frei bleiben"""@de-de ,
+                                                                                                        """Enter the title at the time of approval.
+
+If a project has to remain confidential, it is to be assigned to the \"third-party funder\" \"Not declared\". In this case, the title of the project can remain blank"""@en-us ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                           rdfs:comment """Anzugeben ist der Titel zum Zeitpunkt der Bewilligung.
+
+Sofern ein Projekt vertraulich bleiben muss, ist es dem/der \"Drittmittelgeber/-in\" \"Nicht erklärt\" zuzuordnen. In diesem Fall kann auch der Titel des Projekts frei bleiben"""@de-de ,
+                                                                        """Enter the title at the time of approval.
+
+If a project has to remain confidential, it is to be assigned to the \"third-party funder\" \"Not declared\". In this case, the title of the project can remain blank"""@en-us ;
+                                                           rdfs:label "Titel des Projekts"@de-de ,
+                                                                      "Title of Project"@en-us .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm
+<http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                      rdf:type owl:FunctionalProperty ;
+                                                                      rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#StrukturiertesPromotionsprogramm> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Na13" ;
+                                                                      <http://purl.obolibrary.org/obo/IAO_0000115> "Anzugeben ist der Titel des strukturierten Promotionsprogramms"@de-de ,
+                                                                                                                   "Enter the title of the structured doctoral program"@en-us ;
+                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                      rdfs:comment "Anzugeben ist der Titel des strukturierten Promotionsprogramms"@de-de ,
+                                                                                   "Enter the title of the structured doctoral program"@en-us ;
+                                                                      rdfs:label "Titel des Promotionsprogramms"@de-de ,
+                                                                                 "Title of doctoral program"@en-us .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation
+<http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                               rdf:type owl:FunctionalProperty ;
+                                                               rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Publikation> ;
+                                                               rdfs:range xsd:string ;
+                                                               <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu5" ;
+                                                               <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "dcterms.title" ;
+                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "RDA name: Title proper"@en-us ,
+                                                                                                            "RDA-Bezeichnung: Haupttitel"@de-de ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               rdfs:comment "RDA name: Title proper"@en-us ,
+                                                                            "RDA-Bezeichnung: Haupttitel"@de-de ;
+                                                               rdfs:label "Titel der Publikation"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Verlagsort
+<http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Verlag> ;
+                                                         rdfs:range xsd:string ;
+                                                         <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu153" ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                         rdfs:label "Place of publication"@en-us ,
+                                                                    "Verlagsort"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr
+<http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                     rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Publikation> ;
+                                                                     rdfs:range xsd:dateTime ;
+                                                                     <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu151" ,
+                                                                                                                                        "Pu84" ;
+                                                                     <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "kds.date.issued" ;
+                                                                     <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                     <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                     <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
+                                                                     <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                     <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                                     rdfs:label "Release year"@en-us ,
+                                                                                "Veröffentlichungsjahr"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer
+<http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                       rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Patent> ;
+                                                                       rdfs:range xsd:string ;
+                                                                       <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pa33" ;
+                                                                       <http://purl.obolibrary.org/obo/IAO_0000115> "Die Veröffentlichungsnummer dient zur Recherche weiterer Informationen"@de-de ,
+                                                                                                                    "The publication number is used to research further information"@en-us ;
+                                                                       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                       rdfs:comment "Die Veröffentlichungsnummer dient zur Recherche weiterer Informationen"@de-de ,
+                                                                                    "The publication number is used to research further information"@en-us ;
+                                                                       rdfs:label "Publication number"@en-us ,
+                                                                                  "Veröffentlichungsnummer"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten
+<http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                                        rdf:type owl:FunctionalProperty ;
+                                                                        rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Befristet> ;
+                                                                        rdfs:range xsd:nonNegativeInteger ;
+                                                                        <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be39" ;
+                                                                        <http://purl.obolibrary.org/obo/IAO_0000115> """Angabe von Vertragsmonaten des aktuellen Vertrages.
+
+Bei Kopfzählung ist die Laufzeit des Vertrages mit dem größten Arbeitszeitanteil anzugeben. Bei gleichem Arbeitszeitanteil wird die Vertragslaufzeit des Vertrages mit der längeren Laufzeit angegeben. Für das Kerndatum Vollzeitäquivalente erfolgt die Zuordnung des/der Beschäftigten bei mehreren Arbeitsverträgen nach Arbeitsvertrag"""@de-de ,
+                                                                                                                     """Specification of contract months of the current contract.
+
+When doing head count, the term of the contract with the largest proportion of working hours must be specified. In the case of the same proportion of working hours, the contract term of the contract with the longer term is specified. For the core date of full-time equivalents, the employee is assigned according to the employment contract if there are several employment contracts"""@en-us ;
+                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                        rdfs:comment """Angabe von Vertragsmonaten des aktuellen Vertrages.
+
+Bei Kopfzählung ist die Laufzeit des Vertrages mit dem größten Arbeitszeitanteil anzugeben. Bei gleichem Arbeitszeitanteil wird die Vertragslaufzeit des Vertrages mit der längeren Laufzeit angegeben. Für das Kerndatum Vollzeitäquivalente erfolgt die Zuordnung des/der Beschäftigten bei mehreren Arbeitsverträgen nach Arbeitsvertrag"""@de-de ,
+                                                                                     """Specification of contract months of the current contract.
+
+When doing head count, the term of the contract with the largest proportion of working hours must be specified. In the case of the same proportion of working hours, the contract term of the contract with the longer term is specified. For the core date of full-time equivalents, the employee is assigned according to the employment contract if there are several employment contracts"""@en-us ;
+                                                                        rdfs:label "Contract period in months"@en-us ,
+                                                                                   "Vertragslaufzeit in Monaten"@de-de .
+
+
+###  http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte
+<http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Publikation> ;
+                                                            rdfs:range xsd:string ;
+                                                            <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu19" ;
+                                                            <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "dcterms.rights.accessRights" ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000115> """Access rights are described in accordance with the \"Access Rights Vocabulary\" of the Confederation of Open Access Repositories (COAR):
+http://vocabularies.coar-repositories.org/documentation/access_rights/"""@en-us ,
+                                                                                                         """Die Beschreibung der Zugangsrechte erfolgt entlang des „Access Rights Vocabulary“ der Confederation of Open Access Repositories (COAR):
+http://vocabularies.coar-repositories.org/documentation/access_rights/"""@de-de ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                            rdfs:comment """Access rights are described in accordance with the \"Access Rights Vocabulary\" of the Confederation of Open Access Repositories (COAR):
+http://vocabularies.coar-repositories.org/documentation/access_rights/"""@en-us ,
+                                                                         """Die Beschreibung der Zugangsrechte erfolgt entlang des „Access Rights Vocabulary“ der Confederation of Open Access Repositories (COAR):
+http://vocabularies.coar-repositories.org/documentation/access_rights/"""@de-de ;
+                                                            rdfs:label "Access rights"@en-us ,
+                                                                       "Zugangsrechte"@de-de .
+
+
 ###  http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus
 <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> rdf:type owl:DatatypeProperty ;
                                                                            rdfs:subPropertyOf owl:topDataProperty ;
@@ -1447,7 +1877,24 @@ Publication types to be marked:
 <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> rdf:type owl:DatatypeProperty ;
                                                                         rdfs:subPropertyOf owl:topDataProperty ;
                                                                         rdfs:domain <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> ;
-                                                                        rdfs:range xsd:string .
+                                                                        rdfs:range xsd:string ;
+                                                                        <http://purl.obolibrary.org/obo/IAO_0000115> """Die Angabe des Titels des übergeordneten Projektes dient der Abbildung der logischen Struktur. Ein Teilprojekt liegt dann vor, wenn z.B. ein eigenes Förderkennzeichen vergeben wurde. Der Detailgrad der Ausweisung von Teilprojekten bleibt der Einrichtung überlassen.
+
+Sofern ein Projekt vertraulich bleiben muss, ist es dem/der \"Drittmittelgeber/-in\" \"Nicht erklärt\" zuzuordnen. In diesem Fall kann auch der Titel des übergeordneten Projektes frei bleiben"""@de-de ,
+                                                                                                                     """The specification of the title of the superordinate project serves to map the logical structure. A sub-project exists if, for example, its own funding code has been assigned. The level of detail of the sub-project designation is left to the institution.
+
+If a project must remain confidential, it must be assigned to the \"Third-party funder\" \"Not declared\". In this case, the title of the parent project can also be left blank"""@en-us ;
+                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                        rdfs:comment """Die Angabe des Titels des übergeordneten Projektes dient der Abbildung der logischen Struktur. Ein Teilprojekt liegt dann vor, wenn z.B. ein eigenes Förderkennzeichen vergeben wurde. Der Detailgrad der Ausweisung von Teilprojekten bleibt der Einrichtung überlassen.
+
+Sofern ein Projekt vertraulich bleiben muss, ist es dem/der \"Drittmittelgeber/-in\" \"Nicht erklärt\" zuzuordnen. In diesem Fall kann auch der Titel des übergeordneten Projektes frei bleiben"""@de-de ,
+                                                                                     """The specification of the title of the superordinate project serves to map the logical structure. A sub-project exists if, for example, its own funding code has been assigned. The level of detail of the sub-project designation is left to the institution.
+
+If a project must remain confidential, it must be assigned to the \"Third-party funder\" \"Not declared\". In this case, the title of the parent project can also be left blank"""@en-us ;
+                                                                        rdfs:label "has superordinate project"@en-us ,
+                                                                                   "hat übergeordnetes Projekt"@de-de .
 
 
 #################################################################
@@ -1872,14 +2319,7 @@ Unterkategorisierung von selbstständigen Werken (Buch, Pu22) nach vorwiegend in
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Foerderer
-<http://kerndatensatz-forschung.de/owl/Basis#Foerderer> rdf:type owl:Class ;
-                                                        <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu86" ;
-                                                        <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "dcterms.funding" ;
-                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                        rdfs:label "Funders"@en-us ,
-                                                                   "Förderer"@de-de .
+<http://kerndatensatz-forschung.de/owl/Basis#Foerderer> rdf:type owl:Class .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt
@@ -3402,6 +3842,15 @@ Wird eine FI auf verschiedenen Wegen zur Nutzung angeboten (bspw. lokal und virt
 #################################################################
 #    Annotations
 #################################################################
+
+<http://kerndatensatz-forschung.de/owl/Basis#Foerderer> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                        <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Pu86" ;
+                                                        <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "dcterms.funding" ;
+                                                        rdfs:label "Förderer"@de-de ;
+                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                        rdfs:label "Funders"@en-us ;
+                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
 
 <http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt> <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Dr13" ;
                                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;

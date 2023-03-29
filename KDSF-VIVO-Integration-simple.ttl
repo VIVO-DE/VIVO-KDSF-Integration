@@ -7,7 +7,7 @@
 @base <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-simple.ttl> .
 
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-simple.ttl> rdf:type owl:Ontology ;
-                                                                                                                                               owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-03-28/KDSF-VIVO-Integration-simple.ttl> ;
+                                                                                                                                               owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-03-29/KDSF-VIVO-Integration-simple.ttl> ;
                                                                                                                                                <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                                                                                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> "kdsf" ;
                                                                                                                                                rdfs:comment """This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.\"
@@ -16,7 +16,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                                                                                                             "This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International."^^xsd:string ;
                                                                                                                                                rdfs:label "KDSF-VIVO-Alignment"@de-de ;
                                                                                                                                                owl:versionInfo "2017-01-04"^^xsd:string ,
-                                                                                                                                                               "2023-03-28"^^xsd:string .
+                                                                                                                                                               "2023-03-29"^^xsd:string .
 
 #################################################################
 #    Annotation properties

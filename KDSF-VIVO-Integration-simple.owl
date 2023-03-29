@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/KDSF-VIVO-Integration-simple.owl">
-        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-03-28/KDSF-VIVO-Integration-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-03-29/KDSF-VIVO-Integration-simple.owl"/>
         <terms:rights rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <vitro:ontologyPrefixAnnot>kdsf</vitro:ontologyPrefixAnnot>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.&quot;
@@ -20,7 +20,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International.</rdfs:comment>
         <rdfs:label xml:lang="de-de">KDSF-VIVO-Alignment</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-01-04</owl:versionInfo>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-28</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-29</owl:versionInfo>
     </owl:Ontology>
     
 
