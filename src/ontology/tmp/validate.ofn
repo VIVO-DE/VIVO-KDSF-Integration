@@ -11,7 +11,7 @@ Prefix(vitro:=<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>)
 
 
 Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/>
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-03-28/KDSF-VIVO-Integration.owl>
+<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration/KDSF-VIVO-Integration/releases/2023-03-29/KDSF-VIVO-Integration.owl>
 Annotation(terms:rights <https://creativecommons.org/licenses/by-sa/4.0/>)
 Annotation(vitro:ontologyPrefixAnnot "kdsf")
 Annotation(rdfs:comment "This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.\"
@@ -20,7 +20,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 Annotation(rdfs:comment "This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International."^^xsd:string)
 Annotation(rdfs:label "KDSF-VIVO-Alignment"@de-de)
 Annotation(owl:versionInfo "2017-01-04"^^xsd:string)
-Annotation(owl:versionInfo "2023-03-28"^^xsd:string)
+Annotation(owl:versionInfo "2023-03-29"^^xsd:string)
 
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#AUF>))
 Declaration(Class(<http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht>))
@@ -234,12 +234,15 @@ Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#DatumDerPr
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilung>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Drittmitteleinnahmen>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Drittmittelertraege>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Foerderer>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenPublikation>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Geschlecht>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Heft>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#IdentifierName>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzname>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzort>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Koordinationsrolle>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#KoordinatorEinrichtung>))
@@ -248,8 +251,28 @@ Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Name>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#NameAusgruendung>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#NameDerOrganisationseinheit>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Projektende>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Ressource>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Schoepfername>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Sprachcode>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#TitelPatent>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Verlagsort>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten>))
+Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus>))
 Declaration(DataProperty(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt>))
 Declaration(AnnotationProperty(Meta:inhaltlicheDefinition))
@@ -557,7 +580,7 @@ SubObjectPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatMittelgeber>
 ObjectPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#hatMittelgeber> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
 ObjectPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#hatMittelgeber> <http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber>)
 
-# Object Property: <http://kerndatensatz-forschung.de/owl/Basis#hatNutzung> (has usage)
+# Object Property: <http://kerndatensatz-forschung.de/owl/Basis#hatNutzung> (hat Nutzung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#hatNutzung> "Fi8")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatNutzung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -976,7 +999,7 @@ SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#BeschreibungDerFo
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#BeschreibungDerForschungsinfrastruktur> <http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastruktur>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#BeschreibungDerForschungsinfrastruktur> xsd:string)
 
-# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Besoldung> (Salary)
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Besoldung> (Besoldung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Besoldung> "Be100")
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Besoldung> "Be40")
@@ -1085,7 +1108,7 @@ SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritae
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> <http://kerndatensatz-forschung.de/owl/Basis#Patent>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#DatumDerPrioritaetsbegruendendenErstanmeldung> xsd:dateTime)
 
-# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilung> (Datum der Erteilung)
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilung> (Date of issue)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilung> "(Pa4)")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Datum_der_Erteilung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1153,6 +1176,17 @@ FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Drittmittele
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Drittmittelertraege> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Drittmittelertraege> xsd:float)
 
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> (Förderer)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "Pu86")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "dcterms.funding")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "Funders"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "Förderer"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Foerderer> owl:topDataProperty)
+
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt> (Förderkennzeichen des Drittmittelprojekts)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt> "Dr13")
@@ -1213,6 +1247,20 @@ SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Heft> owl:topData
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Heft> <http://kerndatensatz-forschung.de/owl/Basis#Format>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Heft> xsd:string)
 
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> (Name des Identifiers)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> "Pu133")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> "dcterms.identifier.name")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> "Name des Identifiers"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> "Name of the identifier"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> <http://kerndatensatz-forschung.de/owl/Basis#Identifier>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#IdentifierName> xsd:string)
+
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum> (Conference date)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Konferenzdatum> "Pu99")
@@ -1242,6 +1290,24 @@ AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Ko
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> "Name der Konferenz"@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> "Name of scientific meeting"@en-us)
 SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzname> owl:topDataProperty)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> (Ort der Konferenz)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> "Pu98")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> "kds.format.ConferenceVenue")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> "Anzugeben sind Stadt und Land, in welchen die Konferenz stattfindet. Aufschlüsselung des Lands über ISO-Landescode (z.B. USA). Bei „Online“-Konferenzen mit Teilnehmer/-innen ausschließlich an verschiedenen Orten erfolgt hierüber eine entsprechende Angabe"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> "City and country of the conference through ISO country code (e.g. USA). In case of pure online virtual con-ferences this information should be included here"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> "Anzugeben sind Stadt und Land, in welchen die Konferenz stattfindet. Aufschlüsselung des Lands über ISO-Landescode (z.B. USA). Bei „Online“-Konferenzen mit Teilnehmer/-innen ausschließlich an verschiedenen Orten erfolgt hierüber eine entsprechende Angabe"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> "City and country of the conference through ISO country code (e.g. USA). In case of pure online virtual con-ferences this information should be included here"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> "Conference venue"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> "Ort der Konferenz"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> <http://kerndatensatz-forschung.de/owl/Basis#Format>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Konferenzort> xsd:string)
 
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Kooperationspartner> (Cooperation partner (for cooperative doctorates))
 
@@ -1378,6 +1444,50 @@ SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> ow
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#NameDerQuelle> xsd:string)
 
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> (Name der weiteren Einrichtung)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> "Be12")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> "Anzugeben sind Organisationseinheiten inkl. Sitzland/Sitzländer. Hierbei ist die größte organisatorische Einheit (bspw. eine Universität oder ein Institut/Zentrum einer AUF) anzugeben, nicht jedoch interne Untereinheiten.
+Aufschlüsselung für inländische Einrichtungen gemäß dem Informationsportal der DFG, GERiT (German Research Institutions), für ausländische Einrichtungen gemäß dem Research Organization Registry (ROR) oder alternativ über ISO-Landescode (z.B. USA) und Name (z.B. UC Berkeley)."@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> "The organisational units to be indicated include the country/countries of domicile. The largest organisational unit (e.g. a university or an institute/centre of an AUF) must be specified, but not internal subunits.
+Breakdown for domestic institutions according to the DFG's information portal, GERiT (German Research Institutions), for foreign institutions according to the Research Organization Registry (ROR) or alternatively via ISO country code (e.g. USA) and name (e.g. UC Berkeley)"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> "Anzugeben sind Organisationseinheiten inkl. Sitzland/Sitzländer. Hierbei ist die größte organisatorische Einheit (bspw. eine Universität oder ein Institut/Zentrum einer AUF) anzugeben, nicht jedoch interne Untereinheiten.
+Aufschlüsselung für inländische Einrichtungen gemäß dem Informationsportal der DFG, GERiT (German Research Institutions), für ausländische Einrichtungen gemäß dem Research Organization Registry (ROR) oder alternativ über ISO-Landescode (z.B. USA) und Name (z.B. UC Berkeley)."@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> "The organisational units to be indicated include the country/countries of domicile. The largest organisational unit (e.g. a university or an institute/centre of an AUF) must be specified, but not internal subunits.
+Breakdown for domestic institutions according to the DFG's information portal, GERiT (German Research Institutions), for foreign institutions according to the Research Organization Registry (ROR) or alternatively via ISO country code (e.g. USA) and name (e.g. UC Berkeley)"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> "Name der weiteren Einrichtung"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> "Name of other institution"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> <http://kerndatensatz-forschung.de/owl/Basis#GemeinsameBerufung>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#NameDerWeiterenEinrichtung> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> (Patentfamilie)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> "Pa38")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> "Anzahl der zum Stichtag insgesamt bestehenden Patentfamilien, bei denen die berichtende Einrichtung als Anmelderin fungiert (umfasst nicht veräußerte Patentfamilien unabhängig vom Status der Erteilung).
+
+Erstes Mitglied einer Patentfamilie ist die prioritätsbegründende Anmeldung; alle weiteren Anmeldungen, die diese Priorität in Anspruch nehmen, sind weitere Familienmitglieder"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> "Total number of patent families in existence as of the reporting date for which the reporting institution is the applicant (includes patent families that have not been sold, regardless of grant status).
+
+The first member of a patent family is the priority application; all other applications claiming this priority are additional family members"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> "Anzahl der zum Stichtag insgesamt bestehenden Patentfamilien, bei denen die berichtende Einrichtung als Anmelderin fungiert (umfasst nicht veräußerte Patentfamilien unabhängig vom Status der Erteilung).
+
+Erstes Mitglied einer Patentfamilie ist die prioritätsbegründende Anmeldung; alle weiteren Anmeldungen, die diese Priorität in Anspruch nehmen, sind weitere Familienmitglieder"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> "Total number of patent families in existence as of the reporting date for which the reporting institution is the applicant (includes patent families that have not been sold, regardless of grant status).
+
+The first member of a patent family is the priority application; all other applications claiming this priority are additional family members"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> "Patent family"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> "Patentfamilie"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> <http://purl.org/ontology/bibo/Patent>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Patentfamilie> xsd:string)
+
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> (ist Peer Reviewed)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> "Pu104")
@@ -1409,8 +1519,49 @@ SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> owl
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#PeerReviewed> xsd:boolean)
 
-# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Ressource> (Darstellungsform)
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> (Projektbeginn)
 
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> "Dr15a")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> "Als Projektbeginn zählt das Jahr des Projektbeginns laut Bewilligungsbescheid bzw. Vereinbarung mit dem Förderer. Liegt kein Startdatum vor, kann das Jahr des ersten Mittelabrufs eingesetzt werden"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> "The year of the start of the project according to the notification of approval or agreement with the funding agency counts as the start of the project. If there is no start date, the year of the first call for funds can be used"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:offerCreateNewOptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> "true"^^xsd:boolean)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> "Als Projektbeginn zählt das Jahr des Projektbeginns laut Bewilligungsbescheid bzw. Vereinbarung mit dem Förderer. Liegt kein Startdatum vor, kann das Jahr des ersten Mittelabrufs eingesetzt werden"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> "The year of the start of the project according to the notification of approval or agreement with the funding agency counts as the start of the project. If there is no start date, the year of the first call for funds can be used"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> "Projektbeginn")
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> owl:topDataProperty)
+FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn>)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Projektbeginn> xsd:dateTime)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Projektende> (Projektende)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Projektende> "Dr14a")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Projektende> "Als Projektende zählt das Jahr des Projektendes laut Bewilligungsbescheid bzw. Vereinbarung mit dem Förderer. Liegt kein Enddatum vor, kann das Jahr des letzten Mittelabrufs eingesetzt werden"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Projektende> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Projektende> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:offerCreateNewOptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Projektende> "true"^^xsd:boolean)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Projektende> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Projektende> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Projektende> "Als Projektende zählt das Jahr des Projektendes laut Bewilligungsbescheid bzw. Vereinbarung mit dem Förderer. Liegt kein Enddatum vor, kann das Jahr des letzten Mittelabrufs eingesetzt werden"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Projektende> "Projektende"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Projektende> owl:topDataProperty)
+FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#Projektende>)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Projektende> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Projektende> xsd:dateTime)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Ressource> (Form of presentation)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Ressource> "Pu102")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Ressource> "Pu106")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Ressource> "Pu107")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Ressource> "Pu108")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Ressource> "Pu109")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Ressource> "Pu50")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Ressource> "kds.type.form")
 AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Ressource> "Die Darstellungsform spezifiziert die überwiegende Form der Kommunikation für bestimmte Publikationstypen (Pu6) und gibt an, mit welchem Sinn der Inhalt wahrgenommen wird (Orientiert an RDA-Bezeichnung: Inhaltstyp).
 
 Zu markierende Publikationstypen:
@@ -1449,6 +1600,292 @@ SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Ressource> owl:to
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Ressource> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Ressource> DataOneOf("Audio" "Bewegte Bilder" "Bild" "Text"))
 
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> (Name des Schöpfer/-ins)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> "Pu2")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> "dcterms.creator")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> "Der Vorname und Nachname der schöpfenden Person. Ein Werk kann einen oder mehrere Schöpfer/-innen, z.B. Autor/-innen, haben, die alle aufzulisten sind"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> "First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> "Name of the creator(s)"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> "Der Vorname und Nachname der schöpfenden Person. Ein Werk kann einen oder mehrere Schöpfer/-innen, z.B. Autor/-innen, haben, die alle aufzulisten sind"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> "First and last name of the creator. A work may have two or more joint creators, e.g. authors, which have to be all listed"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> "Name des Schöpfer/-ins"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> <http://kerndatensatz-forschung.de/owl/Basis#Schoepfer>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Schoepfername> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> (Seitenbereich)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> "Pu145")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> "kds.format.pagerange")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> "Angabe der Anfangs- und Endseite der Publikation"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> "The first and last page of a publication"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> "Angabe der Anfangs- und Endseite der Publikation"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> "The first and last page of a publication"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> "Page range"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> "Seitenbereich"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> <http://kerndatensatz-forschung.de/owl/Basis#Format>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Seitenbereich> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> (Sprachcode)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> "Pu95")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> "kds.language.iso")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:offerCreateNewOptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> "true"^^xsd:boolean)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> "Language code"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> "Sprachcode"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Sprachcode> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> (Staatsangehörigkeit)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> "Be72")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> "Na58")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> "A distinction is made between Germany and abroad. Individuals with multiple nationalities who belong to both Germany and other countries are only assigned to the Domestic category"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> "Es wird unterschieden zwischen Inland und Ausland. Personen mit mehreren Staatsangehörigkeiten, die sowohl dem deutschen als auch weiteren Staaten angehören, werden nur der Kategorie Inland zugeordnet."@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:offerCreateNewOptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> "true"^^xsd:boolean)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> "A distinction is made between Germany and abroad. Individuals with multiple nationalities who belong to both Germany and other countries are only assigned to the Domestic category"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> "Es wird unterschieden zwischen Inland und Ausland. Personen mit mehreren Staatsangehörigkeiten, die sowohl dem deutschen als auch weiteren Staaten angehören, werden nur der Kategorie Inland zugeordnet."@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> "Citizenship"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> "Staatsangehörigkeit"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> <http://kerndatensatz-forschung.de/owl/Basis#Person>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Staatsangehoerigkeit> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> (Start der Promotion (nach Annahme als Doktorand/-in am Fachbereich / an der Fakultät))
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> "Na38a")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> "Der Beginn der Promotion ist mittels des Datums (Jahr, Monat) der Annahme als Doktorand/-in am Fachbereich / an der Fakultät zu bestimmen"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> "The start of the doctorate is to be determined by the date (year, month) of acceptance as a doctoral candidate at the department/faculty"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> "Der Beginn der Promotion ist mittels des Datums (Jahr, Monat) der Annahme als Doktorand/-in am Fachbereich / an der Fakultät zu bestimmen"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> "The start of the doctorate is to be determined by the date (year, month) of acceptance as a doctoral candidate at the department/faculty"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> "Start der Promotion (nach Annahme als Doktorand/-in am Fachbereich / an der Fakultät)"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> "Start of the doctorate (after acceptance as a doctoral student at the department / faculty)"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> <http://kerndatensatz-forschung.de/owl/Basis#Promotion>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet> xsd:dateTime)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> (Start der Promotion (nach Betreuungsvereinbarung / Arbeitsvertrag))
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> "Na102")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> "Der Beginn der Promotion ist mittels des Datums (Jahr, Monat) der Betreuungsvereinbarung oder des Arbeitsvertrages zu bestimmen"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:offerCreateNewOptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> "true"^^xsd:boolean)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> "Der Beginn der Promotion ist mittels des Datums (Jahr, Monat) der Betreuungsvereinbarung oder des Arbeitsvertrages zu bestimmen"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> "The start of the doctorate is to be determined using the date (year, month) of the supervision agreement or the employment contract"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> "Start der Promotion (nach Betreuungsvereinbarung / Arbeitsvertrag)"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> "Start of doctorate (according to supervision agreement / employment contract)"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> <http://kerndatensatz-forschung.de/owl/Basis#Promotion>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag> xsd:dateTime)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> (Stipendien oder Stellen für teilnehmende Doktorand/-innen)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> "Na22")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> "Es wird angegeben (ja/nein), ob im strukturierten Promotionsprogramm Stipendien oder Stellen für Doktorand/-innen vergeben werden"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> "It is stated (yes/no) whether scholarships or positions for doctoral students are awarded in the structured doctoral program"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> "Es wird angegeben (ja/nein), ob im strukturierten Promotionsprogramm Stipendien oder Stellen für Doktorand/-innen vergeben werden"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> "It is stated (yes/no) whether scholarships or positions for doctoral students are awarded in the structured doctoral program"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> "Scholarships or positions for participating doctoral students"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> "Stipendien oder Stellen für teilnehmende Doktorand/-innen"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> owl:topDataProperty)
+FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden>)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> <http://kerndatensatz-forschung.de/owl/Basis#StrukturiertesPromotionsprogramm>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#StipendienoderStellenfuerteilnehmendeDoktoranden> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> (Titel des Patents)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> "Pa7")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> "Der Titel des Patentes aus der Anmeldung"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> "The title of the patent from the application"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> "Der Titel des Patentes aus der Anmeldung"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> "The title of the patent from the application"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> "Titel des Patents"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> "Title of patent"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> owl:topDataProperty)
+FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#TitelPatent>)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> <http://purl.org/ontology/bibo/Patent>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#TitelPatent> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> (Titel des Projekts)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> "Dr9")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> "Anzugeben ist der Titel zum Zeitpunkt der Bewilligung.
+
+Sofern ein Projekt vertraulich bleiben muss, ist es dem/der \"Drittmittelgeber/-in\" \"Nicht erklärt\" zuzuordnen. In diesem Fall kann auch der Titel des Projekts frei bleiben"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> "Enter the title at the time of approval.
+
+If a project has to remain confidential, it is to be assigned to the \"third-party funder\" \"Not declared\". In this case, the title of the project can remain blank"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> "Anzugeben ist der Titel zum Zeitpunkt der Bewilligung.
+
+Sofern ein Projekt vertraulich bleiben muss, ist es dem/der \"Drittmittelgeber/-in\" \"Nicht erklärt\" zuzuordnen. In diesem Fall kann auch der Titel des Projekts frei bleiben"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> "Enter the title at the time of approval.
+
+If a project has to remain confidential, it is to be assigned to the \"third-party funder\" \"Not declared\". In this case, the title of the project can remain blank"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> "Titel des Projekts"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> "Title of Project"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> owl:topDataProperty)
+FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt>)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#TitelProjekt> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> (Titel des Promotionsprogramms)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> "Na13")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> "Anzugeben ist der Titel des strukturierten Promotionsprogramms"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> "Enter the title of the structured doctoral program"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> "Anzugeben ist der Titel des strukturierten Promotionsprogramms"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> "Enter the title of the structured doctoral program"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> "Titel des Promotionsprogramms"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> "Title of doctoral program"@en-us)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> owl:topDataProperty)
+FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm>)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> <http://kerndatensatz-forschung.de/owl/Basis#StrukturiertesPromotionsprogramm>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#TitelPromotionsprogramm> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> (Titel der Publikation)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> "Pu5")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> "dcterms.title")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> "RDA name: Title proper"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> "RDA-Bezeichnung: Haupttitel"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> "RDA name: Title proper"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> "RDA-Bezeichnung: Haupttitel"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> "Titel der Publikation"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> owl:topDataProperty)
+FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation>)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#TitelPublikation> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> (Place of publication)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> "Pu153")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:offerCreateNewOptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> "true"^^xsd:boolean)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> "Place of publication"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> "Verlagsort"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> <http://kerndatensatz-forschung.de/owl/Basis#Verlag>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Verlagsort> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> (Veröffentlichungsjahr)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> "Pu151")
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> "Pu84")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> "kds.date.issued")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:offerCreateNewOptionAnnot <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> "true"^^xsd:boolean)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> "Release year"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> "Veröffentlichungsjahr"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsjahr> xsd:dateTime)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> (Publication number)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> "Pa33")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> "Die Veröffentlichungsnummer dient zur Recherche weiterer Informationen"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> "The publication number is used to research further information"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> "Die Veröffentlichungsnummer dient zur Recherche weiterer Informationen"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> "The publication number is used to research further information"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> "Publication number"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> "Veröffentlichungsnummer"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> <http://kerndatensatz-forschung.de/owl/Basis#Patent>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Veroeffentlichungsnummer> xsd:string)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> (Contract period in months)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> "Be39")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> "Angabe von Vertragsmonaten des aktuellen Vertrages.
+
+Bei Kopfzählung ist die Laufzeit des Vertrages mit dem größten Arbeitszeitanteil anzugeben. Bei gleichem Arbeitszeitanteil wird die Vertragslaufzeit des Vertrages mit der längeren Laufzeit angegeben. Für das Kerndatum Vollzeitäquivalente erfolgt die Zuordnung des/der Beschäftigten bei mehreren Arbeitsverträgen nach Arbeitsvertrag"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> "Specification of contract months of the current contract.
+
+When doing head count, the term of the contract with the largest proportion of working hours must be specified. In the case of the same proportion of working hours, the contract term of the contract with the longer term is specified. For the core date of full-time equivalents, the employee is assigned according to the employment contract if there are several employment contracts"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> "Angabe von Vertragsmonaten des aktuellen Vertrages.
+
+Bei Kopfzählung ist die Laufzeit des Vertrages mit dem größten Arbeitszeitanteil anzugeben. Bei gleichem Arbeitszeitanteil wird die Vertragslaufzeit des Vertrages mit der längeren Laufzeit angegeben. Für das Kerndatum Vollzeitäquivalente erfolgt die Zuordnung des/der Beschäftigten bei mehreren Arbeitsverträgen nach Arbeitsvertrag"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> "Specification of contract months of the current contract.
+
+When doing head count, the term of the contract with the largest proportion of working hours must be specified. In the case of the same proportion of working hours, the contract term of the contract with the longer term is specified. For the core date of full-time equivalents, the employee is assigned according to the employment contract if there are several employment contracts"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> "Contract period in months"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> "Vertragslaufzeit in Monaten"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> owl:topDataProperty)
+FunctionalDataProperty(<http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten>)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> <http://kerndatensatz-forschung.de/owl/Basis#Befristet>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#VertragslaufzeitInMonaten> xsd:nonNegativeInteger)
+
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> (Access rights)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> "Pu19")
+AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> "dcterms.rights.accessRights")
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> "Access rights are described in accordance with the \"Access Rights Vocabulary\" of the Confederation of Open Access Repositories (COAR):
+http://vocabularies.coar-repositories.org/documentation/access_rights/"@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> "Die Beschreibung der Zugangsrechte erfolgt entlang des „Access Rights Vocabulary“ der Confederation of Open Access Repositories (COAR):
+http://vocabularies.coar-repositories.org/documentation/access_rights/"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:selectFromExistingAnnot <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> "Access rights are described in accordance with the \"Access Rights Vocabulary\" of the Confederation of Open Access Repositories (COAR):
+http://vocabularies.coar-repositories.org/documentation/access_rights/"@en-us)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> "Die Beschreibung der Zugangsrechte erfolgt entlang des „Access Rights Vocabulary“ der Confederation of Open Access Repositories (COAR):
+http://vocabularies.coar-repositories.org/documentation/access_rights/"@de-de)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> "Access rights"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> "Zugangsrechte"@de-de)
+SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> owl:topDataProperty)
+DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> <http://kerndatensatz-forschung.de/owl/Basis#Publikation>)
+DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#Zugangsrechte> xsd:string)
+
 # Data Property: <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> (hat Promotionsberechtigung aus)
 
 AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> "A distinction is made between domestic and foreign countries. Persons with doctoral qualifications from several countries, which were acquired in Germany as well as in other countries, are only assigned to the domestic category"@en-us)
@@ -1465,8 +1902,25 @@ SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsbere
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> <http://kerndatensatz-forschung.de/owl/Basis#Person>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#hatPromotionsberechtigungAus> xsd:string)
 
-# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> (<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt>)
+# Data Property: <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> (has superordinate project)
 
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "Die Angabe des Titels des übergeordneten Projektes dient der Abbildung der logischen Struktur. Ein Teilprojekt liegt dann vor, wenn z.B. ein eigenes Förderkennzeichen vergeben wurde. Der Detailgrad der Ausweisung von Teilprojekten bleibt der Einrichtung überlassen.
+
+Sofern ein Projekt vertraulich bleiben muss, ist es dem/der \"Drittmittelgeber/-in\" \"Nicht erklärt\" zuzuordnen. In diesem Fall kann auch der Titel des übergeordneten Projektes frei bleiben"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "The specification of the title of the superordinate project serves to map the logical structure. A sub-project exists if, for example, its own funding code has been assigned. The level of detail of the sub-project designation is left to the institution.
+
+If a project must remain confidential, it must be assigned to the \"Third-party funder\" \"Not declared\". In this case, the title of the parent project can also be left blank"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "Die Angabe des Titels des übergeordneten Projektes dient der Abbildung der logischen Struktur. Ein Teilprojekt liegt dann vor, wenn z.B. ein eigenes Förderkennzeichen vergeben wurde. Der Detailgrad der Ausweisung von Teilprojekten bleibt der Einrichtung überlassen.
+
+Sofern ein Projekt vertraulich bleiben muss, ist es dem/der \"Drittmittelgeber/-in\" \"Nicht erklärt\" zuzuordnen. In diesem Fall kann auch der Titel des übergeordneten Projektes frei bleiben"@de-de)
+AnnotationAssertion(rdfs:comment <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "The specification of the title of the superordinate project serves to map the logical structure. A sub-project exists if, for example, its own funding code has been assigned. The level of detail of the sub-project designation is left to the institution.
+
+If a project must remain confidential, it must be assigned to the \"Third-party funder\" \"Not declared\". In this case, the title of the parent project can also be left blank"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "has superordinate project"@en-us)
+AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> "hat übergeordnetes Projekt"@de-de)
 SubDataPropertyOf(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> owl:topDataProperty)
 DataPropertyDomain(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt>)
 DataPropertyRange(<http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt> xsd:string)
@@ -1739,7 +2193,7 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Diss
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Dissertation> "Dissertation"@en-us)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Dissertation> <http://kerndatensatz-forschung.de/owl/Basis#Qualifikationsschrift>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> (Doktorand/ -innen)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> (PhD student)
 
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Doktorand> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1866,16 +2320,6 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndaten
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> "Finanzierungsform"@de-de)
 AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> "Form of financing"@en-us)
-
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> (Förderer)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "Pu86")
-AnnotationAssertion(Meta:pgbid <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "dcterms.funding")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "Funders"@en-us)
-AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Foerderer> "Förderer"@de-de)
 
 # Class: <http://kerndatensatz-forschung.de/owl/Basis#Format> (Format)
 
@@ -2478,7 +2922,7 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Prom
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Promotion> <http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Promotion> <http://vivoweb.org/ontology/core#EducationalProcess>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> (PhD cooperation partner)
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> (Promotionskooperationspartner)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> "Na86")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://kerndatensatz-forschung.de/owl/Basis#Promotionskooperationspartner> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -2565,7 +3009,7 @@ AnnotationAssertion(rdfs:label <http://kerndatensatz-forschung.de/owl/Basis#Qual
 EquivalentClasses(<http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren> <http://vivoweb.org/ontology/core#EducationalProcess>)
 SubClassOf(<http://kerndatensatz-forschung.de/owl/Basis#Qualifizierungsverfahren> <http://vivoweb.org/ontology/core#EducationalProcess>)
 
-# Class: <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> (Source edition [Journal Article])
+# Class: <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> (Quellenedition [Journalartikel])
 
 AnnotationAssertion(Meta:inhaltlicheDefinition <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> "Pu130")
 AnnotationAssertion(obo:IAO_0000115 <http://kerndatensatz-forschung.de/owl/Basis#Quellenedition> "A scholarly edition of primary sources is the publication of historic or cultural sources with a substantial contribution of the source editor published as an article or a book.
