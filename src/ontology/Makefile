@@ -15,7 +15,7 @@
 # ----------------------------------------
 # these can be overwritten on the command line
 
-URIBASE=                    http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KDSF-VIVO-Integration
+URIBASE=                    http://kerndatensatz-forschung.de/owl/Basis
 ONT=                        KDSF-VIVO-Integration
 ONTBASE=                    $(URIBASE)/$(ONT)
 EDIT_FORMAT=                owl
