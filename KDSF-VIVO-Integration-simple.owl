@@ -11,16 +11,16 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/KDSF-VIVO-Integration-simple.owl">
-        <owl:versionIRI rdf:resource="http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-03-30/KDSF-VIVO-Integration-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-03-31/KDSF-VIVO-Integration-simple.owl"/>
         <terms:rights rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <vitro:ontologyPrefixAnnot>kdsf</vitro:ontologyPrefixAnnot>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.&quot;
 
-The ontology is forked for update to the current KDSF standard at version 1.3 for use by the Berlin University Alliance, and redeveloped by Rolf Guescini (Humboldt-Universität Berlin), and will be tested in VIVO 1.13.x</rdfs:comment>
+The ontology is forked for update to the current KDSF standard at version 1.3 for use by the Berlin University Alliance, and redeveloped by Rolf Guescini (Humboldt-Universität Berlin), and will be tested against VIVO 1.13.x</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International.</rdfs:comment>
         <rdfs:label xml:lang="de-de">KDSF-VIVO-Alignment</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-01-04</owl:versionInfo>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-30</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-31</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -376,11 +376,16 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatGemeinsameBerufung">
         <Meta:inhaltlicheDefinition>Be4a</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="de-de">Gemeinsame Berufungen setzen ein gemeinsames Berufungsverfahren einer Hochschule und einer Forschungseinrichtung voraus (näher erläutert in &quot;Gemeinsame Berufungen von leitenden Wissenschaftlerinnen und Wissenschaftlern durch Hochschulen und außerhochschulische Forschungseinrichtungen&quot; der Gemeinsamen Wissenschaftskonferenz https://www.gwk-bonn.de/fileadmin/Redaktion/Dokumente/Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">Joint vocations require a joint appointment procedure of a university and a research institution (explained in more detail in &quot;Joint vocations of leading scientists by universities and non-university research institutions&quot; of the Joint Science Conference https://www.gwk-bonn.de/fileadmin/Redaktion/Documents /Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf).</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
-        <rdfs:label xml:lang="en-us">has a common vocation</rdfs:label>
+        <rdfs:comment xml:lang="de-de">Gemeinsame Berufungen setzen ein gemeinsames Berufungsverfahren einer Hochschule und einer Forschungseinrichtung voraus (näher erläutert in &quot;Gemeinsame Berufungen von leitenden Wissenschaftlerinnen und Wissenschaftlern durch Hochschulen und außerhochschulische Forschungseinrichtungen&quot; der Gemeinsamen Wissenschaftskonferenz https://www.gwk-bonn.de/fileadmin/Redaktion/Dokumente/Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf).</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Joint vocations require a joint appointment procedure of a university and a research institution (explained in more detail in &quot;Joint vocations of leading scientists by universities and non-university research institutions&quot; of the Joint Science Conference https://www.gwk-bonn.de/fileadmin/Redaktion/Documents /Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf).</rdfs:comment>
+        <rdfs:label xml:lang="en-us">has common vocation</rdfs:label>
         <rdfs:label xml:lang="de-de">hat gemeinsame Berufung</rdfs:label>
     </owl:ObjectProperty>
     

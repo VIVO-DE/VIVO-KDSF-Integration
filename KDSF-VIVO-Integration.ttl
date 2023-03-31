@@ -7,16 +7,16 @@
 @base <http://kerndatensatz-forschung.de/owl/Basis> .
 
 <http://kerndatensatz-forschung.de/owl/Basis> rdf:type owl:Ontology ;
-                                               owl:versionIRI <http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-03-30/KDSF-VIVO-Integration.ttl> ;
+                                               owl:versionIRI <http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-03-31/KDSF-VIVO-Integration.ttl> ;
                                                <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> "kdsf" ;
                                                rdfs:comment """This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.\"
 
-The ontology is forked for update to the current KDSF standard at version 1.3 for use by the Berlin University Alliance, and redeveloped by Rolf Guescini (Humboldt-Universität Berlin), and will be tested in VIVO 1.13.x"""^^xsd:string ,
+The ontology is forked for update to the current KDSF standard at version 1.3 for use by the Berlin University Alliance, and redeveloped by Rolf Guescini (Humboldt-Universität Berlin), and will be tested against VIVO 1.13.x"""^^xsd:string ,
                                                             "This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International."^^xsd:string ;
                                                rdfs:label "KDSF-VIVO-Alignment"@de-de ;
                                                owl:versionInfo "2017-01-04"^^xsd:string ,
-                                                               "2023-03-30"^^xsd:string .
+                                                               "2023-03-31"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -337,11 +337,16 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                        rdfs:domain :Professoren ;
                        rdfs:range :GemeinsameBerufung ;
                        <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be4a" ;
+                       <http://purl.obolibrary.org/obo/IAO_0000115> "Gemeinsame Berufungen setzen ein gemeinsames Berufungsverfahren einer Hochschule und einer Forschungseinrichtung voraus (näher erläutert in \"Gemeinsame Berufungen von leitenden Wissenschaftlerinnen und Wissenschaftlern durch Hochschulen und außerhochschulische Forschungseinrichtungen\" der Gemeinsamen Wissenschaftskonferenz https://www.gwk-bonn.de/fileadmin/Redaktion/Dokumente/Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf)."@de-de ,
+                                                                    "Joint vocations require a joint appointment procedure of a university and a research institution (explained in more detail in \"Joint vocations of leading scientists by universities and non-university research institutions\" of the Joint Science Conference https://www.gwk-bonn.de/fileadmin/Redaktion/Documents /Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf)."@en-us ;
                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
-                       rdfs:label "has a common vocation"@en-us ,
+                       rdfs:comment "Gemeinsame Berufungen setzen ein gemeinsames Berufungsverfahren einer Hochschule und einer Forschungseinrichtung voraus (näher erläutert in \"Gemeinsame Berufungen von leitenden Wissenschaftlerinnen und Wissenschaftlern durch Hochschulen und außerhochschulische Forschungseinrichtungen\" der Gemeinsamen Wissenschaftskonferenz https://www.gwk-bonn.de/fileadmin/Redaktion/Dokumente/Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf)."@de-de ,
+                                    "Joint vocations require a joint appointment procedure of a university and a research institution (explained in more detail in \"Joint vocations of leading scientists by universities and non-university research institutions\" of the Joint Science Conference https://www.gwk-bonn.de/fileadmin/Redaktion/Documents /Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf)."@en-us ;
+                       rdfs:label "has common vocation"@en-us ,
                                   "hat gemeinsame Berufung"@de-de .
 
 
@@ -696,62 +701,6 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                  "Im Sinne des Kerndatensatz Forschung zählen als Zeitpunkt des Abschlusses das Kalenderjahr und optional der Monat der letzten Prüfungsleistung"@de-de ;
                     rdfs:label "Abschlusszeitpunkt"@de-de ,
                                "Graduation date"@en-us .
-
-
-###  http://kerndatensatz-forschung.de/owl/Basis#Altersgruppe
-:Altersgruppe rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain :Person ;
-              rdfs:range xsd:string ;
-              <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be52" ;
-              <http://purl.obolibrary.org/obo/IAO_0000115> """Age group of employees at the reference date for reporting. To be reported in five-year groups analogous to Destatis, Fachserie 11, Reihe 4.4: under 25, 25 to under 30, 30 to under 35, 35 to under 40, 40 to under 45, 45 to under 50, 50 to under 55, 55 to under 60, 60 to under 65, 65 and older.
-
-Note: It is recommended to calculate this figure from corresponding point in time data, provided that an institution keeps this data internally."""@en-us ,
-                                                           """Altersgruppe der Beschäftigten zum Stichtag für die Berichtslegung. Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter.
-
-Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu berechnen, sofern eine Einrichtung diese intern vorhält."""@de-de ;
-              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-              rdfs:comment """Age group of employees at the reference date for reporting. To be reported in five-year groups analogous to Destatis, Fachserie 11, Reihe 4.4: under 25, 25 to under 30, 30 to under 35, 35 to under 40, 40 to under 45, 45 to under 50, 50 to under 55, 55 to under 60, 60 to under 65, 65 and older.
-
-Note: It is recommended to calculate this figure from corresponding point in time data, provided that an institution keeps this data internally.
-[Differentiation option (cumulative form) / grouping possibility
-
-Translated with www.DeepL.com/Translator (free version)"""@en-us ,
-                           """Altersgruppe der Beschäftigten zum Stichtag für die Berichtslegung. Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter.
-
-Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu berechnen, sofern eine Einrichtung diese intern vorhält.
-[Ausdifferenzierungmöglichkeit (Summenform) / Gruppierungsmöglichkei"""@de-de ;
-              rdfs:label "Age group"@en-us ,
-                         "Altersgruppe"@de-de .
-
-
-###  http://kerndatensatz-forschung.de/owl/Basis#AltersgruppeBeiAbschluss
-:AltersgruppeBeiAbschluss rdf:type owl:DatatypeProperty ;
-                          rdfs:subPropertyOf owl:topDataProperty ;
-                          rdfs:domain :Qualifizierungsverfahren ;
-                          rdfs:range xsd:string ;
-                          <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Na69"@de-de ,
-                                                                                             "Na71"@de-de ;
-                          <http://purl.obolibrary.org/obo/IAO_0000115> """To be reported in five-year groups analogous to Destatis, Fachserie 11, Reihe 4.4: under 25, 25 to under 30, 30 to under 35, 35 to under 40, 40 to under 45, 45 to under 50, 50 to under 55, 55 to under 60, 60 to under 65, 65 and older.
-Only to be recorded by title-awarding institution"""@en-us ,
-                                                                       """Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter.
-Nur zu erfassen durch titelverleihende Einrichtung
-
-Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu berechnen, sofern eine Einrichtung diese intern vorhält."""@de-de ;
-                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                          rdfs:comment """To be reported in five-year groups analogous to Destatis, Fachserie 11, Reihe 4.4: under 25, 25 to under 30, 30 to under 35, 35 to under 40, 40 to under 45, 45 to under 50, 50 to under 55, 55 to under 60, 60 to under 65, 65 and older.
-Only to be recorded by title-awarding institution"""@en-us ,
-                                       """Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter.
-Nur zu erfassen durch titelverleihende Einrichtung
-
-Note: It is recommended to calculate this figure from corresponding point in time data, provided that an institution keeps this data internally.
-[Differentiation option (cumulative form) / grouping possibility"""@de-de ;
-                          rdfs:label "Age group at graduation"@en-us ,
-                                     "Altersgruppe bei Abschluss"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#AnzahlGenutzteStunden
@@ -1117,40 +1066,6 @@ Diese Angabe versteht sich als Alternative zu Dr1b. Nur eines der beiden Kerndat
                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "Das Förderkennzeichen des Mittelgebers, sofern in der Publikation angegeben. " ;
                                rdfs:label "Förderkennzeichen der Publikation"@de-de .
-
-
-###  http://kerndatensatz-forschung.de/owl/Basis#Geschlecht
-:Geschlecht rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
-            rdf:type owl:FunctionalProperty ;
-            rdfs:domain :Person ;
-            rdfs:range [ rdf:type rdfs:Datatype ;
-                         owl:oneOf [ rdf:type rdf:List ;
-                                     rdf:first "Maennlich" ;
-                                     rdf:rest [ rdf:type rdf:List ;
-                                                rdf:first "Ohne Angabe" ;
-                                                rdf:rest [ rdf:type rdf:List ;
-                                                           rdf:first "Weiblich" ;
-                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                      rdf:first "divers" ;
-                                                                      rdf:rest rdf:nil
-                                                                    ]
-                                                         ]
-                                              ]
-                                   ]
-                       ] ;
-            <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be7"@en-us ,
-                                                                               "Na7"@en-us ;
-            <http://purl.obolibrary.org/obo/IAO_0000115> "Das Geschlecht ist als \"männlich\", \"weiblich\", \"divers\" oder \"ohne Angabe\" anzugeben."@de-de ,
-                                                         "The gender is to be indicated as \"male\", \"female\", \"diverse\" or \"not specified\""@en-us ;
-            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
-            rdfs:comment "Das Geschlecht ist als \"männlich\", \"weiblich\", \"divers\" oder \"ohne Angabe\" anzugeben."@de-de ,
-                         "The gender is to be indicated as \"male\", \"female\", \"diverse\" or \"not specified\""@en-us ;
-            rdfs:label "Gender"@en-us ,
-                       "Geslecht"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Heft
@@ -3874,8 +3789,8 @@ Wird eine FI auf verschiedenen Wegen zur Nutzung angeboten (bspw. lokal und virt
            <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "dcterms.funding" ;
            rdfs:label "Förderer"@de-de ;
            <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-           rdfs:label "Funders"@en-us ;
-           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+           rdfs:label "Funders"@en-us .
 
 
 :FoerderkennzeichenDrittmittelprojekt <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Dr13" ;
