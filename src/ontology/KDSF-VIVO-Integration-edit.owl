@@ -21,7 +21,7 @@ Annotation(dct:rights <https://creativecommons.org/licenses/by-sa/4.0/>)
 Annotation(vitro:ontologyPrefixAnnot "kdsf")
 Annotation(rdfs:comment "This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.\"
 
-The ontology is forked for update to the current KDSF standard at version 1.3 for use by the Berlin University Alliance, and redeveloped by Rolf Guescini (Humboldt-Universität Berlin), and will be tested in VIVO 1.13.x"^^xsd:string)
+The ontology is forked for update to the current KDSF standard at version 1.3 for use by the Berlin University Alliance, and redeveloped by Rolf Guescini (Humboldt-Universität Berlin), and will be tested against VIVO 1.13.x"^^xsd:string)
 Annotation(rdfs:comment "This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International."^^xsd:string)
 Annotation(rdfs:label "KDSF-VIVO-Alignment"@de-de)
 Annotation(owl:versionInfo "2017-01-04"^^xsd:string)
@@ -221,8 +221,6 @@ Declaration(ObjectProperty(:hatVerlag))
 Declaration(ObjectProperty(:hatZugangsart))
 Declaration(ObjectProperty(vivo:informationResourceSupportedBy))
 Declaration(DataProperty(:Abschlusszeitpunkt))
-Declaration(DataProperty(:Altersgruppe))
-Declaration(DataProperty(:AltersgruppeBeiAbschluss))
 Declaration(DataProperty(:AnzahlGenutzteStunden))
 Declaration(DataProperty(:AnzahlNutzer))
 Declaration(DataProperty(:AnzahlNutzungszugriffe))
@@ -505,14 +503,19 @@ SubObjectPropertyOf(:hatForschungsfeld owl:topObjectProperty)
 ObjectPropertyDomain(:hatForschungsfeld ObjectUnionOf(:Ausgruendung :Beschaeftigung :Drittmittelprojekt :Patent :Publikation :StrukturiertesPromotionsprogramm))
 ObjectPropertyRange(:hatForschungsfeld :Forschungsfeld)
 
-# Object Property: :hatGemeinsameBerufung (hat gemeinsame Berufung)
+# Object Property: :hatGemeinsameBerufung (has common vocation)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :hatGemeinsameBerufung "Be4a")
+AnnotationAssertion(obo:IAO_0000115 :hatGemeinsameBerufung "Gemeinsame Berufungen setzen ein gemeinsames Berufungsverfahren einer Hochschule und einer Forschungseinrichtung voraus (näher erläutert in \"Gemeinsame Berufungen von leitenden Wissenschaftlerinnen und Wissenschaftlern durch Hochschulen und außerhochschulische Forschungseinrichtungen\" der Gemeinsamen Wissenschaftskonferenz https://www.gwk-bonn.de/fileadmin/Redaktion/Dokumente/Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf)."@de-de)
+AnnotationAssertion(obo:IAO_0000115 :hatGemeinsameBerufung "Joint vocations require a joint appointment procedure of a university and a research institution (explained in more detail in \"Joint vocations of leading scientists by universities and non-university research institutions\" of the Joint Science Conference https://www.gwk-bonn.de/fileadmin/Redaktion/Documents /Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf)."@en-us)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :hatGemeinsameBerufung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :hatGemeinsameBerufung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:offerCreateNewOptionAnnot :hatGemeinsameBerufung "true"^^xsd:boolean)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :hatGemeinsameBerufung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:selectFromExistingAnnot :hatGemeinsameBerufung "true"^^xsd:boolean)
-AnnotationAssertion(rdfs:label :hatGemeinsameBerufung "has a common vocation"@en-us)
+AnnotationAssertion(rdfs:comment :hatGemeinsameBerufung "Gemeinsame Berufungen setzen ein gemeinsames Berufungsverfahren einer Hochschule und einer Forschungseinrichtung voraus (näher erläutert in \"Gemeinsame Berufungen von leitenden Wissenschaftlerinnen und Wissenschaftlern durch Hochschulen und außerhochschulische Forschungseinrichtungen\" der Gemeinsamen Wissenschaftskonferenz https://www.gwk-bonn.de/fileadmin/Redaktion/Dokumente/Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf)."@de-de)
+AnnotationAssertion(rdfs:comment :hatGemeinsameBerufung "Joint vocations require a joint appointment procedure of a university and a research institution (explained in more detail in \"Joint vocations of leading scientists by universities and non-university research institutions\" of the Joint Science Conference https://www.gwk-bonn.de/fileadmin/Redaktion/Documents /Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf)."@en-us)
+AnnotationAssertion(rdfs:label :hatGemeinsameBerufung "has common vocation"@en-us)
 AnnotationAssertion(rdfs:label :hatGemeinsameBerufung "hat gemeinsame Berufung"@de-de)
 SubObjectPropertyOf(:hatGemeinsameBerufung owl:topObjectProperty)
 ObjectPropertyDomain(:hatGemeinsameBerufung :Professoren)
@@ -568,7 +571,7 @@ SubObjectPropertyOf(:hatMittelgeber owl:topObjectProperty)
 ObjectPropertyDomain(:hatMittelgeber :Drittmittelprojekt)
 ObjectPropertyRange(:hatMittelgeber :Mittelgeber)
 
-# Object Property: :hatNutzung (has usage)
+# Object Property: :hatNutzung (hat Nutzung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :hatNutzung "Fi8")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :hatNutzung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -832,60 +835,6 @@ SubDataPropertyOf(:Abschlusszeitpunkt owl:topDataProperty)
 DataPropertyDomain(:Abschlusszeitpunkt :Qualifizierungsverfahren)
 DataPropertyRange(:Abschlusszeitpunkt xsd:dateTime)
 
-# Data Property: :Altersgruppe (Age group)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Altersgruppe "Be52")
-AnnotationAssertion(obo:IAO_0000115 :Altersgruppe "Age group of employees at the reference date for reporting. To be reported in five-year groups analogous to Destatis, Fachserie 11, Reihe 4.4: under 25, 25 to under 30, 30 to under 35, 35 to under 40, 40 to under 45, 45 to under 50, 50 to under 55, 55 to under 60, 60 to under 65, 65 and older.
-
-Note: It is recommended to calculate this figure from corresponding point in time data, provided that an institution keeps this data internally."@en-us)
-AnnotationAssertion(obo:IAO_0000115 :Altersgruppe "Altersgruppe der Beschäftigten zum Stichtag für die Berichtslegung. Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter.
-
-Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu berechnen, sofern eine Einrichtung diese intern vorhält."@de-de)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Altersgruppe <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Altersgruppe <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Altersgruppe <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Altersgruppe "Age group of employees at the reference date for reporting. To be reported in five-year groups analogous to Destatis, Fachserie 11, Reihe 4.4: under 25, 25 to under 30, 30 to under 35, 35 to under 40, 40 to under 45, 45 to under 50, 50 to under 55, 55 to under 60, 60 to under 65, 65 and older.
-
-Note: It is recommended to calculate this figure from corresponding point in time data, provided that an institution keeps this data internally.
-[Differentiation option (cumulative form) / grouping possibility
-
-Translated with www.DeepL.com/Translator (free version)"@en-us)
-AnnotationAssertion(rdfs:comment :Altersgruppe "Altersgruppe der Beschäftigten zum Stichtag für die Berichtslegung. Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter.
-
-Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu berechnen, sofern eine Einrichtung diese intern vorhält.
-[Ausdifferenzierungmöglichkeit (Summenform) / Gruppierungsmöglichkei"@de-de)
-AnnotationAssertion(rdfs:label :Altersgruppe "Age group"@en-us)
-AnnotationAssertion(rdfs:label :Altersgruppe "Altersgruppe"@de-de)
-SubDataPropertyOf(:Altersgruppe owl:topDataProperty)
-DataPropertyDomain(:Altersgruppe :Person)
-DataPropertyRange(:Altersgruppe xsd:string)
-
-# Data Property: :AltersgruppeBeiAbschluss (Altersgruppe bei Abschluss)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :AltersgruppeBeiAbschluss "Na69"@de-de)
-AnnotationAssertion(Meta:inhaltlicheDefinition :AltersgruppeBeiAbschluss "Na71"@de-de)
-AnnotationAssertion(obo:IAO_0000115 :AltersgruppeBeiAbschluss "To be reported in five-year groups analogous to Destatis, Fachserie 11, Reihe 4.4: under 25, 25 to under 30, 30 to under 35, 35 to under 40, 40 to under 45, 45 to under 50, 50 to under 55, 55 to under 60, 60 to under 65, 65 and older.
-Only to be recorded by title-awarding institution"@en-us)
-AnnotationAssertion(obo:IAO_0000115 :AltersgruppeBeiAbschluss "Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter.
-Nur zu erfassen durch titelverleihende Einrichtung
-
-Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu berechnen, sofern eine Einrichtung diese intern vorhält."@de-de)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :AltersgruppeBeiAbschluss <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :AltersgruppeBeiAbschluss <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :AltersgruppeBeiAbschluss <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :AltersgruppeBeiAbschluss "To be reported in five-year groups analogous to Destatis, Fachserie 11, Reihe 4.4: under 25, 25 to under 30, 30 to under 35, 35 to under 40, 40 to under 45, 45 to under 50, 50 to under 55, 55 to under 60, 60 to under 65, 65 and older.
-Only to be recorded by title-awarding institution"@en-us)
-AnnotationAssertion(rdfs:comment :AltersgruppeBeiAbschluss "Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter.
-Nur zu erfassen durch titelverleihende Einrichtung
-
-Note: It is recommended to calculate this figure from corresponding point in time data, provided that an institution keeps this data internally.
-[Differentiation option (cumulative form) / grouping possibility"@de-de)
-AnnotationAssertion(rdfs:label :AltersgruppeBeiAbschluss "Age group at graduation"@en-us)
-AnnotationAssertion(rdfs:label :AltersgruppeBeiAbschluss "Altersgruppe bei Abschluss"@de-de)
-SubDataPropertyOf(:AltersgruppeBeiAbschluss owl:topDataProperty)
-DataPropertyDomain(:AltersgruppeBeiAbschluss :Qualifizierungsverfahren)
-DataPropertyRange(:AltersgruppeBeiAbschluss xsd:string)
-
 # Data Property: :AnzahlGenutzteStunden (Anzahl genutzte Stunden)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :AnzahlGenutzteStunden "Fi28")
@@ -1096,7 +1045,7 @@ SubDataPropertyOf(:DatumDerPrioritaetsbegruendendenErstanmeldung owl:topDataProp
 DataPropertyDomain(:DatumDerPrioritaetsbegruendendenErstanmeldung :Patent)
 DataPropertyRange(:DatumDerPrioritaetsbegruendendenErstanmeldung xsd:dateTime)
 
-# Data Property: :Datum_der_Erteilung (Date of issue)
+# Data Property: :Datum_der_Erteilung (Datum der Erteilung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Datum_der_Erteilung "(Pa4)")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Datum_der_Erteilung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1235,7 +1184,7 @@ SubDataPropertyOf(:Heft owl:topDataProperty)
 DataPropertyDomain(:Heft :Format)
 DataPropertyRange(:Heft xsd:string)
 
-# Data Property: :IdentifierName (Name of the identifier)
+# Data Property: :IdentifierName (Name des Identifiers)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :IdentifierName "Pu133")
 AnnotationAssertion(Meta:pgbid :IdentifierName "dcterms.identifier.name")
@@ -2988,7 +2937,7 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Qualifizierun
 AnnotationAssertion(rdfs:label :Qualifizierungsverfahren "Qualifizierungsverfahren"@de-de)
 EquivalentClasses(:Qualifizierungsverfahren vivo:EducationalProcess)
 
-# Class: :Quellenedition (Source edition [Journal Article])
+# Class: :Quellenedition (Quellenedition [Journalartikel])
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Quellenedition "Pu130")
 AnnotationAssertion(obo:IAO_0000115 :Quellenedition "A scholarly edition of primary sources is the publication of historic or cultural sources with a substantial contribution of the source editor published as an article or a book.
