@@ -135,6 +135,13 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 
     <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatUebergeordnetesProjekt">
         <owl:inverseOf rdf:resource="http://lod.tib.eu/onto/kdsf/istUebergeordnetesProjektVon"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-en">has superordinate project</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat übergeordnetes Projekt</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -207,6 +214,7 @@ Note: It is recommended to calculate this figure from corresponding point in tim
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-en">has Salary</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Besoldung</rdfs:label>
     </owl:ObjectProperty>
     
@@ -247,8 +255,10 @@ Note: It is recommended to calculate this figure from corresponding point in tim
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:publicDescriptionAnnot xml:lang="de">Es wird unterschieden zwischen Inland und Ausland. Personen mit Promotionsberechtigungen aus mehreren Ländern, die sowohl in Deutschland als auch weiteren Ländern erworben wurden, werden nur der Kategorie Inland zugeordnet.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="en-en">A distinction is made between domestic and foreign countries. Persons with doctoral qualifications from several countries, which were acquired both in Germany and other countries, are only assigned to the domestic category.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="de-de">Es wird unterschieden zwischen Inland und Ausland. Personen mit Promotionsberechtigungen aus mehreren Ländern, die sowohl in Deutschland als auch weiteren Ländern erworben wurden, werden nur der Kategorie Inland zugeordnet.</vitro:publicDescriptionAnnot>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-en">has doctoral degree entitlement from</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Promotionsberechtigung aus</rdfs:label>
     </owl:ObjectProperty>
     
@@ -266,10 +276,29 @@ Note: It is recommended to calculate this figure from corresponding point in tim
         <Meta:inhaltlicheDefinition>Pu109</Meta:inhaltlicheDefinition>
         <Meta:inhaltlicheDefinition>Pu50</Meta:inhaltlicheDefinition>
         <pgbid>kds.type.form</pgbid>
+        <obo:IAO_0000115 xml:lang="de-de">Die Darstellungsform spezifiziert die überwiegende Form der Kommunikation für bestimmte Publikationstypen (Pu6) und gibt an, mit welchem Sinn der Inhalt wahrgenommen wird (Orientiert an RDA-Bezeichnung: Inhaltstyp).
+
+Zu markierende Publikationstypen:
+- Forschungsdaten (Pu38)
+- Beitrag in nicht-wissenschaftlichen Medien (Pu39)
+- Beitrag in wissenschaftlichen Blogs (Pu42)
+- Integrierende Ressource (Pu49)
+- Sonstiger Publikationstyp (Pu111)</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-en">The format reflects the fundamental form of communication in which the content is expressed for certain publication types (Pu6) and the human sense through which it is intended to be perceived (According to RDA name: Content type).</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:comment xml:lang="de-de">Die Darstellungsform spezifiziert die überwiegende Form der Kommunikation für bestimmte Publikationstypen (Pu6) und gibt an, mit welchem Sinn der Inhalt wahrgenommen wird (Orientiert an RDA-Bezeichnung: Inhaltstyp).
+
+Zu markierende Publikationstypen:
+- Forschungsdaten (Pu38)
+- Beitrag in nicht-wissenschaftlichen Medien (Pu39)
+- Beitrag in wissenschaftlichen Blogs (Pu42)
+- Integrierende Ressource (Pu49)
+- Sonstiger Publikationstyp (Pu111)</rdfs:comment>
+        <rdfs:comment xml:lang="en-en">The format reflects the fundamental form of communication in which the content is expressed for certain publication types (Pu6) and the human sense through which it is intended to be perceived (According to RDA name: Content type).</rdfs:comment>
+        <rdfs:label xml:lang="en-en">has resource type</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Ressourceart</rdfs:label>
     </owl:ObjectProperty>
     
@@ -286,8 +315,10 @@ Note: It is recommended to calculate this figure from corresponding point in tim
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:publicDescriptionAnnot xml:lang="de">Es wird unterschieden zwischen Inland und Ausland. Personen mit mehreren Staatsangehörigkeiten, die sowohl dem deutschen als auch weiteren Staaten angehören, werden nur der Kategorie Inland zugeordnet.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="en-en">A distinction is made between domestic and foreign countries. Persons with several citizenships who belong to both the German and other states are only assigned to the domestic category.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="de-de">Es wird unterschieden zwischen Inland und Ausland. Personen mit mehreren Staatsangehörigkeiten, die sowohl dem deutschen als auch weiteren Staaten angehören, werden nur der Kategorie Inland zugeordnet.</vitro:publicDescriptionAnnot>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-en">has Citizenship</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Staatsangehörigkeit</rdfs:label>
     </owl:ObjectProperty>
     
@@ -305,6 +336,7 @@ Note: It is recommended to calculate this figure from corresponding point in tim
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-en">has Contract</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Vertrag</rdfs:label>
     </owl:ObjectProperty>
     
@@ -321,7 +353,10 @@ Note: It is recommended to calculate this figure from corresponding point in tim
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:publicDescriptionAnnot>Die Beschreibung der Zugangsrechte erfolgt entlang des „Access Rights Vocabulary” der Confederation of Open Access Repositorires (COAR):
 https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/access-rights-vocabulary/</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="en-en">The description of access rights follows the &quot;Access Rights Vocabulary&quot; of the Confederation of Open Access Repositories (COAR):
+https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/access-rights-vocabulary/</vitro:publicDescriptionAnnot>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-en">has access rights</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Zugriffsrechte</rdfs:label>
     </owl:ObjectProperty>
     
@@ -338,6 +373,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
         <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-en">is superordinate project of</rdfs:label>
         <rdfs:label xml:lang="de-de">ist übergeordnetes Projekt von</rdfs:label>
     </owl:ObjectProperty>
     
@@ -356,6 +392,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
         <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-en">Speaker institution / consortium leader</rdfs:label>
         <rdfs:label xml:lang="de-de">Sprechereinrichtung / Konsortialführer</rdfs:label>
     </owl:ObjectProperty>
     
@@ -370,6 +407,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-en">contract from</rdfs:label>
         <rdfs:label xml:lang="de-de">ist Vertrag von</rdfs:label>
     </owl:ObjectProperty>
     
@@ -402,6 +440,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">as time limit</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Befristung</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -494,6 +533,13 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Altersgruppe">
         <Meta:inhaltlicheDefinition>Be52</Meta:inhaltlicheDefinition>
+        <vitro:publicDescriptionAnnot xml:lang="en-us">Age group of employees at the reference date for reporting. To be reported in five-year groups analogous to Destatis, Fachserie 11, Reihe 4.4: under 25, 25 to under 30, 30 to under 35, 35 to under 40, 40 to under 45, 45 to under 50, 50 to under 55, 55 to under 60, 60 to under 65, 65 and older.
+
+Note: It is recommended to calculate this figure from corresponding point in time data, if an institution keeps it internally.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="de-de">Altersgruppe der Beschäftigten zum Stichtag für die Berichtslegung. Zu berichten in Fünf-Jahres-Gruppen analog zu Destatis, Fachserie 11, Reihe 4.4: unter 25 Jahren, 25 bis unter 30, 30 bis unter 35, 35 bis unter 40, 40 bis unter 45, 45 bis unter 50, 50 bis unter 55, 55 bis unter 60, 60 bis unter 65, 65 und älter.
+
+Hinweis: Es wird empfohlen, diese Angabe aus entsprechenden Zeitpunktdaten zu berechnen, sofern eine Einrichtung diese intern vorhält.</vitro:publicDescriptionAnnot>
+        <rdfs:label xml:lang="en-us">Age group</rdfs:label>
         <rdfs:label xml:lang="de-de">Altersgruppe</rdfs:label>
     </owl:Class>
     
@@ -505,7 +551,9 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:publicDescriptionAnnot xml:lang="de">Die Klasse wurde erstellt, um die Besoldungsarten zusammenzufassen.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="de-de">Die Klasse wurde erstellt, um die Besoldungsarten zusammenzufassen.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="en-us">The class was created to summarise the grade types.</vitro:publicDescriptionAnnot>
+        <rdfs:isDefinedBy xml:lang="en-us">Salary type</rdfs:isDefinedBy>
         <rdfs:label xml:lang="de-de">Besoldungsart</rdfs:label>
     </owl:Class>
     
@@ -514,11 +562,13 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <!-- http://lod.tib.eu/onto/kdsf/Geschlechtsangabe -->
 
     <owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe">
-        <vitro:descriptionAnnot>Das Geschlecht ist als &quot;männlich&quot;, &quot;weiblich&quot; oder &quot;ohne Angabe&quot; anzugeben.</vitro:descriptionAnnot>
+        <vitro:descriptionAnnot xml:lang="de-de">Das Geschlecht ist als &quot;männlich&quot;, &quot;weiblich&quot; oder &quot;ohne Angabe&quot; anzugeben.</vitro:descriptionAnnot>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:publicDescriptionAnnot xml:lang="en-us">The gender is to be indicated as &quot;male&quot;, &quot;female&quot; or &quot;not specified&quot;.</vitro:publicDescriptionAnnot>
         <rdfs:label xml:lang="de-de">Geschlechtsangabe</rdfs:label>
+        <rdfs:label xml:lang="en-us">gender information</rdfs:label>
     </owl:Class>
     
 
@@ -529,7 +579,9 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:publicDescriptionAnnot xml:lang="de">Die Klasse wurde erstellt, um die Staatsangehörigkeit und das Land des zur Aufnahme einer Promotion berechtigenden Studienabschlusses abzubilden.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="de-de">Die Klasse wurde erstellt, um die Staatsangehörigkeit und das Land des zur Aufnahme einer Promotion berechtigenden Studienabschlusses abzubilden.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="en-us">The class was created to reflect the nationality and country of the degree entitling the holder to take up a doctorate.</vitro:publicDescriptionAnnot>
+        <rdfs:label xml:lang="en-us">Country category</rdfs:label>
         <rdfs:label xml:lang="de-de">Landkategorie</rdfs:label>
     </owl:Class>
     
@@ -543,6 +595,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:publicDescriptionAnnot xml:lang="en-us">Resource type</vitro:publicDescriptionAnnot>
         <rdfs:label xml:lang="de-de">Ressourceart</rdfs:label>
     </owl:Class>
     
@@ -560,7 +613,9 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:publicDescriptionAnnot xml:lang="de">Die Klasse wurde erstellt, um das befristete/ unbefristete Verhältnis abzubilden.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="de-de">Die Klasse wurde erstellt, um das befristete/ unbefristete Verhältnis abzubilden.</vitro:publicDescriptionAnnot>
+        <vitro:publicDescriptionAnnot xml:lang="en-us">The class was created to map the temporary/permanent relationship</vitro:publicDescriptionAnnot>
+        <rdfs:label xml:lang="en-us">Contract</rdfs:label>
         <rdfs:label xml:lang="de-de">Vertrag</rdfs:label>
     </owl:Class>
     
@@ -569,11 +624,14 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <!-- http://lod.tib.eu/onto/kdsf/Zugriffsrechte -->
 
     <owl:Class rdf:about="http://lod.tib.eu/onto/kdsf/Zugriffsrechte">
+        <obo:IAO_0000115 xml:lang="en-us">Access rights according to the &quot;Access Rights Vocabulary&quot; of the Confederation of Open Access Repositories (COAR):
+https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/access-rights-vocabulary/</obo:IAO_0000115>
         <obo:IAO_0000115>Zugriffsrechte entsprechend dem „Access Rights Vocabulary” der Confederation of Open Access Repositorires (COAR):
 https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/access-rights-vocabulary/</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Access rights</rdfs:label>
         <rdfs:label xml:lang="de-de">Zugriffsrechte</rdfs:label>
     </owl:Class>
     
@@ -607,6 +665,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Audio">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
         <rdfs:label xml:lang="de-de">Audio</rdfs:label>
+        <rdfs:label xml:lang="en-us">Audio</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -616,6 +675,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Ausland">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/LandKategorie"/>
         <rdfs:label xml:lang="de-de">Ausland</rdfs:label>
+        <rdfs:label xml:lang="en-us">Foreign country</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -625,6 +685,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B1">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B1</rdfs:label>
+        <rdfs:label xml:lang="en-us">B1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -634,6 +695,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B10">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B10</rdfs:label>
+        <rdfs:label xml:lang="en-us">B10</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -643,6 +705,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B11">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B11</rdfs:label>
+        <rdfs:label xml:lang="en-us">B11</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -652,6 +715,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B2">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B2</rdfs:label>
+        <rdfs:label xml:lang="en-us">B2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -661,6 +725,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B3">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B3</rdfs:label>
+        <rdfs:label xml:lang="en-us">B3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -670,6 +735,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B4">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B4</rdfs:label>
+        <rdfs:label xml:lang="en-us">B4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -679,6 +745,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B5">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B5</rdfs:label>
+        <rdfs:label xml:lang="en-us">B5</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -688,6 +755,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B6">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B6</rdfs:label>
+        <rdfs:label xml:lang="en-us">B6</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -697,6 +765,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B7">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B7</rdfs:label>
+        <rdfs:label xml:lang="en-us">B7</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -706,6 +775,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B8">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B8</rdfs:label>
+        <rdfs:label xml:lang="en-us">B8</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -715,6 +785,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/B9">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">B9</rdfs:label>
+        <rdfs:label xml:lang="en-us">B9</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -724,6 +795,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/BewegteBilder">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
         <rdfs:label xml:lang="de-de">Bewegte Bilder</rdfs:label>
+        <rdfs:label xml:lang="en-us">Moving images</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -733,6 +805,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Bild">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
         <rdfs:label xml:lang="de-de">Bild</rdfs:label>
+        <rdfs:label xml:lang="en-us">Image</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -742,6 +815,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Bund">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
         <rdfs:label xml:lang="de-de">Bund</rdfs:label>
+        <rdfs:label xml:lang="en-us">Confederation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -751,6 +825,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Bundeslaender">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
         <rdfs:label xml:lang="de-de">Bundesländer</rdfs:label>
+        <rdfs:label xml:lang="en-us">Federal states</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -760,6 +835,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/C2">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">C2</rdfs:label>
+        <rdfs:label xml:lang="en-us">C2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -769,6 +845,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/DFG">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
         <rdfs:label xml:lang="de-de">Deutsche Forschungsgemeinschaft</rdfs:label>
+        <rdfs:label xml:lang="en-us">Deutsche Forschungsgemeinschaft</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -777,6 +854,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Divers">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
+        <rdfs:label xml:lang="de-de">Divers</rdfs:label>
+        <rdfs:label xml:lang="en-us">Othere</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -786,6 +865,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Drittmittel">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
         <rdfs:label xml:lang="de-de">Drittmittel</rdfs:label>
+        <rdfs:label xml:lang="en-us">Third-party funds</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -795,6 +875,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/EU">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
         <rdfs:label xml:lang="de-de">Europäische Union</rdfs:label>
+        <rdfs:label xml:lang="en-us">European union</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -804,6 +885,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/GewerblicheWirtschaftlicheUndSonstigeBereiche">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
         <rdfs:label xml:lang="de-de">Gewerbliche Wirtschaftliche und Sonstige Bereiche</rdfs:label>
+        <rdfs:label xml:lang="en-us">Commercial Economic and Other Sectors</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -813,6 +895,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/GrundmittelUndInstitutionelleMittel">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
         <rdfs:label xml:lang="de-de">Grundmittel und institutionelle Mittel</rdfs:label>
+        <rdfs:label xml:lang="en-us">Basic funds and institutional funds</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -822,6 +905,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Habilitiert">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikation"/>
         <rdfs:label xml:lang="de-de">Habilitiert</rdfs:label>
+        <rdfs:label xml:lang="en-us">Habilitated (qualified as a university lecturer)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -831,6 +915,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Hauptberuflich">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
         <rdfs:label xml:lang="de-de">Hauptberuflich</rdfs:label>
+        <rdfs:label xml:lang="en-us">Full-time</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -840,6 +925,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Inland">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/LandKategorie"/>
         <rdfs:label xml:lang="de-de">Inland</rdfs:label>
+        <rdfs:label xml:lang="en-us">Domestic</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -849,6 +935,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Lokal">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
         <rdfs:label xml:lang="de-de">Lokal</rdfs:label>
+        <rdfs:label xml:lang="en-us">Local</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -858,6 +945,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Maennlich">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
         <rdfs:label xml:lang="de-de">Männlich</rdfs:label>
+        <rdfs:label xml:lang="en-us">Male</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -867,6 +955,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Mischfinanzierung">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
         <rdfs:label xml:lang="de-de">Mischfinanzierung</rdfs:label>
+        <rdfs:label xml:lang="en-us">Local</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -876,6 +965,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Nebenberuflich">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
         <rdfs:label xml:lang="de-de">Nebenberuflich</rdfs:label>
+        <rdfs:label xml:lang="en-us">Avocational</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -885,6 +975,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/NichtErklärtOeffentlicheMittelgeber">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
         <rdfs:label xml:lang="de-de">Nicht erklärte öffentliche Mittelgeber</rdfs:label>
+        <rdfs:label xml:lang="en-us">Non-declared public funder</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -894,6 +985,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/NichtErklärtPrivateMittelgeber">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
         <rdfs:label xml:lang="de-de">Nicht erklärte private Mittelgeber</rdfs:label>
+        <rdfs:label xml:lang="en-us">Non-declared private funder</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -903,6 +995,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Ohne_Angabe">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
         <rdfs:label xml:lang="de-de">Ohne Angabe</rdfs:label>
+        <rdfs:label xml:lang="en-us">Not stated</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -912,6 +1005,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/OpenAccessFIZugangsart">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Zugangsart"/>
         <rdfs:label xml:lang="de-de">Open Access</rdfs:label>
+        <rdfs:label xml:lang="en-us">Open Access</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -921,6 +1015,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Promoviert">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikation"/>
         <rdfs:label xml:lang="de-de">Promoviert</rdfs:label>
+        <rdfs:label xml:lang="en-us">PhD graduation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -930,6 +1025,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SharedAccessFIZugangsart">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Zugangsart"/>
         <rdfs:label xml:lang="de-de">Shared Access</rdfs:label>
+        <rdfs:label xml:lang="en-us">Shared Access</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -939,6 +1035,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Sondermittel">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
         <rdfs:label xml:lang="de-de">Sondermittel</rdfs:label>
+        <rdfs:label xml:lang="en-us">Special funds</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -948,6 +1045,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SonstigeDrittmittelgeber">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
         <rdfs:label xml:lang="de-de">Sonstige Drittmittelgeber</rdfs:label>
+        <rdfs:label xml:lang="en-us">Other third party funders</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -957,6 +1055,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SonstigeInternationaleOrganisationen">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
         <rdfs:label xml:lang="de-de">Sonstige internationale Organisationen</rdfs:label>
+        <rdfs:label xml:lang="en-us">Other international organizations</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -966,6 +1065,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Teilzeit">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
         <rdfs:label xml:lang="de-de">Teilzeit</rdfs:label>
+        <rdfs:label xml:lang="en-us">Part-time</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -975,6 +1075,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Text">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Ressourceart"/>
         <rdfs:label xml:lang="de-de">Text</rdfs:label>
+        <rdfs:label xml:lang="en-us">Text</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -984,6 +1085,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Unter25">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
         <rdfs:label xml:lang="de-de">unter 25 Jahren</rdfs:label>
+        <rdfs:label xml:lang="en-us">under 25 Years</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -993,6 +1095,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/UserAccessFIZugangsart">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Zugangsart"/>
         <rdfs:label xml:lang="de-de">User Access</rdfs:label>
+        <rdfs:label xml:lang="en-us">User Access</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1002,6 +1105,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Verteilt">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
         <rdfs:label xml:lang="de-de">Verteilt</rdfs:label>
+        <rdfs:label xml:lang="en-us">Distributed</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1011,6 +1115,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Virtuell">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
         <rdfs:label xml:lang="de-de">Virtuell</rdfs:label>
+        <rdfs:label xml:lang="en-us">Virtiual</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1020,6 +1125,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Vollzeit">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
         <rdfs:label xml:lang="de-de">Vollzeit</rdfs:label>
+        <rdfs:label xml:lang="en-us">Full-time</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1029,6 +1135,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/W1">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">W1</rdfs:label>
+        <rdfs:label xml:lang="en-us">W1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1038,6 +1145,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/W2_C3">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">W2/C3</rdfs:label>
+        <rdfs:label xml:lang="en-us">W2/C3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1047,6 +1155,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/W3_C4">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Besoldungsart"/>
         <rdfs:label xml:lang="de-de">W3/C4</rdfs:label>
+        <rdfs:label xml:lang="en-us">W3/C4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1056,6 +1165,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Weiblich">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
         <rdfs:label xml:lang="de-de">Weiblich</rdfs:label>
+        <rdfs:label xml:lang="en-us">Femlale</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1065,6 +1175,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/25BisUnter30">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
         <rdfs:label xml:lang="de-de">25 bis unter 30 Jahren</rdfs:label>
+        <rdfs:label xml:lang="en-us">25 to under 30 years</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1074,6 +1185,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/30BisUnter35">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
         <rdfs:label xml:lang="de-de">30 bis unter 35 Jahren</rdfs:label>
+        <rdfs:label xml:lang="en-us">30 to under 35 years</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1083,6 +1195,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/35BisUnter40">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
         <rdfs:label xml:lang="de-de">35 bis unter 40 Jahren</rdfs:label>
+        <rdfs:label xml:lang="en-us">35 to under 40 years</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1092,6 +1205,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/40BisUnter45">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
         <rdfs:label xml:lang="de-de">40 bis unter 45 Jahren</rdfs:label>
+        <rdfs:label xml:lang="en-us">40 to under 45 years</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1101,6 +1215,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/45BisUnter50">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
         <rdfs:label xml:lang="de-de">45 bis unter 50 Jahren</rdfs:label>
+        <rdfs:label xml:lang="en-us">45 to under 50 years</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1110,6 +1225,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/50BisUnter55">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
         <rdfs:label xml:lang="de-de">50 bis unter 55 Jahren</rdfs:label>
+        <rdfs:label xml:lang="en-us">50 to under 55 years</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1119,6 +1235,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/55BisUnter60">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
         <rdfs:label xml:lang="de-de">55 bis unter 60 Jahren</rdfs:label>
+        <rdfs:label xml:lang="en-us">55 to under 60 years</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1128,6 +1245,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/60BisUnter65">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
         <rdfs:label xml:lang="de-de">60 bis unter 65 Jahren</rdfs:label>
+        <rdfs:label xml:lang="en-us">60 to under 65 years</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1137,6 +1255,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/65undAelter">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
         <rdfs:label xml:lang="de-de">65 Jahre und älter</rdfs:label>
+        <rdfs:label xml:lang="en-us">65 years and older</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1164,6 +1283,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_abf2">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
         <rdfs:label xml:lang="de-de">Open Access</rdfs:label>
+        <rdfs:label xml:lang="en-us">Weiblich</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1173,6 +1293,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_f1cf">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
         <rdfs:label xml:lang="de-de">Embargoed Access</rdfs:label>
+        <rdfs:label xml:lang="en-us">Embargoed Access</rdfs:label>
     </owl:NamedIndividual>
     
 
