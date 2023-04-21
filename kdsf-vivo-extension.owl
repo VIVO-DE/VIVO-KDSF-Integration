@@ -855,7 +855,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Divers">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
         <rdfs:label xml:lang="de-de">Divers</rdfs:label>
-        <rdfs:label xml:lang="en-us">Othere</rdfs:label>
+        <rdfs:label xml:lang="en-us">Other</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -874,8 +874,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/EU">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de-de">Europäische Union</rdfs:label>
         <rdfs:label xml:lang="en-us">European union</rdfs:label>
+        <rdfs:label xml:lang="de-de">Europäische Union</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -884,8 +884,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/GewerblicheWirtschaftlicheUndSonstigeBereiche">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de-de">Gewerbliche Wirtschaftliche und Sonstige Bereiche</rdfs:label>
         <rdfs:label xml:lang="en-us">Commercial Economic and Other Sectors</rdfs:label>
+        <rdfs:label xml:lang="de-de">Gewerbliche Wirtschaftliche und Sonstige Bereiche</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -894,8 +894,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/GrundmittelUndInstitutionelleMittel">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
-        <rdfs:label xml:lang="de-de">Grundmittel und institutionelle Mittel</rdfs:label>
         <rdfs:label xml:lang="en-us">Basic funds and institutional funds</rdfs:label>
+        <rdfs:label xml:lang="de-de">Grundmittel und institutionelle Mittel</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -904,8 +904,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Habilitiert">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikation"/>
-        <rdfs:label xml:lang="de-de">Habilitiert</rdfs:label>
         <rdfs:label xml:lang="en-us">Habilitated (qualified as a university lecturer)</rdfs:label>
+        <rdfs:label xml:lang="de-de">Habilitiert</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -914,8 +914,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Hauptberuflich">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
-        <rdfs:label xml:lang="de-de">Hauptberuflich</rdfs:label>
         <rdfs:label xml:lang="en-us">Full-time</rdfs:label>
+        <rdfs:label xml:lang="de-de">Hauptberuflich</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -924,8 +924,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Inland">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/LandKategorie"/>
-        <rdfs:label xml:lang="de-de">Inland</rdfs:label>
         <rdfs:label xml:lang="en-us">Domestic</rdfs:label>
+        <rdfs:label xml:lang="de-de">Inland</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -934,8 +934,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Lokal">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
-        <rdfs:label xml:lang="de-de">Lokal</rdfs:label>
         <rdfs:label xml:lang="en-us">Local</rdfs:label>
+        <rdfs:label xml:lang="de-de">Lokal</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -944,8 +944,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Maennlich">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
-        <rdfs:label xml:lang="de-de">Männlich</rdfs:label>
         <rdfs:label xml:lang="en-us">Male</rdfs:label>
+        <rdfs:label xml:lang="de-de">Männlich</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -955,7 +955,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Mischfinanzierung">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
         <rdfs:label xml:lang="de-de">Mischfinanzierung</rdfs:label>
-        <rdfs:label xml:lang="en-us">Local</rdfs:label>
+        <rdfs:label xml:lang="en-us">Mixed financing</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -964,8 +964,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Nebenberuflich">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
-        <rdfs:label xml:lang="de-de">Nebenberuflich</rdfs:label>
         <rdfs:label xml:lang="en-us">Avocational</rdfs:label>
+        <rdfs:label xml:lang="de-de">Nebenberuflich</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -994,8 +994,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Ohne_Angabe">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
-        <rdfs:label xml:lang="de-de">Ohne Angabe</rdfs:label>
         <rdfs:label xml:lang="en-us">Not stated</rdfs:label>
+        <rdfs:label xml:lang="de-de">Ohne Angabe</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1014,8 +1014,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Promoviert">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Qualifikation"/>
-        <rdfs:label xml:lang="de-de">Promoviert</rdfs:label>
         <rdfs:label xml:lang="en-us">PhD graduation</rdfs:label>
+        <rdfs:label xml:lang="de-de">Promoviert</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1044,8 +1044,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SonstigeDrittmittelgeber">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de-de">Sonstige Drittmittelgeber</rdfs:label>
         <rdfs:label xml:lang="en-us">Other third party funders</rdfs:label>
+        <rdfs:label xml:lang="de-de">Sonstige Drittmittelgeber</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1054,8 +1054,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/SonstigeInternationaleOrganisationen">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber"/>
-        <rdfs:label xml:lang="de-de">Sonstige internationale Organisationen</rdfs:label>
         <rdfs:label xml:lang="en-us">Other international organizations</rdfs:label>
+        <rdfs:label xml:lang="de-de">Sonstige internationale Organisationen</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1064,8 +1064,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Teilzeit">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
-        <rdfs:label xml:lang="de-de">Teilzeit</rdfs:label>
         <rdfs:label xml:lang="en-us">Part-time</rdfs:label>
+        <rdfs:label xml:lang="de-de">Teilzeit</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1084,8 +1084,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Unter25">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Altersgruppe"/>
-        <rdfs:label xml:lang="de-de">unter 25 Jahren</rdfs:label>
         <rdfs:label xml:lang="en-us">under 25 Years</rdfs:label>
+        <rdfs:label xml:lang="de-de">unter 25 Jahren</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1104,8 +1104,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Verteilt">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
-        <rdfs:label xml:lang="de-de">Verteilt</rdfs:label>
         <rdfs:label xml:lang="en-us">Distributed</rdfs:label>
+        <rdfs:label xml:lang="de-de">Verteilt</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1114,8 +1114,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Virtuell">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Forschungsinfrastrukturart"/>
+        <rdfs:label xml:lang="en-us">Virtual</rdfs:label>
         <rdfs:label xml:lang="de-de">Virtuell</rdfs:label>
-        <rdfs:label xml:lang="en-us">Virtiual</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1124,8 +1124,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Vollzeit">
         <rdf:type rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Taetigkeitsart"/>
-        <rdfs:label xml:lang="de-de">Vollzeit</rdfs:label>
         <rdfs:label xml:lang="en-us">Full-time</rdfs:label>
+        <rdfs:label xml:lang="de-de">Vollzeit</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1164,8 +1164,8 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
 
     <owl:NamedIndividual rdf:about="http://lod.tib.eu/onto/kdsf/Weiblich">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Geschlechtsangabe"/>
+        <rdfs:label xml:lang="en-us">Female</rdfs:label>
         <rdfs:label xml:lang="de-de">Weiblich</rdfs:label>
-        <rdfs:label xml:lang="en-us">Femlale</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1265,6 +1265,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_14cb">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
         <rdfs:label xml:lang="de-de">Metadata only access</rdfs:label>
+        <rdfs:label xml:lang="en-us">Metadata only access</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1274,6 +1275,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_16ec">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
         <rdfs:label xml:lang="de-de">Restricted Access</rdfs:label>
+        <rdfs:label xml:lang="en-us">Restricted Access</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1283,7 +1285,7 @@ https://www.coar-repositories.org/activities/repository-interoperability/coar-vo
     <owl:NamedIndividual rdf:about="http://purl.org/coar/access_right/c_abf2">
         <rdf:type rdf:resource="http://lod.tib.eu/onto/kdsf/Zugriffsrechte"/>
         <rdfs:label xml:lang="de-de">Open Access</rdfs:label>
-        <rdfs:label xml:lang="en-us">Weiblich</rdfs:label>
+        <rdfs:label xml:lang="en-us">Open Access</rdfs:label>
     </owl:NamedIndividual>
     
 
