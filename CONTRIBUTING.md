@@ -81,17 +81,3 @@ If you have never editted this ontology before, first follow a [general tutorial
 1. Commit changes to branch
 1. Push changes upstream
 1. Create pull request
-
-## Best Practices
-
-<a id="great-issues"></a>
-
-### How to write great issues?
-
-Please refer to the [OBO Academy best practices](https://oboacademy.github.io/obook/lesson/term-request/).
-
-<a id="great-pulls"></a>
-
-### How to create a great pull/merge request?
-
-Please refer to the [OBO Academy best practices](https://oboacademy.github.io/obook/howto/github-create-pull-request/)
