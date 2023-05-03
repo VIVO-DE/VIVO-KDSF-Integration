@@ -39,7 +39,6 @@ Damit die kdsf- und kdsf-vivo-Properties in den VIVO-Profilen angezeigt werden, 
 Die Dateien sind in VIVO 1.9.X getestet.
 
 # Vorgehen und Stand der Entwicklung
-* Englischsprachige Labels sind noch nicht enthalten
 * Ausbau der Dokumentation
 
 # Lizenz
