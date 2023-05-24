@@ -28,24 +28,17 @@ Declaration(Class(:Artikel))
 Declaration(Class(:Ausgruendung))
 Declaration(Class(:AusserplanmaessigeProfessoren))
 Declaration(Class(:Autor))
-Declaration(Class(:Befristet))
-Declaration(Class(:Befristung))
 Declaration(Class(:BeitraegeInterviewsInNicht-wissenschaftlichenMedien))
 Declaration(Class(:BeitragInWissenschaftlichenBlogs))
 Declaration(Class(:Beschaeftigter))
 Declaration(Class(:Beschaeftigung))
 Declaration(Class(:Bibliographie))
 Declaration(Class(:Buch))
-Declaration(Class(:Bund))
-Declaration(Class(:Bundeslaender))
-Declaration(Class(:DFG))
 Declaration(Class(:Dissertation))
 Declaration(Class(:Doktorand))
 Declaration(Class(:Dokumenttyp))
 Declaration(Class(:Drittmittelprojekt))
-Declaration(Class(:EU))
 Declaration(Class(:Editorial))
-Declaration(Class(:EuUndSonstigeInternationaleOrganisationen))
 Declaration(Class(:FH))
 Declaration(Class(:Fach))
 Declaration(Class(:Foerderer))
@@ -54,15 +47,10 @@ Declaration(Class(:Format))
 Declaration(Class(:Forschungsdaten))
 Declaration(Class(:Forschungsfeld))
 Declaration(Class(:Forschungsinfrastruktur))
-Declaration(Class(:Forschungsinfrastrukturart))
 Declaration(Class(:Forschungsinfrastrukturtyp))
 Declaration(Class(:GemeinsameBerufung))
-Declaration(Class(:GewerblicheWirtschaftUndSonstigeBereiche))
 Declaration(Class(:GrossgeraeteUndInstrumente))
-Declaration(Class(:Habilitation))
 Declaration(Class(:Habilitationsschrift))
-Declaration(Class(:Habilitiert))
-Declaration(Class(:Hauptberuflich))
 Declaration(Class(:HauptberuflicheGastprofessoren))
 Declaration(Class(:Herausgeber))
 Declaration(Class(:HerausgeberschaftEinesSonderheftsEinerZeitschrift))
@@ -76,16 +64,9 @@ Declaration(Class(:Konferenzbeitrag))
 Declaration(Class(:Konferenzpaper))
 Declaration(Class(:Konferenzposter))
 Declaration(Class(:LetterToTheEditor))
-Declaration(Class(:Lokal))
 Declaration(Class(:MeetingAbstract))
-Declaration(Class(:Mittelgeber))
 Declaration(Class(:Monographie))
-Declaration(Class(:Nebenberuflich))
-Declaration(Class(:NichtErklaert))
-Declaration(Class(:NichtErklaertOeffentlicheMittelgeber))
-Declaration(Class(:NichtErklaertPrivateMittelgeber))
 Declaration(Class(:Nutzung))
-Declaration(Class(:OpenAccess))
 Declaration(Class(:OrdentlicheProfessoren))
 Declaration(Class(:Organisationseinheit))
 Declaration(Class(:Patent))
@@ -94,14 +75,10 @@ Declaration(Class(:Personalkategorie))
 Declaration(Class(:Preprint))
 Declaration(Class(:Professoren))
 Declaration(Class(:Professorenbezeichnung))
-Declaration(Class(:Promotion))
 Declaration(Class(:Promotionskooperationspartner))
-Declaration(Class(:Promoviert))
 Declaration(Class(:Publikation))
 Declaration(Class(:Publikationstyp))
-Declaration(Class(:Qualifikation))
 Declaration(Class(:Qualifikationsschrift))
-Declaration(Class(:Qualifizierungsverfahren))
 Declaration(Class(:Quellenedition))
 Declaration(Class(:Review))
 Declaration(Class(:Rezension))
@@ -111,11 +88,8 @@ Declaration(Class(:Schoepfer))
 Declaration(Class(:SchoepferID))
 Declaration(Class(:Schoepfertyp))
 Declaration(Class(:Seniorprofessoren))
-Declaration(Class(:SharedAccess))
 Declaration(Class(:Software))
 Declaration(Class(:SonstigeBezeichnung))
-Declaration(Class(:SonstigeDrittmittelgeber))
-Declaration(Class(:SonstigeInternationaleOrganisationen))
 Declaration(Class(:SonstigeKooperationspartner))
 Declaration(Class(:SonstigeProfessoren))
 Declaration(Class(:SonstigerDokumenttyp))
@@ -125,17 +99,10 @@ Declaration(Class(:SonstigesPersonal))
 Declaration(Class(:SonstigesWissenschaftlichesUndKuenstlerischesPersonal))
 Declaration(Class(:Stiftungsprofessoren))
 Declaration(Class(:StrukturiertesPromotionsprogramm))
-Declaration(Class(:Taetigkeitsart))
-Declaration(Class(:Teilzeit))
-Declaration(Class(:Unbefristet))
 Declaration(Class(:Universitaet))
-Declaration(Class(:UserAccess))
 Declaration(Class(:Verlag))
-Declaration(Class(:Verteilt))
 Declaration(Class(:Vertretungsprofessoren))
 Declaration(Class(:Verwaltungspersonal))
-Declaration(Class(:Virtuell))
-Declaration(Class(:Vollzeit))
 Declaration(Class(:WissenschaftlicheOderKuenstlerischeHilfskraefte))
 Declaration(Class(:WissenschaftlicheUndKuenstlerischeMitarbeiter))
 Declaration(Class(:WissenschaftlicheVortragsfolien))
@@ -143,7 +110,6 @@ Declaration(Class(:WissenschaftlicherArtikel))
 Declaration(Class(:WissenschaftlichesUndKuenstlerischesPersonal))
 Declaration(Class(:WissenschaftsunterstuetzendesPersonal))
 Declaration(Class(:Wissensressourcen))
-Declaration(Class(:Zugangsart))
 Declaration(Class(obo:ERO_0000004))
 Declaration(Class(obo:ERO_0000014))
 Declaration(Class(obo:ERO_0000071))
@@ -344,7 +310,6 @@ AnnotationAssertion(vitro:selectFromExistingAnnot :hatArt "true"^^xsd:boolean)
 AnnotationAssertion(rdfs:label :hatArt "hat Art"@de-de)
 SubObjectPropertyOf(:hatArt owl:topObjectProperty)
 ObjectPropertyDomain(:hatArt :Forschungsinfrastruktur)
-ObjectPropertyRange(:hatArt :Forschungsinfrastrukturart)
 
 # Object Property: :hatBefristung (hat Befristung)
 
@@ -357,7 +322,6 @@ AnnotationAssertion(rdfs:label :hatBefristung "has time limit"@en-us)
 AnnotationAssertion(rdfs:label :hatBefristung "hat Befristung"@de-de)
 FunctionalObjectProperty(:hatBefristung)
 ObjectPropertyDomain(:hatBefristung :Beschaeftigung)
-ObjectPropertyRange(:hatBefristung :Befristung)
 
 # Object Property: :hatBeschaeftigung (has Employment)
 
@@ -447,7 +411,6 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :hatErstbetreu
 AnnotationAssertion(vitro:selectFromExistingAnnot :hatErstbetreuer "true"^^xsd:boolean)
 AnnotationAssertion(rdfs:label :hatErstbetreuer "hat Erstbetreuerin / Erstbetreuer"@de-de)
 SubObjectPropertyOf(:hatErstbetreuer owl:topObjectProperty)
-ObjectPropertyDomain(:hatErstbetreuer :Promotion)
 ObjectPropertyRange(:hatErstbetreuer :Person)
 
 # Object Property: :hatFach (hat Fach)
@@ -573,7 +536,6 @@ AnnotationAssertion(vitro:selectFromExistingAnnot :hatMittelgeber "true"^^xsd:bo
 AnnotationAssertion(rdfs:label :hatMittelgeber "hat Mittelgeber"@de-de)
 SubObjectPropertyOf(:hatMittelgeber owl:topObjectProperty)
 ObjectPropertyDomain(:hatMittelgeber :Drittmittelprojekt)
-ObjectPropertyRange(:hatMittelgeber :Mittelgeber)
 
 # Object Property: :hatNutzung (hat Nutzung)
 
@@ -656,7 +618,6 @@ AnnotationAssertion(vitro:selectFromExistingAnnot :hatQualifikation "true"^^xsd:
 AnnotationAssertion(rdfs:label :hatQualifikation "hat Qualifikation"@de-de)
 SubObjectPropertyOf(:hatQualifikation owl:topObjectProperty)
 ObjectPropertyDomain(:hatQualifikation :Person)
-ObjectPropertyRange(:hatQualifikation :Qualifikation)
 
 # Object Property: :hatQualifizierungsverfahren (hat Qualifizierungsverfahren)
 
@@ -670,7 +631,6 @@ AnnotationAssertion(vitro:selectFromExistingAnnot :hatQualifizierungsverfahren "
 AnnotationAssertion(rdfs:label :hatQualifizierungsverfahren "hat Qualifizierungsverfahren"@de-de)
 SubObjectPropertyOf(:hatQualifizierungsverfahren owl:topObjectProperty)
 ObjectPropertyDomain(:hatQualifizierungsverfahren :Person)
-ObjectPropertyRange(:hatQualifizierungsverfahren :Qualifizierungsverfahren)
 
 # Object Property: :hatSchoepfer (has creator)
 
@@ -739,7 +699,6 @@ AnnotationAssertion(rdfs:label :hatTaetigkeitsart "has type of activity"@en-us)
 AnnotationAssertion(rdfs:label :hatTaetigkeitsart "hat Tätigkeitsart"@de-de)
 SubObjectPropertyOf(:hatTaetigkeitsart owl:topObjectProperty)
 ObjectPropertyDomain(:hatTaetigkeitsart :Beschaeftigung)
-ObjectPropertyRange(:hatTaetigkeitsart :Taetigkeitsart)
 
 # Object Property: :hatTyp (has type)
 
@@ -815,7 +774,6 @@ AnnotationAssertion(rdfs:label :hatZugangsart "has access type"@en-us)
 AnnotationAssertion(rdfs:label :hatZugangsart "hat Zugangsart"@de-de)
 SubObjectPropertyOf(:hatZugangsart owl:topObjectProperty)
 ObjectPropertyDomain(:hatZugangsart :Forschungsinfrastruktur)
-ObjectPropertyRange(:hatZugangsart :Zugangsart)
 
 
 ############################
@@ -836,7 +794,6 @@ AnnotationAssertion(rdfs:comment :Abschlusszeitpunkt "Im Sinne des Kerndatensatz
 AnnotationAssertion(rdfs:label :Abschlusszeitpunkt "Abschlusszeitpunkt"@de-de)
 AnnotationAssertion(rdfs:label :Abschlusszeitpunkt "Graduation date"@en-us)
 SubDataPropertyOf(:Abschlusszeitpunkt owl:topDataProperty)
-DataPropertyDomain(:Abschlusszeitpunkt :Qualifizierungsverfahren)
 DataPropertyRange(:Abschlusszeitpunkt xsd:dateTime)
 
 # Data Property: :AnzahlGenutzteStunden (Anzahl genutzte Stunden)
@@ -1049,7 +1006,7 @@ SubDataPropertyOf(:DatumDerPrioritaetsbegruendendenErstanmeldung owl:topDataProp
 DataPropertyDomain(:DatumDerPrioritaetsbegruendendenErstanmeldung :Patent)
 DataPropertyRange(:DatumDerPrioritaetsbegruendendenErstanmeldung xsd:dateTime)
 
-# Data Property: :Datum_der_Erteilung (Date of issue)
+# Data Property: :Datum_der_Erteilung (Datum der Erteilung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Datum_der_Erteilung "(Pa4)")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Datum_der_Erteilung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1245,7 +1202,6 @@ AnnotationAssertion(rdfs:comment :Kooperationspartner "Indication of whether per
 AnnotationAssertion(rdfs:label :Kooperationspartner "Cooperation partner (for cooperative doctorates)"@en-us)
 AnnotationAssertion(rdfs:label :Kooperationspartner "Kooperationspartner (bei kooperativer Promotion)"@de-de)
 SubDataPropertyOf(:Kooperationspartner owl:topDataProperty)
-DataPropertyDomain(:Kooperationspartner :Promotion)
 DataPropertyRange(:Kooperationspartner xsd:string)
 
 # Data Property: :Koordinationsrolle (Koordinationsrolle (Einrichtung))
@@ -1602,7 +1558,6 @@ AnnotationAssertion(rdfs:comment :StartDerPromotionNachAnnahmeAmFachbereichAnDer
 AnnotationAssertion(rdfs:label :StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet "Start der Promotion (nach Annahme als Doktorand/-in am Fachbereich / an der Fakultät)"@de-de)
 AnnotationAssertion(rdfs:label :StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet "Start of the doctorate (after acceptance as a doctoral student at the department / faculty)"@en-us)
 SubDataPropertyOf(:StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet owl:topDataProperty)
-DataPropertyDomain(:StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet :Promotion)
 DataPropertyRange(:StartDerPromotionNachAnnahmeAmFachbereichAnDerFakultaet xsd:dateTime)
 
 # Data Property: :StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag (Start der Promotion (nach Betreuungsvereinbarung / Arbeitsvertrag))
@@ -1619,7 +1574,6 @@ AnnotationAssertion(rdfs:comment :StartDerPromotionNachBetreuungsvereinbarungArb
 AnnotationAssertion(rdfs:label :StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag "Start der Promotion (nach Betreuungsvereinbarung / Arbeitsvertrag)"@de-de)
 AnnotationAssertion(rdfs:label :StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag "Start of doctorate (according to supervision agreement / employment contract)"@en-us)
 SubDataPropertyOf(:StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag owl:topDataProperty)
-DataPropertyDomain(:StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag :Promotion)
 DataPropertyRange(:StartDerPromotionNachBetreuungsvereinbarungArbeitsvertrag xsd:dateTime)
 
 # Data Property: :StipendienoderStellenfuerteilnehmendeDoktoranden (Stipendien oder Stellen für teilnehmende Doktorand/-innen)
@@ -1783,7 +1737,6 @@ AnnotationAssertion(rdfs:label :VertragslaufzeitInMonaten "Contract period in mo
 AnnotationAssertion(rdfs:label :VertragslaufzeitInMonaten "Vertragslaufzeit in Monaten"@de-de)
 SubDataPropertyOf(:VertragslaufzeitInMonaten owl:topDataProperty)
 FunctionalDataProperty(:VertragslaufzeitInMonaten)
-DataPropertyDomain(:VertragslaufzeitInMonaten :Befristet)
 DataPropertyRange(:VertragslaufzeitInMonaten xsd:nonNegativeInteger)
 
 # Data Property: :Zugangsrechte (Access rights)
@@ -1941,49 +1894,6 @@ AnnotationAssertion(rdfs:label :Autor "Author"@en-us)
 AnnotationAssertion(rdfs:label :Autor "Autor/-in"@de-de)
 SubClassOf(:Autor :Schoepfertyp)
 
-# Class: :Befristet (Limited)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Befristet "Be33")
-AnnotationAssertion(obo:IAO_0000115 :Befristet "A fixed-term contract exists if the contract duration in months (Be39) has a value greater than or equal to 1."@en-us)
-AnnotationAssertion(obo:IAO_0000115 :Befristet "Eine befristeter Vertrag liegt vor, wenn die Vertragslaufzeit in Monaten (Be39) einen Wert größer oder gleich 1 aufweist."@de-de)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Befristet <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Befristet <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Befristet <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Befristet "A fixed-term contract exists if the contract duration in months (Be39) has a value greater than or equal to 1."@en-us)
-AnnotationAssertion(rdfs:comment :Befristet "Eine befristeter Vertrag liegt vor, wenn die Vertragslaufzeit in Monaten (Be39) einen Wert größer oder gleich 1 aufweist."@de-de)
-AnnotationAssertion(rdfs:label :Befristet "Befristet"@de-de)
-AnnotationAssertion(rdfs:label :Befristet "Limited"@en-us)
-SubClassOf(:Befristet :Befristung)
-
-# Class: :Befristung (Befristung)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Befristung "Be10")
-AnnotationAssertion(obo:IAO_0000115 :Befristung "Als Befristung wird angegeben, ob eine Person in einem zeitlich begrenzten Arbeitsvertragsverhältnis zur berichtenden Einrichtung steht.
-
-Für das Kerndatum Vollzeitäquivalente erfolgt die Zuordnung des/der Beschäftigten bei mehreren Arbeitsverträgen nach Arbeitsvertrag. Bsp: Hat eine Person einen befristeten und einen unbefristeten Arbeitsvertrag mit einem Beschäftigungsanteil von jeweils 50%, geht dies anteilig in die Ausdifferenzierung des Kerndatums Vollzeitäquivalente ein.
-
-Für das Kerndatum Kopfzahlen wird eine Person als unbefristet geführt, sobald ein Vertrag unbefristet ist."@de-de)
-AnnotationAssertion(obo:IAO_0000115 :Befristung "As a time limit, it is indicated whether a person is in a temporary employment contract relationship with the reporting institution.
-
-For the core date full-time equivalents, the assignment of the employee(s) is made according to employment contract in the case of several employment contracts. Ex: If a person has a fixed-term and a permanent employment contract with an employment share of 50% each, this is included proportionately in the differentiation of the core date full-time equivalents.
-
-For the core date headcounts, a person is listed as permanent as soon as a contract is permanent."@en-us)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Befristung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Befristung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Befristung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Befristung "Als Befristung wird angegeben, ob eine Person in einem zeitlich begrenzten Arbeitsvertragsverhältnis zur berichtenden Einrichtung steht.
-
-Für das Kerndatum Vollzeitäquivalente erfolgt die Zuordnung des/der Beschäftigten bei mehreren Arbeitsverträgen nach Arbeitsvertrag. Bsp: Hat eine Person einen befristeten und einen unbefristeten Arbeitsvertrag mit einem Beschäftigungsanteil von jeweils 50%, geht dies anteilig in die Ausdifferenzierung des Kerndatums Vollzeitäquivalente ein.
-
-Für das Kerndatum Kopfzahlen wird eine Person als unbefristet geführt, sobald ein Vertrag unbefristet ist."@de-de)
-AnnotationAssertion(rdfs:comment :Befristung "As a time limit, it is indicated whether a person is in a temporary employment contract relationship with the reporting institution.
-
-For the core date full-time equivalents, the assignment of the employee(s) is made according to employment contract in the case of several employment contracts. Ex: If a person has a fixed-term and a permanent employment contract with an employment share of 50% each, this is included proportionately in the differentiation of the core date full-time equivalents.
-
-For the core date headcounts, a person is listed as permanent as soon as a contract is permanent."@en-us)
-AnnotationAssertion(rdfs:label :Befristung "Befristung"@de-de)
-AnnotationAssertion(rdfs:label :Befristung "Time limit"@en-us)
-
 # Class: :BeitraegeInterviewsInNicht-wissenschaftlichenMedien (Beiträge bzw. Interviews in nicht-wissenschaftlichen Medien)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :BeitraegeInterviewsInNicht-wissenschaftlichenMedien "Pu39")
@@ -2067,39 +1977,6 @@ AnnotationAssertion(rdfs:label :Buch "Buch"@de-de)
 EquivalentClasses(:Buch <http://purl.org/ontology/bibo/Book>)
 SubClassOf(:Buch <http://purl.org/ontology/bibo/Book>)
 
-# Class: :Bund (Federal Government)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Bund "Dr22")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Bund <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Bund <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :Bund <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Bund <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Bund "Bund"@de-de)
-AnnotationAssertion(rdfs:label :Bund "Federal Government"@en-us)
-SubClassOf(:Bund :Mittelgeber)
-
-# Class: :Bundeslaender (Bundesländer)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Bundeslaender "Dr23")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Bundeslaender <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Bundeslaender <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :Bundeslaender <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Bundeslaender <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Bundeslaender "Bundesländer"@de-de)
-AnnotationAssertion(rdfs:label :Bundeslaender "Federal states"@en-us)
-SubClassOf(:Bundeslaender :Mittelgeber)
-
-# Class: :DFG (DFG)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :DFG "Dr21")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :DFG <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :DFG <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :DFG <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :DFG <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :DFG "DFG"@de-de)
-AnnotationAssertion(rdfs:label :DFG "DFG"@en-us)
-SubClassOf(:DFG :Mittelgeber)
-
 # Class: :Dissertation (Dissertation)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Dissertation "Pu34")
@@ -2160,17 +2037,6 @@ AnnotationAssertion(rdfs:label :Drittmittelprojekt "Drittmittelprojekt"@de-de)
 AnnotationAssertion(rdfs:label :Drittmittelprojekt "Third-party funded project"@en-us)
 SubClassOf(:Drittmittelprojekt obo:ERO_0000014)
 
-# Class: :EU (EU)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :EU "Dr95"@de-de)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :EU <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :EU <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :EU <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :EU <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :EU "EU"@de-de)
-AnnotationAssertion(rdfs:label :EU "EU"@en-us)
-SubClassOf(:EU :EuUndSonstigeInternationaleOrganisationen)
-
 # Class: :Editorial (Editorial)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Editorial "Pu121")
@@ -2186,17 +2052,6 @@ AnnotationAssertion(rdfs:label :Editorial "Editorial"@de-de)
 AnnotationAssertion(rdfs:label :Editorial "Editorial"@en-us)
 EquivalentClasses(:Editorial <http://vivoweb.org/ontology/core#EditorialArticle>)
 SubClassOf(:Editorial <http://vivoweb.org/ontology/core#EditorialArticle>)
-
-# Class: :EuUndSonstigeInternationaleOrganisationen (EU und sonstige internationale Organisationen)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :EuUndSonstigeInternationaleOrganisationen "Dr20")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :EuUndSonstigeInternationaleOrganisationen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :EuUndSonstigeInternationaleOrganisationen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :EuUndSonstigeInternationaleOrganisationen <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :EuUndSonstigeInternationaleOrganisationen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :EuUndSonstigeInternationaleOrganisationen "EU and other international organisations"@en-us)
-AnnotationAssertion(rdfs:label :EuUndSonstigeInternationaleOrganisationen "EU und sonstige internationale Organisationen"@de-de)
-SubClassOf(:EuUndSonstigeInternationaleOrganisationen :Mittelgeber)
 
 # Class: :FH (University of Applied Sciences)
 
@@ -2272,17 +2127,6 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Forschungsinf
 AnnotationAssertion(rdfs:label :Forschungsinfrastruktur "Forschungsinfrastruktur"@de-de)
 AnnotationAssertion(rdfs:label :Forschungsinfrastruktur "Research infrastructure"@en-us)
 
-# Class: :Forschungsinfrastrukturart (Nature of the research infrastructure)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Forschungsinfrastrukturart "Fi5")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Forschungsinfrastrukturart <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Forschungsinfrastrukturart <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Forschungsinfrastrukturart <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Forschungsinfrastrukturart "If an RI is offered for use in different ways (e.g. locally and virtually), two notifications are required. For example, a physical collection can be used 'locally' and its digital copy in the form of a database 'virtually'. Furthermore, depending on the location of an RI in the linked matrix, different information on use/utilisation is useful (e.g. differentiation of the information for local + user access and virtual + open access)"@en-us)
-AnnotationAssertion(rdfs:comment :Forschungsinfrastrukturart "Wird eine FI auf verschiedenen Wegen zur Nutzung angeboten (bspw. lokal und virtuell) so sind zwei Meldungen erforderlich. So kann z.B. eine physische Sammlung 'lokal' und ihr Digitalisat in Form einer Datenbank 'virtuell' genutzt werden. Weiterhin sind je nach Verortung einer FI in der verlinkten Matrix unterschiedliche Angaben zu Nutzung/Auslastung sinnvoll (bspw. Unterscheidung der Angaben für lokal + User Access und virtuellen + open access)."@de-de)
-AnnotationAssertion(rdfs:label :Forschungsinfrastrukturart "Art der Forschungsinfrastruktur"@de-de)
-AnnotationAssertion(rdfs:label :Forschungsinfrastrukturart "Nature of the research infrastructure"@en-us)
-
 # Class: :Forschungsinfrastrukturtyp (Typ der Forschungsinfrastruktur)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Forschungsinfrastrukturtyp "Fi4")
@@ -2301,17 +2145,6 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :GemeinsameBer
 AnnotationAssertion(rdfs:label :GemeinsameBerufung "Common vocation"@en-us)
 AnnotationAssertion(rdfs:label :GemeinsameBerufung "Gemeinsame Berufung"@de-de)
 
-# Class: :GewerblicheWirtschaftUndSonstigeBereiche (Gewerbliche Wirtschaft und sonstige Bereiche)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :GewerblicheWirtschaftUndSonstigeBereiche "Dr25")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :GewerblicheWirtschaftUndSonstigeBereiche <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :GewerblicheWirtschaftUndSonstigeBereiche <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :GewerblicheWirtschaftUndSonstigeBereiche <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :GewerblicheWirtschaftUndSonstigeBereiche <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :GewerblicheWirtschaftUndSonstigeBereiche "Commercial economy and other sectors"@en-us)
-AnnotationAssertion(rdfs:label :GewerblicheWirtschaftUndSonstigeBereiche "Gewerbliche Wirtschaft und sonstige Bereiche"@de-de)
-SubClassOf(:GewerblicheWirtschaftUndSonstigeBereiche :Mittelgeber)
-
 # Class: :GrossgeraeteUndInstrumente (Großgeräte und Instrumente)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :GrossgeraeteUndInstrumente "Fi15")
@@ -2324,22 +2157,6 @@ AnnotationAssertion(rdfs:label :GrossgeraeteUndInstrumente "Large equipment and 
 SubClassOf(:GrossgeraeteUndInstrumente :Forschungsinfrastrukturtyp)
 SubClassOf(:GrossgeraeteUndInstrumente obo:ERO_0000004)
 SubClassOf(:GrossgeraeteUndInstrumente <http://vivoweb.org/ontology/core#Equipment>)
-
-# Class: :Habilitation (Habilitation)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Habilitation "Be16")
-AnnotationAssertion(Meta:inhaltlicheDefinition :Habilitation "Na44")
-AnnotationAssertion(obo:IAO_0000115 :Habilitation "Die Habilitation dient als akademisches Examen dem Nachweis der besonderen Befähigung für Forschung und Lehre in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Habilitation setzt die Promotion und in der Regel eine mehrjährige wissenschaftliche Tätigkeit voraus. Hochschulen mit Promotionsrecht haben das Recht zur Habilitation."@de-de)
-AnnotationAssertion(obo:IAO_0000115 :Habilitation "The Habilitation serves as an academic examination to prove special competence for research and teaching in a specific subject or subject area. Admission to the Habilitation requires a doctorate and, as a rule, several years of academic activity. Universities with the right to award doctorates have the right to award a Habilitation"@en-us)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Habilitation <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Habilitation <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Habilitation <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Habilitation "Die Habilitation dient als akademisches Examen dem Nachweis der besonderen Befähigung für Forschung und Lehre in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Habilitation setzt die Promotion und in der Regel eine mehrjährige wissenschaftliche Tätigkeit voraus. Hochschulen mit Promotionsrecht haben das Recht zur Habilitation."@de-de)
-AnnotationAssertion(rdfs:comment :Habilitation "The Habilitation serves as an academic examination to prove special competence for research and teaching in a specific subject or subject area. Admission to the Habilitation requires a doctorate and, as a rule, several years of academic activity. Universities with the right to award doctorates have the right to award a Habilitation"@en-us)
-AnnotationAssertion(rdfs:label :Habilitation "Habilitation")
-AnnotationAssertion(rdfs:label :Habilitation "Habilitation"@en-us)
-SubClassOf(:Habilitation :Qualifizierungsverfahren)
-SubClassOf(:Habilitation <http://vivoweb.org/ontology/core#EducationalProcess>)
 
 # Class: :Habilitationsschrift (Habilitationsschrift)
 
@@ -2357,29 +2174,6 @@ wissenschaftliche Arbeit für den Erwerb der universitären Lehrbefähigung"@de-
 AnnotationAssertion(rdfs:label :Habilitationsschrift "Habilitationsschrift"@de-de)
 AnnotationAssertion(rdfs:label :Habilitationsschrift "Postdoctoral thesis"@en-us)
 SubClassOf(:Habilitationsschrift :Qualifikationsschrift)
-
-# Class: :Habilitiert (Habilitated)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Habilitiert "Be16")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Habilitiert <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Habilitiert <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Habilitiert <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Habilitiert "Habilitated"@en-us)
-AnnotationAssertion(rdfs:label :Habilitiert "Habilitiert"@de-de)
-SubClassOf(:Habilitiert :Qualifikation)
-
-# Class: :Hauptberuflich (Main occupation)
-
-AnnotationAssertion(obo:IAO_0000115 :Hauptberuflich "Ausschließlich oder überwiegende Beschäftigung mit voller wöchentlicher und Regelarbeitszeit oder auch Teilzeitbeschäftigung."@de-de)
-AnnotationAssertion(obo:IAO_0000115 :Hauptberuflich "Exclusive or predominant employment with full weekly and standard working hours or also part-time employment."@en-us)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Hauptberuflich <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Hauptberuflich <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Hauptberuflich <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Hauptberuflich "Ausschließlich oder überwiegende Beschäftigung mit voller wöchentlicher und Regelarbeitszeit oder auch Teilzeitbeschäftigung."@de-de)
-AnnotationAssertion(rdfs:comment :Hauptberuflich "Exclusive or predominant employment with full weekly and standard working hours or also part-time employment."@en-us)
-AnnotationAssertion(rdfs:label :Hauptberuflich "Hauptberuflich"@de-de)
-AnnotationAssertion(rdfs:label :Hauptberuflich "Main occupation"@en-us)
-SubClassOf(:Hauptberuflich :Taetigkeitsart)
 
 # Class: :HauptberuflicheGastprofessoren (Full-time visiting professors)
 
@@ -2561,16 +2355,6 @@ AnnotationAssertion(rdfs:label :LetterToTheEditor "Letter to the Editor"@en-us)
 SubClassOf(:LetterToTheEditor :Dokumenttyp)
 SubClassOf(:LetterToTheEditor :Journalartikel)
 
-# Class: :Lokal (Local)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Lokal "Fi19")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Lokal <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Lokal <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Lokal <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Lokal "Local"@en-us)
-AnnotationAssertion(rdfs:label :Lokal "Lokal"@de-de)
-SubClassOf(:Lokal :Forschungsinfrastrukturart)
-
 # Class: :MeetingAbstract (Meeting Abstract)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :MeetingAbstract "Pu48")
@@ -2585,15 +2369,6 @@ AnnotationAssertion(rdfs:comment :MeetingAbstract "Ein Meeting Abstract ist ein 
 AnnotationAssertion(rdfs:label :MeetingAbstract "Meeting Abstract"@de-de)
 AnnotationAssertion(rdfs:label :MeetingAbstract "Meeting Abstract"@en-us)
 SubClassOf(:MeetingAbstract :Konferenzbeitrag)
-
-# Class: :Mittelgeber (Drittmittelgeber/-in)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Mittelgeber "Dr12")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Mittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Mittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Mittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Mittelgeber "Drittmittelgeber/-in"@de-de)
-AnnotationAssertion(rdfs:label :Mittelgeber "Third-party funder"@en-us)
 
 # Class: :Monographie (Monograph)
 
@@ -2613,49 +2388,6 @@ AnnotationAssertion(rdfs:label :Monographie "Monographie"@de-de)
 SubClassOf(:Monographie :Buch)
 SubClassOf(:Monographie <http://purl.org/ontology/bibo/Book>)
 
-# Class: :Nebenberuflich (Nebenberuflich)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Nebenberuflich "Be36")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Nebenberuflich <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Nebenberuflich <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Nebenberuflich <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Nebenberuflich "Nebenberuflich"@de-de)
-AnnotationAssertion(rdfs:label :Nebenberuflich "Secondary Occupation"@en-us)
-SubClassOf(:Nebenberuflich :Taetigkeitsart)
-
-# Class: :NichtErklaert (Nicht Erklärt)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :NichtErklaert "Dr134")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :NichtErklaert <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :NichtErklaert <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :NichtErklaert <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :NichtErklaert <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :NichtErklaert "Nicht Erklärt"@de-de)
-AnnotationAssertion(rdfs:label :NichtErklaert "Not declared"@en-us)
-SubClassOf(:NichtErklaert :Mittelgeber)
-
-# Class: :NichtErklaertOeffentlicheMittelgeber (Nicht erklärt (Öffentliche Mittelgeber/-innen))
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :NichtErklaertOeffentlicheMittelgeber "Dr136")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :NichtErklaertOeffentlicheMittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :NichtErklaertOeffentlicheMittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :NichtErklaertOeffentlicheMittelgeber <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :NichtErklaertOeffentlicheMittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :NichtErklaertOeffentlicheMittelgeber "Nicht erklärt (Öffentliche Mittelgeber/-innen)"@de-de)
-AnnotationAssertion(rdfs:label :NichtErklaertOeffentlicheMittelgeber "Not declared (public funders)"@en-us)
-SubClassOf(:NichtErklaertOeffentlicheMittelgeber :NichtErklaert)
-
-# Class: :NichtErklaertPrivateMittelgeber (Nicht Erklärt (Private Mittelgeber/ -innen))
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :NichtErklaertPrivateMittelgeber "Dr135")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :NichtErklaertPrivateMittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :NichtErklaertPrivateMittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :NichtErklaertPrivateMittelgeber <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :NichtErklaertPrivateMittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :NichtErklaertPrivateMittelgeber "Nicht Erklärt (Private Mittelgeber/ -innen)"@de-de)
-AnnotationAssertion(rdfs:label :NichtErklaertPrivateMittelgeber "Not declared (private donors)"@en-us)
-SubClassOf(:NichtErklaertPrivateMittelgeber :NichtErklaert)
-
 # Class: :Nutzung (Use / intensity of use)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Nutzung "Fi8")
@@ -2664,20 +2396,6 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Nutzung <http://
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Nutzung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label :Nutzung "Nutzung / Nutzungsintensität"@de-de)
 AnnotationAssertion(rdfs:label :Nutzung "Use / intensity of use"@en-us)
-
-# Class: :OpenAccess (Open Access)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :OpenAccess "Fi24")
-AnnotationAssertion(obo:IAO_0000115 :OpenAccess "\"Open Access\" bezeichnet die Bereitstellung wesentlicher Ressourcen für die breite wissenschaftliche (und auch nicht-wissenschaftliche) Öffentlichkeit in Form von digitalen Datenbanken und zum Teil auch Bibliotheken."@de-de)
-AnnotationAssertion(obo:IAO_0000115 :OpenAccess "\"Open Access\" refers to the provision of essential resources to the general scientific (and also non-scientific) public in the form of digital databases and, in some cases, libraries."@en-us)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :OpenAccess <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :OpenAccess <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :OpenAccess <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :OpenAccess "\"Open Access\" bezeichnet die Bereitstellung wesentlicher Ressourcen für die breite wissenschaftliche (und auch nicht-wissenschaftliche) Öffentlichkeit in Form von digitalen Datenbanken und zum Teil auch Bibliotheken."@de-de)
-AnnotationAssertion(rdfs:comment :OpenAccess "\"Open Access\" refers to the provision of essential resources to the general scientific (and also non-scientific) public in the form of digital databases and, in some cases, libraries."@en-us)
-AnnotationAssertion(rdfs:label :OpenAccess "Open Access"@de-de)
-AnnotationAssertion(rdfs:label :OpenAccess "Open Access"@en-us)
-SubClassOf(:OpenAccess :Zugangsart)
 
 # Class: :OrdentlicheProfessoren (Ordentliche Professor/-innen)
 
@@ -2785,22 +2503,6 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Professorenbe
 AnnotationAssertion(rdfs:label :Professorenbezeichnung "Bezeichnung für Professoren"@de-de)
 AnnotationAssertion(rdfs:label :Professorenbezeichnung "Designation for professors"@en-us)
 
-# Class: :Promotion (Promotion)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Promotion "Be17")
-AnnotationAssertion(Meta:inhaltlicheDefinition :Promotion "Na43")
-AnnotationAssertion(obo:IAO_0000115 :Promotion "Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D."@de-de)
-AnnotationAssertion(obo:IAO_0000115 :Promotion "The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master's level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D."@en-us)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Promotion <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Promotion <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Promotion <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Promotion "Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D."@de-de)
-AnnotationAssertion(rdfs:comment :Promotion "The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master's level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D."@en-us)
-AnnotationAssertion(rdfs:label :Promotion "Doctorate"@en-us)
-AnnotationAssertion(rdfs:label :Promotion "Promotion"@de-de)
-SubClassOf(:Promotion :Qualifizierungsverfahren)
-SubClassOf(:Promotion <http://vivoweb.org/ontology/core#EducationalProcess>)
-
 # Class: :Promotionskooperationspartner (Promotionskooperationspartner)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Promotionskooperationspartner "Na86")
@@ -2811,20 +2513,6 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Promotionskoo
 AnnotationAssertion(rdfs:label :Promotionskooperationspartner "PhD cooperation partner"@en-us)
 AnnotationAssertion(rdfs:label :Promotionskooperationspartner "Promotionskooperationspartner"@de-de)
 SubClassOf(:Promotionskooperationspartner <http://xmlns.com/foaf/0.1/Organization>)
-
-# Class: :Promoviert (Promoviert)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Promoviert "Be17")
-AnnotationAssertion(obo:IAO_0000115 :Promoviert "Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D."@de-de)
-AnnotationAssertion(obo:IAO_0000115 :Promoviert "The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master's level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D."@en-us)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Promoviert <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Promoviert <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Promoviert <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Promoviert "Die Promotion dient als akademisches Examen dem Nachweis der Befähigung für Forschung in einem bestimmten Fach oder Fachgebiet. Die Zulassung zur Promotion setzt in der Regel einen Abschluss auf Master-Ebene, also von 300 ECTS-Punkten oder mehr voraus. Promotionen umfassen die Abschlüsse: Dr., Ph. D."@de-de)
-AnnotationAssertion(rdfs:comment :Promoviert "The doctorate serves as an academic examination to prove qualification for research in a specific subject or field. Admission to a doctorate usually requires a degree at Master's level, i.e. of 300 ECTS credits or more. Doctorates include the degrees: Dr., Ph. D."@en-us)
-AnnotationAssertion(rdfs:label :Promoviert "Promoviert"@de-de)
-AnnotationAssertion(rdfs:label :Promoviert "Received a Doctorate"@en-us)
-SubClassOf(:Promoviert :Qualifikation)
 
 # Class: :Publikation (Publikation)
 
@@ -2851,17 +2539,6 @@ AnnotationAssertion(rdfs:comment :Publikationstyp "Kategorisierung aller Publika
 AnnotationAssertion(rdfs:label :Publikationstyp "Publication type"@en-us)
 AnnotationAssertion(rdfs:label :Publikationstyp "Publikationstyp"@de-de)
 
-# Class: :Qualifikation (Qualifikation)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Qualifikation "Be9")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Qualifikation <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Qualifikation <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Qualifikation <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Qualifikation "Die Qualifikation der Beschäftigten wird aufgeschlüsselt nach Habilitation und Promotion. Gezählt wird jeweils der höchste Abschluss."@de-de)
-AnnotationAssertion(rdfs:comment :Qualifikation "The qualifications of employees are broken down by habilitation and doctorate. The highest degree is counted in each case."@en-us)
-AnnotationAssertion(rdfs:label :Qualifikation "Qualification"@en-us)
-AnnotationAssertion(rdfs:label :Qualifikation "Qualifikation"@de-de)
-
 # Class: :Qualifikationsschrift (Qualification Thesis)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Qualifikationsschrift "Pu146")
@@ -2878,17 +2555,7 @@ AnnotationAssertion(rdfs:label :Qualifikationsschrift "Qualifikationsschrift"@de
 SubClassOf(:Qualifikationsschrift :Publikationstyp)
 SubClassOf(:Qualifikationsschrift <http://purl.org/ontology/bibo/Thesis>)
 
-# Class: :Qualifizierungsverfahren (Qualifizierungsverfahren)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Qualifizierungsverfahren "Na4a")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Qualifizierungsverfahren <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Qualifizierungsverfahren <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Qualifizierungsverfahren <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Qualifizierungsverfahren "Qualifizierungsverfahren"@de-de)
-EquivalentClasses(:Qualifizierungsverfahren <http://vivoweb.org/ontology/core#EducationalProcess>)
-SubClassOf(:Qualifizierungsverfahren <http://vivoweb.org/ontology/core#EducationalProcess>)
-
-# Class: :Quellenedition (Quellenedition [Journalartikel])
+# Class: :Quellenedition (Source edition [Journal Article])
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Quellenedition "Pu130")
 AnnotationAssertion(obo:IAO_0000115 :Quellenedition "A scholarly edition of primary sources is the publication of historic or cultural sources with a substantial contribution of the source editor published as an article or a book.
@@ -3037,20 +2704,6 @@ AnnotationAssertion(rdfs:label :Seniorprofessoren "Senior professors"@en-us)
 AnnotationAssertion(rdfs:label :Seniorprofessoren "Seniorprofessor/-innen"@de-de)
 SubClassOf(:Seniorprofessoren :SonstigeProfessoren)
 
-# Class: :SharedAccess (Shared Access)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :SharedAccess "Fi23")
-AnnotationAssertion(obo:IAO_0000115 :SharedAccess "\"Shared Access\" bezeichnet den Zugang zu klassischen Großgeräten (wie z.B. Teleskopanlagen) oder Forschungsplattformen (wie z.B. Speziallaboren), die für eine bestimmte wissenschaftliche Community relevant und für die Erfüllung ihrer Forschungsaufgaben entscheidend sind. Sie werden deshalb gemeinsam durch diese Community geplant, errichtet und betrieben."@de-de)
-AnnotationAssertion(obo:IAO_0000115 :SharedAccess "\"Shared access\" refers to access to classic large-scale equipment (such as telescope facilities) or research platforms (such as special laboratories) that are relevant for a specific scientific community and crucial for the fulfilment of its research tasks. They are therefore planned, built and operated jointly by this community."@en-us)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :SharedAccess <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :SharedAccess <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :SharedAccess <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :SharedAccess "\"Shared Access\" bezeichnet den Zugang zu klassischen Großgeräten (wie z.B. Teleskopanlagen) oder Forschungsplattformen (wie z.B. Speziallaboren), die für eine bestimmte wissenschaftliche Community relevant und für die Erfüllung ihrer Forschungsaufgaben entscheidend sind. Sie werden deshalb gemeinsam durch diese Community geplant, errichtet und betrieben."@de-de)
-AnnotationAssertion(rdfs:comment :SharedAccess "\"Shared access\" refers to access to classic large-scale equipment (such as telescope facilities) or research platforms (such as special laboratories) that are relevant for a specific scientific community and crucial for the fulfilment of its research tasks. They are therefore planned, built and operated jointly by this community."@en-us)
-AnnotationAssertion(rdfs:label :SharedAccess "Shared Access"@de-de)
-AnnotationAssertion(rdfs:label :SharedAccess "Shared Access"@en-us)
-SubClassOf(:SharedAccess :Zugangsart)
-
 # Class: :Software (Software)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Software "Pu45")
@@ -3083,28 +2736,6 @@ AnnotationAssertion(rdfs:comment :SonstigeBezeichnung "The person (professor) ca
 AnnotationAssertion(rdfs:label :SonstigeBezeichnung "Other designation"@en-us)
 AnnotationAssertion(rdfs:label :SonstigeBezeichnung "Sonstige Bezeichnung"@de-de)
 SubClassOf(:SonstigeBezeichnung :SonstigeProfessoren)
-
-# Class: :SonstigeDrittmittelgeber (Other third-party funders)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigeDrittmittelgeber "Dr141")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :SonstigeDrittmittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :SonstigeDrittmittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :SonstigeDrittmittelgeber <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :SonstigeDrittmittelgeber <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :SonstigeDrittmittelgeber "Other third-party funders"@en-us)
-AnnotationAssertion(rdfs:label :SonstigeDrittmittelgeber "Sonstige Drittmittelgeber/-innen"@de-de)
-SubClassOf(:SonstigeDrittmittelgeber :Mittelgeber)
-
-# Class: :SonstigeInternationaleOrganisationen (Other international organisations)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigeInternationaleOrganisationen "Dr96")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :SonstigeInternationaleOrganisationen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :SonstigeInternationaleOrganisationen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :SonstigeInternationaleOrganisationen <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :SonstigeInternationaleOrganisationen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :SonstigeInternationaleOrganisationen "Other international organisations"@en-us)
-AnnotationAssertion(rdfs:label :SonstigeInternationaleOrganisationen "Sonstige internationale Organisationen"@de-de)
-SubClassOf(:SonstigeInternationaleOrganisationen :EuUndSonstigeInternationaleOrganisationen)
 
 # Class: :SonstigeKooperationspartner (Sonstige Kooperationspartner)
 
@@ -3244,43 +2875,6 @@ AnnotationAssertion(rdfs:label :StrukturiertesPromotionsprogramm "Structured doc
 AnnotationAssertion(rdfs:label :StrukturiertesPromotionsprogramm "Strukturiertes Promotionsprogramm"@de-de)
 SubClassOf(:StrukturiertesPromotionsprogramm <http://vivoweb.org/ontology/core#Program>)
 
-# Class: :Taetigkeitsart (Tätigkeitsart)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Taetigkeitsart "Be32")
-AnnotationAssertion(obo:IAO_0000115 :Taetigkeitsart "Categorisation of the activity of employees into main occupation/main office (Be35) and secondary occupation/secondary office (Be36)."@en-us)
-AnnotationAssertion(obo:IAO_0000115 :Taetigkeitsart "Kategorisierung der Tätigkeit von Beschäftigten in Hauptberuflichkeit/Hauptamt (Be35) und Nebenberuflichkeit/Nebenamt (Be36)."@de-de)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Taetigkeitsart <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Taetigkeitsart <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Taetigkeitsart <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Taetigkeitsart "Categorisation of the activity of employees into main occupation/main office (Be35) and secondary occupation/secondary office (Be36)."@en-us)
-AnnotationAssertion(rdfs:comment :Taetigkeitsart "Kategorisierung der Tätigkeit von Beschäftigten in Hauptberuflichkeit/Hauptamt (Be35) und Nebenberuflichkeit/Nebenamt (Be36)."@de-de)
-AnnotationAssertion(rdfs:label :Taetigkeitsart "Type of Activity"@en-us)
-AnnotationAssertion(rdfs:label :Taetigkeitsart "Tätigkeitsart"@de-de)
-
-# Class: :Teilzeit (Part Time)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Teilzeit "Be56")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Teilzeit <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Teilzeit <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Teilzeit <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Teilzeit "Part Time"@en-us)
-AnnotationAssertion(rdfs:label :Teilzeit "Teilzeit"@de-de)
-SubClassOf(:Teilzeit :Hauptberuflich)
-
-# Class: :Unbefristet (Unlimited)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Unbefristet "Be34")
-AnnotationAssertion(obo:IAO_0000115 :Unbefristet "An open-ended contract exists if the contract term in months (Be39) has no value."@en-us)
-AnnotationAssertion(obo:IAO_0000115 :Unbefristet "Eine unbefristeter Vertrag liegt vor, wenn die Vertragslaufzeit in Monaten (Be39) keinen Wert aufweist."@de-de)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Unbefristet <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Unbefristet <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Unbefristet <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Unbefristet "An open-ended contract exists if the contract term in months (Be39) has no value."@en-us)
-AnnotationAssertion(rdfs:comment :Unbefristet "Eine unbefristeter Vertrag liegt vor, wenn die Vertragslaufzeit in Monaten (Be39) keinen Wert aufweist."@de-de)
-AnnotationAssertion(rdfs:label :Unbefristet "Unbefristet"@de-de)
-AnnotationAssertion(rdfs:label :Unbefristet "Unlimited"@en-us)
-SubClassOf(:Unbefristet :Befristung)
-
 # Class: :Universitaet (Universität)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Universitaet "Na96")
@@ -3292,20 +2886,6 @@ AnnotationAssertion(rdfs:label :Universitaet "University"@en-us)
 AnnotationAssertion(rdfs:label :Universitaet "Universität"@de-de)
 SubClassOf(:Universitaet :Promotionskooperationspartner)
 SubClassOf(:Universitaet <http://vivoweb.org/ontology/core#University>)
-
-# Class: :UserAccess (User Access)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :UserAccess "Fi22")
-AnnotationAssertion(obo:IAO_0000115 :UserAccess "\"User Access\" bezieht sich auf einen geregelten Zugang zu Ressourcen aufgrund von Bewerbung und Registrierung einzelner, qualifizierter Expertennutzer/-innen …quot; oft auch aus verschiedenen disziplinären Zusammenhängen …quot;, wie es beispielsweise bei Bioprobenbanken, Archiven oder Spezialbibliotheken üblich ist."@de-de)
-AnnotationAssertion(obo:IAO_0000115 :UserAccess "\"User access\" refers to regulated access to resources based on the application and registration of individual, qualified expert users ...quot; often also from different disciplinary contexts ...quot; as is common, for example, in biospecimen banks, archives or special libraries."@en-us)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :UserAccess <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :UserAccess <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :UserAccess <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :UserAccess "\"User Access\" bezieht sich auf einen geregelten Zugang zu Ressourcen aufgrund von Bewerbung und Registrierung einzelner, qualifizierter Expertennutzer/-innen …quot; oft auch aus verschiedenen disziplinären Zusammenhängen …quot;, wie es beispielsweise bei Bioprobenbanken, Archiven oder Spezialbibliotheken üblich ist."@de-de)
-AnnotationAssertion(rdfs:comment :UserAccess "\"User access\" refers to regulated access to resources based on the application and registration of individual, qualified expert users ...quot; often also from different disciplinary contexts ...quot; as is common, for example, in biospecimen banks, archives or special libraries."@en-us)
-AnnotationAssertion(rdfs:label :UserAccess "User Access"@de-de)
-AnnotationAssertion(rdfs:label :UserAccess "User Access"@en-us)
-SubClassOf(:UserAccess :Zugangsart)
 
 # Class: :Verlag (Verlag)
 
@@ -3319,16 +2899,6 @@ AnnotationAssertion(rdfs:label :Verlag "Publishing House"@en-us)
 AnnotationAssertion(rdfs:label :Verlag "Verlag"@de-de)
 EquivalentClasses(:Verlag <http://vivoweb.org/ontology/core#Publisher>)
 SubClassOf(:Verlag <http://vivoweb.org/ontology/core#Publisher>)
-
-# Class: :Verteilt (Distributed)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Verteilt "Fi20")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Verteilt <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Verteilt <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Verteilt <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Verteilt "Distributed"@en-us)
-AnnotationAssertion(rdfs:label :Verteilt "Verteilt"@de-de)
-SubClassOf(:Verteilt :Forschungsinfrastrukturart)
 
 # Class: :Vertretungsprofessoren (Vertretungsprofessor/-innen / Lehrstuhlvertreter/-innen)
 
@@ -3362,26 +2932,6 @@ AnnotationAssertion(vitro:inClassGroup :Verwaltungspersonal <http://vivoweb.org/
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Verwaltungspersonal <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label :Verwaltungspersonal "Verwaltungspersonal"@de-de)
 SubClassOf(:Verwaltungspersonal :Personalkategorie)
-
-# Class: :Virtuell (Virtuell)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Virtuell "Fi21")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Virtuell <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Virtuell <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Virtuell <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Virtuell "Virtual"@en-us)
-AnnotationAssertion(rdfs:label :Virtuell "Virtuell"@de-de)
-SubClassOf(:Virtuell :Forschungsinfrastrukturart)
-
-# Class: :Vollzeit (Vollzeit)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Vollzeit "Be55")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Vollzeit <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Vollzeit <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Vollzeit <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Vollzeit "Full-time"@en-us)
-AnnotationAssertion(rdfs:label :Vollzeit "Vollzeit"@de-de)
-SubClassOf(:Vollzeit :Hauptberuflich)
 
 # Class: :WissenschaftlicheOderKuenstlerischeHilfskraefte (Wissenschaftliche oder künstlerische Hilfskräfte)
 
@@ -3466,33 +3016,6 @@ AnnotationAssertion(rdfs:label :Wissensressourcen "Wissensressourcen"@de-de)
 SubClassOf(:Wissensressourcen :Forschungsinfrastrukturtyp)
 SubClassOf(:Wissensressourcen <http://vivoweb.org/ontology/core#Equipment>)
 
-# Class: :Zugangsart (Type of access)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Zugangsart "Fi6")
-AnnotationAssertion(obo:IAO_0000115 :Zugangsart "Mehrfachnennungen möglich:
-A) User Access (z.B. über wissenschaftliches Antragsverfahren für externe Nutzer/-innen)
-B) Shared Access (z.B. über wissenschaftliche Kollaborationen mit der Betreiber/-inneneinrichtung)
-C) Open Access (Freier Zugang zu bspw. Wissensressourcen)
-
-Wird eine FI auf verschiedenen Wegen zur Nutzung angeboten (bspw. lokal und virtuell) so sind zwei Meldungen erforderlich. So kann z.B. eine physische Sammlung 'lokal' und ihr Digitalisat in Form einer Datenbank 'virtuell' genutzt werden. Weiterhin sind je nach Verortung einer FI in der verlinkten Matrix unterschiedliche Angaben zu Nutzung/Auslastung sinnvoll (bspw. Unterscheidung der Angaben für lokal + User Access und virtuellen + open access)."@de-de)
-AnnotationAssertion(obo:IAO_0000115 :Zugangsart "Multiple answers possible:
-A) User access (e.g. via scientific application procedure for external users)
-B) Shared Access (e.g. via scientific collaborations with the operating institution)
-C) Open Access (free access to e.g. knowledge resources)
-
-If a RI is offered for use in different ways (e.g. locally and virtually), two notifications are required. For example, a physical collection can be used 'locally' and its digitised version in the form of a database 'virtually'. Furthermore, depending on the location of a RI in the linked matrix, different information on use/utilisation is useful (e.g. differentiation of the information for local + user access and virtual + open access)."@en-us)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Zugangsart <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Zugangsart <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Zugangsart <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Zugangsart "Mehrfachnennungen möglich:
-A) User Access (z.B. über wissenschaftliches Antragsverfahren für externe Nutzer/-innen)
-B) Shared Access (z.B. über wissenschaftliche Kollaborationen mit der Betreiber/-inneneinrichtung)
-C) Open Access (Freier Zugang zu bspw. Wissensressourcen)
-
-Wird eine FI auf verschiedenen Wegen zur Nutzung angeboten (bspw. lokal und virtuell) so sind zwei Meldungen erforderlich. So kann z.B. eine physische Sammlung 'lokal' und ihr Digitalisat in Form einer Datenbank 'virtuell' genutzt werden. Weiterhin sind je nach Verortung einer FI in der verlinkten Matrix unterschiedliche Angaben zu Nutzung/Auslastung sinnvoll (bspw. Unterscheidung der Angaben für lokal + User Access und virtuellen + open access)."@de-de)
-AnnotationAssertion(rdfs:label :Zugangsart "Art des Zugangs"@de-de)
-AnnotationAssertion(rdfs:label :Zugangsart "Type of access"@en-us)
-
 # Class: obo:ERO_0000071 (obo:ERO_0000071)
 
 SubClassOf(obo:ERO_0000071 :Software)
@@ -3532,10 +3055,6 @@ SubClassOf(<http://vivoweb.org/ontology/core#Division> :Organisationseinheit)
 # Class: <http://vivoweb.org/ontology/core#EditorialArticle> (<http://vivoweb.org/ontology/core#EditorialArticle>)
 
 SubClassOf(<http://vivoweb.org/ontology/core#EditorialArticle> :Editorial)
-
-# Class: <http://vivoweb.org/ontology/core#EducationalProcess> (<http://vivoweb.org/ontology/core#EducationalProcess>)
-
-SubClassOf(<http://vivoweb.org/ontology/core#EducationalProcess> :Qualifizierungsverfahren)
 
 # Class: <http://vivoweb.org/ontology/core#Publisher> (<http://vivoweb.org/ontology/core#Publisher>)
 
