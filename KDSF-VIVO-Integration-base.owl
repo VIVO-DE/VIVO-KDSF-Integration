@@ -12,7 +12,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/KDSF-VIVO-Integration-base.owl">
-        <owl:versionIRI rdf:resource="http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-03-31/KDSF-VIVO-Integration-base.owl"/>
+        <owl:versionIRI rdf:resource="http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-05-24/KDSF-VIVO-Integration-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:rights rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <vitro:ontologyPrefixAnnot>kdsf</vitro:ontologyPrefixAnnot>
@@ -22,7 +22,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International.</rdfs:comment>
         <rdfs:label xml:lang="de-de">KDSF-VIVO-Alignment</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-01-04</owl:versionInfo>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-31</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-24</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -375,7 +375,6 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
         <Meta:inhaltlicheDefinition>Be8</Meta:inhaltlicheDefinition>
         <Meta:inhaltlicheDefinition>Na14</Meta:inhaltlicheDefinition>
         <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</vitro:displayRankAnnot>
@@ -2611,21 +2610,6 @@ Unterkategorisierung von selbstständigen Werken (Buch, Pu22) nach vorwiegend in
     
 
 
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#Drittmittel -->
-
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Drittmittel">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
-        <Meta:inhaltlicheDefinition>Be14</Meta:inhaltlicheDefinition>
-        <Meta:inhaltlicheDefinition>Na30</Meta:inhaltlicheDefinition>
-        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Drittmittel</rdfs:label>
-        <rdfs:label xml:lang="en-us">Third-party funding</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt">
@@ -2723,20 +2707,6 @@ Unterkategorisierung von selbstständigen Werken (Buch, Pu22) nach vorwiegend in
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Fach</rdfs:label>
         <rdfs:label xml:lang="en-us">Subject</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform -->
-
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform">
-        <Meta:inhaltlicheDefinition>Be8</Meta:inhaltlicheDefinition>
-        <Meta:inhaltlicheDefinition>Na14</Meta:inhaltlicheDefinition>
-        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Finanzierungsform</rdfs:label>
-        <rdfs:label xml:lang="en-us">Form of financing</rdfs:label>
     </owl:Class>
     
 
@@ -2888,21 +2858,6 @@ Unterkategorisierung von selbstständigen Werken (Buch, Pu22) nach vorwiegend in
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Großgeräte und Instrumente</rdfs:label>
         <rdfs:label xml:lang="en-us">Large equipment and instruments</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#GrundmittelUndInstitutionelleMittel -->
-
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#GrundmittelUndInstitutionelleMittel">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
-        <Meta:inhaltlicheDefinition>Be13</Meta:inhaltlicheDefinition>
-        <Meta:inhaltlicheDefinition>Na29</Meta:inhaltlicheDefinition>
-        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="en-us">Basic funds and institutional funds</rdfs:label>
-        <rdfs:label xml:lang="de-de">Grundmittel und institutionelle Mittel</rdfs:label>
     </owl:Class>
     
 
@@ -3238,21 +3193,6 @@ alternatively the ISBN for books. A publication may have several identifiers. In
         <rdfs:comment xml:lang="de-de">Ein Meeting Abstract ist ein kurzer Text, der ein Konferenzpaper, ein Konferenzposter oder eine Präsentation in einer wissenschaftlichen Konferenz zusammenfasst und der (z.B. in einem Konferenzband) veröffentlicht wurde und dauerhaft verfügbar ist.</rdfs:comment>
         <rdfs:label xml:lang="de-de">Meeting Abstract</rdfs:label>
         <rdfs:label xml:lang="en-us">Meeting Abstract</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#Mischfinanzierung -->
-
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Mischfinanzierung">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
-        <Meta:inhaltlicheDefinition>Be86</Meta:inhaltlicheDefinition>
-        <Meta:inhaltlicheDefinition>Na90</Meta:inhaltlicheDefinition>
-        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Mischfinanzierung</rdfs:label>
-        <rdfs:label xml:lang="en-us">Mixed financing</rdfs:label>
     </owl:Class>
     
 
@@ -3874,21 +3814,6 @@ RDA-Bezeichnung: Beziehungskennzeichnung</rdfs:comment>
     
 
 
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#Sondermittel -->
-
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Sondermittel">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
-        <Meta:inhaltlicheDefinition>Be87</Meta:inhaltlicheDefinition>
-        <Meta:inhaltlicheDefinition>Na100</Meta:inhaltlicheDefinition>
-        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de-de">Sondermittel</rdfs:label>
-        <rdfs:label xml:lang="en-us">Special funds</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://kerndatensatz-forschung.de/owl/Basis#SonstigeBezeichnung -->
 
     <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#SonstigeBezeichnung">
@@ -3949,21 +3874,6 @@ RDA-Bezeichnung: Beziehungskennzeichnung</rdfs:comment>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">Other Cooperation partner</rdfs:label>
         <rdfs:label xml:lang="de-de">Sonstige Kooperationspartner</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kerndatensatz-forschung.de/owl/Basis#SonstigeMittel -->
-
-    <owl:Class rdf:about="http://kerndatensatz-forschung.de/owl/Basis#SonstigeMittel">
-        <rdfs:subClassOf rdf:resource="http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform"/>
-        <Meta:inhaltlicheDefinition>Be54</Meta:inhaltlicheDefinition>
-        <Meta:inhaltlicheDefinition>Na104</Meta:inhaltlicheDefinition>
-        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="en-us">Other funds</rdfs:label>
-        <rdfs:label xml:lang="de-de">Sonstige Mittel</rdfs:label>
     </owl:Class>
     
 

@@ -7,7 +7,7 @@
 @base <http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/KDSF-VIVO-Integration-full.ttl> .
 
 <http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/KDSF-VIVO-Integration-full.ttl> rdf:type owl:Ontology ;
-                                                                                                    owl:versionIRI <http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-03-31/KDSF-VIVO-Integration-full.ttl> ;
+                                                                                                    owl:versionIRI <http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-05-24/KDSF-VIVO-Integration-full.ttl> ;
                                                                                                     <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                                                                                     <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> "kdsf" ;
                                                                                                     rdfs:comment """This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.\"
@@ -16,7 +16,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                                                                  "This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International."^^xsd:string ;
                                                                                                     rdfs:label "KDSF-VIVO-Alignment"@de-de ;
                                                                                                     owl:versionInfo "2017-01-04"^^xsd:string ,
-                                                                                                                    "2023-03-31"^^xsd:string .
+                                                                                                                    "2023-05-24"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -282,7 +282,6 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
                                                                                                <http://kerndatensatz-forschung.de/owl/Basis#StrukturiertesPromotionsprogramm>
                                                                                              )
                                                                                ] ;
-                                                                   rdfs:range <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> ;
                                                                    <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be8" ,
                                                                                                                                       "Na14" ;
                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRankAnnot> "10"^^xsd:int ;
@@ -2132,18 +2131,6 @@ Unterkategorisierung von selbstständigen Werken (Buch, Pu22) nach vorwiegend in
                                                                      "Dokumenttyp"@de-de .
 
 
-###  http://kerndatensatz-forschung.de/owl/Basis#Drittmittel
-<http://kerndatensatz-forschung.de/owl/Basis#Drittmittel> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> ;
-                                                          <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be14" ,
-                                                                                                                             "Na30" ;
-                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                          rdfs:label "Drittmittel"@de-de ,
-                                                                     "Third-party funding"@en-us .
-
-
 ###  http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt
 <http://kerndatensatz-forschung.de/owl/Basis#Drittmittelprojekt> rdf:type owl:Class ;
                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/ERO_0000014> ;
@@ -2224,17 +2211,6 @@ Unterkategorisierung von selbstständigen Werken (Buch, Pu22) nach vorwiegend in
                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                    rdfs:label "Fach"@de-de ,
                                                               "Subject"@en-us .
-
-
-###  http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform
-<http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> rdf:type owl:Class ;
-                                                                <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be8" ,
-                                                                                                                                   "Na14" ;
-                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                rdfs:label "Finanzierungsform"@de-de ,
-                                                                           "Form of financing"@en-us .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Foerderer
@@ -2355,18 +2331,6 @@ Unterkategorisierung von selbstständigen Werken (Buch, Pu22) nach vorwiegend in
                                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                          rdfs:label "Großgeräte und Instrumente"@de-de ,
                                                                                     "Large equipment and instruments"@en-us .
-
-
-###  http://kerndatensatz-forschung.de/owl/Basis#GrundmittelUndInstitutionelleMittel
-<http://kerndatensatz-forschung.de/owl/Basis#GrundmittelUndInstitutionelleMittel> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> ;
-                                                                                  <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be13" ,
-                                                                                                                                                     "Na29" ;
-                                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                                  rdfs:label "Basic funds and institutional funds"@en-us ,
-                                                                                             "Grundmittel und institutionelle Mittel"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Habilitation
@@ -2647,18 +2611,6 @@ alternatively the ISBN for books. A publication may have several identifiers. In
                                                                            "Ein Meeting Abstract ist ein kurzer Text, der ein Konferenzpaper, ein Konferenzposter oder eine Präsentation in einer wissenschaftlichen Konferenz zusammenfasst und der (z.B. in einem Konferenzband) veröffentlicht wurde und dauerhaft verfügbar ist."@de-de ;
                                                               rdfs:label "Meeting Abstract"@de-de ,
                                                                          "Meeting Abstract"@en-us .
-
-
-###  http://kerndatensatz-forschung.de/owl/Basis#Mischfinanzierung
-<http://kerndatensatz-forschung.de/owl/Basis#Mischfinanzierung> rdf:type owl:Class ;
-                                                                rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> ;
-                                                                <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be86" ,
-                                                                                                                                   "Na90" ;
-                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                                rdfs:label "Mischfinanzierung"@de-de ,
-                                                                           "Mixed financing"@en-us .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#Mittelgeber
@@ -3179,18 +3131,6 @@ RDA-Bezeichnung: Beziehungskennzeichnung"""@de-de ;
                                                                   "Software"@en-us .
 
 
-###  http://kerndatensatz-forschung.de/owl/Basis#Sondermittel
-<http://kerndatensatz-forschung.de/owl/Basis#Sondermittel> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> ;
-                                                           <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be87" ,
-                                                                                                                              "Na100" ;
-                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                           rdfs:label "Sondermittel"@de-de ,
-                                                                      "Special funds"@en-us .
-
-
 ###  http://kerndatensatz-forschung.de/owl/Basis#SonstigeBezeichnung
 <http://kerndatensatz-forschung.de/owl/Basis#SonstigeBezeichnung> rdf:type owl:Class ;
                                                                   rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren> ;
@@ -3241,18 +3181,6 @@ RDA-Bezeichnung: Beziehungskennzeichnung"""@de-de ;
                                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                           rdfs:label "Other Cooperation partner"@en-us ,
                                                                                      "Sonstige Kooperationspartner"@de-de .
-
-
-###  http://kerndatensatz-forschung.de/owl/Basis#SonstigeMittel
-<http://kerndatensatz-forschung.de/owl/Basis#SonstigeMittel> rdf:type owl:Class ;
-                                                             rdfs:subClassOf <http://kerndatensatz-forschung.de/owl/Basis#Finanzierungsform> ;
-                                                             <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Be54" ,
-                                                                                                                                "Na104" ;
-                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                             rdfs:label "Other funds"@en-us ,
-                                                                        "Sonstige Mittel"@de-de .
 
 
 ###  http://kerndatensatz-forschung.de/owl/Basis#SonstigeProfessoren
@@ -3789,8 +3717,8 @@ Wird eine FI auf verschiedenen Wegen zur Nutzung angeboten (bspw. lokal und virt
                                                         <http://kerndatensatz-forschung.de/owl/Meta#pgbid> "dcterms.funding" ;
                                                         rdfs:label "Förderer"@de-de ;
                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                        rdfs:label "Funders"@en-us .
+                                                        rdfs:label "Funders"@en-us ;
+                                                        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 
 <http://kerndatensatz-forschung.de/owl/Basis#FoerderkennzeichenDrittmittelprojekt> <http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition> "Dr13" ;

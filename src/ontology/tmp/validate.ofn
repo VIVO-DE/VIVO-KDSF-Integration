@@ -11,7 +11,7 @@ Prefix(vitro:=<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>)
 
 
 Ontology(<http://kerndatensatz-forschung.de/owl/Basis>
-<http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-03-31/KDSF-VIVO-Integration.owl>
+<http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-05-24/KDSF-VIVO-Integration.owl>
 Annotation(terms:rights <https://creativecommons.org/licenses/by-sa/4.0/>)
 Annotation(vitro:ontologyPrefixAnnot "kdsf")
 Annotation(rdfs:comment "This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.\"
@@ -20,7 +20,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 Annotation(rdfs:comment "This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International."^^xsd:string)
 Annotation(rdfs:label "KDSF-VIVO-Alignment"@de-de)
 Annotation(owl:versionInfo "2017-01-04"^^xsd:string)
-Annotation(owl:versionInfo "2023-03-31"^^xsd:string)
+Annotation(owl:versionInfo "2023-05-24"^^xsd:string)
 
 Declaration(Class(:AUF))
 Declaration(Class(:ArbeitspapierForschungsbericht))
@@ -42,14 +42,12 @@ Declaration(Class(:DFG))
 Declaration(Class(:Dissertation))
 Declaration(Class(:Doktorand))
 Declaration(Class(:Dokumenttyp))
-Declaration(Class(:Drittmittel))
 Declaration(Class(:Drittmittelprojekt))
 Declaration(Class(:EU))
 Declaration(Class(:Editorial))
 Declaration(Class(:EuUndSonstigeInternationaleOrganisationen))
 Declaration(Class(:FH))
 Declaration(Class(:Fach))
-Declaration(Class(:Finanzierungsform))
 Declaration(Class(:Foerderer))
 Declaration(Class(:FoerderkennzeichenDrittmittelprojekt))
 Declaration(Class(:Format))
@@ -61,7 +59,6 @@ Declaration(Class(:Forschungsinfrastrukturtyp))
 Declaration(Class(:GemeinsameBerufung))
 Declaration(Class(:GewerblicheWirtschaftUndSonstigeBereiche))
 Declaration(Class(:GrossgeraeteUndInstrumente))
-Declaration(Class(:GrundmittelUndInstitutionelleMittel))
 Declaration(Class(:Habilitation))
 Declaration(Class(:Habilitationsschrift))
 Declaration(Class(:Habilitiert))
@@ -81,7 +78,6 @@ Declaration(Class(:Konferenzposter))
 Declaration(Class(:LetterToTheEditor))
 Declaration(Class(:Lokal))
 Declaration(Class(:MeetingAbstract))
-Declaration(Class(:Mischfinanzierung))
 Declaration(Class(:Mittelgeber))
 Declaration(Class(:Monographie))
 Declaration(Class(:Nebenberuflich))
@@ -117,12 +113,10 @@ Declaration(Class(:Schoepfertyp))
 Declaration(Class(:Seniorprofessoren))
 Declaration(Class(:SharedAccess))
 Declaration(Class(:Software))
-Declaration(Class(:Sondermittel))
 Declaration(Class(:SonstigeBezeichnung))
 Declaration(Class(:SonstigeDrittmittelgeber))
 Declaration(Class(:SonstigeInternationaleOrganisationen))
 Declaration(Class(:SonstigeKooperationspartner))
-Declaration(Class(:SonstigeMittel))
 Declaration(Class(:SonstigeProfessoren))
 Declaration(Class(:SonstigerDokumenttyp))
 Declaration(Class(:SonstigerPublikationstyp))
@@ -484,7 +478,6 @@ AnnotationAssertion(vitro:selectFromExistingAnnot :hatFinanzierungsform "true"^^
 AnnotationAssertion(rdfs:label :hatFinanzierungsform "hat Finanzierungsform"@de-de)
 SubObjectPropertyOf(:hatFinanzierungsform owl:topObjectProperty)
 ObjectPropertyDomain(:hatFinanzierungsform ObjectUnionOf(:Beschaeftigter :StrukturiertesPromotionsprogramm))
-ObjectPropertyRange(:hatFinanzierungsform :Finanzierungsform)
 
 # Object Property: :hatFormat (has format)
 
@@ -582,7 +575,7 @@ SubObjectPropertyOf(:hatMittelgeber owl:topObjectProperty)
 ObjectPropertyDomain(:hatMittelgeber :Drittmittelprojekt)
 ObjectPropertyRange(:hatMittelgeber :Mittelgeber)
 
-# Object Property: :hatNutzung (has usage)
+# Object Property: :hatNutzung (hat Nutzung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :hatNutzung "Fi8")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :hatNutzung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -2122,7 +2115,7 @@ AnnotationAssertion(rdfs:label :Dissertation "Dissertation"@de-de)
 AnnotationAssertion(rdfs:label :Dissertation "Dissertation"@en-us)
 SubClassOf(:Dissertation :Qualifikationsschrift)
 
-# Class: :Doktorand (Doktorand/ -innen)
+# Class: :Doktorand (PhD student)
 
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Doktorand <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Doktorand <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -2152,17 +2145,6 @@ AnnotationAssertion(rdfs:comment :Dokumenttyp "Unterkategorisierung von unselbst
 Unterkategorisierung von selbstständigen Werken (Buch, Pu22) nach vorwiegend inhaltlichen Kriterien in die folgenden Dokumenttypen: Bibliographie, Rezension, Quellenedition und Sonstiger Dokumenttyp."@de-de)
 AnnotationAssertion(rdfs:label :Dokumenttyp "Document type"@en-us)
 AnnotationAssertion(rdfs:label :Dokumenttyp "Dokumenttyp"@de-de)
-
-# Class: :Drittmittel (Third-party funding)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Drittmittel "Be14")
-AnnotationAssertion(Meta:inhaltlicheDefinition :Drittmittel "Na30")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Drittmittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Drittmittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Drittmittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Drittmittel "Drittmittel"@de-de)
-AnnotationAssertion(rdfs:label :Drittmittel "Third-party funding"@en-us)
-SubClassOf(:Drittmittel :Finanzierungsform)
 
 # Class: :Drittmittelprojekt (Drittmittelprojekt)
 
@@ -2239,16 +2221,6 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Fach <http://vit
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Fach <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label :Fach "Fach"@de-de)
 AnnotationAssertion(rdfs:label :Fach "Subject"@en-us)
-
-# Class: :Finanzierungsform (Form of financing)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Finanzierungsform "Be8")
-AnnotationAssertion(Meta:inhaltlicheDefinition :Finanzierungsform "Na14")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Finanzierungsform <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Finanzierungsform <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Finanzierungsform <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Finanzierungsform "Finanzierungsform"@de-de)
-AnnotationAssertion(rdfs:label :Finanzierungsform "Form of financing"@en-us)
 
 # Class: :Format (Format)
 
@@ -2352,17 +2324,6 @@ AnnotationAssertion(rdfs:label :GrossgeraeteUndInstrumente "Large equipment and 
 SubClassOf(:GrossgeraeteUndInstrumente :Forschungsinfrastrukturtyp)
 SubClassOf(:GrossgeraeteUndInstrumente obo:ERO_0000004)
 SubClassOf(:GrossgeraeteUndInstrumente <http://vivoweb.org/ontology/core#Equipment>)
-
-# Class: :GrundmittelUndInstitutionelleMittel (Basic funds and institutional funds)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :GrundmittelUndInstitutionelleMittel "Be13")
-AnnotationAssertion(Meta:inhaltlicheDefinition :GrundmittelUndInstitutionelleMittel "Na29")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :GrundmittelUndInstitutionelleMittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :GrundmittelUndInstitutionelleMittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :GrundmittelUndInstitutionelleMittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :GrundmittelUndInstitutionelleMittel "Basic funds and institutional funds"@en-us)
-AnnotationAssertion(rdfs:label :GrundmittelUndInstitutionelleMittel "Grundmittel und institutionelle Mittel"@de-de)
-SubClassOf(:GrundmittelUndInstitutionelleMittel :Finanzierungsform)
 
 # Class: :Habilitation (Habilitation)
 
@@ -2624,17 +2585,6 @@ AnnotationAssertion(rdfs:comment :MeetingAbstract "Ein Meeting Abstract ist ein 
 AnnotationAssertion(rdfs:label :MeetingAbstract "Meeting Abstract"@de-de)
 AnnotationAssertion(rdfs:label :MeetingAbstract "Meeting Abstract"@en-us)
 SubClassOf(:MeetingAbstract :Konferenzbeitrag)
-
-# Class: :Mischfinanzierung (Mixed financing)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Mischfinanzierung "Be86")
-AnnotationAssertion(Meta:inhaltlicheDefinition :Mischfinanzierung "Na90")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Mischfinanzierung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Mischfinanzierung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Mischfinanzierung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Mischfinanzierung "Mischfinanzierung"@de-de)
-AnnotationAssertion(rdfs:label :Mischfinanzierung "Mixed financing"@en-us)
-SubClassOf(:Mischfinanzierung :Finanzierungsform)
 
 # Class: :Mittelgeber (Drittmittelgeber/-in)
 
@@ -2938,7 +2888,7 @@ AnnotationAssertion(rdfs:label :Qualifizierungsverfahren "Qualifizierungsverfahr
 EquivalentClasses(:Qualifizierungsverfahren <http://vivoweb.org/ontology/core#EducationalProcess>)
 SubClassOf(:Qualifizierungsverfahren <http://vivoweb.org/ontology/core#EducationalProcess>)
 
-# Class: :Quellenedition (Source edition [Journal Article])
+# Class: :Quellenedition (Quellenedition [Journalartikel])
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Quellenedition "Pu130")
 AnnotationAssertion(obo:IAO_0000115 :Quellenedition "A scholarly edition of primary sources is the publication of historic or cultural sources with a substantial contribution of the source editor published as an article or a book.
@@ -3119,17 +3069,6 @@ AnnotationAssertion(rdfs:label :Software "Software"@en-us)
 EquivalentClasses(:Software obo:ERO_0000071)
 SubClassOf(:Software obo:ERO_0000071)
 
-# Class: :Sondermittel (Special funds)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Sondermittel "Be87")
-AnnotationAssertion(Meta:inhaltlicheDefinition :Sondermittel "Na100")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Sondermittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Sondermittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Sondermittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Sondermittel "Sondermittel"@de-de)
-AnnotationAssertion(rdfs:label :Sondermittel "Special funds"@en-us)
-SubClassOf(:Sondermittel :Finanzierungsform)
-
 # Class: :SonstigeBezeichnung (Other designation)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigeBezeichnung "Be46"@en-us)
@@ -3177,17 +3116,6 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :SonstigeKoope
 AnnotationAssertion(rdfs:label :SonstigeKooperationspartner "Other Cooperation partner"@en-us)
 AnnotationAssertion(rdfs:label :SonstigeKooperationspartner "Sonstige Kooperationspartner"@de-de)
 SubClassOf(:SonstigeKooperationspartner :Promotionskooperationspartner)
-
-# Class: :SonstigeMittel (Other funds)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigeMittel "Be54")
-AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigeMittel "Na104")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :SonstigeMittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :SonstigeMittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :SonstigeMittel <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :SonstigeMittel "Other funds"@en-us)
-AnnotationAssertion(rdfs:label :SonstigeMittel "Sonstige Mittel"@de-de)
-SubClassOf(:SonstigeMittel :Finanzierungsform)
 
 # Class: :SonstigeProfessoren (Other professors)
 
