@@ -51,15 +51,12 @@ Declaration(Class(:Format))
 Declaration(Class(:Forschungsdaten))
 Declaration(Class(:Forschungsfeld))
 Declaration(Class(:Forschungsinfrastruktur))
-Declaration(Class(:Forschungsinfrastrukturtyp))
 Declaration(Class(:GemeinsameBerufung))
-Declaration(Class(:GrossgeraeteUndInstrumente))
 Declaration(Class(:Habilitationsschrift))
 Declaration(Class(:HauptberuflicheGastprofessoren))
 Declaration(Class(:Herausgeber))
 Declaration(Class(:HerausgeberschaftEinesSonderheftsEinerZeitschrift))
 Declaration(Class(:Identifier))
-Declaration(Class(:InformationsUndKommunikationsinfrastrukturen))
 Declaration(Class(:IntegrierendeRessource))
 Declaration(Class(:Journalartikel))
 Declaration(Class(:Juniorprofessoren))
@@ -98,7 +95,6 @@ Declaration(Class(:SonstigeKooperationspartner))
 Declaration(Class(:SonstigeProfessoren))
 Declaration(Class(:SonstigerDokumenttyp))
 Declaration(Class(:SonstigerPublikationstyp))
-Declaration(Class(:SonstigerTyp))
 Declaration(Class(:SonstigesPersonal))
 Declaration(Class(:SonstigesWissenschaftlichesUndKuenstlerischesPersonal))
 Declaration(Class(:Stiftungsprofessoren))
@@ -113,7 +109,6 @@ Declaration(Class(:WissenschaftlicheVortragsfolien))
 Declaration(Class(:WissenschaftlicherArtikel))
 Declaration(Class(:WissenschaftlichesUndKuenstlerischesPersonal))
 Declaration(Class(:WissenschaftsunterstuetzendesPersonal))
-Declaration(Class(:Wissensressourcen))
 Declaration(Class(obo:ERO_0000004))
 Declaration(Class(obo:ERO_0000014))
 Declaration(Class(obo:ERO_0000071))
@@ -525,7 +520,7 @@ AnnotationAssertion(rdfs:label :hatMittelgeber "hat Mittelgeber"@de-de)
 SubObjectPropertyOf(:hatMittelgeber owl:topObjectProperty)
 ObjectPropertyDomain(:hatMittelgeber :Drittmittelprojekt)
 
-# Object Property: :hatNutzung (has usage)
+# Object Property: :hatNutzung (hat Nutzung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :hatNutzung "Fi8")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :hatNutzung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -885,7 +880,7 @@ SubDataPropertyOf(:BeschreibungDerForschungsinfrastruktur owl:topDataProperty)
 DataPropertyDomain(:BeschreibungDerForschungsinfrastruktur :Forschungsinfrastruktur)
 DataPropertyRange(:BeschreibungDerForschungsinfrastruktur xsd:string)
 
-# Data Property: :Besoldung (Salary)
+# Data Property: :Besoldung (Besoldung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Besoldung "Be100")
 AnnotationAssertion(Meta:inhaltlicheDefinition :Besoldung "Be40")
@@ -994,7 +989,7 @@ SubDataPropertyOf(:DatumDerPrioritaetsbegruendendenErstanmeldung owl:topDataProp
 DataPropertyDomain(:DatumDerPrioritaetsbegruendendenErstanmeldung :Patent)
 DataPropertyRange(:DatumDerPrioritaetsbegruendendenErstanmeldung xsd:dateTime)
 
-# Data Property: :Datum_der_Erteilung (Date of issue)
+# Data Property: :Datum_der_Erteilung (Datum der Erteilung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Datum_der_Erteilung "(Pa4)")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Datum_der_Erteilung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1979,7 +1974,7 @@ AnnotationAssertion(rdfs:label :Dissertation "Dissertation"@de-de)
 AnnotationAssertion(rdfs:label :Dissertation "Dissertation"@en-us)
 SubClassOf(:Dissertation :Qualifikationsschrift)
 
-# Class: :Doktorand (Doktorand/ -innen)
+# Class: :Doktorand (PhD student)
 
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Doktorand <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Doktorand <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -2114,15 +2109,6 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Forschungsinf
 AnnotationAssertion(rdfs:label :Forschungsinfrastruktur "Forschungsinfrastruktur"@de-de)
 AnnotationAssertion(rdfs:label :Forschungsinfrastruktur "Research infrastructure"@en-us)
 
-# Class: :Forschungsinfrastrukturtyp (Typ der Forschungsinfrastruktur)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Forschungsinfrastrukturtyp "Fi4")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Forschungsinfrastrukturtyp <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Forschungsinfrastrukturtyp <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Forschungsinfrastrukturtyp <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Forschungsinfrastrukturtyp "Typ der Forschungsinfrastruktur"@de-de)
-AnnotationAssertion(rdfs:label :Forschungsinfrastrukturtyp "Type of research infrastructure"@en-us)
-
 # Class: :GemeinsameBerufung (Common vocation)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :GemeinsameBerufung "Be4a")
@@ -2131,19 +2117,6 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :GemeinsameBerufu
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :GemeinsameBerufung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label :GemeinsameBerufung "Common vocation"@en-us)
 AnnotationAssertion(rdfs:label :GemeinsameBerufung "Gemeinsame Berufung"@de-de)
-
-# Class: :GrossgeraeteUndInstrumente (Großgeräte und Instrumente)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :GrossgeraeteUndInstrumente "Fi15")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :GrossgeraeteUndInstrumente <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :GrossgeraeteUndInstrumente <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :GrossgeraeteUndInstrumente <http://vivoweb.org/ontology#vitroClassGroupequipment>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :GrossgeraeteUndInstrumente <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :GrossgeraeteUndInstrumente "Großgeräte und Instrumente"@de-de)
-AnnotationAssertion(rdfs:label :GrossgeraeteUndInstrumente "Large equipment and instruments"@en-us)
-SubClassOf(:GrossgeraeteUndInstrumente :Forschungsinfrastrukturtyp)
-SubClassOf(:GrossgeraeteUndInstrumente obo:ERO_0000004)
-SubClassOf(:GrossgeraeteUndInstrumente vivo:Equipment)
 
 # Class: :Habilitationsschrift (Habilitationsschrift)
 
@@ -2223,18 +2196,6 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Identifier <http
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Identifier <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label :Identifier "Identifier"@de-de)
 AnnotationAssertion(rdfs:label :Identifier "Identifier"@en-us)
-
-# Class: :InformationsUndKommunikationsinfrastrukturen (Information and communication infrastructures)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :InformationsUndKommunikationsinfrastrukturen "Fi17")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :InformationsUndKommunikationsinfrastrukturen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :InformationsUndKommunikationsinfrastrukturen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :InformationsUndKommunikationsinfrastrukturen <http://vivoweb.org/ontology#vitroClassGroupequipment>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :InformationsUndKommunikationsinfrastrukturen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :InformationsUndKommunikationsinfrastrukturen "Information and communication infrastructures"@en-us)
-AnnotationAssertion(rdfs:label :InformationsUndKommunikationsinfrastrukturen "Informations- und Kommunikationsinfrastrukturen"@de-de)
-SubClassOf(:InformationsUndKommunikationsinfrastrukturen :Forschungsinfrastrukturtyp)
-SubClassOf(:InformationsUndKommunikationsinfrastrukturen vivo:Equipment)
 
 # Class: :IntegrierendeRessource (Integrierende Ressource)
 
@@ -2537,7 +2498,7 @@ AnnotationAssertion(rdfs:label :Qualifikationsschrift "Qualifikationsschrift"@de
 SubClassOf(:Qualifikationsschrift :Publikationstyp)
 SubClassOf(:Qualifikationsschrift bibo:Thesis)
 
-# Class: :Quellenedition (Quellenedition [Journalartikel])
+# Class: :Quellenedition (Source edition [Journal Article])
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Quellenedition "Pu130")
 AnnotationAssertion(obo:IAO_0000115 :Quellenedition "A scholarly edition of primary sources is the publication of historic or cultural sources with a substantial contribution of the source editor published as an article or a book.
@@ -2773,17 +2734,6 @@ AnnotationAssertion(rdfs:label :SonstigerPublikationstyp "Other publication type
 AnnotationAssertion(rdfs:label :SonstigerPublikationstyp "Sonstiger Publikationstyp"@de-de)
 SubClassOf(:SonstigerPublikationstyp :Publikationstyp)
 
-# Class: :SonstigerTyp (Other type)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigerTyp "Fi18")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :SonstigerTyp <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :SonstigerTyp <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :SonstigerTyp <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :SonstigerTyp "Other type"@en-us)
-AnnotationAssertion(rdfs:label :SonstigerTyp "Sonstiger Typ"@de-de)
-SubClassOf(:SonstigerTyp :Forschungsinfrastrukturtyp)
-SubClassOf(:SonstigerTyp vivo:Equipment)
-
 # Class: :SonstigesPersonal (Other staff)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigesPersonal "Be73")
@@ -2985,18 +2935,6 @@ AnnotationAssertion(vitro:inClassGroup :WissenschaftsunterstuetzendesPersonal <h
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :WissenschaftsunterstuetzendesPersonal <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label :WissenschaftsunterstuetzendesPersonal "Wissenschaftsunterstützendes Personal"@de-de)
 SubClassOf(:WissenschaftsunterstuetzendesPersonal :Personalkategorie)
-
-# Class: :Wissensressourcen (Knowledge resources)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Wissensressourcen "Fi16")
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Wissensressourcen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Wissensressourcen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :Wissensressourcen <http://vivoweb.org/ontology#vitroClassGroupequipment>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Wissensressourcen <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label :Wissensressourcen "Knowledge resources"@en-us)
-AnnotationAssertion(rdfs:label :Wissensressourcen "Wissensressourcen"@de-de)
-SubClassOf(:Wissensressourcen :Forschungsinfrastrukturtyp)
-SubClassOf(:Wissensressourcen vivo:Equipment)
 
 
 )
