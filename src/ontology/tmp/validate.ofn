@@ -11,7 +11,7 @@ Prefix(vitro:=<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>)
 
 
 Ontology(<http://kerndatensatz-forschung.de/owl/Basis>
-<http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-05-25/KDSF-VIVO-Integration.owl>
+<http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-05-31/KDSF-VIVO-Integration.owl>
 Annotation(terms:rights <https://creativecommons.org/licenses/by-sa/4.0/>)
 Annotation(vitro:ontologyPrefixAnnot "kdsf")
 Annotation(rdfs:comment "This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.\"
@@ -20,7 +20,7 @@ The ontology is forked for update to the current KDSF standard at version 1.3 fo
 Annotation(rdfs:comment "This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International."^^xsd:string)
 Annotation(rdfs:label "KDSF-VIVO-Alignment"@de-de)
 Annotation(owl:versionInfo "2017-01-04"^^xsd:string)
-Annotation(owl:versionInfo "2023-05-25"^^xsd:string)
+Annotation(owl:versionInfo "2023-05-31"^^xsd:string)
 
 Declaration(Class(:AUF))
 Declaration(Class(:ArbeitspapierForschungsbericht))
@@ -34,7 +34,6 @@ Declaration(Class(:Beschaeftigter))
 Declaration(Class(:Beschaeftigung))
 Declaration(Class(:Bibliographie))
 Declaration(Class(:Buch))
-Declaration(Class(:Dissertation))
 Declaration(Class(:Doktorand))
 Declaration(Class(:Dokumenttyp))
 Declaration(Class(:Drittmittelprojekt))
@@ -117,6 +116,7 @@ Declaration(Class(<http://purl.org/ontology/bibo/Patent>))
 Declaration(Class(<http://purl.org/ontology/bibo/Report>))
 Declaration(Class(<http://purl.org/ontology/bibo/Slideshow>))
 Declaration(Class(<http://purl.org/ontology/bibo/Thesis>))
+Declaration(Class(<http://purl.org/spar/fabio/DoctoralThesis>))
 Declaration(Class(<http://vivoweb.org/ontology/core#Company>))
 Declaration(Class(<http://vivoweb.org/ontology/core#ConferencePoster>))
 Declaration(Class(<http://vivoweb.org/ontology/core#Dataset>))
@@ -125,9 +125,11 @@ Declaration(Class(<http://vivoweb.org/ontology/core#EditorialArticle>))
 Declaration(Class(<http://vivoweb.org/ontology/core#EducationalProcess>))
 Declaration(Class(<http://vivoweb.org/ontology/core#Equipment>))
 Declaration(Class(<http://vivoweb.org/ontology/core#FacultyMember>))
+Declaration(Class(<http://vivoweb.org/ontology/core#Position>))
 Declaration(Class(<http://vivoweb.org/ontology/core#Program>))
 Declaration(Class(<http://vivoweb.org/ontology/core#Project>))
 Declaration(Class(<http://vivoweb.org/ontology/core#Publisher>))
+Declaration(Class(<http://vivoweb.org/ontology/core#Relationship>))
 Declaration(Class(<http://vivoweb.org/ontology/core#Review>))
 Declaration(Class(<http://vivoweb.org/ontology/core#University>))
 Declaration(Class(<http://xmlns.com/foaf/0.1/Organization>))
@@ -532,7 +534,7 @@ AnnotationAssertion(rdfs:label :hatMittelgeber "hat Mittelgeber"@de-de)
 SubObjectPropertyOf(:hatMittelgeber owl:topObjectProperty)
 ObjectPropertyDomain(:hatMittelgeber :Drittmittelprojekt)
 
-# Object Property: :hatNutzung (has usage)
+# Object Property: :hatNutzung (hat Nutzung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :hatNutzung "Fi8")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :hatNutzung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1001,7 +1003,7 @@ SubDataPropertyOf(:DatumDerPrioritaetsbegruendendenErstanmeldung owl:topDataProp
 DataPropertyDomain(:DatumDerPrioritaetsbegruendendenErstanmeldung :Patent)
 DataPropertyRange(:DatumDerPrioritaetsbegruendendenErstanmeldung xsd:dateTime)
 
-# Data Property: :Datum_der_Erteilung (Date of issue)
+# Data Property: :Datum_der_Erteilung (Datum der Erteilung)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Datum_der_Erteilung "(Pa4)")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Datum_der_Erteilung <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1076,6 +1078,9 @@ AnnotationAssertion(Meta:pgbid :Foerderer "dcterms.funding")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Foerderer <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Foerderer <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Foerderer <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment :Foerderer "An Institution, which has financially supported the research underlying this publication. If available, funding information from bibliometric databases shall be imported and inserted here"@en-us)
+AnnotationAssertion(rdfs:comment :Foerderer "Eine Institution, die für die Publikation erbrachte Forschung (mit-)finanziert hat. Falls vorhanden, sollen hier importierte Förderinformationen aus Publikationsdatenbanken angegeben werden.
+Nach Möglichkeit zu erfassen, z.B. wenn in Publikation angegeben. Empfohlen wird die Erfassung nach Fundref (https://www.crossref.org/services/funder-registry/) und/oder ISNI-Standard (im letzten Fall gemeinsam mit der ISNI-ID)."@de-de)
 AnnotationAssertion(rdfs:label :Foerderer "Funders"@en-us)
 AnnotationAssertion(rdfs:label :Foerderer "Förderer"@de-de)
 SubDataPropertyOf(:Foerderer owl:topDataProperty)
@@ -1121,7 +1126,7 @@ SubDataPropertyOf(:Heft owl:topDataProperty)
 DataPropertyDomain(:Heft :Format)
 DataPropertyRange(:Heft xsd:string)
 
-# Data Property: :IdentifierName (Name of the identifier)
+# Data Property: :IdentifierName (Name des Identifiers)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :IdentifierName "Pu133")
 AnnotationAssertion(Meta:pgbid :IdentifierName "dcterms.identifier.name")
@@ -1815,6 +1820,8 @@ SubClassOf(:AUF :Promotionskooperationspartner)
 # Class: :ArbeitspapierForschungsbericht (Working Paper/Research Report)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :ArbeitspapierForschungsbericht "Pu37")
+AnnotationAssertion(obo:IAO_0000115 :ArbeitspapierForschungsbericht "A working paper is a public scientific publication that is issued either by the institution where the research takes place, or was made on behalf of an institution. This publication type also contains: appraisals, research and final reports of public institutions, scientific expertise and resources]."@en-us)
+AnnotationAssertion(obo:IAO_0000115 :ArbeitspapierForschungsbericht "Ein Arbeitspapier ist eine öffentliche wissenschaftliche Publikation, die entweder von der Institution herausgegeben wird, in der die Forschung stattfindet, oder im Auftrag einer Institution angefertigt wurde. Dieser Publikationstyp enthält auch: Gutachten, Forschungs- und Abschlussberichte öffentlicher Einrichtungen, wissenschaftliche Expertisen und Studien]."@de-de)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :ArbeitspapierForschungsbericht <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :ArbeitspapierForschungsbericht <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup :ArbeitspapierForschungsbericht <http://vivoweb.org/ontology#vitroClassGrouppublications>)
@@ -1972,21 +1979,6 @@ AnnotationAssertion(rdfs:label :Buch "Buch"@de-de)
 EquivalentClasses(:Buch <http://purl.org/ontology/bibo/Book>)
 SubClassOf(:Buch <http://purl.org/ontology/bibo/Book>)
 
-# Class: :Dissertation (Dissertation)
-
-AnnotationAssertion(Meta:inhaltlicheDefinition :Dissertation "Pu34")
-AnnotationAssertion(obo:IAO_0000115 :Dissertation "A dissertation is a scientific work needed for the completion of a doctorate (PhD) degree."@en-us)
-AnnotationAssertion(obo:IAO_0000115 :Dissertation "Eine Dissertation ist eine wissenschaftliche Arbeit für den Erwerb des Doktorgrades."@de-de)
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Dissertation <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Dissertation <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup :Dissertation <http://vivoweb.org/ontology#vitroClassGrouppublications>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Dissertation <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:comment :Dissertation "A dissertation is a scientific work needed for the completion of a doctorate (PhD) degree."@en-us)
-AnnotationAssertion(rdfs:comment :Dissertation "Eine Dissertation ist eine wissenschaftliche Arbeit für den Erwerb des Doktorgrades."@de-de)
-AnnotationAssertion(rdfs:label :Dissertation "Dissertation"@de-de)
-AnnotationAssertion(rdfs:label :Dissertation "Dissertation"@en-us)
-SubClassOf(:Dissertation :Qualifikationsschrift)
-
 # Class: :Doktorand (Doktorand/ -innen)
 
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Doktorand <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -1998,6 +1990,7 @@ AnnotationAssertion(rdfs:comment :Doktorand "Persons who are in an employment re
 AnnotationAssertion(rdfs:label :Doktorand "Doktorand/ -innen"@de-de)
 AnnotationAssertion(rdfs:label :Doktorand "PhD student"@en-us)
 SubClassOf(:Doktorand :Person)
+SubClassOf(:Doktorand <http://vivoweb.org/ontology/core#Position>)
 SubClassOf(:Doktorand <http://xmlns.com/foaf/0.1/Person>)
 
 # Class: :Dokumenttyp (Document type)
@@ -2051,6 +2044,8 @@ SubClassOf(:Editorial <http://vivoweb.org/ontology/core#EditorialArticle>)
 # Class: :FH (University of Applied Sciences)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :FH "Na93")
+AnnotationAssertion(obo:IAO_0000115 :FH "Angabe, ob die Personen über eine Kooperation mit einer Fachhochschule promoviert haben oder promovieren"@de-de)
+AnnotationAssertion(obo:IAO_0000115 :FH "Indication of whether the persons have obtained or are obtaining a doctorate through a cooperation with a university of applied sciences"@en-us)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :FH <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :FH <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup :FH <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
@@ -2071,6 +2066,10 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Fach <http://vit
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Fach <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label :Fach "Fach"@de-de)
 AnnotationAssertion(rdfs:label :Fach "Subject"@en-us)
+
+# Class: :Foerderer (Förderer)
+
+SubClassOf(:Foerderer <http://vivoweb.org/ontology/core#Relationship>)
 
 # Class: :Format (Format)
 
@@ -2181,6 +2180,7 @@ RDA-Bezeichnung: Mitwirkender/Mitwirkende"@de-de)
 AnnotationAssertion(rdfs:label :Herausgeber "Editor"@en-us)
 AnnotationAssertion(rdfs:label :Herausgeber "Herausgeber/-in"@de-de)
 SubClassOf(:Herausgeber :Schoepfertyp)
+SubClassOf(:Herausgeber <http://vivoweb.org/ontology/core#Relationship>)
 
 # Class: :HerausgeberschaftEinesSonderheftsEinerZeitschrift (Herausgeberschaft eines Sonderhefts einer Zeitschrift)
 
@@ -2291,6 +2291,8 @@ SubClassOf(:Konferenzpaper :Konferenzbeitrag)
 # Class: :Konferenzposter (Conference Poster)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Konferenzposter "Pu26")
+AnnotationAssertion(obo:IAO_0000115 :Konferenzposter "A conference poster is a visual presentation of academic endeavor that has been presented at a conference and is published as such or as short contribution in the proceedings or separately and is available there permanently."@en-us)
+AnnotationAssertion(obo:IAO_0000115 :Konferenzposter "Ein Konferenzposter ist eine visuelle Präsentation akademische Arbeit, die auf einer Konferenz präsentiert und als solche bzw. als Kurzbeitrag im Konferenzband oder separat veröffentlicht wurde und permanent verfügbar ist."@de-de)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Konferenzposter <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Konferenzposter <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup :Konferenzposter <http://vivoweb.org/ontology#vitroClassGrouppublications>)
@@ -2372,6 +2374,7 @@ AnnotationAssertion(rdfs:comment :OrdentlicheProfessoren "Professors employed on
 AnnotationAssertion(rdfs:label :OrdentlicheProfessoren "Full professors"@en-us)
 AnnotationAssertion(rdfs:label :OrdentlicheProfessoren "Ordentliche Professor/-innen"@de-de)
 SubClassOf(:OrdentlicheProfessoren :Professorenbezeichnung)
+SubClassOf(:OrdentlicheProfessoren <http://vivoweb.org/ontology/core#Position>)
 
 # Class: :Organisationseinheit (Organisational unit)
 
@@ -2446,6 +2449,8 @@ SubClassOf(:Preprint :Artikel)
 # Class: :Professoren (Professors)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Professoren "Be19")
+AnnotationAssertion(obo:IAO_0000115 :Professoren "Die Professor/-innen (einschließlich Juniorprofessor/-innen) nehmen die ihrer Einrichtung jeweils obliegenden Aufgaben in Wissenschaft und Kunst, Forschung und Lehre in ihren Fächern nach näherer Ausgestaltung ihres Dienstverhältnisses selbständig wahr."@de-de)
+AnnotationAssertion(obo:IAO_0000115 :Professoren "The professors (including junior professors) shall independently perform the duties of their institution in science and art, research and teaching in their subjects in accordance with the more detailed provisions of their employment contracts."@en-us)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Professoren <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Professoren <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup :Professoren <http://vivoweb.org/ontology#vitroClassGrouppeople>)
@@ -2454,6 +2459,7 @@ AnnotationAssertion(rdfs:label :Professoren "Professor/-innen"@de-de)
 AnnotationAssertion(rdfs:label :Professoren "Professors"@en-us)
 SubClassOf(:Professoren :WissenschaftlichesUndKuenstlerischesPersonal)
 SubClassOf(:Professoren <http://vivoweb.org/ontology/core#FacultyMember>)
+SubClassOf(:Professoren <http://vivoweb.org/ontology/core#Position>)
 
 # Class: :Professorenbezeichnung (Designation for professors)
 
@@ -2464,7 +2470,7 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Professorenbe
 AnnotationAssertion(rdfs:label :Professorenbezeichnung "Bezeichnung für Professoren"@de-de)
 AnnotationAssertion(rdfs:label :Professorenbezeichnung "Designation for professors"@en-us)
 
-# Class: :Promotionskooperationspartner (PhD cooperation partner)
+# Class: :Promotionskooperationspartner (Promotionskooperationspartner)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Promotionskooperationspartner "Na86")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Promotionskooperationspartner <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -2473,6 +2479,7 @@ AnnotationAssertion(vitro:inClassGroup :Promotionskooperationspartner <http://vi
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Promotionskooperationspartner <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label :Promotionskooperationspartner "PhD cooperation partner"@en-us)
 AnnotationAssertion(rdfs:label :Promotionskooperationspartner "Promotionskooperationspartner"@de-de)
+SubClassOf(:Promotionskooperationspartner <http://vivoweb.org/ontology/core#Relationship>)
 SubClassOf(:Promotionskooperationspartner <http://xmlns.com/foaf/0.1/Organization>)
 
 # Class: :Publikation (Publikation)
@@ -2516,7 +2523,7 @@ AnnotationAssertion(rdfs:label :Qualifikationsschrift "Qualifikationsschrift"@de
 SubClassOf(:Qualifikationsschrift :Publikationstyp)
 SubClassOf(:Qualifikationsschrift <http://purl.org/ontology/bibo/Thesis>)
 
-# Class: :Quellenedition (Quellenedition [Journalartikel])
+# Class: :Quellenedition (Source edition [Journal Article])
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Quellenedition "Pu130")
 AnnotationAssertion(obo:IAO_0000115 :Quellenedition "A scholarly edition of primary sources is the publication of historic or cultural sources with a substantial contribution of the source editor published as an article or a book.
@@ -2657,6 +2664,8 @@ AnnotationAssertion(rdfs:label :Schoepfertyp "Schöpfer/-innentyp"@de-de)
 # Class: :Seniorprofessoren (Seniorprofessor/-innen)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :Seniorprofessoren "Be31")
+AnnotationAssertion(obo:IAO_0000115 :Seniorprofessoren "A senior professor works with contractually defined rights and duties in research and teaching"@en-us)
+AnnotationAssertion(obo:IAO_0000115 :Seniorprofessoren "Ein/-e Seniorprofessor/-in arbeitet mit vertraglich festgelegten Rechten und Pflichten im Forschungs- und Lehrbetrieb"@de-de)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Seniorprofessoren <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Seniorprofessoren <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup :Seniorprofessoren <http://vivoweb.org/ontology#vitroClassGrouppeople>)
@@ -2700,7 +2709,7 @@ SubClassOf(:SonstigeBezeichnung :SonstigeProfessoren)
 
 # Class: :SonstigeKooperationspartner (Sonstige Kooperationspartner)
 
-AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigeKooperationspartner "Na97"@en-us)
+AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigeKooperationspartner "Na97")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :SonstigeKooperationspartner <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :SonstigeKooperationspartner <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup :SonstigeKooperationspartner <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
@@ -2712,12 +2721,15 @@ SubClassOf(:SonstigeKooperationspartner :Promotionskooperationspartner)
 # Class: :SonstigeProfessoren (Other professors)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigeProfessoren "Be88")
+AnnotationAssertion(obo:IAO_0000115 :SonstigeProfessoren "Professor/-innen, die den Kategorien Juniorprofessor/-innen (falls nicht unter Juniorprofessor/-innen (Be29) subsumiert), Stiftungsprofessor/-innen, Vertretungsprofessor/-innen / Lehrstuhlvertreter/-innen, Seniorprofessor/-innen, Hauptberufliche Gastprofessor/-innen zugeordnet sind."@de-de)
+AnnotationAssertion(obo:IAO_0000115 :SonstigeProfessoren "Professors assigned to the categories junior professor (if not subsumed under junior professor (Be29)), endowed professor, substitute professor / chair representative, senior professor, full-time visiting professor."@en-us)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :SonstigeProfessoren <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :SonstigeProfessoren <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :SonstigeProfessoren <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label :SonstigeProfessoren "Other professors"@en-us)
 AnnotationAssertion(rdfs:label :SonstigeProfessoren "Sonstige Professor/-innen"@de-de)
 SubClassOf(:SonstigeProfessoren :Professorenbezeichnung)
+SubClassOf(:SonstigeProfessoren <http://vivoweb.org/ontology/core#Position>)
 
 # Class: :SonstigerDokumenttyp (Other document type)
 
@@ -2765,17 +2777,23 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :SonstigesPers
 AnnotationAssertion(rdfs:label :SonstigesPersonal "Other staff"@en-us)
 AnnotationAssertion(rdfs:label :SonstigesPersonal "Sonstiges Personal"@de-de)
 SubClassOf(:SonstigesPersonal :Personalkategorie)
+SubClassOf(:SonstigesPersonal <http://vivoweb.org/ontology/core#Position>)
 
 # Class: :SonstigesWissenschaftlichesUndKuenstlerischesPersonal (Other scientific and artistic staff)
 
-AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigesWissenschaftlichesUndKuenstlerischesPersonal "Be85"@en)
+AnnotationAssertion(Meta:inhaltlicheDefinition :SonstigesWissenschaftlichesUndKuenstlerischesPersonal "Be85")
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :SonstigesWissenschaftlichesUndKuenstlerischesPersonal <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :SonstigesWissenschaftlichesUndKuenstlerischesPersonal <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup :SonstigesWissenschaftlichesUndKuenstlerischesPersonal <http://vivoweb.org/ontology#vitroClassGrouppeople>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :SonstigesWissenschaftlichesUndKuenstlerischesPersonal <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment :SonstigesWissenschaftlichesUndKuenstlerischesPersonal "Includes teaching staff for special tasks as well as assistants and
+lecturers."@en-us)
+AnnotationAssertion(rdfs:comment :SonstigesWissenschaftlichesUndKuenstlerischesPersonal "Umfasst Lehrkräfte für besondere Aufgaben sowie Assistenten und
+Dozenten."@de-de)
 AnnotationAssertion(rdfs:label :SonstigesWissenschaftlichesUndKuenstlerischesPersonal "Other scientific and artistic staff"@en-us)
 AnnotationAssertion(rdfs:label :SonstigesWissenschaftlichesUndKuenstlerischesPersonal "Sonstiges wissenschaftliches und künstlerisches Personal"@de-de)
 SubClassOf(:SonstigesWissenschaftlichesUndKuenstlerischesPersonal :WissenschaftlichesUndKuenstlerischesPersonal)
+SubClassOf(:SonstigesWissenschaftlichesUndKuenstlerischesPersonal <http://vivoweb.org/ontology/core#Position>)
 
 # Class: :Stiftungsprofessoren (Stiftungsprofessor/-innen)
 
@@ -2880,8 +2898,11 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Verwaltungsperso
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :Verwaltungspersonal <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup :Verwaltungspersonal <http://vivoweb.org/ontology#vitroClassGrouppeople>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Verwaltungspersonal <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment :Verwaltungspersonal "Hinweis: Das wissenschaftsnahe, das wissenschaftsunterstützende und das Verwaltungspersonal entsprechen in Summe dem nichtwissenschaftlichen Personal bei Destatis"@de-de)
+AnnotationAssertion(rdfs:comment :Verwaltungspersonal "Note: The science-related, science-supporting and administrative staff correspond in total to the non-scientific staff at Destatis."@en-us)
 AnnotationAssertion(rdfs:label :Verwaltungspersonal "Verwaltungspersonal"@de-de)
 SubClassOf(:Verwaltungspersonal :Personalkategorie)
+SubClassOf(:Verwaltungspersonal <http://vivoweb.org/ontology/core#Position>)
 
 # Class: :WissenschaftlicheOderKuenstlerischeHilfskraefte (Wissenschaftliche oder künstlerische Hilfskräfte)
 
@@ -2890,13 +2911,26 @@ AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :Wissenschaftlich
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :WissenschaftlicheOderKuenstlerischeHilfskraefte <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup :WissenschaftlicheOderKuenstlerischeHilfskraefte <http://vivoweb.org/ontology#vitroClassGrouppeople>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :WissenschaftlicheOderKuenstlerischeHilfskraefte <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment :WissenschaftlicheOderKuenstlerischeHilfskraefte "Die Definition von wissenschaftlichen oder künstlerischen Hilfskräften richtet sich nach den jeweiligen Landeshochschulgesetzen"@de-de)
+AnnotationAssertion(rdfs:comment :WissenschaftlicheOderKuenstlerischeHilfskraefte "The definition of academic or artistic assistants is governed by the respective Land higher education acts"@en-us)
 AnnotationAssertion(rdfs:label :WissenschaftlicheOderKuenstlerischeHilfskraefte "Scientific or artistic assistants"@en-us)
 AnnotationAssertion(rdfs:label :WissenschaftlicheOderKuenstlerischeHilfskraefte "Wissenschaftliche oder künstlerische Hilfskräfte"@de-de)
 SubClassOf(:WissenschaftlicheOderKuenstlerischeHilfskraefte :WissenschaftlichesUndKuenstlerischesPersonal)
+SubClassOf(:WissenschaftlicheOderKuenstlerischeHilfskraefte <http://vivoweb.org/ontology/core#Position>)
 
 # Class: :WissenschaftlicheUndKuenstlerischeMitarbeiter (Scientific and artistic staff)
 
 AnnotationAssertion(Meta:inhaltlicheDefinition :WissenschaftlicheUndKuenstlerischeMitarbeiter "Be22")
+AnnotationAssertion(obo:IAO_0000115 :WissenschaftlicheUndKuenstlerischeMitarbeiter "Academic staff are the civil servants and employees assigned to the departments, academic institutions or operational units who are responsible for academic services. Scientific services also include providing students with specialist knowledge and practical skills and instructing them in the application of scientific methods, insofar as this is necessary to ensure the required teaching. In the field of medicine, scientific services also include activities in patient care.
+
+Persons working full-time at the higher education institution or research institution with medical, dental or veterinary duties who are not professors or university lecturers shall, as a rule, be treated in the same way as academic staff in terms of service and membership.
+
+Corresponding regulations apply to artistic staff"@en-us)
+AnnotationAssertion(obo:IAO_0000115 :WissenschaftlicheUndKuenstlerischeMitarbeiter "Wissenschaftliche Mitarbeiter/-innen sind die den Fachbereichen, den wissenschaftlichen Einrichtungen oder den Betriebseinheiten zugeordnete Beamte/Beamtinnen und Angestellte, denen wissenschaftliche Dienstleistungen obliegen. Zu den wissenschaftlichen Dienstleistungen gehört es auch, Student/-innen Fachwissen und praktische Fertigkeiten zu vermitteln und sie in der Anwendung wissenschaftlicher Methoden zu unterweisen, soweit dies zur Gewährleistung des erforderlichen Lehrangebots notwendig ist. Im Bereich der Medizin zählen zu den wissenschaftlichen Dienstleistungen auch Tätigkeiten in der Krankenversorgung.
+
+Hauptberuflich an der Hochschule oder Forschungseinrichtung tätige Personen mit ärztlichen, zahnärztlichen oder tierärztlichen Aufgaben, die nicht Professor/-in oder Hochschuldozent/-in sind, sind in der Regel dienst- und mitgliedschaftsrechtlich den wissenschaftlichen Mitarbeitern/Mitarbeiterinnen gleichgestellt.
+
+Entsprechende Regelungen gelten für künstlerische Mitarbeiter/-innen"@de-de)
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot :WissenschaftlicheUndKuenstlerischeMitarbeiter <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot :WissenschaftlicheUndKuenstlerischeMitarbeiter <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup :WissenschaftlicheUndKuenstlerischeMitarbeiter <http://vivoweb.org/ontology#vitroClassGrouppeople>)
@@ -2904,6 +2938,7 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot :Wissenschaftl
 AnnotationAssertion(rdfs:label :WissenschaftlicheUndKuenstlerischeMitarbeiter "Scientific and artistic staff"@en-us)
 AnnotationAssertion(rdfs:label :WissenschaftlicheUndKuenstlerischeMitarbeiter "Wissenschaftliche und künstlerische Mitarbeiter/-innen"@de-de)
 SubClassOf(:WissenschaftlicheUndKuenstlerischeMitarbeiter :WissenschaftlichesUndKuenstlerischesPersonal)
+SubClassOf(:WissenschaftlicheUndKuenstlerischeMitarbeiter <http://vivoweb.org/ontology/core#Position>)
 
 # Class: :WissenschaftlicheVortragsfolien (Scientific presentation slides)
 
@@ -2981,6 +3016,20 @@ SubClassOf(<http://purl.org/ontology/bibo/Report> :ArbeitspapierForschungsberich
 # Class: <http://purl.org/ontology/bibo/Slideshow> (<http://purl.org/ontology/bibo/Slideshow>)
 
 SubClassOf(<http://purl.org/ontology/bibo/Slideshow> :WissenschaftlicheVortragsfolien)
+
+# Class: <http://purl.org/spar/fabio/DoctoralThesis> (Dissertation)
+
+AnnotationAssertion(Meta:inhaltlicheDefinition <http://purl.org/spar/fabio/DoctoralThesis> "Pu34")
+AnnotationAssertion(obo:IAO_0000115 <http://purl.org/spar/fabio/DoctoralThesis> "A dissertation is an academic work needed for the completion of a doctorate (PhD) degree."@en-us)
+AnnotationAssertion(obo:IAO_0000115 <http://purl.org/spar/fabio/DoctoralThesis> "Eine Dissertation ist eine wissenschaftliche Arbeit für den Erwerb des Doktorgrades."@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://purl.org/spar/fabio/DoctoralThesis> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://purl.org/spar/fabio/DoctoralThesis> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://purl.org/spar/fabio/DoctoralThesis> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment <http://purl.org/spar/fabio/DoctoralThesis> "A dissertation is an academic work needed for the completion of a doctorate (PhD) degree."@en-us)
+AnnotationAssertion(rdfs:comment <http://purl.org/spar/fabio/DoctoralThesis> "Eine Dissertation ist eine wissenschaftliche Arbeit für den Erwerb des Doktorgrades."@de-de)
+AnnotationAssertion(rdfs:label <http://purl.org/spar/fabio/DoctoralThesis> "Dissertation"@de-de)
+AnnotationAssertion(rdfs:label <http://purl.org/spar/fabio/DoctoralThesis> "Dissertation"@en-us)
+SubClassOf(<http://purl.org/spar/fabio/DoctoralThesis> :Qualifikationsschrift)
 
 # Class: <http://vivoweb.org/ontology/core#ConferencePoster> (<http://vivoweb.org/ontology/core#ConferencePoster>)
 
