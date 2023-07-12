@@ -1,4 +1,4 @@
-
+![Build Status](https://github.com/BUA-VIVO/VIVO-KDSF-Integration/workflows/CI/badge.svg)
 # KDSF-VIVO-Alignment
 
 _KDSF ontology alignment (Kerndatensatz Forschung = Research Core Dataset) for use in VIVO. KDSF is a German national standard, therefore the description is in German only._
@@ -39,7 +39,6 @@ Damit die kdsf- und kdsf-vivo-Properties in den VIVO-Profilen angezeigt werden, 
 Die Dateien sind in VIVO 1.9.X getestet.
 
 # Vorgehen und Stand der Entwicklung
-* Englischsprachige Labels sind noch nicht enthalten
 * Ausbau der Dokumentation
 
 # Lizenz
@@ -54,3 +53,6 @@ Der Kerndatensatz Forschung steht unter der Lizenz [Creative Commons Attribution
 * Tatiana Walther
 * Anna Kasprzik
 * Christian Hauschke
+
+# Refactoring and Update to KDSF V. 1.3
+* Rolf Guescini

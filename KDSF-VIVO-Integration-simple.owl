@@ -1,0 +1,728 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/KDSF-VIVO-Integration-simple.owl#"
+     xml:base="http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/KDSF-VIVO-Integration-simple.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Meta="http://kerndatensatz-forschung.de/owl/Meta#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
+    <owl:Ontology rdf:about="http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/KDSF-VIVO-Integration-simple.owl">
+        <owl:versionIRI rdf:resource="http://kerndatensatz-forschung.de/owl/Basis/KDSF-VIVO-Integration/releases/2023-05-24/KDSF-VIVO-Integration-simple.owl"/>
+        <terms:rights rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <vitro:ontologyPrefixAnnot>kdsf</vitro:ontologyPrefixAnnot>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is an adoption of the Research Core Dataset (KDSF). This alignment was originally created by Tatiana Walther, Anna Kasprzik and Christian Hauschke (Technische Informationsbibliothek (TIB)) for use in current research information system VIVO. The prior version vas  tested with VIVO 1.9.&quot;
+
+The ontology is forked for update to the current KDSF standard at version 1.3 for use by the Berlin University Alliance, and redeveloped by Rolf Guescini (Humboldt-Universität Berlin), and will be tested against VIVO 1.13.x</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is available under the Creative Commons Attribution-ShareAlike 4.0 International.</rdfs:comment>
+        <rdfs:label xml:lang="de-de">KDSF-VIVO-Alignment</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-01-04</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-24</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition -->
+
+    <owl:AnnotationProperty rdf:about="http://kerndatensatz-forschung.de/owl/Meta#inhaltlicheDefinition">
+        <rdfs:label>inhaltliche Definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Meta#pgbid -->
+
+    <owl:AnnotationProperty rdf:about="http://kerndatensatz-forschung.de/owl/Meta#pgbid">
+        <rdfs:label>ID der PGB</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRankAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRankAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#Foerderorganisation -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#Foerderorganisation">
+        <Meta:inhaltlicheDefinition>Dr16</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">Funding organisation</rdfs:label>
+        <rdfs:label xml:lang="de-de">Förderorganisation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#WissenschaftlicheProjektleiter -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#WissenschaftlicheProjektleiter">
+        <Meta:inhaltlicheDefinition>Dr31</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has Scientific Project Manager</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Wissenschaftliche Projektleiter/-in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#ZweckdesProjekts -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#ZweckdesProjekts">
+        <Meta:inhaltlicheDefinition>Dr32</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de-de">Zweck des Projekts</rdfs:label>
+        <rdfs:label xml:lang="en-us">purpose of project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatArt -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatArt">
+        <Meta:inhaltlicheDefinition>Fi5</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de-de">hat Art</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatBefristung -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatBefristung">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <Meta:inhaltlicheDefinition>Be10</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has time limit</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Befristung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatBeschaeftigung -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatBeschaeftigung">
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:comment xml:lang="de-de">Beziehung zwischen Personen und Beschäftigung</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Relationship between people and employment</rdfs:comment>
+        <rdfs:label xml:lang="en-us">has Employment</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Beschäftigung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatBetreiber -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatBetreiber">
+        <Meta:inhaltlicheDefinition>Fi11</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has operator</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Betreiber/ -in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatBetriebspersonal -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatBetriebspersonal">
+        <Meta:inhaltlicheDefinition>Fi13</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de-de">hat Betriebspersonal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatBezeichnung -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatBezeichnung">
+        <Meta:inhaltlicheDefinition>Be41</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has designation</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Bezeichnung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatDokumenttyp -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatDokumenttyp">
+        <Meta:inhaltlicheDefinition>Pu101</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.type.document</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has document type</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Dokumenttyp</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatErfinder -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatErfinder">
+        <Meta:inhaltlicheDefinition>Pa5</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has inventor</rdfs:label>
+        <rdfs:label xml:lang="en-us">hat Erfinder/-in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatErstbetreuer -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatErstbetreuer">
+        <Meta:inhaltlicheDefinition>Na47</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de-de">hat Erstbetreuerin / Erstbetreuer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatFach -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatFach">
+        <Meta:inhaltlicheDefinition>Be38</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Dr28</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na2</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pa1</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pu138</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de-de">hat Fach</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatFinanzierungsform -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatFinanzierungsform">
+        <Meta:inhaltlicheDefinition>Be8</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na14</Meta:inhaltlicheDefinition>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de-de">hat Finanzierungsform</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatFormat -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatFormat">
+        <Meta:inhaltlicheDefinition>Pu87</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>dcterms.format</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has format</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatForschungsfeld -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatForschungsfeld">
+        <Meta:inhaltlicheDefinition xml:lang="de-de">Be77</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition xml:lang="de-de">Dr124</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition xml:lang="de-de">Na66</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition xml:lang="de-de">Pa36</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition xml:lang="de-de">Pu141</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has field of research</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Forschungsfeld</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatGemeinsameBerufung -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatGemeinsameBerufung">
+        <Meta:inhaltlicheDefinition>Be4a</Meta:inhaltlicheDefinition>
+        <obo:IAO_0000115 xml:lang="de-de">Gemeinsame Berufungen setzen ein gemeinsames Berufungsverfahren einer Hochschule und einer Forschungseinrichtung voraus (näher erläutert in &quot;Gemeinsame Berufungen von leitenden Wissenschaftlerinnen und Wissenschaftlern durch Hochschulen und außerhochschulische Forschungseinrichtungen&quot; der Gemeinsamen Wissenschaftskonferenz https://www.gwk-bonn.de/fileadmin/Redaktion/Dokumente/Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">Joint vocations require a joint appointment procedure of a university and a research institution (explained in more detail in &quot;Joint vocations of leading scientists by universities and non-university research institutions&quot; of the Joint Science Conference https://www.gwk-bonn.de/fileadmin/Redaktion/Documents /Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf).</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:comment xml:lang="de-de">Gemeinsame Berufungen setzen ein gemeinsames Berufungsverfahren einer Hochschule und einer Forschungseinrichtung voraus (näher erläutert in &quot;Gemeinsame Berufungen von leitenden Wissenschaftlerinnen und Wissenschaftlern durch Hochschulen und außerhochschulische Forschungseinrichtungen&quot; der Gemeinsamen Wissenschaftskonferenz https://www.gwk-bonn.de/fileadmin/Redaktion/Dokumente/Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf).</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Joint vocations require a joint appointment procedure of a university and a research institution (explained in more detail in &quot;Joint vocations of leading scientists by universities and non-university research institutions&quot; of the Joint Science Conference https://www.gwk-bonn.de/fileadmin/Redaktion/Documents /Papers/GWK-Heft-37-Gemeinsame-Berufungen.pdf).</rdfs:comment>
+        <rdfs:label xml:lang="en-us">has common vocation</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat gemeinsame Berufung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatIdentifier">
+        <Meta:inhaltlicheDefinition>Pu132</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>dcterms.identifier</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has identifier</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Identifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatKooperationspartner -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatKooperationspartner">
+        <Meta:inhaltlicheDefinition>Na86</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has cooperation partner</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Kooperationspartner</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatKoordinator -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatKoordinator">
+        <Meta:inhaltlicheDefinition>Fi12</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has coordinator</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Koordinator/-in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatMittelgeber -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatMittelgeber">
+        <Meta:inhaltlicheDefinition>Dr12</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de-de">hat Mittelgeber</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatNutzung -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatNutzung">
+        <Meta:inhaltlicheDefinition>Fi8</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has usage</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Nutzung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatOrganisationseinheit -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatOrganisationseinheit">
+        <Meta:inhaltlicheDefinition>Be75</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Dr121</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na92</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pa35</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pu140</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has organizational unit</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Organisationseinheit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatPersonalkategorie -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatPersonalkategorie">
+        <Meta:inhaltlicheDefinition>Be11</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has personal category</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Personalkategorie</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatPublikation -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatPublikation">
+        <Meta:inhaltlicheDefinition>Fi14</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de-de">hat Publikation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatPublikationstyp -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatPublikationstyp">
+        <Meta:inhaltlicheDefinition>Pu6</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has publication type</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Publikationstyp</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatQualifikation -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatQualifikation">
+        <Meta:inhaltlicheDefinition>Be9</Meta:inhaltlicheDefinition>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de-de">hat Qualifikation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatQualifizierungsverfahren -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatQualifizierungsverfahren">
+        <Meta:inhaltlicheDefinition>Na4a</Meta:inhaltlicheDefinition>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="de-de">hat Qualifizierungsverfahren</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatSchoepfer -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatSchoepfer">
+        <Meta:inhaltlicheDefinition>Pu149</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pu2</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>dcterms.creator</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has creator</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Schöpfer/-in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatSchoepfertyp -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatSchoepfertyp">
+        <Meta:inhaltlicheDefinition>Pu55</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>kds.creator</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has creator type</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Schöpfertyp</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatSprecher -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatSprecher">
+        <Meta:inhaltlicheDefinition>Na17</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has speaker</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Sprecher/-in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatStrukturiertesPromotionsprogramm -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatStrukturiertesPromotionsprogramm">
+        <Meta:inhaltlicheDefinition>Na3</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na48</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Na6</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has Structured Doctoral Programme</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Strukturiertes Promotionsprogramm</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatTaetigkeitsart -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatTaetigkeitsart">
+        <Meta:inhaltlicheDefinition>Be32</Meta:inhaltlicheDefinition>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</vitro:displayRankAnnot>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has type of activity</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Tätigkeitsart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatTyp -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatTyp">
+        <Meta:inhaltlicheDefinition>Fi4</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has type</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Typ</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatUntereinheit -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatUntereinheit">
+        <Meta:inhaltlicheDefinition>Be83</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Dr138</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pa40</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:comment xml:lang="en-us">To represent hierarchical structures of organisational units. This can also be used to represent the aggregation level &quot;entire institution&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Zur Darstellung hierarchischer Strukturen von Organisationseinheiten. Damit kann auch das Aggregationsniveau &quot;Gesamteinrichtung&quot; abgebildet werden</rdfs:comment>
+        <rdfs:label xml:lang="en-us">has subunit</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Untereinheit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatUnterstuetzungDurch -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatUnterstuetzungDurch">
+        <rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#informationResourceSupportedBy"/>
+        <Meta:inhaltlicheDefinition>Pu86</Meta:inhaltlicheDefinition>
+        <Meta:inhaltlicheDefinition>Pu90</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>dcterms.funding</Meta:pgbid>
+        <Meta:pgbid>kds.funding.grantnumber</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:comment>Alternativ zu den direkten Eigenschaften Förderer (Pu86) und Förderkennzeichen (Pu90), kann eine Verbindung zu Drittmittelprojekt bzw. Promotionsprogramm angegeben werden, worüber sich Förderer und Förderkennzeichen ableiten lassen</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">As an alternative to the direct properties of sponsor (Pu86) and funding indicator (Pu90), a link to the externally funded project or doctoral programme can be specified, from which the sponsor and funding indicator can be derived.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">has support from</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Unterstützung durch</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatVerlag -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatVerlag">
+        <Meta:inhaltlicheDefinition>Pu67</Meta:inhaltlicheDefinition>
+        <Meta:pgbid>dcterms.publisher</Meta:pgbid>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has publisher</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Verlag</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kerndatensatz-forschung.de/owl/Basis#hatZugangsart -->
+
+    <owl:ObjectProperty rdf:about="http://kerndatensatz-forschung.de/owl/Basis#hatZugangsart">
+        <Meta:inhaltlicheDefinition>Fi6</Meta:inhaltlicheDefinition>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:label xml:lang="en-us">has access type</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Zugangsart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#informationResourceSupportedBy -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#informationResourceSupportedBy"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+

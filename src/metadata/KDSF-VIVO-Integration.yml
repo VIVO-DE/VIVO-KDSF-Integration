@@ -1,0 +1,24 @@
+idspace: KDSF-VIVO-INTEGRATION
+base_url: /KDSF-VIVO-Integration
+
+products:
+- KDSF-VIVO-Integration.owl: https://raw.githubusercontent.com/bua-vivo/VIVO-KDSF-Integration/main/KDSF-VIVO-Integration.owl
+
+term_browser: ontobee
+example_terms:
+- KDSF-VIVO-INTEGRATION_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/bua-vivo/VIVO-KDSF-Integration/v
+
+- prefix: /tracker/
+  replacement: https://github.com/bua-vivo/VIVO-KDSF-Integration/issues
+
+- prefix: /about/
+  replacement: https://github.com/bua-vivo/KDSF-VIVO-Integration/blob/master/README.md
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/bua-vivo/VIVO-KDSF-Integration/main/
